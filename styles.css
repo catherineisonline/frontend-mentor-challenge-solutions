@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(225, 100%, 94%);
+}
+.background {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 0;
+}
+
+.menu-container {
+  position: relative;
+  width: 100%;
+  height: 6rem;
+  background-color: transparent;
+}
+
+.center-container {
+  width: 30%;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.header-container {
+  width: 100%;
+  min-height: 12rem;
+  position: relative;
+  background-image: url(images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+
+/** Title **/
+
+.title-container {
+  font-family: "Red Hat Display", sans-serif;
+  padding: 1rem;
+  color: hsl(223, 47%, 23%);
+}
+.title-container p {
+  font-weight: lighter;
+  color: hsl(224, 23%, 55%);
+  margin: 0;
+}
+
+/** Pricing Container **/
+
+.pricing-container {
+  background-color: hsl(225, 100%, 98%);
+  font-family: "Red Hat Display", sans-serif;
+  width: 80%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.music-icon {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 30%;
+  height: auto;
+  padding: 0.8rem;
+}
+.pricing-detail {
+  font-size: 0.9rem;
+}
+.pricing-detail h4 {
+  color: hsl(223, 47%, 23%);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-detail p {
+  color: hsl(224, 23%, 55%);
+  margin-top: 0;
+}
+
+/** Change button **/
+
+.change-btn a {
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+}
+
+/** Payment/Cancel Buttons **/
+
+.payment-btn {
+  background-color: hsl(245, 75%, 52%);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Red Hat Display", sans-serif;
+  width: 80%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: transparent;
+  box-shadow: 5px 10px 20px hsl(245, 75%, 90%);
+}
+
+.payment-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.payment-btn:hover,
+.change-btn a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.cancel-btn {
+  margin-top: 1rem;
+  background-color: transparent;
+  font-size: 0.8rem;
+  width: 80%;
+  padding-bottom: 3rem;
+  border: none;
+  font-weight: 900;
+}
+
+.cancel-btn a {
+  text-transform: capitalize;
+  color: rgb(136, 133, 133);
+  text-decoration: none;
+}
+
+.cancel-btn a:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+/** Footer **/
+
+.attribution {
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  margin-bottom: 0;
+  width: 100%;
+  min-height: 10rem;
+  align-items: flex-end;
+}
+
+.attribution a {
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+/** Media Queries **/
+
+@media only screen and (max-width: 1024px) {
+  .center-container {
+    width: 40%;
+  }
+  .header-container {
+    min-height: 11rem;
+  }
+  .music-icon {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-container {
+    height: 5rem;
+  }
+
+  .center-container {
+    width: 50%;
+  }
+  .header-container {
+    min-height: 9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .menu-container {
+    height: 4rem;
+  }
+
+  .center-container {
+    width: 75%;
+  }
+
+  .music-icon {
+    margin: 0;
+  }
+}
