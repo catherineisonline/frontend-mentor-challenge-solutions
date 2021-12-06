@@ -1,0 +1,125 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: hsl(0, 0%, 95%);
+}
+
+/** Nav **/
+nav {
+    margin-top: 100px;
+}
+
+/** Main Container **/
+.main-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/** Headings **/
+.headings {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+/** Descriptions **/
+.descriptions {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/** Buttons **/
+.buttons {
+    background-color: hsl(0, 0%, 95%);
+    border-color: transparent;
+    border-radius: 25px;
+    font-family: 'Lexend Deca', sans-serif;
+    width: 60%;
+    text-transform: capitalize;
+}
+
+.buttons:hover {
+    border: 2px solid hsl(0, 0%, 95%);
+    background-color: transparent;
+    
+}
+.buttons:hover p {
+    color: hsl(0, 0%, 95%);
+}
+
+/** Container 1 **/
+.container-one {
+background-color: hsl(31, 77%, 52%);
+border-radius: 5px 5px 0 0;
+}
+.container-one .buttons {
+    color: hsl(31, 77%, 52%);
+}
+
+/** Container 2 **/
+.container-two {
+background-color: hsl(184, 100%, 22%);
+}
+.container-two .buttons {
+    color: hsl(184, 100%, 22%);
+}
+
+/** Container 3 **/
+.container-three {
+background-color: hsl(179, 100%, 13%);
+border-radius: 0 0 5px 5px;
+}
+.container-three .buttons {
+    color: hsl(179, 100%, 13%);
+}
+
+/** Container Spacing **/
+.container-one, .container-two, .container-three {
+    padding: 50px;
+}
+
+/** Media Queries **/
+@media only screen and (min-width: 600px) {
+   /** Main Container **/
+.main-container {
+    width: 60%;
+} 
+}
+
+@media only screen and (min-width: 801px) {
+    /** Main Container **/
+.main-container {
+    width: 50%;
+}   
+}
+
+@media only screen and (min-width: 1025px) {
+     /** Main Container **/
+     .main-container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /** Container 1 **/
+.container-one {
+    border-radius: 5px 0 0 5px;
+    }
+    /** Container 3 **/
+.container-three {
+    border-radius: 0 5px 5px 0;
+    }
+    /** Buttons **/
+.buttons {
+    margin-top: 50px;
+    width: 70%;
+}
+}
+
+@media only screen and (min-width: 1201px) {
+    /** Main Container **/
+    .main-container {
+        width:70%;
+    }
+} 
