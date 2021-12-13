@@ -1,0 +1,130 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+}
+nav {
+    margin-top: 100px;
+}
+/**Feature Section **/
+.feature-section {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+}
+
+/** Feature Header**/
+.feature-header {
+    text-align: center;
+    color: hsl(234, 12%, 34%);
+}
+.feature-header span {
+    font-weight: 200;
+}
+.feature-header p{
+    color: hsl(229, 6%, 66%);
+}
+
+/** Feature Cards **/
+.card-one, .card-two, .card-three, .card-four {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+    box-shadow: 0px 9px 24px -7px rgba(0,0,0,0.67);    ;
+}
+.card-info h3 {
+    color: hsl(234, 12%, 34%);
+}
+.card-info p {
+    color: hsl(229, 6%, 66%);
+}
+.card-icon {
+    text-align: right;
+}
+.card-icon img{
+    padding: 10px;
+    height: 20%;
+    width: 20%;
+}
+.card-one, .card-two, .card-three, .card-four {
+    border-top-style: solid;
+    border-top-width: 5px;   
+}
+.card-one {
+    border-color: hsl(180, 62%, 55%);
+}
+.card-two {
+    border-color: hsl(0, 78%, 62%);
+}
+.card-three {
+    border-color: hsl(34, 97%, 64%);
+}
+.card-four {
+    border-color: hsl(212, 86%, 64%);
+}
+
+
+/** Media Queries **/
+
+@media only screen and (min-width: 480px) {
+    .feature-section {
+    width: 70%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .feature-section {
+    width: 50%;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .feature-section {
+        width: 40%;
+    } 
+}
+
+@media only screen and (min-width: 1025px) {
+    .feature-section {
+        width: 90%;
+    }
+    .feature-header {
+        width: 60%;
+        margin: auto;
+    }
+    .feature-details {
+       text-align: center;
+    }
+    .feature-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100% 100% 100%;
+        gap: 20px;
+    }
+    .card-one, .card-four, .grid-center-container {
+        place-self: center;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .feature-section {
+        width: 80%;
+    }
+    .feature-cards {
+        gap: 30px;
+    }
+    .card-info {
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .feature-header {
+        width: 50%;
+    }
+}
