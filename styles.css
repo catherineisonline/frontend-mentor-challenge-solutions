@@ -1,0 +1,164 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.nft-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: hsl(216, 50%, 16%);
+}
+
+/** Container Image **/
+.container-image {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+.main-image {
+  position: relative;
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.color-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: none;
+}
+.color-image:hover {
+  background: url("icon-view.svg") hsl(178, 100%, 50%) no-repeat 50% 50%;
+  background-size: 20% 20%;
+  opacity: 0.7;
+}
+/** Container Title **/
+
+.container-title h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.container-title p {
+  color: hsl(215, 51%, 70%);
+}
+
+/** Pricing and Timing **/
+
+.container-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100%;
+  word-spacing: 2px;
+  align-items: center;
+}
+
+.container-details p {
+  display: inline-block;
+  margin: 0;
+}
+
+.pricing {
+  color: hsl(178, 100%, 50%);
+  text-align: left;
+}
+
+.timing {
+  color: hsl(215, 51%, 70%);
+  text-align: right;
+}
+
+.container-line {
+  border: 1px solid hsl(215, 32%, 27%);
+  margin-top: 30px;
+}
+
+/** Author **/
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+  margin-top: 20px;
+}
+.author img {
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 10%;
+  height: 10%;
+}
+
+.author p {
+  color: hsl(215, 51%, 70%);
+  margin: 0;
+}
+
+.author-name {
+  color: white;
+  text-decoration: none;
+}
+
+/** Active States **/
+
+.author-name:hover,
+.container-title h1 a:hover {
+  color: hsl(178, 100%, 50%);
+}
+/** Footer **/
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0;
+}
+
+/** Media Queries **/
+
+@media only screen and (min-width: 600px) {
+  .main-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .main-container {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .main-container {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .main-container {
+    width: 20%;
+  }
+}
