@@ -67,6 +67,15 @@ nav {
     border-color: hsl(212, 86%, 64%);
 }
 
+/** Footer **/
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0;
+}
+
 
 /** Media Queries **/
 
