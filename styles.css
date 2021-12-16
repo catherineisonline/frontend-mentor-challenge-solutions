@@ -100,6 +100,15 @@ nav {
     line-height: 25px;
 }
 
+/** Footer **/
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0;
+}
+
 
 /** Media Queries **/
 @media only screen and (min-width: 480px) {
