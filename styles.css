@@ -110,7 +110,6 @@ img {
   border: transparent;
   box-shadow: 5px 10px 20px hsl(245, 75%, 90%);
   color: white;
-  font-size: 0.8rem;
 }
 
 .payment-btn:hover,
@@ -122,7 +121,6 @@ img {
 .cancel-btn {
   margin-top: 1rem;
   background-color: transparent;
-  font-size: 0.8rem;
   width: 80%;
   padding-bottom: 3rem;
   border: none;
