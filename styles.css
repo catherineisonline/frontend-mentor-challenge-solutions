@@ -32,13 +32,13 @@ body {
   height: auto;
   border-radius: 5px;
   overflow: hidden;
+  line-height: 0;
 }
 .main-image {
   display: block;
   position: relative;
   height: auto;
   width: 100%;
-  border-radius: 5px;
 }
 
 .color-image {
