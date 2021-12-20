@@ -5,15 +5,13 @@ body {
     background-color: hsl(0, 0%, 98%);
     font-family: 'Poppins', sans-serif;
 }
-nav {
-    margin-top: 100px;
-}
 /**Feature Section **/
 .feature-section {
     width: 90%;
     margin: 0 auto;
     justify-content: center;
     align-content: center;
+    margin-top: 100px;
 }
 
 /** Feature Header**/
