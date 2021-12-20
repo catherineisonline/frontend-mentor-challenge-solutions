@@ -3,7 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: hsl(225, 100%, 94%);
-  background-image: url(images/pattern-background-desktop.svg);
+  background-image: url(pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: 0;
@@ -23,7 +23,7 @@ body {
 .header-container {
   width: 100%;
   min-height: 15rem;
-  background-image: url(images/illustration-hero.svg);
+  background-image: url(illustration-hero.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
