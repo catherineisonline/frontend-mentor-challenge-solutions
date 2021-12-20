@@ -82,11 +82,13 @@ body {
 .pricing {
   color: hsl(178, 100%, 50%);
   text-align: left;
+  align-items: center;
 }
 
 .timing {
   color: hsl(215, 51%, 70%);
   text-align: right;
+  align-items: center;
 }
 
 .container-line {
