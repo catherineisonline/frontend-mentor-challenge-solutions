@@ -30,8 +30,11 @@ body {
   cursor: pointer;
   width: 100%;
   height: auto;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .main-image {
+  display: block;
   position: relative;
   height: auto;
   width: 100%;
