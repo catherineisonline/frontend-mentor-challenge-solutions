@@ -10,16 +10,14 @@ body {
 .main-container {
   width: 90%;
   margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 50px;
   justify-content: center;
   align-content: center;
-  margin-top: 150px;
-  margin-bottom: 100px;
 }
 
 .nft-container {
-  position: relative;
-  width: 100%;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   background-color: hsl(216, 50%, 16%);
 }
@@ -32,7 +30,7 @@ body {
   height: auto;
   border-radius: 5px;
   overflow: hidden;
-  line-height: 0;
+  
 }
 .main-image {
   display: block;
@@ -47,11 +45,12 @@ body {
   width: 100%;
   height: 100%;
   background-image: none;
+ 
 }
 .color-image:hover {
   background: url("icon-view.svg") hsl(178, 100%, 50%) no-repeat 50% 50%;
   background-size: 20% 20%;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 /** Container Title **/
 
@@ -82,13 +81,11 @@ body {
 .pricing {
   color: hsl(178, 100%, 50%);
   text-align: left;
-  align-items: center;
 }
 
 .timing {
   color: hsl(215, 51%, 70%);
   text-align: right;
-  align-items: center;
 }
 
 .container-line {
@@ -153,6 +150,8 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .main-container {
-    width: 20%;
+    width: 25%;
+    margin-top: 6rem;
   }
 }
+
