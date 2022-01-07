@@ -133,7 +133,7 @@ h1 span {
 }
 
 .gb-left {
-  position: static;
+  position: absolute;
   background-color: white;
   border-radius: 15px;
   width: 50%;
