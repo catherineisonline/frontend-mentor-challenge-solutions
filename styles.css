@@ -211,10 +211,8 @@ h1 span {
     background-color: transparent;
     margin-left: 10%;
     margin-bottom: -15%;
-
     border-top: 0;
     border-bottom: 30px solid transparent;
-
     border-right: 30px solid white;
   }
 }
