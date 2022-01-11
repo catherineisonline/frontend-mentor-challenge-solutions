@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<link href="styles.css" rel="stylesheet"></link>
-<!-- Google Fonts -->
+    <link href="styles.css" rel="stylesheet">
+    </link>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+        rel="stylesheet">
     <title>Order Summary</title>
 </head>
+
 <body>
     <main>
-    <section class="center-container">
-        <div class="order-container">
-            <div class="header-container"></div>
-<!-- Title -->
-            <div class="title-container">      
-<h1>Order Summary</h1>
-<p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-</div>
-<!-- Pricing Container-->
-    <div class="pricing-container">
-   <div class="music-icon"><img src="icon-music.svg" alt="">
-   <div class="pricing-detail">
-    <p class="annual-plan">Annual Plan</p>
-    <p>$59.99/year</p></div>
-</div>
-   <div class=change-btn><a class="change-btn-link" href="">Change</a></div> 
-</div>
-<!-- Payment/Cancel Buttons  -->
-<div><button class="payment-btn" type="button">Proceed to Payment</button></div>
-<div><button class="cancel-btn" type="button">Cancel Order</button></div>
-        </div>
-    </section>
-</main>
+        <section class="center-container">
+            <div class="order-container">
+                <div class="header-container"></div>
+                <!-- Title -->
+                <div class="title-container">
+                    <h1>Order Summary</h1>
+                    <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you
+                        like!</p>
+                </div>
+                <!-- Pricing Container-->
+                <div class="pricing-container">
+                    <div class="music-icon">
+                        <!-- Music Icon -->
+                        <div class="music-img"></div>
+                        <!-- Pricing Details -->
+                        <div class="pricing-detail">
+                            <p class="annual-plan">Annual Plan</p>
+                            <p>$59.99/year</p>
+                        </div>
+                    </div>
+                    <!-- Change Button -->
+                    <div><a class="change-btn-link" href=""><button type="button" class="change-btn">Change</button></a>
+                    </div>
+                </div>
+                <!-- Payment/Cancel Buttons  -->
+                <a class="payment-btn" href=""><button type="button">Proceed to Payment</button></a>
+                <a class="cancel-btn" href=""><button type="button">Cancel Order</button></a>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

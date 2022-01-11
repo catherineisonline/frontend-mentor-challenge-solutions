@@ -1,15 +1,28 @@
-body {
+* {
   margin: 0;
   padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
   box-sizing: border-box;
   background-color: hsl(225, 100%, 94%);
   background-image: url(pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  margin-bottom: 0;
 }
+
+
 .center-container {
-  width: 30%;
+  position: relative;
+  width: 90%;
+  max-width: 28.3rem;
+  height: 100vh;
+  max-height: 44rem;
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -18,14 +31,16 @@ body {
   background-color: white;
   border-radius: 25px;
   text-align: center;
+  overflow: hidden;
 }
 
 .header-container {
   width: 100%;
-  min-height: 15rem;
+  min-height: 14rem;
+  height: 100%;
   background-image: url(illustration-hero.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   border-radius: 25px 25px 0 0;
   overflow: hidden;
@@ -34,102 +49,117 @@ body {
 /** Title **/
 
 .title-container {
+  width: 80%;
+  height: 100%;
+  max-height: 14rem;
   font-family: "Red Hat Display", sans-serif;
-  padding: 1rem;
   color: hsl(223, 47%, 23%);
   text-align: center;
-  width: 80%;
   margin: 0 auto;
-  margin-top: 0;
+  margin-top: 3rem;
+}
+.title-container h1 {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
 }
 .title-container p {
   font-weight: lighter;
   color: hsl(224, 23%, 55%);
-  margin: 0;
+  margin-top: 1.2rem;
+  line-height: 25px;
 }
 
 /** Pricing Container **/
-
 .pricing-container {
   background-color: hsl(225, 100%, 98%);
   font-family: "Red Hat Display", sans-serif;
-  width: 80%;
+  width: 70%;
   display: inline-flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   justify-content: space-between;
+  align-content: space-between;
   align-items: center;
   border-radius: 10px;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
 }
 
 .music-icon {
-  display: inline-flex;
-  flex-flow: row nowrap;
-  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
-img {
-  max-width: 30%;
-  height: auto;
-  padding: 0.8rem;
+.music-img {
+  width: 3rem;
+  height: 3rem;
+  background-image: url('icon-music.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-
 
 .pricing-detail .annual-plan {
   color: hsl(223, 47%, 23%);
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  width: 100%;
+ 
 }
 
 .pricing-detail p {
   color: hsl(224, 23%, 55%);
-  margin-top: 0;
 }
 
 /** Change button **/
-
-.change-btn a {
-  padding: 1rem;
+.change-btn {
+  border-radius: none;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
   color: hsl(245, 75%, 52%);
   font-weight: 700;
+  font-size: 1rem;
 }
 
 /** Payment/Cancel Buttons **/
-
-.payment-btn {
+.payment-btn button{
   background-color: hsl(245, 75%, 52%);
-  border-radius: 10px;
+  border-radius: 15px;
   font-family: "Red Hat Display", sans-serif;
   width: 80%;
-  padding: 0.5rem;
-  margin-top: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
   border: transparent;
   box-shadow: 5px 10px 20px hsl(245, 75%, 90%);
   color: white;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
-.payment-btn:hover,
-.change-btn a:hover {
+.payment-btn button:hover,
+.cancel-btn button:hover,
+.change-btn-link button:hover {
+  cursor: pointer;
   opacity: 0.7;
   text-decoration: none;
 }
 
+/** Cancel Button **/
 .cancel-btn {
-  margin-top: 1rem;
-  background-color: transparent;
-  width: 80%;
-  padding-bottom: 3rem;
-  border: none;
-  font-weight: 900;
-}
 
-.cancel-btn a {
+}
+.cancel-btn button {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10rem;
+  font-weight: 700;
+  margin-top: 2rem;
   text-transform: capitalize;
   color: rgb(136, 133, 133);
   text-decoration: none;
+  font-size: 1rem;
 }
 
 .cancel-btn a:hover {
@@ -138,6 +168,8 @@ img {
 
 
 /** Media Queries **/
+
+/**
 
 @media only screen and (max-width: 1024px) {
   .center-container {
