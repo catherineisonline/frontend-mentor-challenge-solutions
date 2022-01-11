@@ -16,7 +16,6 @@ body {
   background-size: contain;
 }
 
-
 .center-container {
   position: relative;
   width: 90%;
@@ -36,18 +35,17 @@ body {
 
 .header-container {
   width: 100%;
-  min-height: 14rem;
   height: 100%;
+  min-height: 14rem;
   background-image: url(illustration-hero.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   border-radius: 25px 25px 0 0;
   overflow: hidden;
-} 
+}
 
 /** Title **/
-
 .title-container {
   width: 80%;
   height: 100%;
@@ -60,7 +58,7 @@ body {
 }
 .title-container h1 {
   font-size: 1.5rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 900;
 }
 .title-container p {
@@ -90,27 +88,28 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   font-size: 1rem;
   font-weight: 900;
 }
 
 .music-img {
-  width: 3rem;
+  width: 3.5rem;
   height: 3rem;
-  background-image: url('icon-music.svg');
+  background-image: url("icon-music.svg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .pricing-detail .annual-plan {
   color: hsl(223, 47%, 23%);
- 
+  margin-bottom: 1rem;
 }
 
 .pricing-detail p {
   color: hsl(224, 23%, 55%);
+  line-height: 10px;
 }
 
 /** Change button **/
@@ -120,16 +119,17 @@ body {
   background-color: transparent;
   text-decoration: underline;
   color: hsl(245, 75%, 52%);
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1rem;
 }
 
 /** Payment/Cancel Buttons **/
-.payment-btn button{
+.payment-btn button {
   background-color: hsl(245, 75%, 52%);
   border-radius: 15px;
   font-family: "Red Hat Display", sans-serif;
   width: 80%;
+  min-width: 80%;
   padding: 1rem;
   margin-top: 2rem;
   border: transparent;
@@ -148,9 +148,6 @@ body {
 }
 
 /** Cancel Button **/
-.cancel-btn {
-
-}
 .cancel-btn button {
   background-color: transparent;
   border: none;
@@ -167,44 +164,15 @@ body {
   color: hsl(223, 47%, 23%);
 }
 
-
 /** Media Queries **/
-
-/**
-
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
   .center-container {
-    width: 40%;
+    margin-top: 70px;
   }
-  .header-container {
-    height:auto;
-  }
-  .music-icon {
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  
-  .center-container {
-    width: 50%;
-  }
-  .header-container {
-    height:auto;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  
-  .center-container {
-    
-    width: 90%;
-  }
-  .header-container {
-    height: auto;
-  }
-
-  .music-icon {
-    margin: 0;
+  /** Pricing Container **/
+  .pricing-container {
+    justify-content: space-evenly;
+    padding: 2rem;
+    gap: 3rem;
   }
 }
