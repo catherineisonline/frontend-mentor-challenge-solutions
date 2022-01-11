@@ -90,28 +90,6 @@ h2 {
   margin-top: 0.5rem;
 }
 
-/** Footer **/
-
-.attribution {
-  display: inline-flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  min-height: 2rem;
-  margin-bottom: 0;
-  align-items: center;
-  color: hsla(0, 0%, 100%, 0.76);
-  font-size: 0.5rem;
-  background-color: transparent;
-}
-
-.attribution a {
-  text-decoration: none;
-  color: hsla(0, 0%, 100%, 0.76);
-}
-.attribution a:hover {
-  color: hsl(0, 0%, 100%);
-}
 
 /** Media Query 480px **/
 
