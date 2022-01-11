@@ -61,6 +61,7 @@ body {
 .title-container h1 {
   font-size: 1.5rem;
   letter-spacing: 3px;
+  font-weight: 900;
 }
 .title-container p {
   font-weight: lighter;
