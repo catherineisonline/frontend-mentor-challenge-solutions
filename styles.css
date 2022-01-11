@@ -114,17 +114,14 @@ body {
 
 /** Change button **/
 .change-btn {
-  border-radius: none;
-  border: none;
   background-color: transparent;
-  text-decoration: underline;
   color: hsl(245, 75%, 52%);
   font-weight: 900;
   font-size: 1rem;
 }
 
 /** Payment/Cancel Buttons **/
-.payment-btn button {
+.payment-btn {
   background-color: hsl(245, 75%, 52%);
   border-radius: 15px;
   font-family: "Red Hat Display", sans-serif;
@@ -139,16 +136,16 @@ body {
   font-weight: 700;
 }
 
-.payment-btn button:hover,
-.cancel-btn button:hover,
-.change-btn-link button:hover {
+.payment-btn:hover,
+.cancel-btn:hover,
+.change-btn:hover {
   cursor: pointer;
   opacity: 0.7;
   text-decoration: none;
 }
 
 /** Cancel Button **/
-.cancel-btn button {
+.cancel-btn {
   background-color: transparent;
   border: none;
   margin-bottom: 10rem;
@@ -160,7 +157,7 @@ body {
   font-size: 1rem;
 }
 
-.cancel-btn a:hover {
+.cancel-btn:hover {
   color: hsl(223, 47%, 23%);
 }
 
