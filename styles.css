@@ -44,7 +44,7 @@ body {
   overflow: hidden;
 }
 .main-image {
-  background-image: url("/images/image-equilibrium.jpg");
+  background-image: url("images/image-equilibrium.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -62,7 +62,7 @@ body {
   background-image: none;
 }
 .color-image:hover {
-  background-image: url("/images/icon-view.svg");
+  background-image: url("images/icon-view.svg");
   background-color: var(--cyan);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -125,10 +125,10 @@ body {
   background-repeat: no-repeat;
 }
 .pricing-img {
-  background-image: url("/images/icon-ethereum.svg");
+  background-image: url("images/icon-ethereum.svg");
 }
 .timing-img {
-  background-image: url("/images/icon-clock.svg");
+  background-image: url("images/icon-clock.svg");
 }
 
 .container-line {
