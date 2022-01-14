@@ -65,9 +65,13 @@ body {
   background-image: none;
 }
 .color-image:hover {
-  background: url("/images/icon-view.svg") var(--cyan) no-repeat 50% 50%;
+  background-image: url("/images/icon-view.svg");
+  background-color: var(--cyan);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: 20% 20%;
   opacity: 0.5;
+  transition: background-color ease-in-out 0.3s;
 }
 /** Container Title **/
 .container-title {
@@ -166,6 +170,7 @@ body {
 .author-name:hover,
 .container-title h1 a:hover {
   color: var(--cyan);
+  transition: color ease-in 0.3s;
 }
 
 /** Media Queries
