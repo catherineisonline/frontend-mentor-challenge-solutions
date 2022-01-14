@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     </link>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,12 @@
 </head>
 
 <body>
+    <!-- Main Container -->
     <main class="main-container">
         <section class="nft-container">
             <!-- Container Image -->
             <div class="container-image">
-                <img class="main-image" src="image-equilibrium.jpg" alt="image-equilibrium">
+                <div class="main-image"></div>
                 <div class="color-image"></div>
             </div>
             <!-- Container Title -->
@@ -30,17 +31,24 @@
             </div>
             <!-- Pricing and Timing -->
             <div class="container-details">
-                <div class="pricing"><img src="icon-ethereum.svg" alt="">
-                    <p>0.041ETH</p>
+                <!-- Pricing -->
+                <div class="pricing">
+                    <div class="pricing-img"></div>
+                    <div>
+                        <p>0.041ETH</p>
+                    </div>
+
+
                 </div>
-                <div class="timing"><img src="icon-clock.svg" alt="">
-                    <p>3 days left</p>
+                <div class="timing">
+                    <div class="timing-img"></div>
+                 <div><p>3 days left</p></div> 
                 </div>
             </div>
             <hr class="container-line">
             <!-- Author -->
             <div class="author">
-                <img src="image-avatar.png" alt="">
+                <img src="/images/image-avatar.png" alt="">
                 <p>Creation of <a href="" class="author-name">Jules Wyvern</a></p>
             </div>
         </section>

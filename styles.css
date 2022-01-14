@@ -5,19 +5,20 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: hsl(217, 54%, 11%);
 }
-
+/** Main Container **/
 
 .main-container {
-  width: 90%;
+  width: 100%;
+  max-width: 21.8rem;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 9.1rem;
   margin-bottom: 50px;
   justify-content: center;
   align-content: center;
 }
 
 .nft-container {
-  padding: 15px;
+  padding: 1.5rem;
   border-radius: 10px;
   background-color: hsl(216, 50%, 16%);
 }
@@ -27,15 +28,19 @@ body {
   position: relative;
   cursor: pointer;
   width: 100%;
+  max-width: 18.75rem;
   height: auto;
   border-radius: 5px;
   overflow: hidden;
   
 }
 .main-image {
-  display: block;
-  position: relative;
-  height: auto;
+  background-image: url("/images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  min-height: 18.75rem;
   width: 100%;
 }
 
@@ -43,54 +48,83 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  min-height: 18.75rem;
+  height: auto;
   background-image: none;
- 
 }
 .color-image:hover {
-  background: url("icon-view.svg") hsl(178, 100%, 50%) no-repeat 50% 50%;
+  background: url("/images/icon-view.svg") hsl(178, 100%, 50%) no-repeat 50% 50%;
   background-size: 20% 20%;
   opacity: 0.5;
 }
 /** Container Title **/
-
+.container-title {
+  padding-top: 0.5rem;
+  width: 100%;
+}
 .container-title h1 a {
   text-decoration: none;
   color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .container-title p {
   color: hsl(215, 51%, 70%);
+  font-size: 1.1rem;
+  line-height: 25px;
+  font-weight: 400;
 }
 
 /** Pricing and Timing **/
 
 .container-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100%;
-  word-spacing: 2px;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -0.5rem;
 }
 
-.container-details p {
-  display: inline-block;
-  margin: 0;
+.pricing-img {
+  background-image: url("/images/icon-ethereum.svg");
+  min-width: 20px;
+  min-height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
 }
 
 .pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   color: hsl(178, 100%, 50%);
   text-align: left;
+  font-weight: 600;
+}
+
+.timing-img {
+  background-image: url("/images/icon-clock.svg");
+  min-width: 20px;
+  min-height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .timing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   color: hsl(215, 51%, 70%);
   text-align: right;
+  font-weight: 600;
 }
 
 .container-line {
   border: 1px solid hsl(215, 32%, 27%);
-  margin-top: 30px;
 }
 
 /** Author **/
@@ -100,8 +134,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: left;
+  vertical-align: top;
   gap: 15px;
-  margin-top: 20px;
 }
 .author img {
   background-size: cover;
@@ -113,12 +147,12 @@ body {
 
 .author p {
   color: hsl(215, 51%, 70%);
-  margin: 0;
 }
 
 .author-name {
   color: white;
   text-decoration: none;
+  font-weight: 400;
 }
 
 /** Active States **/
@@ -128,7 +162,7 @@ body {
   color: hsl(178, 100%, 50%);
 }
 
-/** Media Queries **/
+/** Media Queries
 
 @media only screen and (min-width: 600px) {
   .main-container {
