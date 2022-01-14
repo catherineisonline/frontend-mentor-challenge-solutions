@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
 :root {
-  --main-font: 'Outfit', sans-serif;
+  --main-font: "Outfit", sans-serif;
   --card-background: hsl(216, 50%, 16%);
   --main-background: hsl(217, 54%, 11%);
   --cyan: hsl(178, 100%, 50%);
@@ -17,22 +17,20 @@ body {
   font-family: var(--main-font);
   background-color: var(--main-background);
 }
-/** Main Container **/
 
+/** Main Container **/
 .main-container {
-  width: 100%;
+  width: 80%;
   max-width: 21.8rem;
   margin: 0 auto;
   margin-top: 9.1rem;
   margin-bottom: 50px;
-  justify-content: center;
-  align-content: center;
 }
 
 .nft-container {
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: var( --card-background);
+  background-color: var(--card-background);
 }
 
 /** Container Image **/
@@ -44,7 +42,6 @@ body {
   height: auto;
   border-radius: 5px;
   overflow: hidden;
-  
 }
 .main-image {
   background-image: url("/images/image-equilibrium.jpg");
@@ -73,10 +70,10 @@ body {
   opacity: 0.5;
   transition: background-color ease-in-out 0.3s;
 }
+
 /** Container Title **/
 .container-title {
   padding-top: 0.5rem;
-  width: 100%;
 }
 .container-title h1 a {
   text-decoration: none;
@@ -93,7 +90,6 @@ body {
 }
 
 /** Pricing and Timing **/
-
 .container-details {
   display: flex;
   flex-direction: row;
@@ -101,7 +97,8 @@ body {
   margin-top: -0.5rem;
 }
 
-.pricing, .timing {
+.pricing,
+.timing {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -114,14 +111,14 @@ body {
   text-align: left;
 }
 
-
 .timing {
   gap: 10px;
   color: var(--soft-blue);
   text-align: right;
 }
 
-.pricing-img, .timing-img {
+.pricing-img,
+.timing-img {
   min-width: 20px;
   min-height: 20px;
   background-size: contain;
@@ -135,7 +132,7 @@ body {
 }
 
 .container-line {
-  border: 1px solid var( --dark-blue);
+  border: 1px solid var(--dark-blue);
   opacity: 0.5;
 }
 
@@ -144,8 +141,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
-  vertical-align: top;
   gap: 15px;
 }
 .author img {
@@ -173,30 +168,11 @@ body {
   transition: color ease-in 0.3s;
 }
 
-/** Media Queries
+/** Media Queries **/
 
-@media only screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
+  /** Main Container **/
   .main-container {
-    width: 60%;
+    margin-top: 3.75rem;
   }
 }
-
-@media only screen and (min-width: 801px) {
-  .main-container {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .main-container {
-    width: 30%;
-  }
-}
-
-@media only screen and (min-width: 1201px) {
-  .main-container {
-    width: 25%;
-    margin-top: 6rem;
-  }
-}
-
