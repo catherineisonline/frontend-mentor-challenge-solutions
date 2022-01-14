@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
+:root {
+  --main-font: 'Outfit', sans-serif;
+  --card-background: hsl(216, 50%, 16%);
+  --main-background: hsl(217, 54%, 11%);
+  --cyan: hsl(178, 100%, 50%);
+  --white: rgb(255, 255, 255);
+  --soft-blue: hsl(215, 51%, 70%);
+  --dark-blue: hsl(215, 32%, 27%);
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Outfit", sans-serif;
-  background-color: hsl(217, 54%, 11%);
+  font-family: var(--main-font);
+  background-color: var(--main-background);
 }
 /** Main Container **/
 
@@ -22,7 +32,7 @@ body {
 .nft-container {
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: hsl(216, 50%, 16%);
+  background-color: var( --card-background);
 }
 
 /** Container Image **/
@@ -55,7 +65,7 @@ body {
   background-image: none;
 }
 .color-image:hover {
-  background: url("/images/icon-view.svg") hsl(178, 100%, 50%) no-repeat 50% 50%;
+  background: url("/images/icon-view.svg") var(--cyan) no-repeat 50% 50%;
   background-size: 20% 20%;
   opacity: 0.5;
 }
@@ -66,13 +76,13 @@ body {
 }
 .container-title h1 a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-size: 1.4rem;
   font-weight: 400;
 }
 
 .container-title p {
-  color: hsl(215, 51%, 70%);
+  color: var(--soft-blue);
   font-size: 1.1rem;
   line-height: 25px;
   font-weight: 400;
@@ -96,14 +106,14 @@ body {
 }
 
 .pricing {
-  color: hsl(178, 100%, 50%);
+  color: var(--cyan);
   text-align: left;
 }
 
 
 .timing {
   gap: 10px;
-  color: hsl(215, 51%, 70%);
+  color: var(--soft-blue);
   text-align: right;
 }
 
@@ -121,7 +131,7 @@ body {
 }
 
 .container-line {
-  border: 1px solid hsl(215, 32%, 27%);
+  border: 1px solid var( --dark-blue);
   opacity: 0.5;
 }
 
@@ -137,17 +147,17 @@ body {
 .author img {
   background-size: cover;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 1px solid var(--white);
   width: 10%;
   height: 10%;
 }
 
 .author p {
-  color: hsl(215, 51%, 70%);
+  color: var(--soft-blue);
 }
 
 .author-name {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: 400;
 }
@@ -155,7 +165,7 @@ body {
 /** Active States **/
 .author-name:hover,
 .container-title h1 a:hover {
-  color: hsl(178, 100%, 50%);
+  color: var(--cyan);
 }
 
 /** Media Queries
