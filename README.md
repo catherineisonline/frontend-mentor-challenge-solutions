@@ -8,11 +8,11 @@
     <a href="https://catherineisonline.github.io/nft-preview-card-frontendmentor/" color="white">
       Live
     </a>
-    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" heoght="20px"></img> </span>
+    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
     <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">
       Solution
     </a>
-   <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" heoght="20px"></img> </span>
+   <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
     <a href="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U">
       Challenge
     </a>
