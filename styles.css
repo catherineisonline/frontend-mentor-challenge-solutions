@@ -85,50 +85,45 @@ body {
   margin-top: -0.5rem;
 }
 
-.pricing-img {
-  background-image: url("/images/icon-ethereum.svg");
-  min-width: 20px;
-  min-height: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  
+.pricing, .timing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
 }
 
 .pricing {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   color: hsl(178, 100%, 50%);
   text-align: left;
-  font-weight: 600;
 }
 
-.timing-img {
-  background-image: url("/images/icon-clock.svg");
+
+.timing {
+  gap: 10px;
+  color: hsl(215, 51%, 70%);
+  text-align: right;
+}
+
+.pricing-img, .timing-img {
   min-width: 20px;
   min-height: 20px;
   background-size: contain;
   background-repeat: no-repeat;
 }
-
-.timing {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  color: hsl(215, 51%, 70%);
-  text-align: right;
-  font-weight: 600;
+.pricing-img {
+  background-image: url("/images/icon-ethereum.svg");
+}
+.timing-img {
+  background-image: url("/images/icon-clock.svg");
 }
 
 .container-line {
   border: 1px solid hsl(215, 32%, 27%);
+  opacity: 0.5;
 }
 
 /** Author **/
-
 .author {
   display: flex;
   flex-direction: row;
@@ -156,7 +151,6 @@ body {
 }
 
 /** Active States **/
-
 .author-name:hover,
 .container-title h1 a:hover {
   color: hsl(178, 100%, 50%);
