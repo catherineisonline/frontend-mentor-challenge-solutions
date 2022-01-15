@@ -73,7 +73,6 @@ body {
   height: 100%;
   background-color: var(--soft-violet);
   position: absolute;
-  mix-blend-mode: multiply;
   opacity: 0.75;
   top: 0;
   bottom: 0;
