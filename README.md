@@ -1,5 +1,5 @@
 
-<img src="" ></img>
+<img src="https://github.com/catherineisonline/stats-preview-card-component-frontendmentor/blob/main/images/project-preview.png?raw=true" ></img>
 
 
 <h1 align="center">Stats Preview Card Component</h1>
