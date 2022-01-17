@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --lexend-ceda: 'Lexend Deca', sans-serif;
+  --big-shoulders: 'Big Shoulders Display', cursive;
+  --light-gray: hsl(0, 0%, 95%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,12 +19,12 @@
 
 body {
   box-sizing: border-box;
-  background-color: hsl(0, 0%, 95%);
+  background-color: var(--light-gray);
   font-size: 15px;
 }
 
 h1 {
-  visibility: hidden;
+  display: none;
 }
 
 /** Main Container **/
@@ -46,26 +60,26 @@ h1 {
 
 /** Headings **/
 .headings {
-  color: hsl(0, 0%, 95%);
-  font-family: "Big Shoulders Display", cursive;
+  color: var(--light-gray);
+  font-family: var(--big-shoulders);
   text-transform: uppercase;
   font-size: 2.5rem;
 }
 
 /** Descriptions **/
 .descriptions {
-  color: hsla(0, 0%, 100%, 0.75);
-  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+  font-family: var(--lexend-ceda);
   font-weight: 100;
   line-height: 25px;
 }
 
 /** Buttons **/
 .buttons {
-  background-color: hsl(0, 0%, 95%);
+  background-color: var(--light-gray);
   border-color: transparent;
   border-radius: 35px;
-  font-family: "Lexend Deca", sans-serif;
+  font-family: var(--lexend-ceda);
   width: 55%;
   text-transform: capitalize;
   margin-top: 3.4rem;
@@ -76,38 +90,38 @@ h1 {
 }
 
 .buttons:hover {
-  border: 1px solid hsl(0, 0%, 95%);
+  border: 1px solid var(--light-gray);
   background-color: transparent;
   cursor: pointer;
 }
 .buttons:hover {
-  color: hsl(0, 0%, 95%);
+  color: var(--light-gray);
 }
 
 /** Container 1 **/
 .container-one {
-  background-color: hsl(31, 77%, 52%);
+  background-color: var(--bright-orange);
   border-radius: 5px 0 0 5px;
 }
 .container-one a {
-  color: hsl(31, 77%, 52%);
+  color: var(--bright-orange);
 }
 
 /** Container 2 **/
 .container-two {
-  background-color: hsl(184, 100%, 22%);
+  background-color: var(--dark-cyan);
 }
 .container-two a {
-  color: hsl(184, 100%, 22%);
+  color: var(--dark-cyan);
 }
 
 /** Container 3 **/
 .container-three {
-  background-color: hsl(179, 100%, 13%);
+  background-color: var(--very-dark-cyan);
   border-radius: 0 5px 5px 0;
 }
 .container-three a {
-  color: hsl(179, 100%, 13%);
+  color: var(--very-dark-cyan);
 }
 
 /* * Media Queries *
