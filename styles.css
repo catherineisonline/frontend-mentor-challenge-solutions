@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
 
 :root {
-  --lexend-ceda: 'Lexend Deca', sans-serif;
-  --big-shoulders: 'Big Shoulders Display', cursive;
+  --lexend-ceda: "Lexend Deca", sans-serif;
+  --big-shoulders: "Big Shoulders Display", cursive;
   --light-gray: hsl(0, 0%, 95%);
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --bright-orange: hsl(31, 77%, 52%);
   --dark-cyan: hsl(184, 100%, 22%);
   --very-dark-cyan: hsl(179, 100%, 13%);
-
 }
 
 * {
   padding: 0;
   margin: 0;
+}
+html, body {
+  overflow-x: hidden;
 }
 
 body {
@@ -31,11 +33,12 @@ h1 {
 .main-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
   max-width: 57.4rem;
   height: auto;
   margin: 0 auto;
   margin-top: 10.8rem;
+  align-items: center;
 }
 
 /** Info Container **/
@@ -124,47 +127,33 @@ h1 {
   color: var(--very-dark-cyan);
 }
 
-/* * Media Queries *
-
-
-/* @media only screen and (min-width: 600px) {
-
+/** Media Queries **/
+@media screen and (max-width: 1025px) {
   .main-container {
-    width: 60%;
-  }
-}
-
-@media only screen and (min-width: 801px) {
-
-  .main-container {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-
-  .main-container {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    margin-top: 5.3rem;
+   justify-content: center;
+   align-content: center;
   }
 
-  .container-one {
-    border-radius: 5px 0 0 5px;
+  .info-container {
+    gap: 1rem;
   }
-
+  .container-one,
+  .container-two,
   .container-three {
-    border-radius: 0 5px 5px 0;
-  }
-
-  .buttons {
     width: 50%;
   }
+  .buttons {
+    width: 40%;
+    margin-top: 1.5rem;
 }
 
-@media only screen and (min-width: 1201px) {
+@media screen and (max-width: 600px) {
 
-  .main-container {
-    width: 70%;
+  .container-one,
+  .container-two,
+  .container-three {
+    width: 80%;
   }
-} */
+}
