@@ -29,7 +29,7 @@
 ## About The Project
 
 <p>A perfect project for newbies who are starting to build confidence with layouts!
-The main challenge is to build out this preview card component and get it looking as close to the design as possible.
+The main challenge is to build out this order summary card component and get it looking as close to the design as possible.
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 <br><br>Your users should be able to:
 <br>1. View the optimal layout depending on their device's screen size
