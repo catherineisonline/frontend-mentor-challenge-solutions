@@ -1,19 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --kumbh-sans: 'Kumbh Sans', sans-serif;
+  --background-color: hsl(185, 75%, 39%);
+  --white: white;
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
-  background: url(bg-pattern-top.svg) left -550px top -550px no-repeat,
-    url(bg-pattern-bottom.svg) right -550px bottom -550px no-repeat;
-  background-position: fixed, fixed;
-  background-size: 800px;
-  background-color: hsl(185, 75%, 39%);
-  background-blend-mode: overlay;
+  font-family: var(--kumbh-sans);
+  background: url('images/bg-pattern-top.svg') left -300px top -600px no-repeat,
+      url('images/bg-pattern-bottom.svg') right -300px bottom -800px no-repeat;
+    background-position: fixed, fixed;
+    background-size: 1020px;
+    background-color: var(--background-color);
+    background-blend-mode: overlay;
 }
 
 
 /** Center Container **/
-
 .center-container {
   position: relative;
   width: 90%;
@@ -23,7 +33,7 @@ body {
   align-content: center;
   border-radius: 25px;
   text-align: center;
-  background-color: white;
+  background-color: var(--white);
   margin-bottom: 100px;
 }
 
@@ -49,9 +59,9 @@ body {
   top: 20%;
   width: 30%;
   min-height: 20%;
-  background-size: contain;
+  background-size: cover;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 5px solid var(--white);
 }
 
 /** Personal Details **/
@@ -63,13 +73,13 @@ body {
 .personal-details h3 {
   display: inline-block;
   word-spacing: 2px;
-  color: hsl(229, 23%, 23%);
+  color: var(--very-dark-blue);
   margin: 0;
 }
 
 .personal-details h3 span,
 .location {
-  color: hsl(227, 10%, 46%);
+  color: var(--grayish-blue);
   font-weight: 100;
 }
 
@@ -96,17 +106,17 @@ hr {
 
 .info-container h3 {
   margin: 4px;
-  color: hsl(229, 23%, 23%);
+  color: var(--very-dark-blue);
 }
 .info-container p {
   font-size: 12px;
   margin: 0;
-  color: hsl(227, 10%, 46%);
+  color: var(--grayish-blue);
 }
 
 /** Media Queries **/
 
-@media only screen and (min-width: 480px) {
+/* @media only screen and (min-width: 480px) {
   .center-container {
     width: 70%;
   }
@@ -149,13 +159,7 @@ hr {
 }
 
 @media only screen and (min-width: 1440px) {
-  body {
-    background: url(bg-pattern-top.svg) left -300px top -600px no-repeat,
-      url(bg-pattern-bottom.svg) right -300px bottom -800px no-repeat;
-    background-position: fixed, fixed;
-    background-size: 1020px;
-    background-color: hsl(185, 75%, 39%);
-  }
+
 
   .center-container {
     width: 25%;
@@ -174,4 +178,19 @@ hr {
     width: 25%;
     min-height: 10%;
   }
+} */
+
+/* Mobile first
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--kumbh-sans);
+  background: url('images/bg-pattern-top.svg') left -550px top -550px no-repeat,
+    url('images/bg-pattern-bottom.svg') right -550px bottom -550px no-repeat;
+  background-position: fixed, fixed;
+  background-size: 800px;
+  background-color: hsl(185, 75%, 39%);
+  background-blend-mode: overlay;
 }
