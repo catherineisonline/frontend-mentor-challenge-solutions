@@ -50,7 +50,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 ## What I learned
 
-The project was fun to build and did not require a lot of experience. I improved my grid skills a bit more but definitely still a lot to learn about it. I tried to make grid responsive but instead ended up using flex for smaller screens. I am not sure whether that's a correct way.
+The project was fun to build and did not require a lot of experience. I improved my grid skills a bit more but definitely still a lot to learn about it. I tried to make grid responsive but instead ended up using flex for smaller screens. I am not sure whether that's a correct way. For the first time, I used a media query for hover effects to avoid sticky background color on mobile devices and it's really a nice feature! 
 
 ## Useful resources
 
