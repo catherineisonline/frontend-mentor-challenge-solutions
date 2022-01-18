@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 :root {
-  --kumbh-sans: 'Kumbh Sans', sans-serif;
+  --kumbh-sans: "Kumbh Sans", sans-serif;
   --background-color: hsl(185, 75%, 39%);
   --white: white;
   --very-dark-blue: hsl(229, 23%, 23%);
   --grayish-blue: hsl(227, 10%, 46%);
-
 }
 
 * {
@@ -15,17 +14,15 @@
 }
 
 body {
-  
   font-family: var(--kumbh-sans);
-  background: url('images/bg-pattern-top.svg'),
-      url('images/bg-pattern-bottom.svg');
-      background-position: top -900px left -700px, bottom -1250px right -550px;
-      background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--background-color);
-    background-blend-mode: overlay;
+  background: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-position: top -900px left -700px, bottom -1250px right -550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--background-color);
+  background-blend-mode: overlay;
 }
-
 
 /** Center Container **/
 .center-container {
@@ -44,7 +41,7 @@ body {
 /** Header BG **/
 .header-bg {
   width: 100%;
-  max-width:inherit;
+  max-width: inherit;
   height: 90%;
   min-height: 8.8rem;
   background-image: url("images/bg-pattern-card.svg");
@@ -66,8 +63,6 @@ body {
   border: 5px solid var(--white);
 }
 
-
-
 /** Personal Details **/
 .personal-details {
   margin-top: 20%;
@@ -87,7 +82,7 @@ body {
   margin: 0;
 }
 /** Location **/
-.location{
+.location {
   color: var(--grayish-blue);
   font-weight: 100;
   font-size: 14px;
@@ -126,99 +121,20 @@ hr {
 /** Media Queries **/
 @media screen and (max-width: 1201px) {
   body {
-  
-    font-family: var(--kumbh-sans);
-    background: url('images/bg-pattern-top.svg'),
-        url('images/bg-pattern-bottom.svg');
-        background-position: top -900px left -700px, bottom -1250px right -550px;
-        background-repeat: no-repeat;
-      background-size: cover;
-      background-color: var(--background-color);
-      background-blend-mode: overlay;
+    background-position: top -700px left -500px, bottom -950px right -450px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  body {
+    background-position: top -600px left -400px, bottom -850px right -400px;
   }
 }
 
-@media  screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  body {
+    background-position: top -250px left -250px, bottom -450px right -250px;
+  }
   .center-container {
     margin-top: 9.3rem;
   }
-}
-
-/* @media only screen and (min-width: 480px) {
-  .center-container {
-    width: 70%;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .center-container {
-    width: 60%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  body {
-    background: url(bg-pattern-top.svg) left -400px top -500px no-repeat,
-      url(bg-pattern-bottom.svg) right -400px bottom -700px no-repeat;
-    background-position: fixed, fixed;
-    background-size: 1000px;
-    background-color: hsl(185, 75%, 39%);
-  }
-  .center-container {
-    width: 40%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  body {
-    background: url(bg-pattern-top.svg) left -300px top -600px no-repeat,
-      url(bg-pattern-bottom.svg) right -300px bottom -800px no-repeat;
-    background-position: fixed, fixed;
-    background-size: 900px;
-    background-color: hsl(185, 75%, 39%);
-  }
-  .center-container {
-    width: 30%;
-  }
-
-  .info-container {
-    padding: 20px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-
-
-  .center-container {
-    width: 25%;
-  }
-
-  .info-container {
-    padding: 20px;
-  }
-
-  hr {
-    margin-top: 5%;
-  }
-
-  .profile-pic img {
-    top: 25%;
-    width: 25%;
-    min-height: 10%;
-  }
-} */
-
-/* Mobile first
-
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--kumbh-sans);
-  background: url('images/bg-pattern-top.svg') left -550px top -550px no-repeat,
-    url('images/bg-pattern-bottom.svg') right -550px bottom -550px no-repeat;
-  background-position: fixed, fixed;
-  background-size: 800px;
-  background-color: hsl(185, 75%, 39%);
-  background-blend-mode: overlay;
 }
