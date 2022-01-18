@@ -13,24 +13,21 @@
   margin: 0;
   padding: 0;
 }
-html,
-body {
-  overflow-x: hidden;
-}
 
 body {
-  min-height: 100vh;
+  overflow-x: hidden;
   background-color: var(--light-gray);
   font-family: var(--karla);
 }
 
 .centering-container {
+  position: relative;
   display: grid;
   grid-template-areas:
     "container-one container-one"
     "container-two container-three";
   grid-template-columns: repeat(2, 1fr);
-  width: 80%;
+  width: 100%;
   max-width: 39.3rem;
   height: auto;
   margin: 0 auto;
