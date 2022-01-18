@@ -1,16 +1,18 @@
-body {
-  box-sizing: border-box;
+
+
+
+* {
   margin: 0;
   padding: 0;
-  background-color: hsl(204, 43%, 93%);
-  font-family: "Karla", sans-serif;
+}
+html, body {
+  overflow-x: hidden;
 }
 
-h1 {
-  display: none;
-}
-nav {
-  margin-top: 90px;
+body {
+  min-height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", sans-serif;
 }
 
 .centering-container {
