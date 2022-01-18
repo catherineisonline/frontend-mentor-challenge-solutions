@@ -113,6 +113,7 @@ body {
   margin-top: 1rem;
   font-weight: 700;
 }
+
 /** Container Two **/
 .container-three {
   background-color: var(--cyan);
@@ -172,5 +173,16 @@ body {
 @media screen and (max-width: 600px) {
   .centering-container {
     width: 60%;
+  }
+}
+
+
+@media (hover: hover) {
+ .sign-up:hover {
+   cursor: pointer;
+      background-color: var(--cyan);
+      color: var(--white);
+      border: 1px solid var(--white);
+      transition: all ease-in-out 0.2s;
   }
 }
