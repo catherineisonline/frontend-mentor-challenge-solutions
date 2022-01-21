@@ -1,27 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
+
+html, body {
+  overflow-x: hidden;
+}
 body {
-  height: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 97.5%;
   font-family: "Raleway", sans-serif;
   background-color: hsl(229, 57%, 11%);
-  background-image: url("images/bg-desktop.png");
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
+  background-image: url("images//bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 /** Main Container **/
 .main-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "a b b";
   margin: 0 auto;
   margin-top: 18.125rem;
-  width: 100%;
-  min-width: 20.313rem;
+  width: 70%;
   max-width: 57.5rem;
   height: auto;
   gap: 2rem;
@@ -42,31 +49,32 @@ body {
   border-radius: 15px 90px 15px 15px;
   padding: 2.5rem;
   padding-right: 8rem;
+  grid-area: a;
 }
 
 .logo {
-  background-image: url('images/logo.svg');
+  background-image: url("images/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 80%;
   height: 5rem;
   text-align: left;
-  
 }
 .icons {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  
 }
 
 .icon-img {
   background-color: hsl(229, 57%, 11%);
   border-radius: 10px;
   padding: 0.8rem;
-} 
+}
 
-.img-one, .img-two, .img-three {
+.img-one,
+.img-two,
+.img-three {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -75,19 +83,14 @@ body {
 }
 
 .img-one {
-  background-image: url('images/icon-document.svg');
+  background-image: url("images/icon-document.svg");
 }
 .img-two {
-  background-image: url('images/icon-folder.svg');
+  background-image: url("images/icon-folder.svg");
 }
 .img-three {
-  background-image: url('images/icon-upload.svg');
+  background-image: url("images/icon-upload.svg");
 }
-/* .icon-img img {
-  padding: 1rem;
-  width: 50%;
-  height: 40%;
-} */
 
 /** Storage Container **/
 .storage-container {
@@ -96,14 +99,15 @@ body {
   height: 50%;
   max-height: 9.375rem;
   position: relative;
+  grid-area: b;
 }
 
 h1 {
-  
   font-size: 0.9rem;
   font-weight: 400;
   color: hsl(243, 100%, 93%);
- line-height: 2rem; }
+  line-height: 2rem;
+}
 
 h1 span {
   font-weight: 700;
@@ -113,7 +117,7 @@ h1 span {
 .progress-bar {
   position: relative;
   display: flex;
- align-items: center;
+  align-items: center;
   background-color: hsla(229, 57%, 11%, 0.562);
   border-radius: 50px;
   width: 100%;
@@ -134,7 +138,6 @@ h1 span {
   width: 75%;
   height: 0.8rem;
   position: relative;
-
 }
 .dot-container {
   position: relative;
@@ -163,7 +166,6 @@ h1 span {
 }
 
 /** GB left **/
-
 .gb-left p {
   color: hsl(229, 57%, 11%);
   font-size: 2.4rem;
@@ -171,7 +173,6 @@ h1 span {
   letter-spacing: 2px;
   margin: 0;
   display: inline-block;
- 
 }
 
 .gb-left span {
@@ -180,20 +181,22 @@ h1 span {
   color: hsl(229, 7%, 55%);
   display: inline-block;
   vertical-align: middle;
-    line-height: normal;
+  line-height: normal;
+  letter-spacing: 1px;
 }
 
 .gb-left {
   position: absolute;
   border-radius: 5px 5px 0 5px;
-  width: 30%;
-  left: 76%;
+  max-width: 9.6rem;
+  min-width: 5rem;
+  width: 90%;
+  left: 75%;
   top: -20%;
   transform: translate(-50%, 0);
   background-color: white;
-  padding: 0.8rem 0.6rem;
+  padding: 0.8rem;
   text-align: right;
-  
 }
 .gb-left:after {
   content: "";
@@ -211,6 +214,42 @@ h1 span {
 }
 
 /** Media Queries **/
+
+@media  screen and (max-width:1025px) {
+  body {
+    background-image: url("images//bg-mobile.png");
+    background-size: cover;
+  }
+
+  .logo {
+    width: 9rem;
+    height: 3rem;
+    padding: 1rem;
+  }
+
+  .main-container {
+    margin-top: 8.125rem;
+    grid-template-areas: 
+    "a a"
+    "b b";
+    gap: 1rem;
+  }
+
+  .storage-container {
+    height: 100%;
+  }
+  .gb-left {
+    position: relative;
+    left: 50%;
+    top: 30%;
+    text-align: center;
+  }
+  .gb-left:after {
+    display: none;
+  }
+  
+}
+
 /* @media screen and (min-width: 480px) {
 
   .main-container {
