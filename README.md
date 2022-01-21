@@ -1,5 +1,5 @@
 
-<img src="" ></img>
+<img src="https://github.com/catherineisonline/fylo-data-storage-component-frontendmentor/blob/main/images/project-preview.png?raw=true" ></img>
 
 
 <h1 align="center">Fylo data storage component</h1>
