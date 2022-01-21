@@ -166,27 +166,33 @@ h1 span {
 
 .gb-left p {
   color: hsl(229, 57%, 11%);
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 2px;
-  
+  margin: 0;
+  display: inline-block;
+ 
 }
 
 .gb-left span {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: hsl(229, 7%, 55%);
-  letter-spacing: 1px;
+  display: inline-block;
+  vertical-align: middle;
+    line-height: normal;
 }
 
 .gb-left {
   position: absolute;
-  border-radius: 15px 15px 0 15px;
-  width:30%;
-  right: -10%;
-  top: -40%;
+  border-radius: 5px 5px 0 5px;
+  width: 30%;
+  left: 76%;
+  top: -20%;
   transform: translate(-50%, 0);
   background-color: white;
+  padding: 0.8rem 0.6rem;
+  text-align: right;
   
 }
 .gb-left:after {
@@ -198,10 +204,10 @@ h1 span {
   height: 0;
   background-color: transparent;
   margin-left: 10%;
-  margin-bottom: -15%;
+  margin-bottom: -10%;
   border-top: 0;
-  border-bottom: 30px solid transparent;
-  border-right: 30px solid white;
+  border-bottom: 35px solid transparent;
+  border-right: 45px solid white;
 }
 
 /** Media Queries **/
