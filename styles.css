@@ -226,7 +226,7 @@ h1 span {
 /** Media Queries **/
 @media screen and (max-width: 1025px) {
   body {
-    background-image: url("images//bg-mobile.png");
+    background-image: url("images/bg-mobile.png");
     background-size: cover;
   }
 
