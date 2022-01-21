@@ -43,11 +43,12 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Grid
 - Desktop-first workflow
 
 ## What I learned
 
+This project helped me to practice some grid as it's a little difficult for me to make the grid responsive. My goal is to make grid change from 1 row to 2 rows without using media query however I lack enough experience in this. I decided to finish this project as it is and deepen my knowledge of the grid in another project that I plan to make, specifically - a photography portfolio website. 
  
 
 ## Useful resources
