@@ -56,19 +56,35 @@ body {
   text-align: center;
   gap: 1rem;
 }
+.icons > * {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
 
-.icon-img {
+.icons > :first-child {
+  background-image: url('images/icon-document.svg');
+}
+.icons > :nth-child(2) {
+  background-image: url('images/icon-folder.svg');
+}
+.icons > :last-child {
+  background-image: url('images/icon-upload.svg');
+}
+/* .icon-img {
   display: flex;
   background-color: hsl(229, 57%, 11%);
   border-radius: 10px;
   justify-content: center;
-}
+} */
 
-.icon-img img {
+/* .icon-img img {
   padding: 1rem;
   width: 50%;
   height: 40%;
-}
+} */
 
 /** Storage Container **/
 .storage-container {
