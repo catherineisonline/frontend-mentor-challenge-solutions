@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --dark-magenta: hsl(300, 43%, 22%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --body-font: "Spartan", sans-serif;
+}
+
 body {
   background-image: url("images/bg-pattern-top-mobile.svg"),
     url("images/bg-pattern-bottom-mobile.svg");
@@ -5,11 +16,12 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   background-size: contain, contain;
+  background-color: var(--white);
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 15px;
-  font-family: "Spartan", sans-serif;
+  font-family: var(--body-font);
 }
 
 .main-container {
@@ -22,7 +34,7 @@ body {
   margin-bottom: 8rem;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 2.1rem;
+  row-gap: 2.2rem;
   grid-template-rows: 1fr;
   grid-template-areas:
     "first-area"
@@ -36,13 +48,13 @@ body {
   text-align: center;
 }
 .main-title h1 {
-  color: hsl(300, 43%, 22%);
+  color: var(--dark-magenta);
   font-size: 2.9rem;
   margin: 0;
   line-height: 3rem;
 }
 .main-title p {
-  color: hsl(303, 10%, 53%);
+  color: var(--dark-grayish-magenta);
   line-height: 1.5rem;
   font-weight: 400;
 }
@@ -59,7 +71,7 @@ body {
 .rating-container-1,
 .rating-container-2,
 .rating-container-3 {
-  background-color: hsl(300, 24%, 96%);
+  background-color: var(--light-grayish-magenta);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -72,7 +84,7 @@ body {
 .rating-container-1 p,
 .rating-container-2 p,
 .rating-container-3 p {
-  color: hsl(300, 43%, 22%);
+  color: var(--dark-magenta);
   font-weight: 700;
   font-size: 13px;
 }
@@ -105,7 +117,7 @@ body {
 .buyer-container-1,
 .buyer-container-2,
 .buyer-container-3 {
-  background-color: hsl(300, 43%, 22%);
+  background-color: var(--dark-magenta);
   border-radius: 5px;
   padding: 1.8rem;
   height: fit-content;
@@ -145,20 +157,20 @@ body {
 }
 
 .buyer-name {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-size: 12px;
   font-weight: 700;
 }
 .buyer-verification {
-  color: hsl(333, 80%, 67%);
+  color: var(--soft-pink);
   font-size: 14px;
 }
 
 .buyer-feedback p {
-  color: hsl(0, 0%, 100%);
+  color: var(--light-grayish-magenta);
   font-weight: 400;
-  font-size: 13px;
   line-height: 1.5rem;
+  font-size: 13px;
 }
 
 /** Media Queries **/
