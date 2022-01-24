@@ -5,44 +5,52 @@ body {
   font-size: 15px;
   font-family: "Spartan", sans-serif;
 }
-nav {
-  margin-top: 100px;
-}
-.main-container {
-  margin: 0 auto;
-}
 
 .main-container {
-    width: 90%;
-    max-width: 69.375rem;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 3rem;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-      "first-area"
-      "second-area"
-      "third-area";
-  }
+  width: 90%;
+  max-width: 69.375rem;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 8.125rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+  row-gap: 2.3rem;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "first-area"
+    "second-area"
+    "third-area";
+}
 
 /** Main Title **/
 .main-title {
-    grid-area: first-area;
+  grid-area: first-area;
   text-align: center;
 }
 .main-title h1 {
   color: hsl(300, 43%, 22%);
-  font-size: 3rem;
+  font-size: 2.9rem;
+  margin: 0;
+  line-height: 3rem;
+  letter-spacing: -1px;
+  width: 80%;
 }
 .main-title p {
   color: hsl(303, 10%, 53%);
+  line-height: 1.6rem;
+  font-weight: 200;
+  width: 90%;
 }
 
 /** Ratings **/
 .ratings {
-    grid-area: second-area;
-  text-align: center;
+  grid-area: second-area;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .rating-container-1,
@@ -50,21 +58,25 @@ nav {
 .rating-container-3 {
   background-color: hsl(300, 24%, 96%);
   border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
 }
+
 .rating-container-1 p,
 .rating-container-2 p,
 .rating-container-3 p {
-  padding: 0 10px 10px 10px;
-  margin-top: 5px;
   color: hsl(300, 43%, 22%);
   font-weight: bold;
-  text-align: center;
 }
 .stars {
   display: flex;
-  justify-content: center;
   flex-direction: row;
-  padding: 10px 10px 0 10px;
+  gap: 0.5rem;
 }
 
 .star-icon {
@@ -73,30 +85,30 @@ nav {
   background-size: cover;
   width: 100%;
   height: auto;
-  padding: 5px;
+  padding: 8px;
 }
 
 /** Buyer Ratings **/
 .buyer-ratings {
-    grid-area: third-area;
+  grid-area: third-area;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2.3rem;
+  height: auto;
 }
 .buyer-container-1,
 .buyer-container-2,
 .buyer-container-3 {
   background-color: hsl(300, 43%, 22%);
   border-radius: 5px;
-  padding: 30px;
+  padding: 2rem;
+  height: fit-content;
+  width: fit-content;
 }
 .rating-header {
   display: flex;
   flex-direction: row;
-}
-.buyer-icon {
-  text-align: center;
-  margin-top: 20px;
+  gap: 1.3rem;
 }
 
 .buyer-one {
@@ -114,51 +126,46 @@ nav {
 .buyer-three {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.3rem;
   border-radius: 50%;
+}
+
+.buyer-information {
+  line-height: 10px;
 }
 
 .buyer-name {
   color: hsl(0, 0%, 100%);
+  font-size: 13px;
+  font-weight: 700;
 }
 .buyer-verification {
   color: hsl(333, 80%, 67%);
+  font-size: 13px;
 }
 .buyer-feedback {
   color: hsl(0, 0%, 100%);
-  letter-spacing: 1px;
-  line-height: 25px;
-}
-
-/** Footer **/
-
-footer {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 /** Media Queries **/
 
-
 @media only screen and (min-width: 600px) {
   body {
-    background: url('images/') left -200px top -10px,
-      url('images/bg-pattern-bottom-desktop.svg') left 100px bottom 0;
+    background: url("images/") left -200px top -10px,
+      url("images/bg-pattern-bottom-desktop.svg") left 100px bottom 0;
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
     background-size: contain, contain;
   }
 }
 
-
-
 @media only screen and (min-width: 1025px) {
   body {
-    background: url('images/bg-pattern-top-desktop.svg') left -300px top -150px,
-      url('images/bg-pattern-bottom-desktop.svg') left 500px top -150px;
+    background: url("images/bg-pattern-top-desktop.svg") left -300px top -150px,
+      url("images/bg-pattern-bottom-desktop.svg") left 500px top -150px;
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
     background-size: cover, cover;
@@ -171,44 +178,24 @@ footer {
       "third-area third-area";
   }
   .main-title {
-    
     text-align: left;
   }
 
-  .rating-container-1,
-  .rating-container-2,
-  .rating-container-3 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  .stars {
-    padding: 10px;
-    margin: 5px;
-  }
-  .rating-container-2 {
-    margin-left: -40px;
-  }
-  .rating-container-1 {
-    margin-left: -80px;
-  }
   .buyer-ratings {
     flex-direction: row;
   }
-
   .buyer-container-2 {
-    margin-top: 20px;
+    margin-top: 1rem;
   }
   .buyer-container-3 {
-    margin-top: 40px;
+    margin-top: 2rem;
   }
 }
 
 @media only screen and (min-width: 1201px) {
   body {
-    background: url('images/bg-pattern-top-desktop.svg') left -300px top -200px,
-      url('images/bg-pattern-bottom-desktop.svg') left 500px top -100px;
+    background: url("images/bg-pattern-top-desktop.svg") left -300px top -200px,
+      url("images/bg-pattern-bottom-desktop.svg") left 500px top -100px;
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
     background-size: contain, contain;
@@ -217,8 +204,8 @@ footer {
 
 @media only screen and (min-width: 1440px) {
   body {
-    background: url('images/bg-pattern-top-desktop.svg') left -300px top -250px,
-      url('images/bg-pattern-bottom-desktop.svg') left 500px top -50px;
+    background: url("images/bg-pattern-top-desktop.svg") left -300px top -250px,
+      url("images/bg-pattern-bottom-desktop.svg") left 500px top -50px;
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
     background-size: contain, contain;
