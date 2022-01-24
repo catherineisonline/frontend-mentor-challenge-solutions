@@ -14,8 +14,7 @@ body {
   margin-top: 8.125rem;
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 2rem;
-  row-gap: 2.3rem;
+  row-gap: 2.1rem;
   grid-template-rows: 1fr;
   grid-template-areas:
     "first-area"
@@ -33,14 +32,13 @@ body {
   font-size: 2.9rem;
   margin: 0;
   line-height: 3rem;
-  letter-spacing: -1px;
   width: 80%;
 }
 .main-title p {
   color: hsl(303, 10%, 53%);
-  line-height: 1.6rem;
-  font-weight: 200;
-  width: 90%;
+  line-height: 1.5rem;
+  width: 85%;
+  font-weight: 400;
 }
 
 /** Ratings **/
@@ -48,9 +46,13 @@ body {
   grid-area: second-area;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
+  align-items: left;
+  padding: 1rem;
+}
+
+.rating-info {
+  width: 85%;
 }
 
 .rating-container-1,
@@ -60,23 +62,35 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: row;
-  vertical-align: middle;
-  justify-content: center;
-  text-align: center;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-around;
+  padding: 4px;
+  height: fit-content;
+  text-align: left;
 }
 
 .rating-container-1 p,
 .rating-container-2 p,
 .rating-container-3 p {
   color: hsl(300, 43%, 22%);
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 14px;
 }
+
+.rating-container-2 {
+  width: 100%;
+  margin-left: 3rem;
+}
+.rating-container-3 {
+  width: 100%;
+  margin-left: 6rem;
+}
+
+/** Stars **/
 .stars {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
 .star-icon {
@@ -85,7 +99,7 @@ body {
   background-size: cover;
   width: 100%;
   height: auto;
-  padding: 8px;
+  padding: 7px;
 }
 
 /** Buyer Ratings **/
@@ -93,7 +107,7 @@ body {
   grid-area: third-area;
   display: flex;
   flex-direction: column;
-  gap: 2.3rem;
+  gap: 1.9rem;
   height: auto;
 }
 .buyer-container-1,
@@ -101,14 +115,17 @@ body {
 .buyer-container-3 {
   background-color: hsl(300, 43%, 22%);
   border-radius: 5px;
-  padding: 2rem;
+  padding: 1.8rem;
   height: fit-content;
   width: fit-content;
 }
+
+/** Ratings Header **/
 .rating-header {
   display: flex;
   flex-direction: row;
-  gap: 1.3rem;
+  gap: 1.6rem;
+  align-items: center;
 }
 
 .buyer-one {
@@ -127,7 +144,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 2.5rem;
-  height: 2.3rem;
+  height: 2.5rem;
   border-radius: 50%;
 }
 
@@ -137,17 +154,19 @@ body {
 
 .buyer-name {
   color: hsl(0, 0%, 100%);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
 }
 .buyer-verification {
   color: hsl(333, 80%, 67%);
-  font-size: 13px;
+  font-size: 14px;
 }
-.buyer-feedback {
+
+.buyer-feedback p {
   color: hsl(0, 0%, 100%);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.5rem;
 }
 
 /** Media Queries **/
