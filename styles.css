@@ -1,4 +1,10 @@
 body {
+  background-image: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-position: left 50px top 0, right 0 bottom -300px;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-size: contain, contain;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -7,11 +13,13 @@ body {
 }
 
 .main-container {
-  width: 90%;
+  width: 80%;
   max-width: 69.375rem;
+  min-width: 20rem;
   height: auto;
   margin: 0 auto;
   margin-top: 8.125rem;
+  margin-bottom: 8rem;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2.1rem;
@@ -32,12 +40,10 @@ body {
   font-size: 2.9rem;
   margin: 0;
   line-height: 3rem;
-  width: 80%;
 }
 .main-title p {
   color: hsl(303, 10%, 53%);
   line-height: 1.5rem;
-  width: 85%;
   font-weight: 400;
 }
 
@@ -47,12 +53,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: left;
-  padding: 1rem;
-}
-
-.rating-info {
-  width: 85%;
+  width: 100%;
 }
 
 .rating-container-1,
@@ -61,12 +62,11 @@ body {
   background-color: hsl(300, 24%, 96%);
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 4px;
+  padding: 6px;
   height: fit-content;
-  text-align: left;
+  text-align: center;
 }
 
 .rating-container-1 p,
@@ -74,16 +74,7 @@ body {
 .rating-container-3 p {
   color: hsl(300, 43%, 22%);
   font-weight: 700;
-  font-size: 14px;
-}
-
-.rating-container-2 {
-  width: 100%;
-  margin-left: 3rem;
-}
-.rating-container-3 {
-  width: 100%;
-  margin-left: 6rem;
+  font-size: 13px;
 }
 
 /** Stars **/
@@ -91,6 +82,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  margin-left: 2rem;
 }
 
 .star-icon {
@@ -170,24 +162,17 @@ body {
 }
 
 /** Media Queries **/
-
 @media only screen and (min-width: 600px) {
   body {
-    background: url("images/") left -200px top -10px,
-      url("images/bg-pattern-bottom-desktop.svg") left 100px bottom 0;
-    background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed, fixed;
-    background-size: contain, contain;
+    background-position: left 100px top -100px, right 0 bottom -500px;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   body {
-    background: url("images/bg-pattern-top-desktop.svg") left -300px top -150px,
-      url("images/bg-pattern-bottom-desktop.svg") left 500px top -150px;
-    background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed, fixed;
-    background-size: cover, cover;
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-bottom-desktop.svg");
+    background-position: left -800px top 0, right -250px bottom 0;
   }
   .main-container {
     grid-template-columns: repeat(2, 1fr);
@@ -196,8 +181,38 @@ body {
       "first-area second-area"
       "third-area third-area";
   }
-  .main-title {
+  .main-title > * {
     text-align: left;
+  }
+  h1 {
+    width: 80%;
+  }
+  .main-title p {
+    width: 85%;
+  }
+  .ratings {
+    align-items: left;
+    padding: 1rem;
+  }
+
+  .rating-info {
+    width: 85%;
+  }
+
+  .rating-container-2 {
+    margin-left: 3rem;
+  }
+  .rating-container-3 {
+    margin-left: 6rem;
+  }
+
+  .rating-container-1,
+  .rating-container-2,
+  .rating-container-3 {
+    text-align: left;
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
   }
 
   .buyer-ratings {
@@ -208,25 +223,5 @@ body {
   }
   .buyer-container-3 {
     margin-top: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1201px) {
-  body {
-    background: url("images/bg-pattern-top-desktop.svg") left -300px top -200px,
-      url("images/bg-pattern-bottom-desktop.svg") left 500px top -100px;
-    background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed, fixed;
-    background-size: contain, contain;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  body {
-    background: url("images/bg-pattern-top-desktop.svg") left -300px top -250px,
-      url("images/bg-pattern-bottom-desktop.svg") left 500px top -50px;
-    background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed, fixed;
-    background-size: contain, contain;
   }
 }
