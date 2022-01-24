@@ -9,12 +9,26 @@ nav {
   margin-top: 100px;
 }
 .main-container {
-  width: 90%;
   margin: 0 auto;
 }
 
+.main-container {
+    width: 90%;
+    max-width: 69.375rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3rem;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "first-area"
+      "second-area"
+      "third-area";
+  }
+
 /** Main Title **/
 .main-title {
+    grid-area: first-area;
   text-align: center;
 }
 .main-title h1 {
@@ -27,6 +41,7 @@ nav {
 
 /** Ratings **/
 .ratings {
+    grid-area: second-area;
   text-align: center;
 }
 
@@ -63,10 +78,10 @@ nav {
 
 /** Buyer Ratings **/
 .buyer-ratings {
+    grid-area: third-area;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 50px;
 }
 .buyer-container-1,
 .buyer-container-2,
@@ -104,20 +119,14 @@ nav {
   border-radius: 50%;
 }
 
-.buyer-information {
-  margin-top: 20px;
-}
 .buyer-name {
   color: hsl(0, 0%, 100%);
-  margin: 0;
 }
 .buyer-verification {
   color: hsl(333, 80%, 67%);
-  margin-top: 5px;
 }
 .buyer-feedback {
   color: hsl(0, 0%, 100%);
-  margin-top: 0;
   letter-spacing: 1px;
   line-height: 25px;
 }
@@ -155,22 +164,17 @@ footer {
     background-size: cover, cover;
   }
   .main-container {
-    width: 80%;
-    height: 20%;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
       "first-area second-area"
       "third-area third-area";
   }
   .main-title {
-    grid-area: first-area;
+    
     text-align: left;
   }
-  .ratings {
-    grid-area: second-area;
-    position: relative;
-  }
+
   .rating-container-1,
   .rating-container-2,
   .rating-container-3 {
@@ -178,12 +182,6 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 10px;
-  }
-  .rating-container-1 p,
-  .rating-container-2 p,
-  .rating-container-3 p {
-    padding: 10px;
-    margin: 5px;
   }
   .stars {
     padding: 10px;
@@ -196,17 +194,9 @@ footer {
     margin-left: -80px;
   }
   .buyer-ratings {
-    grid-area: third-area;
-    display: flex;
     flex-direction: row;
-    gap: 20px;
   }
-  .buyer-container-1,
-  .buyer-container-2,
-  .buyer-container-3 {
-    padding: 20px;
-    height: 80%;
-  }
+
   .buyer-container-2 {
     margin-top: 20px;
   }
@@ -222,11 +212,6 @@ footer {
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
     background-size: contain, contain;
-  }
-  .rating-container-1,
-  .rating-container-2,
-  .rating-container-3 {
-    max-width: 90%;
   }
 }
 
