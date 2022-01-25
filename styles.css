@@ -1,85 +1,95 @@
+:root {
+  --body--font: "Poppins", sans-serif;
+  --light-gray: hsl(0, 0%, 98%);
+  --white: rgb(255, 255, 255);
+  --dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --cyan: hsl(180, 62%, 55%);
+  --red: hsl(0, 78%, 62%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --box-shadow: 0px 9px 24px -7px rgba(0, 0, 0, 0.67);
+}
+
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: hsl(0, 0%, 98%);
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  font-family: var(--body--font);
 }
 /**Feature Section **/
 .feature-section {
-    width: 90%;
-    margin: 0 auto;
-    justify-content: center;
-    align-content: center;
-    margin-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+  margin-top: 5.625rem;
 }
 
 /** Feature Header**/
 .feature-header {
-    text-align: center;
-    color: hsl(234, 12%, 34%);
-    font-size: 1.5rem;
+  text-align: center;
+  color: var(--dark-blue);
+  font-size: 1.5rem;
 }
 .feature-header span {
-    font-weight: 200;
+  font-weight: 200;
 }
-.feature-header p{
-    color: hsl(229, 6%, 66%);
+.feature-header p {
+  color: var(--grayish-blue);
 }
 
 /** Feature Cards **/
-.card-one, .card-two, .card-three, .card-four {
-    background-color: white;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 30px;
-    box-shadow: 0px 9px 24px -7px rgba(0,0,0,0.67);    ;
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 30px;
+  box-shadow:var(--box-shadow);
 }
 .card-info h2 {
-    font-size: 1rem;
-    color: hsl(234, 12%, 34%);
+  font-size: 1rem;
+  color: var(--dark-blue);
 }
 .card-info p {
-    color: hsl(229, 6%, 66%);
+  color: var(--grayish-blue);
 }
 .card-icon {
-    text-align: right;
+  text-align: right;
 }
-.card-icon img{
-    padding: 10px;
-    height: 20%;
-    width: 20%;
+.card-icon img {
+  padding: 10px;
+  height: 20%;
+  width: 20%;
 }
-.card-one, .card-two, .card-three, .card-four {
-    border-top-style: solid;
-    border-top-width: 5px;   
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  border-top-style: solid;
+  border-top-width: 5px;
 }
 .card-one {
-    border-color: hsl(180, 62%, 55%);
+  border-color: var(--cyan);
 }
 .card-two {
-    border-color: hsl(0, 78%, 62%);
+  border-color: var(--red);
 }
 .card-three {
-    border-color: hsl(34, 97%, 64%);
+  border-color: var(--orange);
 }
 .card-four {
-    border-color: hsl(212, 86%, 64%);
-}
-
-/** Footer **/
-
-footer {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  margin-bottom: 0;
+  border-color: var(--blue);
 }
 
 
 /** Media Queries **/
 
-@media only screen and (min-width: 480px) {
+/* @media only screen and (min-width: 480px) {
     .feature-section {
     width: 70%;
     }
@@ -136,4 +146,4 @@ footer {
     .feature-header {
         width: 50%;
     }
-}
+} */
