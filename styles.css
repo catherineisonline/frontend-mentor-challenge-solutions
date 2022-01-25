@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 :root {
   --body--font: "Poppins", sans-serif;
@@ -13,36 +13,62 @@
   --box-shadow: 0px 9px 24px -7px rgba(0, 0, 0, 0.67);
 }
 
-body {
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  box-sizing: border-box;
   background-color: var(--light-gray);
   font-family: var(--body--font);
+  font-size: 15px;
 }
 /**Feature Section **/
 .feature-section {
   width: 90%;
   margin: 0 auto;
-  justify-content: center;
-  align-content: center;
-  margin-top: 5.625rem;
 }
 
 /** Feature Header**/
 .feature-header {
   text-align: center;
   color: var(--dark-blue);
-  font-size: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5.3rem;
+  line-height: 3rem;
+  text-align: center;
+  justify-content: center;
+}
+h1 {
+  font-weight: 600;
+  font-size: 2.3rem;
 }
 .feature-header span {
   font-weight: 200;
 }
-.feature-header p {
+.feature-details {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1.3rem;
+    width: 35%;
+}
+.feature-details p {
   color: var(--grayish-blue);
+  font-size: 15px;
+  line-height: 1.5rem;
+
 }
 
 /** Feature Cards **/
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100% 100% 100%;
+  gap: 20px;
+}
 .card-one,
 .card-two,
 .card-three,
@@ -50,8 +76,7 @@ body {
   background-color: var(--white);
   border-radius: 5px;
   padding: 15px;
-  margin-top: 30px;
-  box-shadow:var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
 .card-info h2 {
   font-size: 1rem;
@@ -88,7 +113,6 @@ body {
   border-color: var(--blue);
 }
 
-
 /** Media Queries **/
 
 /* @media only screen and (min-width: 480px) {
@@ -119,12 +143,6 @@ body {
     }
     .feature-details {
        text-align: center;
-    }
-    .feature-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 100% 100% 100%;
-        gap: 20px;
     }
     .card-one, .card-four, .grid-center-container {
         place-self: center;
