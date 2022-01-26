@@ -3,60 +3,100 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-body {
+:root {
+  --body-font: "Open Sans", sans-serif;
+  --container-font: "Poppins", sans-serif;
+  --background-color: hsl(257, 40%, 49%);
+
+}
+
+/** Reset **/
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+* {
   padding: 0;
   margin: 0;
-  background-image: url("bg-mobile.svg");
+}
+
+/** Styling **/
+body {
+  min-height: 100vh;
+  background-image: url("images/bg-desktop.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: hsl(257, 40%, 49%);
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-}
-
-/**  Header **/
-header {
-width: 100%;
-position: relative;
-}
-
-.logo img {
-  width: 7.5rem;
-  height: auto;
-  padding: 40px;
+  background-size: auto;
+  background-color: var(--background-color);
+  font-family: var(--body-font);
 }
 
 /** Main Container **/
 .main-container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  text-align: center;
+}
+/** Logo **/
+.logo {
+  width: 30rem;
+  height: 20rem;
+  margin: 3.5rem 4.3rem;
+}
+
+.logo-img {
+  background-image: url('images/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 40%;
+}
+
+
+/** Content Container **/
+.content-container {
+  width: 100%;
+  max-width: 80rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 3.6rem;
+  margin-top: -15rem;
 }
 
 /** Illustration Container **/
-.illustration-container img {
-  width: 296px;
-  height: auto;
-  padding-top: 10px;
+.illustration-container {
+  width: 100%;
+  height: 100%;
+}
+.illustration-container-img {
+  background-image: url('images/illustration-mockups.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 44rem;
+  height: 31rem;
 }
 
 /** Info Container **/
 .info-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   color: white;
-  margin-top: 40px;
 }
 
 .info-container h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-family: var(--container-font);
+  font-size: 2.5rem;
   text-transform: capitalize;
+}
+
+.info-container p {
+  line-height: 1.5rem;
 }
 
 /** Registration Button **/
 .registration-button {
-  width: 70%;
+  width: 50%;
   background-color: white;
   color: hsl(257, 40%, 49%);
   border-radius: 35px;
@@ -68,7 +108,6 @@ position: relative;
 }
 
 /** Social Media **/
-
 .social-media {
   display: inline-flex;
   width: 100%;
@@ -90,23 +129,12 @@ position: relative;
 }
 
 
-/** Active States **/
-button:hover {
-    background-color: hsl(300, 69%, 71%);
-    color: white;
-}
-
-.media-icon .fab:hover {
-    color: hsl(300, 69%, 71%);
-    border-color: hsl(300, 69%, 71%);
-}
 
 /** Media Queries **/
 
-/** hover **/
+/** None-sticky Hover **/
 @media (hover: hover) {
-    /** Active States **/
-button:hover {
+  button:hover {
     background-color: hsl(300, 69%, 71%);
     color: white;
 }
@@ -116,9 +144,9 @@ button:hover {
     border-color: hsl(300, 69%, 71%);
 }
 }
-
+/* 
 @media screen and (min-width: 600px) {
-  /** Main Container **/
+
   .main-container {
     width: 60%;
   }
@@ -128,7 +156,7 @@ button:hover {
   body {
     background-image: url("bg-desktop.svg");
   }
-  /** Main Container **/
+
   .main-container {
     width: 90%;
     display: grid;
@@ -136,7 +164,7 @@ button:hover {
     text-align: center;
     gap: 20px;
   }
-  /** Illustration Container **/
+
   .illustration-container img {
     width: 345px;
     padding: 0;
@@ -146,12 +174,12 @@ button:hover {
     margin-top: 0;
     text-align: left;
   }
-  /** Registration Button **/
+  
   .registration-button {
     width: 30%;
   }
 
-  /** Social Media **/
+
   .social-media {
     justify-content: right;
   }
@@ -165,7 +193,7 @@ button:hover {
   .logo img {
     width: 12rem;
   }
-  /** Main Container **/
+
   .main-container {
     position: relative;
     overflow: hidden;
@@ -173,7 +201,7 @@ button:hover {
     margin-top: 2rem;
   }
 
-  /** Illustration Container **/
+
   .illustration-container img {
     width: 100%;
   }
@@ -185,7 +213,6 @@ button:hover {
   }
   
 }
-
 
 
 
