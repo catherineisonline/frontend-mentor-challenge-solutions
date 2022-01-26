@@ -7,11 +7,15 @@
   --body-font: "Open Sans", sans-serif;
   --container-font: "Poppins", sans-serif;
   --background-color: hsl(257, 40%, 49%);
-
+  --white: rgb(255, 255, 255);
+  --hover-color: hsl(300, 69%, 71%);
+  --box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
 }
 
 /** Reset **/
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -19,7 +23,6 @@
   padding: 0;
   margin: 0;
 }
-
 
 /** Styling **/
 body {
@@ -34,7 +37,6 @@ body {
 /** Main Container **/
 .main-container {
   width: 100%;
-
 }
 /** Logo **/
 header {
@@ -49,13 +51,12 @@ header {
 }
 
 .logo-img {
-  background-image: url('images/logo.svg');
+  background-image: url("images/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 90%;
   height: 90%;
 }
-
 
 /** Content Container **/
 .content-container {
@@ -73,7 +74,7 @@ header {
 /** Illustration Container **/
 
 .illustration-container {
-  background-image: url('images/illustration-mockups.svg');
+  background-image: url("images/illustration-mockups.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
@@ -88,7 +89,7 @@ header {
   display: flex;
   flex-direction: column;
   text-align: left;
-  color: white;
+  color: var(--white);
   gap: 1.3rem;
   width: 90%;
   max-width: max-content;
@@ -110,17 +111,17 @@ header {
 /** Registration Button **/
 .registration-button {
   width: 38%;
-  background-color: white;
-  color: hsl(257, 40%, 49%);
+  background-color: var(--white);
+  color: var(--background-color);
   border-radius: 35px;
   border: none;
   padding: 16px;
   font-size: 1.1rem;
   font-weight: 200;
   font-family: var(--container-font);
-  box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
-  -webkit-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
-  -moz-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
 }
 
 /** Social Media **/
@@ -138,8 +139,8 @@ header {
 }
 
 .media-icon {
- align-items: center;
-  width:  1rem;
+  align-items: center;
+  width: 1rem;
   height: 3rem;
 }
 
@@ -148,34 +149,32 @@ header {
   padding: 10px;
   font-size: 1.2rem;
   border-radius: 50%;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid var(--white);
+  color: var(--white);
   width: 2.5rem;
   text-align: center;
 }
-
 
 /** Media Queries **/
 
 /** Nonsticky Hover **/
 @media (hover: hover) {
   button:hover {
-    background-color: hsl(300, 69%, 71%);
-    color: white;
+    background-color: var(--hover-color);
+    color: var(--white);
     cursor: pointer;
     transition: all ease-in-out 0.3s;
-}
+  }
 
-.media-icon .fab:hover {
-    color: hsl(300, 69%, 71%);
-    border-color: hsl(300, 69%, 71%);
+  .media-icon .fab:hover {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
     cursor: pointer;
     transition: all ease-in-out 0.3s;
-}
+  }
 }
 
-
-@media  screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
   body {
     background-image: url("images/bg-mobile.svg");
     background-size: cover;
@@ -183,87 +182,15 @@ header {
   .content-container {
     flex-direction: column;
     justify-content: center;
-  align-items: center;
-  margin-bottom: 10rem;
+    align-items: center;
+    margin-bottom: 10rem;
   }
 
   .info-container {
-  text-align: center;
+    text-align: center;
   }
   .social-media {
     justify-content: center;
     padding: 0;
   }
 }
-/* 
-@media screen and (min-width: 600px) {
-
-  .main-container {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 801px) {
-  body {
-    background-image: url("bg-desktop.svg");
-  }
-
-  .main-container {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    gap: 20px;
-  }
-
-  .illustration-container img {
-    width: 345px;
-    padding: 0;
-  }
-  .info-container {
-    padding: 0;
-    margin-top: 0;
-    text-align: left;
-  }
-  
-  .registration-button {
-    width: 30%;
-  }
-
-
-  .social-media {
-    justify-content: right;
-  }
-  .media-icon .fa-instagram {
-    margin-right: 20px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-
-  .logo img {
-    width: 12rem;
-  }
-
-  .main-container {
-    position: relative;
-    overflow: hidden;
-    width: 90%;
-    margin-top: 2rem;
-  }
-
-
-  .illustration-container img {
-    width: 100%;
-  }
-  .info-container {
-    width: 80%;
-  }
-  .info-container h1 {
-    font-size: 2.5rem;
-  }
-  
-}
-
-
-
