@@ -34,7 +34,6 @@ body {
 /** Main Container **/
 .main-container {
   width: 100%;
-  height: 100%;
 
 }
 /** Logo **/
@@ -61,7 +60,7 @@ header {
 /** Content Container **/
 .content-container {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 80rem;
   height: auto;
   display: flex;
@@ -72,16 +71,15 @@ header {
 }
 
 /** Illustration Container **/
+
 .illustration-container {
-  width: 100%;
-  height: 100%;
-}
-.illustration-container-img {
   background-image: url('images/illustration-mockups.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 44rem;
-  height: 31rem;
+  background-size: contain;
+  width: 100%;
+  min-width: 700px;
+  height: 100%;
+  min-height: 500px;
 }
 
 /** Info Container **/
@@ -92,6 +90,8 @@ header {
   text-align: left;
   color: white;
   gap: 1.3rem;
+  width: 90%;
+  max-width: max-content;
 }
 
 .info-container h1 {
@@ -172,6 +172,28 @@ header {
     cursor: pointer;
     transition: all ease-in-out 0.3s;
 }
+}
+
+
+@media  screen and (max-width:1280px) {
+  body {
+    background-image: url("images/bg-mobile.svg");
+    background-size: cover;
+  }
+  .content-container {
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+  }
+
+  .info-container {
+  text-align: center;
+  }
+  .social-media {
+    justify-content: center;
+    padding: 0;
+  }
 }
 /* 
 @media screen and (min-width: 600px) {
