@@ -37,6 +37,9 @@ body {
 /** Main Container **/
 .main-container {
   width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 /** Logo **/
 header {
@@ -62,25 +65,28 @@ header {
 .content-container {
   position: relative;
   width: 90%;
-  max-width: 80rem;
   height: auto;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  gap: 3.2rem;
+  gap: 11rem;
   margin-top: 1rem;
+  
 }
 
 /** Illustration Container **/
-
 .illustration-container {
-  background-image: url("images/illustration-mockups.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 100%;
-  min-width: 700px;
-  height: 100%;
-  min-height: 500px;
+  height: auto;
+  text-align: center;
+}
+
+.illustration-container img {
+  width: max(50%, 43.75rem);
+  height: max(50%, 30.938rem);
+  display: block;
+  object-fit: cover;
+  
 }
 
 /** Info Container **/
@@ -92,7 +98,8 @@ header {
   color: var(--white);
   gap: 1.3rem;
   width: 90%;
-  max-width: max-content;
+  max-width: 40rem;
+
 }
 
 .info-container h1 {
@@ -122,6 +129,7 @@ header {
   box-shadow: var(--box-shadow);
   -webkit-box-shadow: var(--box-shadow);
   -moz-box-shadow: var(--box-shadow);
+  -webkit-transition:all ease-in-out 0.3s;
 }
 
 /** Social Media **/
@@ -142,6 +150,8 @@ header {
   align-items: center;
   width: 1rem;
   height: 3rem;
+ 
+  
 }
 
 .fab {
@@ -183,7 +193,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     margin-bottom: 10rem;
+    gap: 1rem;
   }
 
   .info-container {
@@ -193,4 +205,4 @@ header {
     justify-content: center;
     padding: 0;
   }
-}
+} 
