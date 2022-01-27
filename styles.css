@@ -64,29 +64,28 @@ header {
 /** Content Container **/
 .content-container {
   position: relative;
-  width: 90%;
+  max-width: 90%;
   height: auto;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   gap: 11rem;
   margin-top: 1rem;
-  
 }
 
 /** Illustration Container **/
 .illustration-container {
   width: 100%;
-  height: auto;
+  height: 100%;
   text-align: center;
 }
 
-.illustration-container img {
-  width: max(50%, 43.75rem);
-  height: max(50%, 30.938rem);
+img {
+  width: min(150%, 44.3rem);
+  height: min(100%, 30.938rem);
   display: block;
-  object-fit: cover;
-  
+  object-fit: contain;
+  margin: auto;
 }
 
 /** Info Container **/
@@ -99,7 +98,6 @@ header {
   gap: 1.3rem;
   width: 90%;
   max-width: 40rem;
-
 }
 
 .info-container h1 {
@@ -129,7 +127,7 @@ header {
   box-shadow: var(--box-shadow);
   -webkit-box-shadow: var(--box-shadow);
   -moz-box-shadow: var(--box-shadow);
-  -webkit-transition:all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
 }
 
 /** Social Media **/
@@ -150,8 +148,6 @@ header {
   align-items: center;
   width: 1rem;
   height: 3rem;
- 
-  
 }
 
 .fab {
@@ -194,7 +190,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
     gap: 1rem;
   }
 
@@ -204,5 +200,6 @@ header {
   .social-media {
     justify-content: center;
     padding: 0;
+    margin-top: 0;
   }
-} 
+}
