@@ -99,7 +99,6 @@ header {
   font-size: 2.5rem;
   text-transform: capitalize;
   max-width: 90%;
-  margin: auto;
 }
 
 .info-container p {
@@ -108,7 +107,6 @@ header {
   font-size: 1.1rem;
   overflow: hidden;
   word-spacing: 1px;
-  margin: auto;
 }
 
 /** Registration Button **/
@@ -199,6 +197,10 @@ header {
   .illustration-container {
     padding: 1.5rem;
   }
+  
+  .info-container h1,   .info-container p {
+  margin: auto;
+}
 
   .social-media {
     justify-content: center;
