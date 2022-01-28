@@ -1,4 +1,4 @@
-<img src="https://github.com/catherineisonline/huddle-landing-page-with-a-single-introductory-section-frontendmentor/blob/main/images/project%20preview.png?raw=true"></img>
+<img src="https://github.com/catherineisonline/huddle-landing-page-with-a-single-introductory-section-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 
 <h1 align="center">Huddle landing page with a single introductory section</h1>
