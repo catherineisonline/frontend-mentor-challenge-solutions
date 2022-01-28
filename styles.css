@@ -63,59 +63,57 @@ header {
 
 /** Content Container **/
 .content-container {
-  position: relative;
-  max-width: 90%;
-  height: auto;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  gap: 11rem;
   margin-top: 1rem;
 }
 
 /** Illustration Container **/
 .illustration-container {
-  width: 100%;
-  height: 100%;
+  flex: 1.4;
   text-align: center;
 }
 
-img {
-  width: min(150%, 44.3rem);
-  height: min(100%, 30.938rem);
+.responsive-img {
+  max-width: 100%;
   display: block;
-  object-fit: contain;
   margin: auto;
 }
 
 /** Info Container **/
 .info-container {
-  margin-top: 2.8rem;
   display: flex;
   flex-direction: column;
   text-align: left;
   color: var(--white);
-  gap: 1.3rem;
-  width: 90%;
-  max-width: 40rem;
+  gap: 1.4rem;
+  max-width: 100%;
+  flex: 1;
+  margin-top: 2.7rem;
 }
 
 .info-container h1 {
   font-family: var(--container-font);
   font-size: 2.5rem;
   text-transform: capitalize;
+  max-width: 90%;
+  margin: auto;
 }
 
 .info-container p {
+  max-width: 85%;
   line-height: 1.7rem;
   font-size: 1.1rem;
   overflow: hidden;
-  word-spacing: 1.5px;
+  word-spacing: 1px;
+  margin: auto;
 }
 
 /** Registration Button **/
 .registration-button {
-  width: 38%;
+  width: 32%;
   background-color: var(--white);
   color: var(--background-color);
   border-radius: 35px;
@@ -139,7 +137,7 @@ img {
   flex-direction: row;
   justify-content: flex-end;
   padding-right: 6.5rem;
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   align-items: center;
   gap: 2.5rem;
 }
@@ -197,6 +195,11 @@ img {
   .info-container {
     text-align: center;
   }
+
+  .illustration-container {
+    padding: 1.5rem;
+  }
+
   .social-media {
     justify-content: center;
     padding: 0;
