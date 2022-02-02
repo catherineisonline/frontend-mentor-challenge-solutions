@@ -35,6 +35,9 @@ body {
   margin-top: 9.37rem;
   margin-bottom: 9.37rem;
   gap: 0.2rem;
+  box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
 }
 
 /** Image Block **/
@@ -52,6 +55,7 @@ body {
 }
 h1 {
   font-size: 1.4rem;
+  color: var(--dark-blue);
 }
 
 .info-block p {
