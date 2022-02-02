@@ -30,7 +30,8 @@ main {
   display: flex;
   flex-direction: column;
   width: max(20%, 20rem);
-  height: max(20%, 31.25rem);
+  min-height: 31.25rem;
+  height: 90%;
   background-color: var(--white);
   margin: 0 auto;
   text-align: center;
