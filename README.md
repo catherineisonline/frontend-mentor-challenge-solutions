@@ -1,4 +1,4 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/QR-code-component-frontendmentor/blob/main/images/project%20preview.png?raw=true"></img>
 
 
 <h1 align="center">QR code component challenge</h1>
