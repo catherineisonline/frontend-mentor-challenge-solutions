@@ -19,26 +19,22 @@ body {
   background-color: var(--light-gray);
 }
 
-main {
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 9.37rem;
-}
-
 /** QR Container **/
 
 .qr-container {
   display: flex;
   flex-direction: column;
   width: max(20%, 20rem);
-  height: max(30%, 31.25rem);
+  /* height: min(100%, 31.25rem); */
+  height: auto;
   background-color: var(--white);
   margin: 0 auto;
   text-align: center;
   align-items: center;
   border-radius: 20px;
   margin-top: 9.37rem;
-  gap: 1.5rem;
+  margin-bottom: 9.37rem;
+  gap: 0.2rem;
 }
 
 /** Image Block **/
@@ -46,18 +42,21 @@ main {
   display: block;
   max-width: 90%;
   margin: auto;
-  border-radius: 15px;
-  margin-top: 1rem;
+  border-radius: 10px;
+  margin-top: 1.2rem;
   cursor: pointer;
 }
 /** Info Block **/
 .info-block {
-  max-width: 80%;
+  padding: 1.2rem;
+}
+h1 {
+  font-size: 1.4rem;
 }
 
 .info-block p {
+  padding: 1rem;
   word-spacing: 1px;
-  margin-top: 1rem;
   color: var(--grayish-blue);
 }
 
