@@ -5,15 +5,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/huddle-landing-page-with-a-single-introductory-section-frontendmentor/" color="white">
+    <a href="https://catherineisonline.github.io/QR-code-component-frontendmentor/" color="white">
       Live
     </a>
     <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/solutions/huddle-landing-page-with-a-single-introductory-section-6uAm3BHTq">
+    <a href="https://www.frontendmentor.io/solutions/qr-code-component-g0YvCa7rB">
       Solution
     </a>
    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0">
+    <a href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H">
       Challenge
     </a>
   </h3>
@@ -47,7 +47,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 - Desktop-first workflow
 
 ## What I learned
-Very easy project for someone who recently stepped in the world of development!
+Very easy project for someone who recently stepped in the world of development! The only issue I had was the height of flex container as it looked different in Safari. So I changed approach a little bit - that's why I had many changes in this simple project.
 
 ## Useful resources
 
@@ -56,4 +56,4 @@ Very easy project for someone who recently stepped in the world of development!
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/qr-code-component-g0YvCa7rB">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
