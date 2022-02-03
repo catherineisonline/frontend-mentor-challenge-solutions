@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor Challenge Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-info">
+      <img src="images/favicon.png" alt="icon">
+      <h1><span>Frontend</span> Mentor Challenge Solutions</h1>
+    </div>
+  </header>
+  <main class="main">
+    <section class="container">
+      <div id="app">
+        <section class="all-solutions">
+          <h2 class="all-solutions-h2">All solutions</h2>
+          <!-- Solutions Container -->
+          <ul class="solutions">
+            <li class="solution" v-for="solution in solutions.slice().reverse()">
+              <!-- Project Preview -->
+              <div class="project-preview">
+
+                <img class="project-image" v-bind:src="solution.projectPreview" alt="project preview">
+                <div class="image-hover-hidden">
+                  <!-- Links -->
+                  <ul class="links">
+                    <li class="link-btn"> <a v-bind:href="solution.liveLink" target="_blank">Live View</a></li>
+                    <li class="link-btn"> <a v-bind:href="solution.liveLink" target="_blank">Repo</a></li>
+                    <li class="link-btn"> <a v-bind:href="solution.projectLink" target="_blank">Try Out</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Project Info -->
+              <div class="project-info">
+                <!-- Project Name -->
+                <div class="project-name">
+                  <p>{{ solution.projectName }}</p>
+                </div>
+                <!-- Project Stack -->
+                <div class="project-stacks">
+                  <p class="project-stack" v-for="projectStack in solution.projectStack" v-bind:class="projectStack"> {{
+                    projectStack }}</p>
+                </div>
+                <!-- Project Describtion -->
+                <div class="project-describtion">
+                  <p>{{ solution.projectDescribtion }}</p>
+                </div>
+
+
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+  <script src="app.js" defer></script>
+</body>
+
+</html>
