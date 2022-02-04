@@ -65,13 +65,14 @@ h1 span {
 }
 .solutions {
   display: flex;
+  flex-direction: row;
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
-  width: calc(90% + 1.875rem);
+  width: calc(100% + 1.875rem);
   margin: 0 auto;
 }
 
@@ -82,7 +83,7 @@ h1 span {
   border-style: solid;
   border-color: var(--border-color);
   border-radius: 1rem;
-  width: calc((50% - 1.875rem) - 0.001rem);
+  width: min(60%, 30rem);
 }
 
 .project-info {
@@ -221,4 +222,17 @@ h1,
 .link-btn + a:hover {
   font-size: 1.1rem;
   color: var(--html-text-color);
+}
+
+
+
+
+
+@media screen and (max-width: 1025px) {
+  .solutions {
+    flex-direction: column;
+  }
+  .solution {
+    
+  }
 }
