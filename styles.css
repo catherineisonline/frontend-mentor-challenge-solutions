@@ -77,13 +77,15 @@ h1 span {
 }
 
 .solution {
+  justify-content: stretch;
+  align-items: stretch;
   display: flex;
   flex-direction: column;
   border-width: 1px;
   border-style: solid;
   border-color: var(--border-color);
   border-radius: 1rem;
-  width: min(60%, 30rem);
+  width: calc((40% - 1.875rem) - 0.001rem);
 }
 
 .project-info {
@@ -161,22 +163,6 @@ h1,
   cursor: pointer;
 }
 
-.project-image:hover + .image-hover-hidden {
-  top: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: var(--hover-background);
-  backdrop-filter: blur(5px);
-  border-radius: 1rem 1rem 0 0;
-  transition: 0.1s;
-}
-
-.image-hover-hidden {
-  display: none;
-}
-
 /* .image-hover-hidden {
   top: 0;
   display: flex;
@@ -224,15 +210,42 @@ h1,
   color: var(--html-text-color);
 }
 
+.learn-more-btn {
+  cursor: pointer;
+  width: 70%;
+  max-width: 10rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-family: var(--barlow-medium);
+  color: var(--js-text-color);
+  border-radius: 15px;
+  background-color: var(--white);
+  transition: all ease-in-out 0.2s;
+  padding: 0.8rem;
+  box-shadow: var(--menu-box-shadow);
+}
 
+.links.shown-links {
+  width: 10rem;
+  height: 10rem;
+  display: inline-flex;
+  flex-direction: row;
+  background-color: var(--hover-background);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem 1rem 0 0;
+  transition: 0.1s;
+}
 
-
+.links, .hide-learn-more {
+  display: none;
+}
 
 @media screen and (max-width: 1025px) {
   .solutions {
     flex-direction: column;
+    width: calc(100% + 1.875rem);
   }
   .solution {
-    
+    width: calc((50% - 1.875rem) - 0.001rem);
   }
 }

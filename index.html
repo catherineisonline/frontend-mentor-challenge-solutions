@@ -29,15 +29,10 @@
               <div class="project-preview">
 
                 <img class="project-image" v-bind:src="solution.projectPreview" alt="project preview">
-                <div class="image-hover-hidden">
-                  <!-- Links -->
-                  <ul class="links">
-                    <li class="link-btn"> <a v-bind:href="solution.liveLink" target="_blank">Live View</a></li>
-                    <li class="link-btn"> <a v-bind:href="solution.repoLink" target="_blank">Repo</a></li>
-                    <li class="link-btn"> <a v-bind:href="solution.projectLink" target="_blank">Try Out</a></li>
-                  </ul>
-                </div>
+
+
               </div>
+
               <!-- Project Info -->
               <div class="project-info">
                 <!-- Project Name -->
@@ -56,15 +51,39 @@
 
 
               </div>
+
+
+              <!-- Links -->
+              <Links>
+
+                <!-- <div><button class="learn-more-btn"> Learn more</button>
+                  <ul class="links" ref="what">
+                    <li class="link-btn"> <a v-bind:href="solution.liveLink" target="_blank">Live View</a></li>
+                    <li class="link-btn"> <a v-bind:href="solution.repoLink" target="_blank">Repo</a></li>
+                    <li class="link-btn"> <a v-bind:href="solution.projectLink" target="_blank">Try Out</a></li>
+                  </ul>
+                </div> -->
+              </Links>
             </li>
           </ul>
         </section>
       </div>
     </section>
+    </div>
   </main>
   <!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
   <script src="app.js" defer></script>
+  <script>
+//     const learnMore = document.querySelector('.learn-more-btn');
+//     const linkList = document.querySelector('.links');
+//     learnMore.addEventListener('mouseenter', function() {
+// linkList.classList.add('.shown-links');
+//     })
+    // learnMore.addEventListener('click', function () {
+    //   document.querySelector('.links').classList.toggle('shown-links');
+    // })
+  </script>
 </body>
 
 </html>
