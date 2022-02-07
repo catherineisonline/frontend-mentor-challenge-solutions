@@ -43,15 +43,74 @@ body {
   background-color: var(--bg-color);
 }
 
+/** Navigation **/
+.nav-icon {
+  background-image: url("/images/nav-icon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 5rem;
+  cursor: pointer;
+}
+
+.main-menu {
+  display: none;
+}
+.show-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  list-style: none;
+  top: 6rem;
+  right: 2rem;
+  font-size: 1rem;
+  font-family: var(--barlow-medium);
+  text-transform: uppercase;
+  gap: 20px;
+  border: 1px solid rgba(190, 190, 190, 0.253);
+  padding: 1rem;
+}
+.show-menu li {
+  border-bottom: 2px solid rgba(190, 190, 190, 0.253);
+  display: flex;
+  gap:10px;
+  align-items: center;
+  text-align: center;
+}
+.show-menu a {
+  text-decoration: none;
+  color: var(--black);
+ 
+}
+
+/** Header **/
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(190, 190, 190, 0.253);
+  box-shadow: var(--menu-box-shadow);
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
 .header-info {
   display: flex;
   flex-direction: row;
   width: 100%;
   gap: 10px;
-  background-color: var(--white);
-  padding: 1rem;
-  border-bottom: 1px solid rgba(190, 190, 190, 0.253);
-  box-shadow: var(--menu-box-shadow);
+}
+.header-info a {
+  text-decoration: none;
+  color: var(--black);
 }
 
 h1 span {
@@ -70,9 +129,10 @@ h1 span {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-wrap: wrap;
-  gap: 3rem;
+  row-gap: 8rem;
+  column-gap: 3rem;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   width: calc(100% + 1.875rem);
   margin: 0 auto;
 }
@@ -80,19 +140,20 @@ h1 span {
 .solution {
   justify-content: stretch;
   align-items: stretch;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   border-width: 1px;
   border-style: solid;
   border-color: var(--border-color);
   border-radius: 1rem;
   width: calc((40% - 1.875rem) - 0.001rem);
+  overflow: auto;
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem;
 }
 
@@ -190,7 +251,7 @@ h1,
   transition: all ease-in-out 0.2s;
   align-items: center;
   padding: 0;
-  margin: 2rem;
+  margin: 1.5rem;
   border: none;
   white-space: nowrap;
   text-align: center;
@@ -240,7 +301,7 @@ h1,
   position: relative;
   list-style: none;
   padding: 0;
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .link-btn a {

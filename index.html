@@ -7,6 +7,9 @@
   <title>Frontend Mentor Challenge Solutions</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 
 </head>
 
@@ -14,8 +17,25 @@
   <header class="header">
     <div class="header-info">
       <img src="images/favicon.png" alt="icon">
-      <h1><span>Frontend</span> Mentor Challenge Solutions</h1>
+      <a href="https://catherineisonline.github.io/frontend-mentor-challenge-solutions/">
+        <h1><span>Frontend</span> Mentor Challenge Solutions</h1>
+      </a>
     </div>
+    <nav class="icon-navigation">
+      <div class="nav-icon"></div>
+      <ul class="main-menu">
+        <li><i class="fas fa-home"></i><a
+            href="https://catherineisonline.github.io/frontend-mentor-challenge-solutions/" target="_blank">Home</a>
+        </li>
+        <li><i class="fas fa-project-diagram"></i><a href="https://www.frontendmentor.io/profile/catherineisonline"
+            target="_blank">Frontend mentor</a></li>
+        <li><i class="fab fa-github-square"></i><a
+            href="https://github.com/catherineisonline/frontend-mentor-challenge-solutions" target="_blank">Project
+            repo</a></li>
+        <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/catherinemitagvaria/"
+            target="_blank">Let's connect</a></li>
+      </ul>
+    </nav>
   </header>
   <main class="main">
     <section class="container">
@@ -27,10 +47,7 @@
             <li class="solution" v-for="solution in solutions.slice().reverse()">
               <!-- Project Preview -->
               <div class="project-preview">
-
                 <img class="project-image" v-bind:src="solution.projectPreview" alt="project preview">
-
-
               </div>
 
               <!-- Project Info -->
@@ -48,15 +65,8 @@
                 <div class="project-describtion">
                   <p>{{ solution.projectDescribtion }}</p>
                 </div>
-
-
-              </div>
-
-
-              <!-- Links -->
-              <Links>
-
-                <div @mouseenter='mouseenter' @mouseleave="mouseleave">
+                <!-- Links -->
+                <div class="links-container" @mouseenter='mouseenter' @mouseleave="mouseleave">
                   <button class="learn-more-btn"> Learn more</button>
                   <ul class="links">
                     <li class="link-btn"> <a v-bind:href="solution.liveLink" target="_blank">Live View</a></li>
@@ -64,7 +74,7 @@
                     <li class="link-btn"> <a v-bind:href="solution.projectLink" target="_blank">Try Out</a></li>
                   </ul>
                 </div>
-              </Links>
+              </div>
             </li>
           </ul>
         </section>
