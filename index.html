@@ -56,13 +56,14 @@
               <!-- Links -->
               <Links>
 
-                <!-- <div><button class="learn-more-btn"> Learn more</button>
-                  <ul class="links" ref="what">
+                <div @mouseenter='mouseenter' @mouseleave="mouseleave">
+                  <button class="learn-more-btn"> Learn more</button>
+                  <ul class="links">
                     <li class="link-btn"> <a v-bind:href="solution.liveLink" target="_blank">Live View</a></li>
                     <li class="link-btn"> <a v-bind:href="solution.repoLink" target="_blank">Repo</a></li>
                     <li class="link-btn"> <a v-bind:href="solution.projectLink" target="_blank">Try Out</a></li>
                   </ul>
-                </div> -->
+                </div>
               </Links>
             </li>
           </ul>
@@ -72,6 +73,8 @@
     </div>
   </main>
   <!-- Script -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
   <script src="app.js" defer></script>
   <script>

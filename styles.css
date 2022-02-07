@@ -1,15 +1,15 @@
 @font-face {
   font-family: "barlowmedium";
-  src: url("fonts/barlow/barlow-medium-webfont.woff2") format("woff2"),
-    url("fonts/barlow/barlow-medium-webfont.woff") format("woff");
+  src: url("fonts/barlow-medium-webfont.woff2") format("woff2"),
+    url("fonts/barlow-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "barlowblack";
-  src: url("fonts/barlow/Barlow-Black.woff2") format("woff2"),
-    url("fonts/barlow/Barlow-Black.woff") format("woff");
+  src: url("fonts/Barlow-Black.woff2") format("woff2"),
+    url("fonts/Barlow-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -249,3 +249,12 @@ h1,
     width: calc((50% - 1.875rem) - 0.001rem);
   }
 }
+
+.hidden {
+  display: none;
+}
+
+
+/* .links .hidden {
+  display: inline;
+} */

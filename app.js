@@ -168,62 +168,20 @@ const app = new Vue({
     ],
   },
 
-  // methods: {
-  //  clicks() {
-  //     this.$refs.what.classList.add("test");
-  //     // btn1 = document.querySelector(".learn-more-btn");
-  //     // document.querySelector(".links").classList.add("shown-links");
-  //     // btn1.classList.add("hide-learn-more");
-  //   },
-  //   // mouseleave(btn2) {
-  //   //   btn2 = document.querySelector(".links").classList.remove("shown-links");
-  //   // },
-  // },
-
-  // components: {
-  //   Links,
-  // },
+  methods: {
+    mouseenter(e) {
+      let Target = e.currentTarget;
+      const childOne = Target.firstChild;
+      const childTwo = Target.lastChild;
+      childOne.classList.add("hidden");
+      childTwo.classList.add("shown-links");
+    },
+    mouseleave(i) {
+      let Target = i.currentTarget;
+      const childOne = Target.firstChild;
+      const childTwo = Target.lastChild;
+      childOne.classList.remove("hidden");
+      childTwo.classList.remove("shown-links");
+    },
+  },
 });
-
-// const liveLinks = app.data.solutions[0];
-// console.log(app);
-
-// var Links = {
-//   props: [liveLinks, "repoLink", "projectLink"],
-//   template:
-//     '<div><button class="learn-more-btn" @mouseover="mouseover"> Learn more</button><ul class="links"><li class="link-btn"> <a { liveLinks } target="_blank">Live View</a></li><li class="link-btn"> <a {repoLink} target="_blank">Repo</a></li><li class="link-btn"> <a {projectLink} target="_blank">Try Out</a></li></ul></div>',
-//   methods: {
-//     mouseover() {
-//       // btn1 = document.querySelector(".learn-more-btn");
-//       document.querySelector(".links").classList.add("shown-links");
-//       // btn1.classList.add("hide-learn-more");
-//     },
-//     // mouseleave(btn2) {
-//     //   btn2 = document.querySelector(".links").classList.remove("shown-links");
-//     // },
-//   },
-// };
-
-// new Vue({
-//   components: {
-//     TextComponent,
-//   },
-
-//   template: `
-//     <div>
-//       <text-component
-//         v-for="(item, index) in items"
-//         :class="{ 'active': index === 0 }"
-//         :text="item.text">
-//       </text-component>
-//     </div>
-//   `,
-
-//   data: {
-//     items: [
-//       { text: 'Foo' },
-//       { text: 'Bar' },
-//       { text: 'Baz' },
-//     ],
-//   },
-// }).$mount('#app');
