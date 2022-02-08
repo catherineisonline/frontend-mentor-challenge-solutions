@@ -2,7 +2,7 @@
   "name": "frontend-mentor-challenge-solutions",
   "version": "1.0.0",
   "description": "Frontend Mentor challenge solutions",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
