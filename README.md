@@ -9,12 +9,10 @@
     <a href="https://catherineisonline.github.io/single-price-grid-component-frontendmentor/">
       Live
     </a>
-    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/solutions/single-price-grid-component-HI8IM79w_">
+  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/single-price-grid-component-HI8IM79w_">
       Solution
     </a>
-   <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc">
+  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc">
       Challenge
     </a>
   </h3>
