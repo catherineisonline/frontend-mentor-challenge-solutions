@@ -9,12 +9,10 @@
     <a href="https://catherineisonline.github.io/3-column-card-component-frontendmentor/" color="white">
       Live
     </a>
-    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/solutions/3column-preview-card-component-3icyN8S1s">
+  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/3column-preview-card-component-3icyN8S1s">
       Solution
     </a>
-   <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj">
+  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj">
       Challenge
     </a>
   </h3>
