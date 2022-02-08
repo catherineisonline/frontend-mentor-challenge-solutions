@@ -9,12 +9,10 @@
     <a href="https://catherineisonline.github.io/profile-card-component-frontendmentor/">
       Live
     </a>
-    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/solutions/profile-card-component-HNQ7OzEqm">
+  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/profile-card-component-HNQ7OzEqm">
       Solution
     </a>
-   <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ">
+  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ">
       Challenge
     </a>
   </h3>
