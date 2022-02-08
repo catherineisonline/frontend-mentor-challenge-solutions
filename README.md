@@ -9,12 +9,10 @@
     <a href="https://catherineisonline.github.io/four-card-feature-section-frontendmentor/" color="white">
       Live
     </a>
-    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/solutions/four-card-feature-section-fUDThIzoK">
+  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/four-card-feature-section-fUDThIzoK">
       Solution
     </a>
-   <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK">
+  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK">
       Challenge
     </a>
   </h3>
