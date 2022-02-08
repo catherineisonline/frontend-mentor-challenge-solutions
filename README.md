@@ -8,12 +8,10 @@
     <a href="https://catherineisonline.github.io/huddle-landing-page-with-a-single-introductory-section-frontendmentor/" color="white">
       Live
     </a>
-    <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/solutions/huddle-landing-page-with-a-single-introductory-section-6uAm3BHTq">
+  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/huddle-landing-page-with-a-single-introductory-section-6uAm3BHTq">
       Solution
     </a>
-   <span> <img src="https://cdn-icons.flaticon.com/png/512/4023/premium/4023094.png?token=exp=1642170850~hmac=f66dc52ed1df6c8039d4a9195d79ca18" width="20px" ></img> </span>
-    <a href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0">
+  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0">
       Challenge
     </a>
   </h3>
