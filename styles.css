@@ -45,7 +45,7 @@ body {
 
 /** Navigation **/
 .nav-icon {
-  background-image: url("images/nav-icon.jpg");
+  background-image: url("/images/nav-icon.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
