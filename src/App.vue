@@ -63,7 +63,6 @@
       </li>
     </ul>
   </section>
-  <!-- <HelloWorld></HelloWorld> -->
 </template>
 
 <script>
