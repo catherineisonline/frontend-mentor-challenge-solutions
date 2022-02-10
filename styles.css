@@ -11,11 +11,18 @@
 }
 
 body {
+   -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: var(--main-font);
   background-color: var(--main-background);
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 /** Main Container **/
