@@ -26,12 +26,18 @@
 
 /** Styling **/
 body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
   height: 100vh;
   background-color: var(--background-color);
   font-family: var(--body-font);
   background-image: url("images/bg-desktop.svg");
   background-repeat: no-repeat;
   background-size: auto;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 /** Main Container **/
