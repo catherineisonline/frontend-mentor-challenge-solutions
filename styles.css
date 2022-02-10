@@ -20,6 +20,9 @@ body {
   overflow-x: hidden;
 }
 body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
   min-height: 100vh;
   box-sizing: border-box;
   padding: 0;
@@ -32,6 +35,10 @@ body {
   background-position-y: bottom;
   background-attachment: fixed;
   background-size: contain;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 /** Main Container **/
