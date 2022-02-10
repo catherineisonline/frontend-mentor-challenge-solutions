@@ -1,68 +1,119 @@
 <template>
-  <section class="all-solutions">
-    <h2 class="all-solutions-h2">All solutions</h2>
-    <!-- Solutions Container -->
-    <ul class="solutions">
-      <li
-        class="solution"
-        v-for="solution in solutions"
-        v-bind:key="solution.id"
-      >
-        <!-- Project Preview -->
-        <div class="project-preview">
-          <img
-            class="project-image"
-            v-bind:src="solution.projectPreview"
-            alt="project preview"
-          />
+  <main class="main">
+    <header
+      class="header"
+      v-for="headerDetail in headerDetails"
+      v-bind:key="headerDetail.id"
+    >
+      <div class="header-info">
+        <img :src="headerDetail.headerIcon" alt="icon" />
+        <a :href="headerDetail.projectUrl">
+          <h1><span>Frontend</span> Mentor Challenge Solutions</h1>
+        </a>
+      </div>
+      <nav class="icon-navigation">
+        <div class="nav-icon">
+          <img :src="headerDetail.navIcon" alt="" @click="click" />
         </div>
-        <!-- Project Info -->
-        <div class="project-info">
-          <!-- Project Name -->
-          <div class="project-name">
-            <p>{{ solution.projectName }}</p>
-          </div>
-          <!-- Project Stack -->
-          <div class="project-stacks">
-            <p
-              class="project-stack"
-              v-for="projectStack in solution.projectStack"
-              v-bind:class="projectStack"
-              v-bind:key="projectStack"
+        <ul class="main-menu">
+          <li>
+            <i class="fas fa-home"></i
+            ><a :href="headerDetail.projectUrl" @click="removeMenu">Home</a>
+          </li>
+          <li>
+            <i class="fas fa-project-diagram"></i
+            ><a
+              :href="headerDetail.frontendMentorUrl"
+              @click="removeMenu"
+              target="_blank"
+              >Frontend mentor</a
             >
-              {{ projectStack }}
-            </p>
+          </li>
+          <li>
+            <i class="fab fa-github-square"></i
+            ><a
+              :href="headerDetail.gitHubUrl"
+              @click="removeMenu"
+              target="_blank"
+              >Project repo</a
+            >
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i
+            ><a
+              :href="headerDetail.linkedinUrl"
+              @click="removeMenu"
+              target="_blank"
+              >Let's connect</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="all-solutions">
+      <h2 class="all-solutions-h2">All solutions</h2>
+      <!-- Solutions Container -->
+      <ul class="solutions">
+        <li
+          class="solution"
+          v-for="solution in solutions"
+          v-bind:key="solution.id"
+        >
+          <!-- Project Preview -->
+          <div class="project-preview">
+            <img
+              class="project-image"
+              v-bind:src="solution.projectPreview"
+              alt="project preview"
+            />
           </div>
-          <!-- Project Describtion -->
-          <div class="project-describtion">
-            <p>{{ solution.projectDescribtion }}</p>
+          <!-- Project Info -->
+          <div class="project-info">
+            <!-- Project Name -->
+            <div class="project-name">
+              <p>{{ solution.projectName }}</p>
+            </div>
+            <!-- Project Stack -->
+            <div class="project-stacks">
+              <p
+                class="project-stack"
+                v-for="projectStack in solution.projectStack"
+                v-bind:class="projectStack"
+                v-bind:key="projectStack"
+              >
+                {{ projectStack }}
+              </p>
+            </div>
+            <!-- Project Describtion -->
+            <div class="project-describtion">
+              <p>{{ solution.projectDescribtion }}</p>
+            </div>
+            <!-- Links -->
+            <div
+              class="links-container"
+              @mouseenter="mouseenter"
+              @mouseleave="mouseleave"
+            >
+              <button class="learn-more-btn">Learn more</button>
+              <ul class="links">
+                <li class="link-btn">
+                  <a v-bind:href="solution.liveLink" target="_blank">Live</a>
+                </li>
+                <li class="link-btn">
+                  <a v-bind:href="solution.repoLink" target="_blank">Repo</a>
+                </li>
+                <li class="link-btn">
+                  <a v-bind:href="solution.projectLink" target="_blank"
+                    >Try Out</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-          <!-- Links -->
-          <!-- <div
-            class="links-container"
-            @mouseenter="mouseenter"
-            @mouseleave="mouseleave"
-          > -->
-          <div class="links-container">
-            <button class="learn-more-btn">Learn more</button>
-            <ul class="links">
-              <li class="link-btn">
-                <a v-bind:href="solution.liveLink" target="_blank">Live View</a>
-              </li>
-              <li class="link-btn">
-                <a v-bind:href="solution.repoLink" target="_blank">Repo</a>
-              </li>
-              <li class="link-btn">
-                <a v-bind:href="solution.projectLink" target="_blank"
-                  >Try Out</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </section>
+        </li>
+      </ul>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -71,6 +122,19 @@ export default {
   components: {},
   data() {
     return {
+      headerDetails: [
+        {
+          headerIcon: require("@/assets/images/favicon.png"),
+          navIcon: require("@/assets/images/nav-icon.jpg"),
+          projectUrl:
+            "https://frontend-mentor-challenge-solutions.netlify.app/",
+          frontendMentorUrl:
+            "https://www.frontendmentor.io/profile/catherineisonline",
+          gitHubUrl:
+            "https://github.com/catherineisonline/frontend-mentor-challenge-solutions",
+          linkedinUrl: "https://www.linkedin.com/in/catherinemitagvaria/",
+        },
+      ],
       solutions: [
         {
           id: 1,
@@ -235,16 +299,30 @@ export default {
       ],
     };
   },
+  methods: {
+    mouseenter(e) {
+      let Target = e.currentTarget;
+      const childOne = Target.firstChild;
+      const childTwo = Target.lastChild;
+      childOne.classList.add("hidden");
+      childTwo.classList.add("shown-links");
+    },
+    mouseleave(i) {
+      let Target = i.currentTarget;
+      const childOne = Target.firstChild;
+      const childTwo = Target.lastChild;
+      childOne.classList.remove("hidden");
+      childTwo.classList.remove("shown-links");
+    },
+    click() {
+      document.querySelector(".main-menu").classList.toggle("show-menu");
+    },
+    removeMenu() {
+      document.querySelector(".main-menu").classList.remove("show-menu");
+    },
+  },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

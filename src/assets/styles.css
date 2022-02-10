@@ -1,18 +1,18 @@
-/* @font-face {
+@font-face {
   font-family: "barlowmedium";
-  src: url("fonts/barlow-medium-webfont.woff2") format("woff2"),
-    url("fonts/barlow-medium-webfont.woff") format("woff");
+  src: url("../assets/fonts/barlow-medium-webfont.woff2") format("woff2"),
+    url("../assets/fonts/barlow-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "barlowblack";
-  src: url("fonts/Barlow-Black.woff2") format("woff2"),
-    url("fonts/Barlow-Black.woff") format("woff");
+  src: url("../assets/fonts/Barlow-Black.woff2") format("woff2"),
+    url("../assets/fonts/Barlow-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&display=swap");
 
@@ -33,25 +33,31 @@
   --menu-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.082);
 }
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
   background-color: var(--bg-color);
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 /** Navigation **/
-.nav-icon {
-  background-image: url("/images/nav-icon.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.nav-icon img {
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  margin-right: 5rem;
+  margin-right: 1rem;
+  object-fit: cover;
   cursor: pointer;
 }
 
@@ -66,6 +72,7 @@ body {
   height: fit-content;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   list-style: none;
   top: 6rem;
   right: 2rem;
@@ -79,14 +86,13 @@ body {
 .show-menu li {
   border-bottom: 2px solid rgba(190, 190, 190, 0.253);
   display: flex;
-  gap:10px;
+  gap: 10px;
   align-items: center;
   text-align: center;
 }
 .show-menu a {
   text-decoration: none;
   color: var(--black);
- 
 }
 
 /** Header **/
@@ -116,23 +122,26 @@ h1 span {
   text-decoration: underline wavy var(--wavy-underline);
 }
 
-.all-solutions {
+.main {
   margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.all-solutions {
+  display: flex;
+  flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 5rem;
-  width: 100%;
 }
 .solutions {
-  display: flex;
-  flex-direction: row;
-  -webkit-box-flex: 1;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  row-gap: 8rem;
-  column-gap: 3rem;
-  justify-content: center;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
   align-items: stretch;
-  width: calc(100% + 1.875rem);
+  justify-content: center;
+  width: calc(80% + 1.875rem);
   margin: 0 auto;
 }
 
@@ -145,15 +154,12 @@ h1 span {
   border-style: solid;
   border-color: var(--border-color);
   border-radius: 1rem;
-  width: calc((40% - 1.875rem) - 0.001rem);
-  overflow: auto;
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .project-info .project-name {
@@ -163,6 +169,7 @@ h1 span {
 h1 {
   font-size: 1.2rem;
   letter-spacing: 2px;
+  font-weight: 100;
 }
 h1,
 .project-name p {
@@ -208,41 +215,27 @@ h1,
   color: var(--project-describtion);
 }
 
-.project-preview {
-  position: relative;
-}
-
 .project-preview img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 1rem 1rem 0 0;
+  transition: all ease-in-out 0.3s;
 }
-.project-preview:hover,
-.image-hover:hover {
+.project-preview img:hover {
   cursor: pointer;
+  transform: scale(0.9);
+  transition: all ease-in-out 0.3s;
 }
-
-/* .image-hover-hidden {
-  top: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: var(--hover-background);
-  backdrop-filter: blur(5px);
-  border-radius: 1rem 1rem 0 0;
-} */
 
 /** Learn More ***/
-
 .learn-more-btn {
   position: relative;
   display: flex;
   cursor: pointer;
   width: 60%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
   font-family: var(--barlow-medium);
   border-radius: 15px;
@@ -287,7 +280,7 @@ h1,
 }
 .link-btn {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
   font-family: var(--barlow-medium);
   color: var(--js-text-color);
@@ -301,6 +294,7 @@ h1,
   list-style: none;
   padding: 0;
   margin: 1.5rem;
+  width: 100%;
 }
 
 .link-btn a {
@@ -330,10 +324,11 @@ h1,
 
 @media screen and (max-width: 1025px) {
   .solutions {
-    flex-direction: column;
-    width: calc(100% + 1.875rem);
+    /* flex-direction: column;
+    width: 100%;
+    align-content: center; */
   }
   .solution {
-    width: calc((50% - 1.875rem) - 0.001rem);
+    width: 80%;
   }
 }
