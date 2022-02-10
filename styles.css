@@ -10,6 +10,9 @@
 }
 
 body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
   background-image: url("images/bg-pattern-top-mobile.svg"),
     url("images/bg-pattern-bottom-mobile.svg");
   background-position: left 50px top 0, right 0 bottom -300px;
@@ -22,6 +25,9 @@ body {
   margin: 0;
   font-size: 15px;
   font-family: var(--body-font);
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 .main-container {
