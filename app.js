@@ -75,7 +75,8 @@ const apiFunc = function init() {
         url = "https://api.freegeoip.app/json/" + randomIP + "?apikey=" + key;
         return apiFunc();
       } else {
-        return alert("You have entered an invalid IP address!");
+        alert("You have entered an invalid IP address!");
+        return false;
       }
     });
   });
