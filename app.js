@@ -1,5 +1,7 @@
 "use strict";
 
+// require('dotenv').config();
+
 //192.212.174.101
 
 const ipAddressField = document.querySelector(".ipAddressField");
@@ -10,7 +12,8 @@ const submitBtn = document.querySelector(".submit-btn");
 const inputField = document.querySelector(".input-field");
 
 //Secret API
-let key = config.MY_API_TOKEN;
+import MY_API_TOKEN from './config.js';
+let key =  MY_API_TOKEN;
 let url =
   "https://geo.ipify.org/api/v2/country,city?apiKey=" + key + "&ipAddress=";
 
