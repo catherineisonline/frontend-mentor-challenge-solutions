@@ -64,7 +64,7 @@ For some reason the limit of 1000 requests has ended very fast. Possible my API 
 2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
 3. <a href="https://geo.ipify.org/">IPify</a> - real-time IP Geolocation API which has been replaced
 4. <a href="https://geo.ipify.org/">Leaflet</a> - an open-source JavaScript library for mobile-friendly interactive maps
-5. <a href="https://rapidapi.com/freegeoipapp/api/free-geo-ip/">Free Geo IP</a> - free geolocation API available on RapidAPI. This is a temporary replacement
+5. <a href="https://freegeoip.app/">Free Geo IP</a> - provides a free IP gelocation API for software developers I am currently using. This is a temporary replacement
 
 
 
