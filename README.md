@@ -9,11 +9,11 @@
       Live
     </a>
     <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/solutions/ip-address-tracker-02_5ChONI">
       Solution
     </a>
    <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0">
       Challenge
     </a>
   </h3>
@@ -65,4 +65,4 @@ This is my very first project on Frontend Mentor using API. I decided to spend m
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/ip-address-tracker-02_5ChONI">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
