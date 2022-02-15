@@ -56,7 +56,8 @@ This is my very first project on Frontend Mentor using API. I decided to spend m
 
 # Important Update
 
-For some reason the limit of 1000 requests has ended very fast. Possible my API key isn't hidden well enough, I am not sure and didn't test it much. The limit doesn't seem to be available once it's used up and this project is not worth any financial investment right now. I changed to another API and hoping that it will work however it does lack some information like ISP, for example. For now I decided to leave this way. The new API I used is provided down below.
+For some reason the limit of 1000 requests has ended very fast. Possible my API key isn't hidden well enough, I am not sure and didn't test it much. The limit doesn't seem to be available once it's used up and this project is not worth any financial investment right now. I changed to another API and hoping that it will work however it does lack some information like ISP, for example. For now I decided to leave this way. The new API I used is provided down below. 
+For some reason the gitignore is havin'g issues so I decided to keep the API key visible on purpose. 
 
 ## Useful resources
 
