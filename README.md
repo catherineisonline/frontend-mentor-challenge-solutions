@@ -54,12 +54,17 @@ The main challenge is to build out this IP Address Tracker app and get it lookin
 ## What I learned
 This is my very first project on Frontend Mentor using API. I decided to spend more time on it from now on. I already have a project using API which was my very first experience, you can check it <a href="https://github.com/catherineisonline/covid19-awareness">here</a>. I decided not to spend too much time and effort on the design as my main goal here is practicing API.
 
+# Important Update
+
+For some reason the limit of 1000 requests has ended very fast. Possible my API key isn't hidden well enough, I am not sure and didn't test it much. The limit doesn't seem to be available once it's used up and this project is not worth any financial investment right now. I changed to another API and hoping that it will work however it does lack some information like ISP, for example. For now I decided to leave this way. The new API I used is provided down below.
+
 ## Useful resources
 
 1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
 2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
-3. <a href="https://geo.ipify.org/">IPify</a> - real-time IP Geolocation API
+3. <a href="https://geo.ipify.org/">IPify</a> - real-time IP Geolocation API which has been replaced
 4. <a href="https://geo.ipify.org/">Leaflet</a> - an open-source JavaScript library for mobile-friendly interactive maps
+5. <a href="https://rapidapi.com/freegeoipapp/api/free-geo-ip/">Free Geo IP</a> - free geolocation API available on RapidAPI. This is a temporary replacement
 
 
 
