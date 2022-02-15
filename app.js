@@ -22,117 +22,63 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-// New API
+//API
 let ipAddress;
+let randomIP;
+let url = "https://api.freegeoip.app/json/?apikey=" + key;
+
 const apiFunc = function init() {
-  fetch("https://free-geo-ip.p.rapidapi.com/json/37.232.66.243", {
-    method: "GET",
-    headers: {
-      "x-rapidapi-host": "free-geo-ip.p.rapidapi.com",
-      "x-rapidapi-key": key,
-    },
-  })
-    .then((response) => response.json())
-    .then((response) => {
-      //Retrieving key values
-      ipAddress = response.ip;
-      let timeZone = response.time_zone;
-      let countryLocation = response.country_name;
-      let cityLocation = response.city;
-      let postalCode = response.zip_code;
-      let isp = "Unavailable";
-      let lat = response.latitude;
-      let lng = response.longitude;
-      // Adding values to HTML
-      ipAddressField.innerHTML = ipAddress;
-      timezoneInput.innerHTML = ` UTC ${timeZone}`;
-      countryLocationInput.innerHTML = `${countryLocation}, ${cityLocation} ${postalCode}`;
-      ispInput.innerHTML = isp;
+  $.getJSON(url, function (response) {
+    // console.log(ip);
+    // Retrieving key values
+    ipAddress = response.ip;
+    let timeZone = response.time_zone;
+    let countryLocation = response.country_name;
+    let cityLocation = response.city;
+    let postalCode = response.zip_code;
+    let isp = "Unavailable";
+    let lat = response.latitude;
+    let lng = response.longitude;
 
-      //Display on Map
-      const mapLocation = () => {
-        var markerIcon = L.icon({
-          iconUrl: "images/icon-location.svg",
+    // Adding values to HTML
+    ipAddressField.innerHTML = ipAddress;
+    timezoneInput.innerHTML = ` UTC ${timeZone}`;
+    countryLocationInput.innerHTML = `${countryLocation}, ${cityLocation} ${postalCode}`;
+    ispInput.innerHTML = isp;
 
-          iconSize: [46, 56], // size of the icon
-          iconAnchor: [23, 55], // point of the icon which will correspond to marker's location
-        });
-        map.setView([lat, lng], 17);
+    // Display on Map
+    const mapLocation = () => {
+      var markerIcon = L.icon({
+        iconUrl: "images/icon-location.svg",
 
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution: false,
-        }).addTo(map);
+        iconSize: [46, 56], // size of the icon
+        iconAnchor: [23, 55], // point of the icon which will correspond to marker's location
+      });
+      map.setView([lat, lng], 17);
 
-        L.marker([lat, lng], { icon: markerIcon }).addTo(map);
-      };
-      mapLocation();
-    })
-    .catch((err) => {
-      console.error(err);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: false,
+      }).addTo(map);
+
+      L.marker([lat, lng], { icon: markerIcon }).addTo(map);
+    };
+    mapLocation();
+    //Search by IP + validation
+    submitBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (
+        inputField.value.match(
+          /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+        )
+      ) {
+        randomIP = inputField.value;
+        url = "https://api.freegeoip.app/json/" + randomIP + "?apikey=" + key;
+        return apiFunc();
+      } else {
+        return alert("You have entered an invalid IP address!");
+      }
     });
+  });
 };
 
 apiFunc();
-
-// Old API
-
-// let url =
-//   "https://geo.ipify.org/api/v2/country,city?apiKey=" + key + "&ipAddress=";
-
-// const apiFunc = function init() {
-//API url
-// $.getJSON(url, function (data) {
-//Retrieving key values
-// ipAddress = data.ip;
-// let timeZone = data.location.timezone;
-// let countryLocation = data.location.country;
-// let cityLocation = data.location.city;
-// let postalCode = data.location.postalCode;
-// let isp = data.isp;
-// let lat = data.location.lat;
-// let lng = data.location.lng;
-
-//Adding values to HTML
-// ipAddressField.innerHTML = ipAddress;
-// timezoneInput.innerHTML = ` UTC ${timeZone}`;
-// countryLocationInput.innerHTML = `${countryLocation}, ${cityLocation} ${postalCode}`;
-// ispInput.innerHTML = isp;
-//
-
-//
-//Display on Map
-// const mapLocation = () => {
-//   var markerIcon = L.icon({
-//     iconUrl: "images/icon-location.svg",
-
-//     iconSize: [46, 56], // size of the icon
-//     iconAnchor: [23, 55], // point of the icon which will correspond to marker's location
-//   });
-//   map.setView([lat, lng], 17);
-
-//   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-//     attribution: false,
-//   }).addTo(map);
-
-//   L.marker([lat, lng], { icon: markerIcon }).addTo(map);
-// };
-// mapLocation();
-
-// //
-// //Search by IP
-// submitBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   ipAddress = inputField.value;
-//   url =
-//     "https://geo.ipify.org/api/v2/country,city?apiKey=" +
-//     key +
-//     "&ipAddress=" +
-//     ipAddress;
-//   apiFunc();
-// });
-
-//
-// });
-// };
-
-// apiFunc();
