@@ -37,17 +37,25 @@ body::-webkit-scrollbar {
 
 nav,
 footer {
-  min-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem;
+
+
+}
+
+nav {
+    justify-content:space-between;
+    padding: 3rem 9.2rem;
+  
 }
 
 nav ul {
   display: inline-flex;
   flex-direction: row;
-  gap: 1rem;
+  justify-content: space-around;
+  gap: 2.3rem;
+  text-align: center;
 }
 a,
 li {
@@ -56,35 +64,46 @@ li {
   cursor: pointer;
 }
 
+
+.links-section a{
+    font-size: 0.8rem;
+}
+
 .links-section a,
 .buttons-section li:first-child a {
   color: var(--gray);
   font-weight: 700;
 }
 
+.buttons-section li:first-child a {
+    font-size: 0.8rem;  
+}
+
 .buttons-section li:nth-child(2) a {
   color: var(--white);
   background-color: var(--cyan);
   border-radius: 20px;
-  padding: 0.5rem;
+  padding: 0.5rem 1.3rem;
+  font-size: 0.8rem; 
+  font-weight: 700;
 }
 
 /** Section 1 **/
 .section-1 {
   position: relative;
-  min-width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   background-color: var(--white);
-  gap: 2rem;
-  padding: 2rem;
+  gap: 2.5rem;
   justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
 
 .main-info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 h1 {
@@ -92,8 +111,6 @@ h1 {
 }
 
 .section-1 img {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
 }
 
@@ -102,17 +119,15 @@ h1 {
 .section-2 {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  width: 70%;
-  margin: 0 auto;
+  position: static;
+  width: 80%;
   background-color: var(--dark-violet);
   background-image: url("images/bg-shorten-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px;
-  left: 0;
-  right: 0;
-  top: 50%;
+  transform: translate(0, 50%);
+  margin: 0 auto;
   padding: 2.2rem;
   gap: 2rem;
   z-index: 1;
@@ -143,7 +158,6 @@ h1 {
 /** Section 3 **/
 
 .section-3 {
-  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 100%;
