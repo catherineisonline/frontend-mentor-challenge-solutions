@@ -328,7 +328,8 @@ h1 {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 2.9rem;
   background-color: var(--dark-violet);
   background-image: url("images/bg-boost-desktop.svg");
   background-size: cover;
