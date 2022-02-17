@@ -40,14 +40,11 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: row;
-
-
 }
 
 nav {
-    justify-content:space-between;
-    padding: 3rem 9.2rem;
-  
+  justify-content: space-between;
+  padding: 3rem 9.2rem;
 }
 
 nav ul {
@@ -64,9 +61,8 @@ li {
   cursor: pointer;
 }
 
-
-.links-section a{
-    font-size: 0.8rem;
+.links-section a {
+  font-size: 0.8rem;
 }
 
 .links-section a,
@@ -76,7 +72,7 @@ li {
 }
 
 .buttons-section li:first-child a {
-    font-size: 0.8rem;  
+  font-size: 0.8rem;
 }
 
 .buttons-section li:nth-child(2) a {
@@ -84,7 +80,7 @@ li {
   background-color: var(--cyan);
   border-radius: 20px;
   padding: 0.5rem 1.3rem;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
@@ -121,6 +117,7 @@ h1 {
   flex-direction: row;
   position: static;
   width: 80%;
+  height: 8rem;
   background-color: var(--dark-violet);
   background-image: url("images/bg-shorten-desktop.svg");
   background-size: cover;
@@ -131,10 +128,19 @@ h1 {
   padding: 2.2rem;
   gap: 2rem;
   z-index: 1;
+  justify-content: space-between;
 }
-.section-2 input {
-  padding: 1rem;
+.url-input-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  border-color: transparent;
+  cursor: text;
+}
+
+.url-input {
+  padding: 1rem;
   border-radius: 10px;
   border-color: transparent;
   cursor: text;
@@ -145,7 +151,18 @@ h1 {
   font-size: 1.1rem;
 }
 
+.error-msg {
+  display: none;
+}
+
+.error-msg.shown {
+  position: relative;
+  display: inline;
+  color: red;
+}
+
 .url-button {
+  position: relative;
   border-color: transparent;
   background-color: var(--cyan);
   border-radius: 10px;
@@ -167,17 +184,17 @@ h1 {
 
 /** Shortening **/
 
-.search-results {
+.search-result-block {
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   justify-content: space-around;
-  margin-top: 2rem;
+  margin-top: 6rem;
+  gap: 2rem;
 }
 
-.shortly-result {
+.hidden-result {
   display: none;
 }
 
@@ -186,7 +203,6 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
   width: 70%;
   margin: 0 auto;
   background-color: white;
@@ -195,6 +211,7 @@ h1 {
   border-radius: 15px;
   font-size: 1.1rem;
 }
+
 .results {
   display: flex;
   flex-direction: row;
@@ -273,7 +290,7 @@ h1 {
 /** Section 4 **/
 
 .section-4 {
-  max-width: 100%;
+  width: 100%;
   text-align: center;
   padding: 4rem;
   background-color: var(--dark-violet);
@@ -294,4 +311,19 @@ h1 {
   background-color: var(--cyan);
   cursor: pointer;
   padding: 0.8rem 2rem;
+}
+
+
+
+/** Footer **/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 4rem;
+
+}
+
+footer img {
+  object-fit: contain;
 }
