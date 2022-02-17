@@ -35,7 +35,6 @@ body::-webkit-scrollbar {
 }
 
 nav,
-footer,
 .section-1,
 .section-3,
 .url-input-block,
@@ -267,6 +266,17 @@ h1 {
   color: var(--cyan);
 }
 
+.copy-btn {
+  color: var(--white);
+  background-color: var(--cyan);
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
 .section-3 h2 {
   margin-top: 5rem;
   font-size: 2.2rem;
@@ -347,12 +357,48 @@ h1 {
   font-weight: 700;
   font-size: 1.1rem;
 }
+
 /** Footer **/
 footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   justify-content: space-evenly;
+  background-color: var(--very-dark-violet);
+  color: var(--white);
+}
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 0.9rem;
   padding: 4rem;
+  gap: 4rem;
 }
 
 footer img {
   object-fit: contain;
+  text-align: center;
+}
+.footer-menu h4 {
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.footer-menu li {
+  line-height: 2rem;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 20px;
+}
+
+.social-media img {
+  width: 1.3rem;
+  height: 1.3rem;
+  object-fit: cover;
+  color: black;
 }
