@@ -48,16 +48,19 @@ footer,
 
 nav {
   justify-content: space-between;
-  padding: 3rem 9.2rem;
+  padding: 3.1rem 9.2rem;
 }
 
 nav ul {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 2.1rem;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+nav ul li {
+  word-spacing: 1px;
 }
 a,
 li {
@@ -84,14 +87,28 @@ li {
   color: var(--white);
   background-color: var(--cyan);
   cursor: pointer;
-  padding: 0.8rem 2rem;
-  font-size: 0.8rem;
+  padding: 0.8rem 2.3rem;
   border-color: transparent;
-  border-radius: 25px;
+  border-radius: 35px;
+  text-align: center;
+}
+.links-section {
+  gap: 2.3rem;
+  font-size: 0.8rem;
+  text-align: center;
+  align-items: center;
+}
+.buttons-section {
+  gap: 1rem;
 }
 
 .buttons-section li:first-child a {
   font-size: 0.8rem;
+}
+
+.buttons-section:nth-child(2) a {
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
 }
 
 /** Section 1 **/
@@ -100,23 +117,42 @@ li {
   display: flex;
   flex-direction: row;
   background-color: var(--white);
-  gap: 2.5rem;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: right;
   margin: 0 auto;
-  padding-top: 2rem;
+  width: 80%;
+  padding: 1.2rem 0;
 }
 
 .main-info {
   display: flex;
   flex-direction: column;
+  width: 60%;
+  padding: 3.6rem 1.3rem;
+  margin-left: -1.9rem;
+}
+.main-info p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 90%;
+}
+.main-info .cyan-btn {
+  width: max-content;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 2.1rem;
+  padding: 0.8rem 2.3rem;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 5.2rem;
 }
 
 .section-1 img {
   object-fit: contain;
+  margin-right: -15rem;
 }
 
 /** Section 2 **/
@@ -282,7 +318,7 @@ h1 {
 }
 
 .section-4 h2 {
-  margin: 2rem auto;
+  margin: 2.1rem auto;
   font-size: 2.2rem;
   color: var(--white);
 }
