@@ -33,14 +33,18 @@ body {
 body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
-/** Header **/
 
 nav,
-footer {
+footer,
+.section-1,
+.section-3,
+.url-input-block,
+.search-result-block {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
+/** Header **/
 
 nav {
   justify-content: space-between;
@@ -51,8 +55,9 @@ nav ul {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 2.3rem;
+  gap: 2.1rem;
   text-align: center;
+  font-size: 0.8rem;
 }
 a,
 li {
@@ -61,33 +66,37 @@ li {
   cursor: pointer;
 }
 
-.links-section a {
-  font-size: 0.8rem;
-}
-
 .links-section a,
-.buttons-section li:first-child a {
-  color: var(--gray);
+.buttons-section li:first-child a,
+.url-button {
   font-weight: 700;
 }
-
-.buttons-section li:first-child a {
-  font-size: 0.8rem;
+/** Gray Ps **/
+.gray-p li a,
+.gray-p,
+.gray-p::placeholder {
+  color: var(--grayish-violet);
 }
 
-.buttons-section li:nth-child(2) a {
+/** Cyan Btns **/
+
+.cyan-btn {
   color: var(--white);
   background-color: var(--cyan);
-  border-radius: 20px;
-  padding: 0.5rem 1.3rem;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
   font-size: 0.8rem;
-  font-weight: 700;
+  border-color: transparent;
+  border-radius: 25px;
+}
+
+.buttons-section li:first-child a {
+  font-size: 0.8rem;
 }
 
 /** Section 1 **/
 .section-1 {
   position: relative;
-  max-width: 100%;
   display: flex;
   flex-direction: row;
   background-color: var(--white);
@@ -111,7 +120,6 @@ h1 {
 }
 
 /** Section 2 **/
-
 .section-2 {
   display: flex;
   flex-direction: row;
@@ -134,7 +142,6 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
   border-color: transparent;
   cursor: text;
 }
@@ -146,8 +153,7 @@ h1 {
   cursor: text;
 }
 
-.section-2 input::placeholder,
-.section-2 button {
+.section-2 input::placeholder {
   font-size: 1.1rem;
 }
 
@@ -162,30 +168,19 @@ h1 {
 }
 
 .url-button {
-  position: relative;
-  border-color: transparent;
-  background-color: var(--cyan);
-  border-radius: 10px;
-  color: var(--white);
   width: 20%;
-  font-weight: 700;
-  cursor: pointer;
 }
 
 /** Section 3 **/
-
 .section-3 {
   display: flex;
   flex-direction: column;
-  min-width: 100%;
   background-color: #f0f1f6;
   z-index: 0;
 }
 
 /** Shortening **/
-
 .search-result-block {
-  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -223,15 +218,6 @@ h1 {
   color: var(--cyan);
 }
 
-.copy-btn {
-  border-color: transparent;
-  background-color: var(--cyan);
-  border-radius: 5px;
-  color: var(--white);
-  cursor: pointer;
-  padding: 0.8rem;
-}
-
 .section-3 h2 {
   padding-top: 5%;
   font-size: 2rem;
@@ -251,7 +237,6 @@ h1 {
   gap: 2rem;
   width: 80%;
   margin: 4rem auto;
-
   justify-content: space-evenly;
 }
 .section-3-blocks > * {
@@ -259,10 +244,6 @@ h1 {
   background-color: var(--white);
   padding: 1.8rem;
   text-align: left;
-}
-
-.section-4 {
-  min-width: 100%;
 }
 
 .section-3-blocks img {
@@ -288,10 +269,11 @@ h1 {
 }
 
 /** Section 4 **/
-
 .section-4 {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
   padding: 4rem;
   background-color: var(--dark-violet);
   background-image: url("images/bg-boost-desktop.svg");
@@ -304,24 +286,10 @@ h1 {
   font-size: 2.2rem;
   color: var(--white);
 }
-
-.section-4 a {
-  color: var(--white);
-  border-radius: 25px;
-  background-color: var(--cyan);
-  cursor: pointer;
-  padding: 0.8rem 2rem;
-}
-
-
-
 /** Footer **/
 footer {
-  display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   padding: 4rem;
-
 }
 
 footer img {
