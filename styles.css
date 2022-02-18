@@ -3,6 +3,7 @@
 :root {
   --body-font: "Poppins", sans-serif;
   --cyan: hsl(180, 66%, 49%);
+  --light-cyan: rgb(132, 204, 204);
   --dark-violet: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
   --gray: hsl(0, 0%, 75%);
@@ -89,12 +90,14 @@ li {
   border-color: transparent;
   border-radius: 35px;
   text-align: center;
+  transition: all ease-in-out 0.2s;
 }
 .links-section {
   gap: 2.3rem;
   font-size: 0.8rem;
   text-align: center;
   align-items: center;
+  transition: all ease-in-out 0.2s;
 }
 .buttons-section {
   gap: 1rem;
@@ -194,6 +197,15 @@ h1 {
   cursor: text;
 }
 
+.url-input.shown {
+  border-color: var(--red);
+  border-width: 4px;
+}
+
+.url-input.shown::placeholder {
+  color: var(--red);
+}
+
 .section-2 input::placeholder {
   font-size: 1.2rem;
   text-align: left;
@@ -206,9 +218,10 @@ h1 {
 }
 
 .error-msg.shown {
-  position: relative;
-  display: inline;
-  color: red;
+  position: absolute;
+  display: inline-block;
+  margin-top: 3.5rem;
+  color: var(--red);
 }
 
 .url-button.cyan-btn {
@@ -271,10 +284,10 @@ h1 {
   background-color: var(--cyan);
   cursor: pointer;
   border-color: transparent;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .section-3 h2 {
@@ -366,6 +379,7 @@ footer {
   justify-content: space-around;
   background-color: var(--very-dark-violet);
   color: var(--white);
+  transition: all ease-in-out 0.2s;
 }
 .footer-menu {
   display: flex;
@@ -388,6 +402,7 @@ footer {
 
 .footer-menu li {
   line-height: 2rem;
+  font-weight: 500;
 }
 
 .social-media {
@@ -402,4 +417,33 @@ footer {
   height: 1.3rem;
   object-fit: cover;
   color: black;
+  cursor: pointer;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(116deg)
+    brightness(103%) contrast(103%);
+    transition: all ease-in-out 0.2s;
+}
+
+/** Hover States **/
+
+@media (hover: hover) {
+  .cyan-btn:hover {
+    background-color: var(--light-cyan);
+    transition: all ease-in-out 0.2s;
+  }
+
+  .links-section a:hover {
+    color: var(--dark-violet);
+    transition: all ease-in-out 0.2s;
+  }
+
+  .social-media img:hover,
+ {
+    filter: invert(97%) sepia(65%) saturate(4201%) hue-rotate(123deg)
+      brightness(88%) contrast(83%);
+    transition: all ease-in-out 0.2s;
+  }
+  .footer-menu a:hover {
+    transition: all ease-in-out 0.2s;
+    color: var(--cyan);
+  }
 }

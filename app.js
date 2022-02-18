@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 const shortlyInput = document.querySelector(".url-input");
 const shortlyBtn = document.querySelector(".url-button");
 const shortlyResult = document.querySelector(".hidden-result");
@@ -27,9 +25,11 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
   if (!urlValidation(inputValue)) {
     // alert("Please enter a valid URL!");
     errorMsg.classList.add("shown");
-    errorMsg.innerHTML = "Please enter a valid URL!";
+    shortlyInput.classList.add("shown");
+    errorMsg.innerHTML = "Please enter a link";
   } else {
     errorMsg.classList.remove("shown");
+    shortlyInput.classList.remove("shown");
     //Passed Validation - init API
     fetch(`https://api.shrtco.de/v2/shorten?url=` + inputValue)
       .then((response) => response.json())
