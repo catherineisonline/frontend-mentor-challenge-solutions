@@ -3,7 +3,7 @@
 :root {
   --body-font: "Poppins", sans-serif;
   --cyan: hsl(180, 66%, 49%);
-  --light-cyan: rgb(132, 204, 204);
+  --light-cyan: #9be3e2;
   --dark-violet: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
   --gray: hsl(0, 0%, 75%);
@@ -313,11 +313,25 @@ h1 {
   width: 75%;
   margin: 0 auto;
   justify-content: space-evenly;
+
+}
+.section-3-blocks::before {
+  content: "";
+  width: 75%;
+  height: 8px;
+  top: 54%;
+  left: 200px;
+  background-color: var(--cyan);
+  position: absolute;
+  z-index: 0;
+ 
+
 }
 .section-3-blocks > * {
   border-radius: 10px;
   background-color: var(--white);
   text-align: left;
+  z-index: 2;
 }
 
 .section-3-blocks img {
@@ -327,6 +341,7 @@ h1 {
   border-radius: 50%;
   position: relative;
   transform: translate(20%, -50%);
+z-index: 1;
 }
 .section-3-blocks h3 {
   padding: 0.2rem 1.3rem;
@@ -420,7 +435,7 @@ footer {
   cursor: pointer;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(116deg)
     brightness(103%) contrast(103%);
-    transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 /** Hover States **/
@@ -436,8 +451,7 @@ footer {
     transition: all ease-in-out 0.2s;
   }
 
-  .social-media img:hover,
- {
+  .social-media img:hover {
     filter: invert(97%) sepia(65%) saturate(4201%) hue-rotate(123deg)
       brightness(88%) contrast(83%);
     transition: all ease-in-out 0.2s;
