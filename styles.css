@@ -363,7 +363,7 @@ footer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: var(--very-dark-violet);
   color: var(--white);
 }
@@ -373,12 +373,13 @@ footer {
   justify-content: space-around;
   font-size: 0.9rem;
   padding: 4rem;
-  gap: 4rem;
+  gap: 4.8rem;
 }
 
-footer img {
-  object-fit: contain;
-  text-align: center;
+.logo-img {
+  object-fit: cover;
+  padding-top: 60%;
+  padding-left: 40%;
 }
 .footer-menu h4 {
   font-weight: 700;
