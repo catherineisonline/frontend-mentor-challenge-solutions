@@ -313,7 +313,6 @@ h1 {
   width: 75%;
   margin: 0 auto;
   justify-content: space-evenly;
-
 }
 .section-3-blocks::before {
   content: "";
@@ -324,8 +323,6 @@ h1 {
   background-color: var(--cyan);
   position: absolute;
   z-index: 0;
- 
-
 }
 .section-3-blocks > * {
   border-radius: 10px;
@@ -341,7 +338,7 @@ h1 {
   border-radius: 50%;
   position: relative;
   transform: translate(20%, -50%);
-z-index: 1;
+  z-index: 1;
 }
 .section-3-blocks h3 {
   padding: 0.2rem 1.3rem;
@@ -459,5 +456,66 @@ footer {
   .footer-menu a:hover {
     transition: all ease-in-out 0.2s;
     color: var(--cyan);
+  }
+}
+
+/** Media Q **/
+
+@media screen and (max-width: 1360px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .main-info .cyan-btn {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .section-1 {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  nav{
+   padding: 1rem;
+  }
+  .section-1 {
+    flex-direction: column-reverse;
+    height: 60rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .section-1 img {
+    margin: 0 auto;
+  }
+  .section-2 {
+    width: 90%;
+  }
+.main-info {
+  width: 70%;
+  text-align: center;
+  align-items: center;
+}
+  .section-3-blocks {
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+  }
+
+  .section-3-blocks::before {
+    width: 8px;
+    height: 75%;
+    top: 0;
+    left: 50%;
+  }
+  .section-3-blocks div:nth-child(2) {
+    margin-top: 2rem;
+  }
+
+  .section-3-blocks div:nth-child(3) {
+    margin-top: 2rem;
   }
 }
