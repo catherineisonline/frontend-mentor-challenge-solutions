@@ -476,9 +476,8 @@ footer {
 }
 
 @media screen and (max-width: 1100px) {
-
-  nav{
-   padding: 1rem;
+  nav {
+    padding: 1rem;
   }
   .section-1 {
     flex-direction: column-reverse;
@@ -494,11 +493,11 @@ footer {
   .section-2 {
     width: 90%;
   }
-.main-info {
-  width: 70%;
-  text-align: center;
-  align-items: center;
-}
+  .main-info {
+    width: 70%;
+    text-align: center;
+    align-items: center;
+  }
   .section-3-blocks {
     flex-direction: column;
     gap: 1rem;
@@ -517,5 +516,19 @@ footer {
 
   .section-3-blocks div:nth-child(3) {
     margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 801px) {
+  .section-2 {
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    height: initial;
+  }
+
+  .url-input-block,
+  .url-button.cyan-btn {
+    width: 100%;
   }
 }
