@@ -531,4 +531,15 @@ footer {
   .url-button.cyan-btn {
     width: 100%;
   }
+
+  footer,
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-img {
+    padding-left: 0;
+  }
 }
