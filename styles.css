@@ -27,9 +27,8 @@ body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
-  display: grid;
-  place-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
@@ -117,12 +116,10 @@ li {
 .section-1 {
   position: relative;
   display: grid;
-  grid-template-columns: 40rem 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 40rem auto;
   background-color: var(--white);
   margin: 0 auto;
   width: 80%;
-  /* padding: 1.2rem 2.5rem; */
   height: 26.5rem;
   max-height: 100%;
   padding: 5rem 1rem;
@@ -320,8 +317,8 @@ h1 {
   content: "";
   width: 75%;
   height: 8px;
-  top: 54%;
-  left: 200px;
+  top: 55%;
+  left: 10%;
   background-color: var(--cyan);
   position: absolute;
   z-index: 0;
@@ -473,9 +470,6 @@ footer {
     padding-top: 10px;
     margin-top: 10px;
   }
-  .section-1 {
-    width: 90%;
-  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -483,6 +477,7 @@ footer {
     padding: 1rem;
   }
   .section-1 {
+    display: flex;
     flex-direction: column-reverse;
     height: 60rem;
     justify-content: center;
@@ -491,6 +486,8 @@ footer {
   }
 
   .section-1 img {
+    object-fit: contain;
+    width: 90%;
     margin: 0 auto;
   }
   .section-2 {
@@ -502,9 +499,10 @@ footer {
     align-items: center;
   }
   .section-3-blocks {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 60%;
+    width: 80%;
   }
 
   .section-3-blocks::before {
@@ -520,12 +518,39 @@ footer {
   .section-3-blocks div:nth-child(3) {
     margin-top: 2rem;
   }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+  }
+  .footer-menu {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .logo-img {
+    padding-left: 0;
+  }
+  .social-media {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 0;
+  }
 }
 
 @media screen and (max-width: 801px) {
   .section-2 {
     width: 80%;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 2fr;
     justify-content: center;
     height: initial;
   }
@@ -533,16 +558,5 @@ footer {
   .url-input-block,
   .url-button.cyan-btn {
     width: 100%;
-  }
-
-  footer,
-  .footer-menu {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo-img {
-    padding-left: 0;
   }
 }
