@@ -18,6 +18,7 @@ function urlValidation(defaultUrl) {
     return false;
   }
 }
+
 // URL Submission Click Event
 const apiFunc = shortlyBtn.addEventListener("click", function () {
   let inputValue = shortlyInput.value;
@@ -30,6 +31,7 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
   } else {
     errorMsg.classList.remove("shown");
     shortlyInput.classList.remove("shown");
+
     //Passed Validation - init API
     fetch(`https://api.shrtco.de/v2/shorten?url=` + inputValue)
       .then((response) => response.json())
@@ -71,4 +73,44 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
   }
 });
 
-apiFunc();
+
+
+
+
+
+//////////////////////
+
+// const reloadFunc = function () {
+//   const shortlyResult = document.querySelector(".hidden-result");
+//   var savings = localStorage.setItem(
+//     "shortenLinksList",
+//     shortlyResult.innerHTML
+//   );
+
+//   var originalHtml = localStorage.getItem("shortenLinksList");
+//   console.log(originalHtml);
+//   if (!shortlyResult.innerHTML === originalHtml) {
+//     shortlyResult.innerHTML = originalHtml;
+//   } else {
+//     console.log("nope");
+//   }
+// };
+
+// window.onload = function () {
+//   apiFunc
+//   console.log(this.apiFunc);
+//   reloadFunc()
+// };
+
+// document.addEventListener("DOMContentLoaded", function (event) {
+//   var originalHtml = localStorage.getItem("shortenLinksList");
+//   var parentNode = document.querySelector(".hidden-result");
+//   let newClone = originalHtml.cloneNode(true);
+//   parentNode.appendChild(newClone);
+// });
+
+// alert(window.onload)
+
+// window.onload = function () {
+//   console.log(this.newResult);
+// };
