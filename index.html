@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
 
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
@@ -14,18 +17,22 @@
   <!-- Header -->
   <nav>
     <!-- Header Icon -->
+    <img src="images/logo.svg" alt="shortly">
     <!-- Menu -->
-    <ul class="links-section gray-p">
-      <img src="images/logo.svg" alt="shortly">
-      <li><a href="">Features</a></li>
-      <li><a href="">Pricing</a></li>
-      <li><a href="">Resources</a></li>
-    </ul>
-    <!-- Header Buttons -->
-    <ul class="buttons-section">
-      <li> <a class="gray-p" href="">Login</a></li>
-      <li><a class="cyan-btn" href="">Sign Up</a></li>
-    </ul>
+    <section class="menu-section">
+      <ul class="links-section gray-p">
+        <li><a href="">Features</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Resources</a></li>
+      </ul>
+      <hr class="menu-hr">
+      <!-- Header Buttons -->
+      <ul class="buttons-section">
+        <li> <a class="gray-p" href="">Login</a></li>
+        <li><a class="cyan-btn sign-up-btn" href="">Sign Up</a></li>
+      </ul>
+    </section>
+    <i class="fa-solid fa-bars"></i>
   </nav>
   <main>
     <!-- Section 1-->
@@ -51,6 +58,7 @@
       <section class="search-result-block">
         <div class="hidden-result">
           <p class="inserted-link"></p>
+          <hr class="result-block-hr">
           <div class="results">
             <p class="short-code"></p>
             <button class="copy-btn">Copy</button>

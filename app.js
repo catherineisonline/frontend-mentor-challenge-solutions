@@ -43,12 +43,20 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
           mainClone.classList = "search-result";
           parentNode.appendChild(mainClone);
           //Finished Cloning
+          //Storage
+          sessionStorage.setItem("cloneCache", parentNode.innerHTML);
+
           //Target clone child elements
           let cloneLink = mainClone.querySelector(".inserted-link");
           let cloneResultLink = mainClone.querySelector(".short-code");
           let cloneCopyBtn = mainClone.querySelector(".copy-btn");
           //Inserting value of search input
           cloneLink.textContent = `${inputValue}`;
+
+          //Storage
+          sessionStorage.setItem("cloneLink", cloneLink.textContent);
+          console.log(cloneLink.innerHTML);
+
           //Inserting the result value
           cloneResultLink.textContent = `shrtco.de/${shortlyCode}`;
           //Link Copy Event
@@ -73,44 +81,30 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
   }
 });
 
-
-
-
-
-
-//////////////////////
-
-// const reloadFunc = function () {
-//   const shortlyResult = document.querySelector(".hidden-result");
-//   var savings = localStorage.setItem(
-//     "shortenLinksList",
-//     shortlyResult.innerHTML
-//   );
-
-//   var originalHtml = localStorage.getItem("shortenLinksList");
-//   console.log(originalHtml);
-//   if (!shortlyResult.innerHTML === originalHtml) {
-//     shortlyResult.innerHTML = originalHtml;
-//   } else {
-//     console.log("nope");
-//   }
-// };
-
+//Reload function
 // window.onload = function () {
-//   apiFunc
-//   console.log(this.apiFunc);
-//   reloadFunc()
+//   let mainClone = shortlyResult.cloneNode(true);
+//   let cloneLinkField = mainClone.querySelector(".inserted-link");
+//   mainClone.classList = "search-result";
+//   parentNode.appendChild(mainClone);
+//   //Retrieving
+//   let originalHtml = sessionStorage.getItem("cloneCache");
+//   let cloneLink = sessionStorage.getItem("cloneLink");
+//   console.log(cloneLink);
+//   //Injecting
+//   parentNode.innerHTML = originalHtml;
+//   console.log(cloneLinkField);
+//   cloneLinkField.innerHTML = cloneLink;
 // };
 
-// document.addEventListener("DOMContentLoaded", function (event) {
-//   var originalHtml = localStorage.getItem("shortenLinksList");
-//   var parentNode = document.querySelector(".hidden-result");
-//   let newClone = originalHtml.cloneNode(true);
-//   parentNode.appendChild(newClone);
-// });
+//Hamburger Menu
 
-// alert(window.onload)
+const burgerIcon = document.querySelector(".fa-bars");
+const navMenu = document.querySelector(" .menu-section");
 
-// window.onload = function () {
-//   console.log(this.newResult);
-// };
+const menuToggle = () =>   navMenu.classList.toggle("show");
+
+burgerIcon.addEventListener("click", function () {
+menuToggle();
+});
+
