@@ -56,7 +56,7 @@ You can use any JavaScript framework/library on the front-end such as React or V
 - Shrtco - url shortening API
 
 ## What I learned
-Another attempt to play around with API and understand it better. Not very hard as I only need one data from get request. This will be my 3rd small project using API. Working with it is not hard however it does get a little harder when I have to work with dynamic DOM elements. Once again was glad to practice some CSS and eventlisteners.
+Another attempt to play around with API and understand it better. Not very hard as I only need one data from get request. This will be my 3rd small project using API. Working with it is not hard however it does get a little harder when I have to work with dynamic DOM elements. Once again was glad to practice some CSS and eventlisteners. I try not to match the original design as much as I did before as it takes more time and I prefer to spend it mostly on JavaScript.
 
 The hardest part which I never managed to finish is saving cache after reload. I tried different ways but I am not getting the final result. I do manage to retrive the previous data (the input value, for instance) however I am unable to make it visible. I usually use console.log-s to understand what I am doing and it does work, I do retrieve everything I need but I have a hard time displaying it on dynamic elements. The elements stay there after refresh however they are empty. I will for sure get back to this project again! 
 
