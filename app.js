@@ -55,10 +55,15 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
 
           //Storage
           sessionStorage.setItem("cloneLink", cloneLink.textContent);
-          console.log(cloneLink.innerHTML);
 
           //Inserting the result value
           cloneResultLink.textContent = `shrtco.de/${shortlyCode}`;
+
+          //Storage
+          sessionStorage.setItem(
+            "cloneResultLink",
+            cloneResultLink.textContent
+          );
           //Link Copy Event
           cloneCopyBtn.addEventListener("click", function (e) {
             e.preventDefault();
@@ -82,22 +87,23 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
 });
 
 //Reload function
-// window.onload = function () {
-//   let mainClone = shortlyResult.cloneNode(true);
-//   let cloneLinkField = mainClone.querySelector(".inserted-link");
-//   mainClone.classList = "search-result";
-//   parentNode.appendChild(mainClone);
-//   //Retrieving
-//   let originalHtml = sessionStorage.getItem("cloneCache");
-//   let cloneLink = sessionStorage.getItem("cloneLink");
-//   console.log(cloneLink);
-//   //Injecting
-//   parentNode.innerHTML = originalHtml;
-//   console.log(cloneLinkField);
-//   cloneLinkField.innerHTML = cloneLink;
-// };
+window.onload = function () {
+  let mainClone = shortlyResult.cloneNode(true);
+  let cloneLinkField = mainClone.querySelector(".inserted-link");
+  let cloneResultLink = mainClone.querySelector(".short-code");
+  mainClone.classList = "search-result";
+  parentNode.appendChild(mainClone);
+  //Retrieving
+  let originalHtml = sessionStorage.getItem("cloneCache");
+  let cloneLink = sessionStorage.getItem("cloneLink");
+  let cloneResultLinks = sessionStorage.getItem("cloneResultLink");
+  //Injecting
+  parentNode.innerHTML = originalHtml;
+  cloneLinkField.innerHTML = cloneLink;
+  cloneResultLink.textContent = cloneResultLinks;
+};
 
-
+// sessionStorage.clear();
 
 //Hamburger Menu
 const burgerIcon = document.querySelector(".fa-bars");
