@@ -40,16 +40,21 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
           let shortlyCode = response.result.code;
           //Started Cloning
           let mainClone = shortlyResult.cloneNode(true);
-          mainClone.classList = "search-result";
-          parentNode.appendChild(mainClone);
+          // mainClone.classList = "search-result";
+          mainClone.classList.replace("hidden-result", "search-result");
+
           //Finished Cloning
           //Storage
           sessionStorage.setItem("cloneCache", parentNode.innerHTML);
 
           //Target clone child elements
           let cloneLink = mainClone.querySelector(".inserted-link");
+
           let cloneResultLink = mainClone.querySelector(".short-code");
           let cloneCopyBtn = mainClone.querySelector(".copy-btn");
+          //Storage
+          sessionStorage.setItem("cloneCopyBtn", cloneCopyBtn.outerHTML);
+
           //Inserting value of search input
           cloneLink.textContent = `${inputValue}`;
 
@@ -64,6 +69,9 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
             "cloneResultLink",
             cloneResultLink.textContent
           );
+
+          parentNode.appendChild(mainClone);
+
           //Link Copy Event
           cloneCopyBtn.addEventListener("click", function (e) {
             e.preventDefault();
@@ -86,21 +94,42 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
   }
 });
 
-//Reload function
-window.onload = function () {
+// Reload function
+window.onload = () => {
   let mainClone = shortlyResult.cloneNode(true);
+  mainClone.classList.replace("hidden-result", "search-result");
   let cloneLinkField = mainClone.querySelector(".inserted-link");
   let cloneResultLink = mainClone.querySelector(".short-code");
-  mainClone.classList = "search-result";
-  parentNode.appendChild(mainClone);
+
   //Retrieving
   let originalHtml = sessionStorage.getItem("cloneCache");
   let cloneLink = sessionStorage.getItem("cloneLink");
   let cloneResultLinks = sessionStorage.getItem("cloneResultLink");
+
   //Injecting
-  parentNode.innerHTML = originalHtml;
   cloneLinkField.innerHTML = cloneLink;
   cloneResultLink.textContent = cloneResultLinks;
+  parentNode.appendChild(mainClone);
+  parentNode.innerHTML = originalHtml;
+
+  //Repeating Copy Event
+  let cloneCopyBtn = parentNode.querySelector(".copy-btn");
+  console.log(cloneCopyBtn);
+
+  cloneCopyBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    //Target text
+    let textToCopy = cloneResultLink.textContent;
+    //  Copy Text
+    navigator.clipboard.writeText(textToCopy);
+    //Change CSS
+    cloneCopyBtn.textContent = "Copied!";
+    cloneCopyBtn.style.backgroundColor = "var(--dark-violet)";
+    setTimeout(function () {
+      cloneCopyBtn.textContent = "Copy";
+      cloneCopyBtn.style.backgroundColor = "var(--cyan)";
+    }, 1000);
+  });
 };
 
 // sessionStorage.clear();
