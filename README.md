@@ -52,6 +52,10 @@ You can use any tools you like to help you complete the challenge. So if you've 
 ## What I learned
 Another fun project to practice API with JavaScript. After several complex projects, this one seemed much easier than before. The only thing which isn't as perfect as I would want to is that sometimes after requesting new quote, it generates the same so the visitor wouldn't notice it and think it didn't work. Probablt there are ways to avoid it but I decided not to spend much on this right now. 
 
+P.S. 
+
+Seems like the issue was cache, not repetitive quotes which is fixed now!
+
 
 ## Useful resources
 
