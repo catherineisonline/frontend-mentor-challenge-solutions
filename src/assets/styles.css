@@ -27,6 +27,7 @@
   --html-text-color: rgb(106, 190, 205);
   --css-text-color: rgb(62, 84, 163);
   --js-text-color: rgb(207, 99, 144);
+  --api-text-color: rgb(133, 194, 10);
   --project-describtion: rgb(115, 115, 115);
   --hover-background: rgba(255, 255, 255, 0.15);
   --wavy-underline: rgba(247, 133, 133, 0.658) 1.5px;
@@ -201,6 +202,9 @@ h1,
 }
 .project-stack.JS {
   color: var(--js-text-color);
+}
+.project-stack.API {
+  color: var(--api-text-color);
 }
 
 .project-stacks {

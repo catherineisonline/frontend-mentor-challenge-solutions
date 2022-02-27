@@ -56,7 +56,7 @@
       <ul class="solutions">
         <li
           class="solution"
-          v-for="solution in solutions"
+          v-for="solution in solutions.slice().reverse()"
           v-bind:key="solution.id"
         >
           <!-- Project Preview -->
@@ -295,6 +295,51 @@ export default {
             "https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H",
           repoLink:
             "https://github.com/catherineisonline/QR-code-component-frontendmentor",
+        },
+        {
+          id: 12,
+          projectName: "Testimonials grid section",
+          projectDescribtion:
+            "This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!",
+          projectStack: ["HTML", "CSS"],
+          projectPreview: require("@/assets/images/testimonials-grid-section.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/testimonials-grid-section-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7",
+          repoLink:
+            "https://github.com/catherineisonline/testimonials-grid-section-frontendmentor",
+        },
+        {
+          id: 13,
+          projectName: "IP Address Tracker",
+          projectDescribtion:
+            "In this challenge, you'll be using two separate APIs together to create an IP Address Tracking app.",
+          projectStack: ["HTML", "CSS", "JS", "API"],
+          projectPreview: require("@/assets/images/IP-address-tracker-challenge.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/ip-address-tracker-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0",
+          repoLink:
+            "https://github.com/catherineisonline/ip-address-tracker-frontendmentor",
+        },
+        {
+          id: 14,
+          projectName: "URL shortening API landing page",
+          projectDescribtion:
+            "Integrate with the shrtcode URL shortening API and play with browser storage in this landing page challenge.",
+          projectStack: ["HTML", "CSS", "JS", "API"],
+          projectPreview: require("@/assets/images/URL-shortening-API-landing-page.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/url-shortening-api-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G",
+          repoLink:
+            "https://github.com/catherineisonline/url-shortening-api-frontendmentor",
         },
       ],
     };
