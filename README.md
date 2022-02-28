@@ -34,9 +34,8 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 <br><br>Users should be able to:
 <br>1. View the optimal layout depending on their device's screen size.
-
 <br>
-2, See the social media share links when they click the share icon.
+2. See the social media share links when they click the share icon.
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
 
