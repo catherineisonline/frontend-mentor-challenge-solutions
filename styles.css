@@ -2,8 +2,8 @@
 :root {
   --light-cyan: hsl(193, 38%, 86%);
   --neon-green: hsl(150, 100%, 66%);
-  --grayish-blue: hsl(217, 19%, 38%);
-  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --grayish-blue: #313a48;
+  --dark-grayish-blue: #202733;
   --white: white;
   --body-font: "Manrope", sans-serif;
 }
@@ -27,7 +27,7 @@ body {
   min-width: 10rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.4rem;
+  gap: 1.28rem;
   margin: 0 auto;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -53,12 +53,13 @@ body {
   padding: 0 1rem;
 }
 .line {
-  width: 100%;
+  width: 90%;
   height: 2rem;
   display: flex;
   flex-direction: row;
   padding-top: 0.6rem;
   align-items: center;
+  margin: 0 auto;
 }
 .line::before,
 .line::after {
@@ -76,32 +77,29 @@ body {
   height: 2rem;
 }
 
-.button-section {
-  cursor: pointer;
-  position: absolute;
-  background-color: var(--neon-green);
-  border-radius: 50%;
-  padding: 1.3rem;
-  top: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0 auto;
-  border: transparent;
-}
 
 .dice-img {
-  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--neon-green);
   background-image: url("images/icon-dice.svg");
-  background-size: cover;
-  width: 1.5rem;
-  height: 1.5rem;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transform: translateY(30%) translateX(-50%);
+  left: 50%;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  transition: all ease-in-out 0.3s;
+
 }
 
 @media (hover: hover) {
-  .button-section:hover {
+  .dice-img:hover {
     box-shadow: -1px 1px 88px 12px rgba(82, 255, 168, 1);
     -webkit-box-shadow: -1px 1px 88px 12px rgba(82, 255, 168, 1);
     -moz-box-shadow: -1px 1px 88px 12px rgba(82, 255, 168, 1);
+    transition: all ease-in-out 0.3s;
   }
 }
 
