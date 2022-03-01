@@ -216,6 +216,7 @@ footer {
   }
 
   .statistics-img {
-    background-size: 60%;
+    background-size: 70%;
+    width: 25rem;
   }
 }
