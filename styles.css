@@ -209,7 +209,7 @@ footer {
     grid-template-rows: repeat(2, 1fr);
     width: 80%;
     justify-items: stretch;
-    gap: 3.5rem;
+    gap: 3.4rem;
   }
   .input-section input {
     grid-column: initial;
@@ -222,5 +222,14 @@ footer {
 
   .email-input-message {
     top: 43.5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .input-section {
+    gap: 3rem;
+  }
+  .email-input-message {
+    top: 50%;
   }
 }
