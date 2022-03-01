@@ -209,7 +209,7 @@ footer {
     grid-template-rows: repeat(2, 1fr);
     width: 80%;
     justify-items: stretch;
-    gap: 2rem;
+    gap: 3.5rem;
   }
   .input-section input {
     grid-column: initial;
@@ -218,5 +218,9 @@ footer {
   .statistics-img {
     background-size: 70%;
     width: 25rem;
+  }
+
+  .email-input-message {
+    top: 43.5%;
   }
 }
