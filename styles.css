@@ -253,4 +253,8 @@ footer {
     transform: translate(0, 90%);
     top: 55%;
   }
+  .statistics-img {
+    background-size: 80%;
+    width: 20rem;
+  }
 }
