@@ -181,9 +181,7 @@ footer {
   font-weight: 700;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
-
 }
-
 
 .copyright {
   font-size: 0.6rem;
@@ -203,7 +201,6 @@ footer {
   }
 }
 
-
 @media screen and (max-width: 900px) {
   .input-section {
     grid-template-columns: 1fr;
@@ -215,7 +212,7 @@ footer {
     grid-column: initial;
   }
   .email-input-message {
-    top: 42%;
+    top: 41%;
     left: 10%;
     font-size: 0.7rem;
   }
