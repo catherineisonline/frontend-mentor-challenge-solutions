@@ -5,13 +5,11 @@ const submitBtn = document.querySelector(".submit-btn");
 const errorMsg = document.querySelector(".email-input-message");
 const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-const timeoutFunc = setInterval(function () {
+const timeoutFunc = setInterval(() => {
   errorMsg.style.display = "none";
 }, 2500);
 
-submitBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-
+submitBtn.addEventListener("click", function () {
   if (inputEl.value.length === 0) {
     errorMsg.style.display = "inline";
     errorMsg.textContent = "Whoops! It looks like you forgot to add your email";

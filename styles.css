@@ -71,9 +71,9 @@ main {
 
 /* Input Section */
 .input-section {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
   gap: 1.2rem;
   width: 44%;
   margin: 0 auto;
@@ -87,6 +87,7 @@ main {
   border-radius: 35px;
   border-color: var(--pale-blue);
   border-width: 1px;
+  border-style: solid;
 }
 
 .input-section input::placeholder {
@@ -114,8 +115,8 @@ main {
   display: none;
   position: absolute;
   color: var(--light-red);
-  transform: translate(10%, 90%);
-  top: 37%;
+  top: 100%;
+  left: 5%;
   font-size: 0.9rem;
   text-align: left;
 }
@@ -204,55 +205,33 @@ footer {
 }
 
 
-
-@media screen and (min-width: 1110px) {
-  .email-input-message {
-    top: 37%;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .email-input-message {
-    top: 36%;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .input-section {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     width: 80%;
-    justify-items: stretch;
     gap: 3.4rem;
   }
   .input-section input {
     grid-column: initial;
+  }
+  .email-input-message {
+    top: 40%;
+    left: 5%;
   }
 
   .statistics-img {
     background-size: 70%;
     width: 25rem;
   }
-
-  .email-input-message {
-    top: 38%;
-  }
 }
-
 @media screen and (max-width: 701px) {
   .input-section {
-    gap: 3rem;
-  }
-  .email-input-message {
-    top: 50%;
+    gap: 2.5rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .email-input-message {
-    transform: translate(0, 90%);
-    top: 55%;
-  }
   .statistics-img {
     background-size: 80%;
     width: 20rem;
