@@ -99,7 +99,7 @@ main {
 }
 
 .input-section input[type="email"] {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   padding-left: 1rem;
   color: var(--gray);
 }
@@ -169,11 +169,7 @@ footer {
   gap: 0.5rem;
   margin: 0 auto;
 }
-.social-media div {
-  text-align: center;
-  align-items: center;
-  
-}
+
 .social-media .fa-brands {
   font-size: 0.8rem;
   color: var(--blue);
@@ -185,9 +181,9 @@ footer {
   font-weight: 700;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
-  aspect-ratio: attr(width) / attr(height);
 
 }
+
 
 .copyright {
   font-size: 0.6rem;
@@ -219,9 +215,9 @@ footer {
     grid-column: initial;
   }
   .email-input-message {
-    top: 45%;
+    top: 42%;
     left: 10%;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .statistics-img {
