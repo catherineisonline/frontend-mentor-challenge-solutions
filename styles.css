@@ -172,6 +172,7 @@ footer {
 .social-media div {
   text-align: center;
   align-items: center;
+  
 }
 .social-media .fa-brands {
   font-size: 0.8rem;
@@ -184,6 +185,8 @@ footer {
   font-weight: 700;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
+  aspect-ratio: attr(width) / attr(height);
+
 }
 
 .copyright {
@@ -218,6 +221,7 @@ footer {
   .email-input-message {
     top: 45%;
     left: 10%;
+    font-size: 0.8rem;
   }
 
   .statistics-img {
