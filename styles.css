@@ -66,7 +66,7 @@ h1 {
   position: relative;
   display: inline-flex;
   align-items: center;
-cursor: pointer;
+  cursor: pointer;
   width: 3.8rem;
   height: 2.3rem;
   border-radius: 25px;
