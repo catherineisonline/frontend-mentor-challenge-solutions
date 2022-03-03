@@ -204,13 +204,12 @@ h1 span {
   }
   .logo {
     height: 4rem;
-    
   }
 
   .info-section {
     grid-area: info;
     position: initial;
-   padding: 1.5rem;
+    padding: 1.5rem;
   }
   h1 {
     font-size: 2.5rem;
