@@ -28,6 +28,7 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 57.5% 1fr;
   min-height: 100vh;
+ 
 }
 
 .logo-area {
@@ -189,6 +190,7 @@ h1 span {
       "icon"
       "hero"
       "info";
+    
   }
 
   .img-section {
@@ -209,7 +211,7 @@ h1 span {
   .info-section {
     grid-area: info;
     position: initial;
-    padding: 1.5rem;
+    padding: 5rem 2rem;
   }
   h1 {
     font-size: 2.5rem;
