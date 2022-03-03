@@ -13,21 +13,17 @@
 }
 
 body {
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
+  
   box-sizing: border-box;
   font-family: var(--body-font);
 }
-body::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
-}
+
 
 .main-container {
   display: grid;
   grid-template-columns: 57.5% 1fr;
-  
   min-height: 100vh;
+
 }
 
 .logo-area {
@@ -78,7 +74,9 @@ h1 span {
   width: 85%;
   padding-top: 1.2rem;
 }
-
+.text-section {
+  max-width: 100%;
+}
 /* Input Section */
 .input-section {
   position: relative;
@@ -156,6 +154,7 @@ h1 span {
   background-size: cover;
   height: 100%;
   width: 100%;
+ 
 }
 
 @media (hover: hover) {
@@ -172,12 +171,14 @@ h1 span {
 @media screen and (max-width: 1025px) {
   .main-container {
     grid-template-columns: 50% 1fr;
+    
   }
 }
 
 @media screen and (max-width: 801px) {
   .info-section {
     display: initial;
+
   }
 
   .main-container {
@@ -187,13 +188,12 @@ h1 span {
       "icon"
       "hero"
       "info";
-    margin-bottom: 10rem;
   }
 
   .img-section {
     grid-area: hero;
     overflow-x: hidden;
-    width:100%;
+    width: 100%;
   }
 
   .logo-area {
@@ -201,17 +201,16 @@ h1 span {
     grid-area: icon;
     top: 5%;
     left: 5%;
-  
+    width: 80%;
   }
   .logo {
-      width: 70%;
+    width: 70%;
     height: 4rem;
   }
 
-  
   .info-section {
     grid-area: info;
     position: initial;
-    height: max-content;
+    min-height: 100vh;
   }
 }
