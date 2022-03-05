@@ -53,6 +53,8 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   min-height: 42rem;
   height: 100%;
+  -webkit-box-shadow: 1px 12px 32px -5px rgba(0,0,0,0.34); 
+box-shadow: 1px 12px 32px -5px rgba(0,0,0,0.34);
 }
 
 /* IMG Container */

@@ -8,8 +8,6 @@ allQuestions.forEach(function (mainItem) {
     const question = mainItem.querySelector(".question");
     const arrow = mainItem.querySelector(".arrow");
 
-    console.log(question);
-
     answerOutput.classList.toggle("shown");
     question.classList.toggle("active");
     arrow.classList.toggle("rotate");
