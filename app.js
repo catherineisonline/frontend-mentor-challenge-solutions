@@ -6,9 +6,12 @@ allQuestions.forEach(function (mainItem) {
   mainItem.addEventListener("click", function () {
     const answerOutput = mainItem.querySelector(".answer");
     const question = mainItem.querySelector(".question");
+    const arrow = mainItem.querySelector(".arrow");
+
     console.log(question);
 
     answerOutput.classList.toggle("shown");
     question.classList.toggle("active");
+    arrow.classList.toggle("rotate");
   });
 });
