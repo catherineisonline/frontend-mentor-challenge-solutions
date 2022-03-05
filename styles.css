@@ -136,6 +136,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   color: var(--very-dark-grayish-blue);
+  transition: all ease-in-out 0.3s;
 }
 .question.active {
   font-weight: 700;
@@ -152,6 +153,13 @@ h1 {
   padding-bottom: 3rem;
   font-size: 1rem;
   color: var(--very-dark-grayish-blue);
+}
+
+@media (hover: hover) {
+  .question:hover {
+    color: var(--soft-red);
+    transition: all ease-in-out 0.3s;
+  }
 }
 
 @media screen and (max-width: 1025px) {
@@ -205,25 +213,23 @@ h1 {
     grid-template-rows: 10rem 1fr;
   }
 
-   .faq-section {
+  .faq-section {
     width: 100%;
   }
- .img-section {
+  .img-section {
     background-size: 80%;
-    /* background-position: bottom -120% left 10%;
-    height: 20rem; */
-  } 
+  }
 
   .container-img {
     margin-top: -13rem;
     margin-left: 2rem;
     width: 90%;
-  } 
+  }
 }
 
 @media screen and (max-width: 700px) {
   .main-container {
     margin-top: 45%;
-   width: 90%;
+    width: 90%;
   }
 }
