@@ -12,6 +12,7 @@
   --dark-blue: hsl(198, 62%, 26%);
   /*footer*/
   --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --header-bg: #3EBFFF;
   --footer-bg: #8ed0c4;
   --very-dark-desaturated-blue: hsl(212, 27%, 19%);
   --very-drak-grayish-blue: hsl(213, 9%, 39%);
@@ -33,7 +34,7 @@ img {
 }
 
 .logo {
-  max-width: 25%;
+  max-width: 12%;
 }
 a {
   text-decoration: none;
@@ -60,11 +61,22 @@ body::-webkit-scrollbar {
 header {
   background-image: url("images/mobile/image-header.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cont;
   background-position: bottom;
   height: 50rem;
-  padding: 1rem;
   text-align: center;
+  background-color: var(--header-bg);
+}
+nav {
+  padding: 2rem;
+}
+nav,
+.menu-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 h1 {
@@ -83,16 +95,9 @@ h1 {
   height: 20%;
   width: 10%;
 }
-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: space-between;
-}
 
 .menu {
   display: none;
-  
 }
 
 .fa-solid {
@@ -259,9 +264,6 @@ footer ul a {
 }
 
 @media screen and (min-width: 767px) {
-  .menu {
-    display: flex;
-  }
   .fa-solid {
     display: none;
   }
@@ -296,17 +298,24 @@ footer ul a {
   }
 
   .menu {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2.4rem;
+    justify-content: space-evenly;
+    margin-right: 4.9rem;
   }
   .menu a {
-      color: var(--white);
-      font-family: var(--barlow-font);
+    color: var(--white);
+    font-family: var(--barlow-font);
   }
-  /* .menu:last-child li a{
-      border-radius: 50%;
-      background-color: var(--white);
-      border-width: 1px;
-  } */
+  .contact {
+    border-radius: 25px;
+    background-color: var(--white);
+    border-width: 1px;
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--fraunces-font);
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: 700;
+  }
 }
