@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces,wght@1,700;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 :root {
   --barlow-font: "Barlow", sans-serif;
   --fraunces-font: "Fraunces", serif;
@@ -63,12 +62,13 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 44.5rem;
+  min-height: 80%;
   text-align: center;
   background-color: var(--header-bg);
 }
 nav {
-  padding: 2.1rem;
+  padding: 2rem 2.2rem;
 }
 nav,
 .menu-section {
@@ -84,9 +84,9 @@ h1 {
   color: var(--white);
   font-family: var(--fraunces-font);
   text-align: center;
-  padding: 4.1rem 0;
+  padding: 4rem 0;
   font-weight: 900;
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.6rem;
 }
 
 .arrow-img {
@@ -107,27 +107,69 @@ h1 {
   cursor: pointer;
 }
 
+.transform {
+  display: flex;
+  flex-direction: column;
+  height: 33.3rem;
+  min-height: 50%;
+}
+
+.standout-section {
+  display: flex;
+  flex-direction: column;
+  height: 33.3rem;
+  min-height: 50%;
+}
 /*  Transform Section */
 .transform section,
 .standout-section section {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
   background-color: var(--white);
-  padding: 2rem;
   text-align: center;
+  padding: 2rem;
+}
+
+.transform-section-img {
+  background-image: url("images/mobile/image-transform.jpg");
+}
+.standout-section-img {
+  background-image: url("images/mobile/image-stand-out.jpg");
+}
+
+.transform-section-img,
+.standout-section-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-width: 50%;
+  height: 100%;
 }
 
 .transform h2,
 .standout-section h2 {
   font-family: var(--fraunces-font);
   color: var(--very-dark-desaturated-blue);
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.transform h2 {
+  word-spacing: -1px;
+  letter-spacing: -2px;
+}
+
+.standout-section h2 {
+  word-spacing: 1.2px;
+  letter-spacing: -2px;
 }
 
 .transform p,
 .standout-section p {
   font-family: var(--barlow-font);
   color: var(--very-drak-grayish-blue);
+  line-height: 30px;
+  padding-top: 1.5rem;
 }
 
 .transform a,
@@ -137,7 +179,9 @@ h1 {
   color: var(--very-dark-desaturated-blue);
   font-family: var(--fraunces-font);
   font-weight: 900;
+  font-size: 0.9rem;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .transform a:after {
@@ -158,7 +202,7 @@ h1 {
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 80%;
+  top: 85%;
 }
 
 /* Graphic Design & Photography */
@@ -264,28 +308,71 @@ footer ul a {
 }
 
 @media screen and (min-width: 767px) {
+  /* Responsive Images */
   header {
     background-image: url("images/desktop/image-header.jpg");
   }
+  .transform-section-img {
+    background-image: url("images/desktop/image-transform.jpg");
+  }
+
+  .standout-section-img {
+    background-image: url("images/desktop/image-stand-out.jpg");
+  }
+
+
+
+  
   .fa-solid {
     display: none;
   }
+
+  /* Transform Section */
+
   .transform {
-    display: flex;
     flex-direction: row-reverse;
   }
+
+  /* Standout Section */
   .standout-section {
-    display: flex;
     flex-direction: row;
   }
-  .transform img,
-  .standout-section img {
-    max-width: 50%;
+
+  .transform section {
+    text-align: left;
+    padding: 8.7rem 9rem;
   }
+
+  .standout-section section {
+    text-align: left;
+    padding: 8.7rem 6rem;
+  }
+  .standout-section p {
+    padding-right: 2.6rem;
+  }
+
   .section-3 {
     display: flex;
     flex-direction: row;
     height: max-content;
+  }
+  /* Learn More */
+  .transform a {
+    margin: 0.6rem;
+  }
+
+  .standout-section a {
+    margin: 0.6rem;
+    padding-top: 32px;
+  }
+
+  .transform a:after {
+    width: 30%;
+    margin: 0;
+  }
+  .standout-section a:after {
+    width: 25%;
+    margin: 0;
   }
 
   .profiles {
@@ -320,8 +407,9 @@ footer ul a {
     color: var(--very-dark-desaturated-blue);
     font-family: var(--fraunces-font);
     text-transform: uppercase;
-    padding: 1rem 1.5rem;
-    font-weight: 700;
+    padding: 0.9rem 1.5rem;
+    font-weight: 900;
+    font-size: 0.9rem;
     position: static;
     margin-right: 0.4rem;
   }
