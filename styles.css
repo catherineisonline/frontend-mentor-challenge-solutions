@@ -34,7 +34,7 @@ img {
 }
 
 .logo {
-  max-width: 12%;
+  max-width: 13%;
 }
 a {
   text-decoration: none;
@@ -68,7 +68,7 @@ header {
   background-color: var(--header-bg);
 }
 nav {
-  padding: 2rem;
+  padding: 2.1rem;
 }
 nav,
 .menu-section {
@@ -299,13 +299,15 @@ footer ul a {
     /* height: 20%; */
     width: 2rem;
   }
-
+  .menu-section {
+    position: relative;
+  }
   .menu {
     display: flex;
     flex-direction: row;
-    gap: 2.4rem;
+    gap: 2.6rem;
     justify-content: space-evenly;
-    margin-right: 4.9rem;
+    margin-right: 2.8rem;
   }
   .menu a {
     color: var(--white);
@@ -318,7 +320,9 @@ footer ul a {
     color: var(--very-dark-desaturated-blue);
     font-family: var(--fraunces-font);
     text-transform: uppercase;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     font-weight: 700;
+    position: static;
+    margin-right: 0.4rem;
   }
 }
