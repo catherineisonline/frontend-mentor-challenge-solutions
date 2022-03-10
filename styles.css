@@ -52,13 +52,9 @@ body {
   flex-direction: column;
 }
 body::-webkit-scrollbar,
-.menu,
-.contact {
+.menu-section {
   display: none; /* for Chrome, Safari, and Opera */
 }
-
-
-
 
 /* Header */
 header {
@@ -71,34 +67,64 @@ header {
   text-align: center;
   background-color: var(--header-bg);
 }
+
 nav {
-  padding: 2rem 2.2rem;
-}
-nav,
-.menu-section {
   position: relative;
+  padding: 2rem 2.2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  max-width: 100%;
 }
 
-.menu.shown {
+.menu-section.shown {
   display: flex;
   position: absolute;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem;
   background-color: var(--white);
-  width: 80%;
-  left:0;
-  right: 0;
-  top: 100%;
-  margin: 0 auto;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
 }
 
-.menu.shown a {
+.menu-section.shown::after {
+  content: "";
+  position: absolute;
+  margin-top: -25%;
+  right: 0;
+  width: 0;
+  height: 0;
+  transform: translate(0, 10%);
+  background-color: transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-top: 40px solid transparent;
+  border-right: 40px solid var(--white);
+}
+.menu-section.shown .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+.contact {
+  display: inline-block;
+  border-radius: 25px;
+  background-color: var(--yellow);
+  border-width: 1px;
+  color: var(--very-dark-desaturated-blue);
+  font-family: var(--fraunces-font);
+  text-transform: uppercase;
+  padding: 0.9rem 1.5rem;
+  font-weight: 900;
+  font-size: 0.9rem;
+  margin-right: 0.4rem;
+}
+.menu-section.shown .menu a {
   color: var(--grayish-blue);
   font-family: var(--barlow-font);
   text-align: center;
@@ -405,8 +431,15 @@ footer {
   gap: 1.5rem;
   margin-top: 2.3rem;
 }
-
+@media screen and (min-width: 500px) and (max-width: 766px) {
+  .menu-section.shown::after {
+    transform: translate(0, 45%);
+  }
+}
 @media screen and (min-width: 767px) {
+  .menu-section.shown {
+    display: none;
+  }
   /* Responsive Images */
   header {
     background-image: url("images/desktop/image-header.jpg");
@@ -437,7 +470,13 @@ footer {
   /* Menu */
   .menu-section {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
   }
+
   .menu {
     display: flex;
     flex-direction: row;
@@ -450,6 +489,7 @@ footer {
     font-family: var(--barlow-font);
   }
   .contact {
+    display: inline-block;
     border-radius: 25px;
     background-color: var(--white);
     border-width: 1px;

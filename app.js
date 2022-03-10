@@ -1,7 +1,6 @@
 const burgerMenu = document.querySelector(".fa-solid");
-const hiddenMenu = document.querySelector(".menu");
+const hiddenMenu = document.querySelector(".menu-section");
 
 burgerMenu.addEventListener("click", function () {
   hiddenMenu.classList.toggle("shown");
-  burgerMenu.classList.toggle('reverse');
 });
