@@ -13,6 +13,7 @@
   --dark-moderate-cyan: hsl(168, 34%, 41%);
   --header-bg: #3ebfff;
   --footer-bg: #8ed0c4;
+  --container-bg: #fffbf8;
   --very-dark-desaturated-blue: hsl(212, 27%, 19%);
   --very-drak-grayish-blue: hsl(213, 9%, 39%);
   --dark-grayish-blue: hsl(232, 10%, 55%);
@@ -160,6 +161,7 @@ h1 {
   flex-direction: column;
   height: 33.3rem;
   min-height: 50%;
+  background-color: var(--container-bg);
 }
 
 .standout-section {
@@ -167,6 +169,7 @@ h1 {
   flex-direction: column;
   height: 33.3rem;
   min-height: 50%;
+  background-color: var(--container-bg);
 }
 /*  Transform Section */
 .transform section,
@@ -314,11 +317,12 @@ h1 {
   gap: 4.5rem;
   padding: 2rem;
   text-align: center;
+  background-color: var(--container-bg);
 }
 
 .testimonials h3 {
   font-family: var(--fraunces-font);
-  color: var(--very-drak-grayish-blue);
+  color: var(--grayish-blue);
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -347,7 +351,6 @@ h1 {
   color: var(--dark-grayish-blue);
   line-height: 1.8rem;
   font-weight: 600;
-  background-color: var(--white);
 }
 
 .author-block {
@@ -413,7 +416,10 @@ footer {
   text-align: center;
   align-items: center;
 }
-
+footer .logo {
+  filter: invert(45%) sepia(22%) saturate(790%) hue-rotate(118deg)
+    brightness(95%) contrast(92%);
+}
 .footer-menu {
   display: flex;
   flex-direction: row;
@@ -431,6 +437,30 @@ footer {
   gap: 1.5rem;
   margin-top: 2.3rem;
 }
+
+.social-media img {
+  filter: invert(34%) sepia(6%) saturate(3757%) hue-rotate(118deg)
+    brightness(106%) contrast(81%);
+}
+
+/* Hover */
+
+@media (hover: hover) {
+  .contact:hover {
+    background-color: #6fd0fa;
+  }
+  .footer-menu a:hover,
+  .contact:hover,
+  .social-media img:hover {
+    color: var(--white);
+    transition: all ease-in-out 0.3s;
+  }
+  .social-media img:hover {
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(38deg)
+      brightness(106%) contrast(100%);
+  }
+}
+
 @media screen and (min-width: 500px) and (max-width: 766px) {
   .menu-section.shown::after {
     transform: translate(0, 45%);
