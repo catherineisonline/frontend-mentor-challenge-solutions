@@ -9,7 +9,7 @@
       Live
     </a>
     <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-QfXrSGu5A">
       Solution
     </a>
    <span> | </span>
@@ -60,4 +60,4 @@ Great project if you are just starting out or need to remember the basics like c
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-QfXrSGu5A">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
