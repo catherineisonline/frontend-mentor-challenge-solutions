@@ -238,7 +238,7 @@ h1,
   position: relative;
   display: flex;
   cursor: pointer;
-  width: 60%;
+  width: max-content;
   font-size: 1rem;
   text-decoration: none;
   font-family: var(--barlow-medium);
@@ -258,8 +258,7 @@ h1,
   bottom: -1px;
   content: "";
   height: 2px;
-  width: 80%;
-  max-width: 6rem;
+  width: 100%;
   position: absolute;
   transform: scaleX(1);
   transition: transform 0.3s ease 0s;
@@ -283,7 +282,6 @@ h1,
   transition: 0.1s;
 }
 .link-btn {
-  width: 100%;
   font-size: 1rem;
   text-decoration: none;
   font-family: var(--barlow-medium);
@@ -298,22 +296,22 @@ h1,
   list-style: none;
   padding: 0;
   margin: 1.5rem;
-  width: 100%;
+  width: max-content;
 }
 
 .link-btn a {
-  width: 100%;
+  position: relative;
+  width: max-content;
   text-decoration: none;
   color: var(--black);
 }
 .link-btn a::after {
   background-color: rgb(237, 44, 73);
   bottom: -10px;
-  left: 20px;
+  left: 0;
   content: "";
   height: 2px;
-  width: 70%;
-  max-width: 4.5rem;
+  width: 100%;
   position: absolute;
   transform: scaleX(1);
   transition: transform 0.3s ease 0s;
@@ -328,11 +326,13 @@ h1,
 
 @media screen and (max-width: 1025px) {
   .solutions {
-    /* flex-direction: column;
-    width: 100%;
-    align-content: center; */
+    gap: 2rem;
   }
-  .solution {
-    width: 80%;
+}
+
+@media screen and (max-width: 900px) {
+  .solutions {
+    grid-template-columns: 1fr;
+    width: 70%;
   }
 }
