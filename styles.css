@@ -355,9 +355,11 @@ nav {
 .section-four input:focus-visible {
   outline: none;
 }
-.section-four a {
+.section-four button {
+  cursor: pointer;
   padding: 1.1rem;
   border-radius: 35px;
+  border: transparent;
   font-family: var(--rale-font);
   font-weight: 700;
   width: 25%;
@@ -503,8 +505,9 @@ footer {
     border: 1px solid var(--cyan);
     transition: all ease-in-out 0.3s;
   }
-  .footer-sec-three a:hover {
-    font-weight: 700;
+  .menu-two a:hover,
+  .menu-one a:hover {
+    font-size: 1.2;
     transition: all ease-in-out 0.3s;
   }
 }
