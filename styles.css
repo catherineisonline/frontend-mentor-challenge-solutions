@@ -53,6 +53,11 @@ ul {
   list-style: none;
 }
 
+/** Gen Styling **/
+.flex-container {
+  display: flex;
+}
+
 /* Header */
 
 header {
@@ -76,7 +81,6 @@ header {
 }
 
 nav {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -85,7 +89,6 @@ nav {
 }
 
 .menu {
-  display: flex;
   flex-direction: row;
   font-size: 1.1rem;
   font-family: var(--rale-font);
@@ -111,7 +114,7 @@ nav {
 
 .intro-section {
   font-family: var(--rale-font);
-  display: flex;
+
   flex-direction: column;
   gap: 2.6rem;
   margin: 0 auto;
@@ -157,7 +160,6 @@ nav {
   margin-top: 12rem;
 }
 .section-one section {
-  display: flex;
   flex-direction: column;
   gap: 1.7rem;
   justify-content: center;
@@ -165,7 +167,6 @@ nav {
 }
 .section-one section div {
   width: 93%;
-  display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
@@ -187,7 +188,6 @@ nav {
 
 /* Section 2 */
 .section-two {
-  display: flex;
   flex-direction: row;
   width: 87%;
   margin: 0 auto;
@@ -199,7 +199,6 @@ nav {
   max-width: 90%;
 }
 .section-two-info {
-  display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 8.5rem 0;
@@ -219,7 +218,6 @@ nav {
 }
 
 .section-two-link {
-  display: flex;
   position: relative;
   flex-direction: row;
   gap: 9px;
@@ -262,7 +260,6 @@ nav {
   z-index: 0;
 }
 .section-three section {
-  display: flex;
   flex-direction: column;
   gap: 1.8rem;
   padding-top: 3.1rem;
@@ -281,7 +278,6 @@ nav {
   font-size: 1.05rem;
 }
 .author-details {
-  display: flex;
   flex-direction: row;
   gap: 0.9rem;
   align-items: center;
@@ -312,7 +308,7 @@ nav {
   width: 70%;
   background-color: var(--dark-blue);
   text-align: center;
-  display: flex;
+
   flex-direction: column;
   gap: 1.35rem;
   margin: 0 auto;
@@ -339,7 +335,6 @@ nav {
   line-height: 1.5rem;
 }
 .input-section {
-  display: flex;
   flex-direction: row;
   gap: 2rem;
   width: 90%;
@@ -376,13 +371,11 @@ footer {
   height: 40rem;
   background-color: var(--footer-bg);
   margin-top: 15rem;
-  display: flex;
   flex-direction: column;
   align-items: left;
 }
 
 .footer-section {
-  display: flex;
   flex-direction: column;
   gap: 2.6rem;
   padding: 4rem 5.7rem;
@@ -395,20 +388,17 @@ footer {
   padding-left: 2.55rem;
 }
 .menu-section {
-  display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
 }
 .footer-sec-one {
-  display: flex;
   flex-direction: column;
   padding-left: 2.9rem;
   width: 30%;
 }
 .test-sect {
-  display: flex;
   flex-direction: row;
   gap: 8rem;
 }
@@ -417,7 +407,6 @@ footer {
 }
 
 .footer-sec-one div {
-  display: flex;
   flex-direction: row;
   gap: 2rem;
 }
@@ -428,26 +417,22 @@ footer {
 }
 
 .footer-sec-two {
-  display: flex;
   flex-direction: column;
   gap: 1.65rem;
   font-family: var(--body-font);
 }
 .footer-sec-two div {
-  display: flex;
   flex-direction: row;
   gap: 1.5rem;
 }
 
 .footer-sec-three {
-  display: flex;
   flex-direction: row;
   gap: 6rem;
 }
 
 .menu-two,
 .menu-one {
-  display: flex;
   flex-direction: column;
   gap: 1rem;
 }
@@ -462,7 +447,6 @@ footer {
 }
 
 .socials {
-  display: flex;
   flex-direction: row;
   gap: 1.25rem;
   text-align: center;
@@ -473,7 +457,6 @@ footer {
   color: var(--white);
   border-radius: 50%;
   border: 1px solid var(--white);
-
   transition: all ease-in-out 0.3s;
   width: 0.9rem;
   height: 0.9rem;
@@ -487,7 +470,7 @@ footer {
   }
 
   .intro-section a:hover,
-  .section-four a:hover {
+  .section-four button:hover {
     background: linear-gradient(90deg, var(--cyan), var(--cyan));
     transition: all ease-in-out 0.3s;
   }
