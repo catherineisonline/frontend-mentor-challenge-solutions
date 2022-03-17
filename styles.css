@@ -189,11 +189,14 @@ nav {
   width: 87%;
   margin: 0 auto;
   margin-top: 10rem;
-  gap: 5rem;
   padding: 0 5rem;
+  gap: 2.9rem;
 }
 .section-two-img {
-  max-width: 90%;
+  width: 80%;
+}
+.section-two img {
+  max-width: 100%;
 }
 .section-two-info {
   flex-direction: column;
@@ -500,5 +503,103 @@ footer {
   .menu-two a:hover,
   .menu-one a:hover {
     font-size: 1.2;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .intro-section {
+    width: 85%;
+  }
+  .intro-text a {
+    width: 50%;
+  }
+  .section-two {
+    flex-direction: column;
+    gap: initial;
+    width: initial;
+  }
+  .section-two-img {
+    margin: 0 auto;
+  }
+  .section-three {
+    margin-top: initial;
+    width: 90%;
+  }
+  .section-four button {
+    width: 30%;
+  }
+
+  .menu-section-two {
+    position: relative;
+  }
+  .socials-section {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: 100%;
+    /* top: 110%; */
+    /* left: 50%; */
+  }
+
+}
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 10px;
+  }
+  header {
+    height: 35rem;
+  }
+
+  .section-one {
+    grid-template-columns: 1fr;
+  }
+
+  .section-three {
+    grid-template-columns: 1fr;
+  }
+
+  .section-four {
+    width: 90%;
+    transform: translate(50%, 190%);
+  }
+
+  .input-section {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .input-section input,
+  .input-section button {
+    width: initial;
+  }
+
+  .footer-inner {
+    padding-bottom: 10rem;
+  }
+
+  footer,
+  .footer-inner,
+  .menu-section,
+  .menu-section-two,
+  .menu-pages {
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+  }
+  .menu-section {
+    gap: 1rem;
+  }
+  .menu-section-one {
+    width: initial;
+    padding: initial;
+  }
+ 
+  .footer-logo {
+    padding: initial;
+    max-width: 70%;
+  }
+  .socials-section {
+    top: 110%; 
+    left: 50%; 
   }
 }
