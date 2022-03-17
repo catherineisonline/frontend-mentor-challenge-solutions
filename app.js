@@ -12,7 +12,7 @@ const timeoutFunc = setTimeout(() => {
 sendBtn.addEventListener("click", function () {
   if (inputEl.value.length === 0 || !inputEl.value.match(emailValidation)) {
     errorMsg.style.display = "inline";
-    errorMsg.textContent = "Please provide a valid email address";
+    errorMsg.textContent = "Please enter a valid email address";
     return timeoutFunc;
   } else {
     errorMsg.style.display = "inline";
