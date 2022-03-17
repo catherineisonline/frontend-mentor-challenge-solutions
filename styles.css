@@ -57,6 +57,9 @@ ul {
 .flex-container {
   display: flex;
 }
+.rale {
+  font-family: var(--rale-font);
+}
 
 /* Header */
 
@@ -91,14 +94,12 @@ nav {
 .menu {
   flex-direction: row;
   font-size: 1.1rem;
-  font-family: var(--rale-font);
   gap: 4.3rem;
   font-weight: 400;
   margin-right: 0.4rem;
 }
 .menu li {
   cursor: pointer;
-  transition: all ease-in-out 0.3s;
 }
 
 /* Intro */
@@ -113,8 +114,6 @@ nav {
 }
 
 .intro-section {
-  font-family: var(--rale-font);
-
   flex-direction: column;
   gap: 2.6rem;
   margin: 0 auto;
@@ -144,7 +143,6 @@ nav {
   margin: 0 auto;
   font-weight: 700;
   font-size: 1.1rem;
-  transition: all ease-in-out 0.3s;
 }
 
 /* Section 1 */
@@ -172,7 +170,6 @@ nav {
 }
 
 .section-one h2 {
-  font-family: var(--rale-font);
   font-weight: 700;
   font-size: 1.4rem;
 }
@@ -205,14 +202,13 @@ nav {
 }
 .section-two-info h2 {
   width: 80%;
-  font-family: var(--rale-font);
+
   font-weight: 700;
   font-size: 2.9rem;
 }
 
 .section-two-info p {
   font-size: 1.1rem;
-  font-family: var(--rale-font);
   line-height: 1.6rem;
   word-spacing: 2.5px;
 }
@@ -228,7 +224,7 @@ nav {
 
 .section-two-link a {
   font-size: 1.26rem;
-  transition: all ease-in-out 0.3s;
+
   color: var(--cyan);
 }
 
@@ -240,7 +236,6 @@ nav {
   width: 30%;
   height: 1px;
   background-color: var(--cyan);
-  transition: all ease-in-out 0.3s;
 }
 /* Section 3 */
 
@@ -308,20 +303,18 @@ nav {
   width: 70%;
   background-color: var(--dark-blue);
   text-align: center;
-
   flex-direction: column;
   gap: 1.35rem;
   margin: 0 auto;
   transform: translate(50%, 140%);
   right: 50%;
   z-index: -1;
-  padding: 3.85rem 2rem;
+  padding: 3.8rem 2rem;
   align-items: center;
   border-radius: 10px;
 }
 
 .section-four h3 {
-  font-family: var(--rale-font);
   font-weight: 700;
   font-size: 2.25rem;
   margin: 0 auto;
@@ -329,20 +322,20 @@ nav {
 
 .section-four p {
   font-size: 1rem;
-  font-family: var(--rale-font);
   width: 80%;
   margin: 0 auto;
   line-height: 1.5rem;
 }
 .input-section {
   flex-direction: row;
-  gap: 2rem;
-  width: 90%;
+  /* gap: 1.2rem; */
+  width: 88%;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 1.2rem;
+  justify-content: space-between;
 }
 .section-four input {
-  width: 70%;
+  width: 64%;
   padding: 1.1rem;
   border-radius: 35px;
   border: transparent;
@@ -352,15 +345,13 @@ nav {
 }
 .section-four button {
   cursor: pointer;
-  padding: 1.1rem;
+  padding: 1rem;
   border-radius: 35px;
   border: transparent;
-  font-family: var(--rale-font);
   font-weight: 700;
-  width: 25%;
+  width: 28%;
   color: var(--white);
   background: linear-gradient(90deg, var(--cyan), var(--blue));
-  transition: all ease-in-out 0.3s;
 }
 
 /* Footer */
@@ -375,7 +366,7 @@ footer {
   align-items: left;
 }
 
-.footer-section {
+.footer-inner {
   flex-direction: column;
   gap: 2.6rem;
   padding: 4rem 5.7rem;
@@ -391,42 +382,43 @@ footer {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0;
 }
-.footer-sec-one {
+.menu-section-one {
   flex-direction: column;
   padding-left: 2.9rem;
-  width: 30%;
+  width: 29%;
 }
-.test-sect {
+.menu-section-two {
   flex-direction: row;
   gap: 8rem;
+  width: 61%;
 }
 .location-icon {
   height: 28%;
 }
 
-.footer-sec-one div {
+.menu-section-one div {
   flex-direction: row;
   gap: 2rem;
 }
-.footer-sec-one p {
+.menu-section-one p {
   font-size: 1.15rem;
   font-family: var(--body-font);
   line-height: 1.7rem;
 }
 
-.footer-sec-two {
+.contact-info {
   flex-direction: column;
   gap: 1.65rem;
   font-family: var(--body-font);
 }
-.footer-sec-two div {
+.contact-info div {
   flex-direction: row;
   gap: 1.5rem;
 }
 
-.footer-sec-three {
+.menu-pages {
   flex-direction: row;
   gap: 6rem;
 }
@@ -443,7 +435,6 @@ footer {
   font-size: 1.1rem;
   font-family: var(--body-font);
   font-weight: 400;
-  transition: all ease-in-out 0.3s;
 }
 
 .socials {
@@ -457,40 +448,57 @@ footer {
   color: var(--white);
   border-radius: 50%;
   border: 1px solid var(--white);
-  transition: all ease-in-out 0.3s;
+
   width: 0.9rem;
   height: 0.9rem;
   padding: 0.5rem;
 }
 
+/* Transitions */
+
+.menu li,
+.intro-text a,
+.section-two-link a,
+.section-two-link::after,
+.section-four button,
+.menu-two a,
+.menu-one a,
+.socials i {
+  transition: all ease-in-out 0.3s;
+}
+
 @media (hover: hover) {
+  .menu li:hover,
+  .intro-section a:hover,
+  .section-four button:hover,
+  .section-two-link:hover a,
+  .section-two-link:hover::after,
+  .socials i:hover,
+  .menu-two a:hover,
+  .menu-one a:hover {
+    transition: all ease-in-out 0.3s;
+  }
   .menu li:hover {
     text-decoration: underline;
-    transition: all ease-in-out 0.3s;
   }
 
   .intro-section a:hover,
   .section-four button:hover {
     background: linear-gradient(90deg, var(--cyan), var(--cyan));
-    transition: all ease-in-out 0.3s;
   }
 
   .section-two-link:hover a {
     color: var(--white);
-    transition: all ease-in-out 0.3s;
   }
   .section-two-link:hover::after {
     background-color: var(--white);
-    transition: all ease-in-out 0.3s;
   }
   .socials i:hover {
     color: var(--cyan);
     border: 1px solid var(--cyan);
-    transition: all ease-in-out 0.3s;
   }
   .menu-two a:hover,
   .menu-one a:hover {
     font-size: 1.2;
-    transition: all ease-in-out 0.3s;
   }
 }
