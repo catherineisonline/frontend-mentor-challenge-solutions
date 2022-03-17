@@ -350,6 +350,7 @@ nav {
   width: 70%;
   padding: 1.1rem;
   border-radius: 35px;
+  border: transparent;
 }
 .section-four input:focus-visible {
   outline: none;
@@ -381,28 +382,38 @@ footer {
 .footer-section {
   display: flex;
   flex-direction: column;
-  gap: 2.55rem;
-  padding: 4.3rem 8.5rem;
+  gap: 2.6rem;
+  padding: 4rem 5.7rem;
+  justify-content: space-between;
   margin-top: 10rem;
   background-color: var(--footer-bg);
 }
 .footer-logo {
-  max-width: 15%;
+  max-width: 14%;
+  padding-left: 2.55rem;
 }
 .menu-section {
   display: flex;
   flex-direction: row;
-  gap: 9rem;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
 }
 .footer-sec-one {
   display: flex;
   flex-direction: column;
+  padding-left: 2.9rem;
+  width: 30%;
+}
+.test-sect {
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
 }
 .location-icon {
   height: 28%;
 }
+
 .footer-sec-one div {
   display: flex;
   flex-direction: row;
@@ -411,30 +422,38 @@ footer {
 .footer-sec-one p {
   font-size: 1.15rem;
   font-family: var(--body-font);
+  line-height: 1.7rem;
 }
 
 .footer-sec-two {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.65rem;
   font-family: var(--body-font);
 }
 .footer-sec-two div {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .footer-sec-three {
   display: flex;
   flex-direction: row;
-  gap: 8.5rem;
+  gap: 6rem;
 }
 
-.footer-sec-three a {
+.menu-two,
+.menu-one {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-two a,
+.menu-one a {
   color: var(--white);
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.1rem;
   font-family: var(--body-font);
   font-weight: 400;
   transition: all ease-in-out 0.3s;
@@ -443,21 +462,20 @@ footer {
 .socials {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1.25rem;
+  text-align: center;
+  align-items: center;
 }
 
-
-.socials a {
-  border-radius: 50%;
-  border: 1px solid var(--white);
-  padding: 10px;
-vertical-align: center;
-}
 .socials i {
   color: var(--white);
-  font-size: 1.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+
   transition: all ease-in-out 0.3s;
-  
+  width: 0.9rem;
+  height: 0.9rem;
+  padding: 0.5rem;
 }
 
 @media (hover: hover) {
@@ -482,11 +500,11 @@ vertical-align: center;
   }
   .socials i:hover {
     color: var(--cyan);
+    border: 1px solid var(--cyan);
     transition: all ease-in-out 0.3s;
   }
   .footer-sec-three a:hover {
     font-weight: 700;
     transition: all ease-in-out 0.3s;
-    border: 1px solid var(--cyan);
   }
 }
