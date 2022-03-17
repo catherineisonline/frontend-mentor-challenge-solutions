@@ -103,7 +103,6 @@ nav {
 }
 
 /* Intro */
-
 .intro-text {
   text-align: center;
   background-color: var(--dark-blue);
@@ -369,7 +368,6 @@ nav {
 }
 
 /* Footer */
-
 footer {
   position: static;
   bottom: 0;
@@ -469,7 +467,6 @@ footer {
 }
 
 /* Transitions */
-
 .menu li,
 .intro-text a,
 .section-two-link a,
