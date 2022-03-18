@@ -1,7 +1,7 @@
 <img src="https://github.com/catherineisonline/ip-address-tracker-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 
-<h1 align="center">Testimonials Grid Section</h1>
+<h1 align="center">IP Address Tracker</h1>
 
 <div align="center">
   <h3>
