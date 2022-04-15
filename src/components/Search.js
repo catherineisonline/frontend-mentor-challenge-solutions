@@ -1,18 +1,19 @@
 import { useEffect } from "react";
+import { FaSearch } from "react-icons/fa";
 
 export default function Search({ searchCountries, searchInput, setCountries }) {
   const regions = [
     {
       label: "Africa",
-      name: "Africa",
+      name: "africa",
     },
-    { label: "America", name: "America" },
+    { label: "Americas", name: "americas" },
     {
       label: "Asia",
-      name: "Asia",
+      name: "asia",
     },
-    { label: "Europe", name: "Europe" },
-    { label: "Oceania", name: "Oceania" },
+    { label: "Europe", name: "europe" },
+    { label: "Oceania", name: "oceania" },
   ];
 
   const fetchRegion = async (e) => {
@@ -30,12 +31,13 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
 
   return (
     <div className="search-section">
-      <div>
+      <div className="input-block">
+        <FaSearch className="search-icon" />
         <input
           type="search"
           name="search"
           id="search"
-          placeholder="search by country name"
+          placeholder="Search for a country..."
           value={searchInput}
           onChange={(e) => searchCountries(e.target.value)}
         ></input>
@@ -47,7 +49,7 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
           id=""
           onChange={(e) => fetchRegion(e.target.value)}
         >
-          <option value="Filter By Region" selected disabled>
+          <option value="Filter By Region" selected hidden>
             Filter By Region
           </option>
           {regions.map((region) => (
