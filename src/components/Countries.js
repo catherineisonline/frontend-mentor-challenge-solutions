@@ -71,7 +71,7 @@ export default function Countries() {
               <div className="container-block">
                 {countries.map(
                   ({ name, population, region, capital, flags }) => (
-                    <Link to={`/rest-countries/${name}`} key={name}>
+                    <Link to={`/rest-countries/${name}`} key={name} className="inside-container">
                       <div>
                         <div className="image-container">
                           <img className="image" src={flags.png} alt="" />

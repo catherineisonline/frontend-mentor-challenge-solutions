@@ -29,7 +29,7 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
   }, []);
 
   return (
-    <div>
+    <div className="search-section">
       <div>
         <input
           type="search"

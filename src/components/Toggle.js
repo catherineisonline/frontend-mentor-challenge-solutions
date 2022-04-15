@@ -7,8 +7,8 @@ document.body.classList.toggle("dark");
 setDarkMode(!darkMode)
 }
   return (
-    <>
-      <button onClick={changeTheme}>{darkMode ? <div><FaSun /> <p>Light Mode</p></div> : <div><FaMoon /><p>Dark Mode</p> </div>}</button>
-    </>
+  
+      <div className="toggle" onClick={changeTheme}>{darkMode ? <div className="toggle-light"><FaSun /> <p>Light Mode</p></div> : <div className="toggle-dark"><FaMoon /><p>Dark Mode</p> </div>}</div>
+    
   );
 }
