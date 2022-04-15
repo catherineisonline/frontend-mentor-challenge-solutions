@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //Styles
-import "./index.css";
+import "./styles.css";
 //Componnets
 import Header from "./components/Header";
 import Countries from "./components/Countries";

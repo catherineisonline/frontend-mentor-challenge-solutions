@@ -8,7 +8,7 @@ setDarkMode(!darkMode)
 }
   return (
     <>
-      <button onClick={changeTheme}>{darkMode ? <FaSun />: <FaMoon /> }</button>
+      <button onClick={changeTheme}>{darkMode ? <div><FaSun /> <p>Light Mode</p></div> : <div><FaMoon /><p>Dark Mode</p> </div>}</button>
     </>
   );
 }

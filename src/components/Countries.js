@@ -7,7 +7,7 @@ export default function Countries() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filtered, setFiltered] = useState([]);
-  const [filteredRegion, setFilteredRegion] = useState([]);
+  // const [filteredRegion, setFilteredRegion] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const fetchCountries = async () => {
     const response = await fetch(url);
@@ -21,7 +21,7 @@ export default function Countries() {
 
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue);
-    console.log(searchValue)
+    console.log(searchValue);
     if (searchInput) {
       const filteredCountries = countries.filter((country) =>
         Object.values(country)
@@ -34,7 +34,6 @@ export default function Countries() {
       setFiltered(countries);
     }
   };
-
 
   return (
     <>
@@ -78,10 +77,10 @@ export default function Countries() {
                           <img className="image" src={flags.png} alt="" />
                         </div>
                         <ul className="info-block">
-                          <h2 className="p">{name}</h2>
-                          <li className="p">{population}</li>
-                          <li className="p">{region}</li>
-                          <li className="p">{capital}</li>
+                          <h2 className="p"> {name}</h2>
+                          <li className="p">Population: {population}</li>
+                          <li className="p">Region: {region}</li>
+                          <li className="p">Capital: {capital}</li>
                         </ul>
                       </div>
                     </Link>

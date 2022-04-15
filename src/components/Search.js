@@ -14,24 +14,19 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
     { label: "Europe", name: "Europe" },
     { label: "Oceania", name: "Oceania" },
   ];
-  // setCountries(regions);
+
   const fetchRegion = async (e) => {
     const url = `https://restcountries.com/v2/region/${e}`;
-    console.log(e.target);
+    e = e.value;
     const response = await fetch(url);
     const data = await response.json();
     setCountries(data);
     console.log(data);
-    e.preventDeafult()
   };
 
   useEffect(() => {
     fetchRegion();
   }, []);
-
-  // const selectedRegion = () => {
-  //   const selectedRegion =
-  // }
 
   return (
     <div>
@@ -50,7 +45,6 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
           className="select-region"
           name="select"
           id=""
-          value={searchInput}
           onChange={(e) => fetchRegion(e.target.value)}
         >
           <option value="Filter By Region" selected disabled>

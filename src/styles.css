@@ -3,29 +3,42 @@
   --body-font: "Nunito Sans", sans-serif;
   --light-mode-text: hsl(200, 15%, 8%);
   --light-mode-background: hsl(0, 0%, 98%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --dark-mode-bg: hsl(207, 26%, 17%);
+  --dark-mode-elements: hsl(209, 23%, 22%);
 }
 
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+  font-family: var(--body-font);
+  font-size: 14px;
+}
+
+img {
+  display: block;
 }
 a {
   text-decoration: none;
+  color: var(--light-mode-text);
 }
 
-/* .mainContainer {
-  background-color: antiquewhite;
-} */
 /* DARKMODE */
 .dark {
-  background-color: black;
+  background-color: var(--dark-mode-bg);
+  color: var(--white);
+}
+.dark a {
+  color: var(--white);
 }
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* background-color: white; */
   padding: 1rem;
   -webkit-box-shadow: 0px 7px 6px -4px rgba(195, 195, 195, 0.27);
   box-shadow: 0px 7px 6px -4px rgba(195, 195, 195, 0.27);
@@ -64,9 +77,8 @@ h2 {
   border-color: transparent;
 }
 
-.main-container {
-  font-family: var(--body-font);
-  font-size: 14px;
+/* .main-container {
+ 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 90%;
@@ -74,23 +86,31 @@ h2 {
   color: var(--light-mode-text);
   gap: 2rem;
   margin-top: 3rem;
-}
+} */
+
+/* CONTAINER BLOCK */
 .container-block {
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* background-color: white; */
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
   border-radius: 10px;
+
   -webkit-box-shadow: 0px 7px 6px -4px rgba(195, 195, 195, 0.27);
   box-shadow: 0px 7px 6px -4px rgba(195, 195, 195, 0.27);
 }
 .info-block {
   padding: 1rem;
   list-style: none;
+  background-color: var(--white);
 }
 
 .image-container {
-  background-size: cover;
-  width: 18rem;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
 }
 .image {
   width: 100%;
