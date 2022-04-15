@@ -51,16 +51,20 @@ export default function Countries() {
           {searchInput.length > 0 ? (
             <div className="container-block">
               {filtered.map(({ name, population, region, capital, flags }) => (
-                <Link to={`/rest-countries/${name}`} key={name}>
+                <Link
+                  to={`/rest-countries/${name}`}
+                  key={name}
+                  className="inside-container"
+                >
                   <div>
                     <div className="image-container">
                       <img className="image" src={flags.png} alt="" />
                     </div>
                     <ul className="info-block">
                       <h2 className="p">{name}</h2>
-                      <li className="p">{population}</li>
-                      <li className="p">{region}</li>
-                      <li className="p">{capital}</li>
+                      <li className="p"><span className="category">Population:</span> {population}</li>
+                      <li className="p"><span className="category">Region:</span> {region}</li>
+                      <li className="p"><span className="category">Capital:</span> {capital}</li>
                     </ul>
                   </div>
                 </Link>
@@ -71,16 +75,20 @@ export default function Countries() {
               <div className="container-block">
                 {countries.map(
                   ({ name, population, region, capital, flags }) => (
-                    <Link to={`/rest-countries/${name}`} key={name} className="inside-container">
+                    <Link
+                      to={`/rest-countries/${name}`}
+                      key={name}
+                      className="inside-container"
+                    >
                       <div>
                         <div className="image-container">
                           <img className="image" src={flags.png} alt="" />
                         </div>
                         <ul className="info-block">
                           <h2 className="p"> {name}</h2>
-                          <li className="p">Population: {population}</li>
-                          <li className="p">Region: {region}</li>
-                          <li className="p">Capital: {capital}</li>
+                          <li className="p"><span className="category">Population:</span> {population}</li>
+                          <li className="p"><span className="category">Region:</span> {region}</li>
+                          <li className="p"><span className="category">Capital:</span> {capital}</li>
                         </ul>
                       </div>
                     </Link>
