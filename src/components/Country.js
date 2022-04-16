@@ -18,16 +18,18 @@ export default function Country() {
   return (
     <>
       {isLoading ? (
-        <h1>Searching...</h1>
+        <div className="searching-block">
+        <h1 className="searching-h1">Searching...</h1>
+        </div>
       ) : (
         <section>
           <Link to="/rest-countries">&larr; Back</Link>
           {country.map(({ name, capital, flags, population, region }) => (
             <div key={name}>
-              <div className="image-container">
-                <img className="image" src={flags.png} alt="" />
+              <div className="country-image-container">
+                <img className="country-image" src={flags.png} alt="" />
               </div>
-              <ul className="info-block">
+              <ul className="country-info-block">
                 <h2 className="p">{name}</h2>
                 <li className="p">{population}</li>
                 <li className="p">{region}</li>

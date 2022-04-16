@@ -42,23 +42,21 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
           onChange={(e) => searchCountries(e.target.value)}
         ></input>
       </div>
-      <div>
-        <select
+      <>
+        <details
           className="select-region"
           name="select"
           id=""
           onChange={(e) => fetchRegion(e.target.value)}
         >
-          <option value="Filter By Region" selected hidden>
-            Filter By Region
-          </option>
-          {regions.map((region) => (
-            <option className="africa" value={region.name}>
-              {region.label}
-            </option>
-          ))}
-        </select>
-      </div>
+          <summary>Filter by Region</summary>
+          <ul>
+            {regions.map((region) => (
+              <li value={region.name}>{region.label}</li>
+            ))}
+          </ul>
+        </details>
+      </>
     </div>
   );
 }

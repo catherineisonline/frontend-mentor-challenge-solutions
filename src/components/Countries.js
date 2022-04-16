@@ -38,7 +38,9 @@ export default function Countries() {
   return (
     <>
       {isLoading ? (
-        <h1>Searching...</h1>
+        <div className="searching-block">
+        <h1 className="searching-h1">Searching...</h1>
+        </div>
       ) : (
         <div>
           <div>
@@ -80,17 +82,17 @@ export default function Countries() {
                       key={name}
                       className="inside-container"
                     >
-                      <div>
+                      {/* <div> */}
                         <div className="image-container">
                           <img className="image" src={flags.png} alt="" />
-                        </div>
+                       </div>
                         <ul className="info-block">
                           <h2 className="p"> {name}</h2>
                           <li className="p"><span className="category">Population:</span> {population}</li>
                           <li className="p"><span className="category">Region:</span> {region}</li>
                           <li className="p"><span className="category">Capital:</span> {capital}</li>
                         </ul>
-                      </div>
+                      {/* </div> */}
                     </Link>
                   )
                 )}
