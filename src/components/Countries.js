@@ -14,6 +14,7 @@ export default function Countries() {
     const data = await response.json();
     setCountries(data);
     setIsLoading(false);
+   
   };
   useEffect(() => {
     fetchCountries();

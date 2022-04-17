@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 export default function Country() {
   const [country, setCountry] = useState([]);
+  const [borders, setBorders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { name } = useParams();
+  const { alpha3Code } = useParams();
 
   useEffect(() => {
     const fetchCountryData = async () => {
@@ -12,19 +14,21 @@ export default function Country() {
       const data = await response.json();
       setCountry(data);
       setIsLoading(false);
-      console.log(data);
     };
     fetchCountryData();
 
-    // const fetchCountryBorders = async () => {
-    //   const url = `https://restcountries.com/v2/name/${name}`;
-    //   const response = await fetch(url);
-    //   const data = await response.json();
-    //   setCountry(data);
-    //   setIsLoading(false);
-    //   console.log(data);
-    // };
-  }, [name]);
+    const fetchCountryBorders = async () => {
+      alpha3Code.toLowerCase();
+      console.log(alpha3Code)
+      const url = `https://restcountries.com/v2/alpha/${alpha3Code}`;
+      const response = await fetch(url);
+      const data = await response.json();
+     
+      setBorders(data);
+      console.log(data);
+    };
+    fetchCountryBorders();
+  }, [name, alpha3Code]);
   return (
     <>
       {isLoading ? (
@@ -64,16 +68,19 @@ export default function Country() {
                   <div className="details-block">
                     <ul className="country-info-block-1">
                       <li className="p">
-                        <span className="details-span">Native Name:</span> {nativeName}
+                        <span className="details-span">Native Name:</span>{" "}
+                        {nativeName}
                       </li>
                       <li className="p">
-                        <span className="details-span">Population:</span> {population}
+                        <span className="details-span">Population:</span>{" "}
+                        {population}
                       </li>
                       <li className="p">
                         <span className="details-span">Region:</span> {region}
                       </li>
                       <li className="p">
-                        <span className="details-span">Sub Region:</span> {subregion}
+                        <span className="details-span">Sub Region:</span>{" "}
+                        {subregion}
                       </li>
                       <li className="p">
                         <span className="details-span">Capital:</span> {capital}
@@ -81,24 +88,24 @@ export default function Country() {
                     </ul>
                     <ul className="country-info-block-3">
                       <li className="p">
-                        <span className="details-span">Top Level Domain:</span> {topLevelDomain}
+                        <span className="details-span">Top Level Domain:</span>{" "}
+                        {topLevelDomain}
                       </li>
                       <li className="p">
-                        <span className="details-span">Currencies:</span> {currencies[0].name}
+                        <span className="details-span">Currencies:</span>{" "}
+                        {currencies[0].name}
                       </li>
                       <li className="p">
-                        <span className="details-span">Languages:</span> {languages[0].name}
+                        <span className="details-span">Languages:</span>{" "}
+                        {languages[0].name}
                       </li>
                     </ul>
-                    {/* <div>
-                
-                  <p>Border Countries:</p>
-                  {country.map(
-            ({   borders}) => (
-                  <p>{borders}</p>
-                  )
-          )}
-                </div> */}
+                    <div>
+                      <p>Border Countries:</p>
+                      {borders.map(({ data }) => (
+                        <p key={data}>{data.borders} {data}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
