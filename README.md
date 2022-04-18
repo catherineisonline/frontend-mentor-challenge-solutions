@@ -12,7 +12,7 @@
       Solution
     </a>
    <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca">
       Challenge
     </a>
   </h3>
@@ -30,7 +30,7 @@
 The challenge is to integrate with the REST Countries V2 API to pull country data and display it like in the designs.
 You can use any JavaScript framework/library on the front-end such as React or Vue. You also have complete control over which packages you use to do things like make HTTP requests or style your project.
 <br><br>Users should be able to:
-<br>1. VSee all countries from the API on the homepage.
+<br>1. See all countries from the API on the homepage.
 <br>
 2. Search for a country using an input field.
 
