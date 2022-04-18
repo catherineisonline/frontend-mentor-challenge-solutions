@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+<img src=""></img>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">REST Countries API with color theme switcher</h1>
 
-## Available Scripts
+<div align="center">
+  <h3>
+    <a href="" color="white">
+      Live
+    </a>
+    <span> | </span>
+    <a href="">
+      Solution
+    </a>
+   <span> | </span>
+    <a href="">
+      Challenge
+    </a>
+  </h3>
+</div>
+<div align="center">
+   Solution for a challenge from  <a href="https://www.frontendmentor.io/" target="_blank">frontendmentor.io</a>.
+</div>
+<br>
+<br>
+<br>
 
-In the project directory, you can run:
+## About The Project
 
-### `npm start`
+<p>If you're wanting to test your JavaScript skills this is the challenge for you. Use whichever JS framework you prefer and pull data from the REST Countries API. 
+The challenge is to integrate with the REST Countries V2 API to pull country data and display it like in the designs.
+You can use any JavaScript framework/library on the front-end such as React or Vue. You also have complete control over which packages you use to do things like make HTTP requests or style your project.
+<br><br>Users should be able to:
+<br>1. VSee all countries from the API on the homepage.
+<br>
+2. Search for a country using an input field.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
+3. Filter countries by region.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
+4. Click on a country to see more detailed information on a separate page.
+<br>
+5. Click through to the border countries on the detail page.
+<br>
+6. Toggle the color scheme between light and dark mode (optional).
+<br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-### `npm test`
+## Built with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flex
+- Desktop-first workflow
+- React
+- Rest Countries API
 
-### `npm run build`
+## What I learned
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Another fun project to practice React along with API. I have worked with other API however mostly with static urls. This one was a bit harder because I had to change request depending on the input as well. I am currently working on filterting by region. I did make it work however I had to change some tags to make options field editable, another new thing I found out recently. Instead of changing it via JS I tried to change to list tags but instead the functionality stopped working. Another hard thing I did not manage yet, is changing country borders. The URL I am getting request from is giving me country code names instead of full name and I am unsure how to change it back to full name.
+I also finally started to understand how to use states depending whether it's a class or function component!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Useful resources
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
+2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
+3. <a href="https://restcountries.com/">Rest Countries API</a> - information about countries via a RESTful API
 
-### `npm run eject`
+## Acknowledgments
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions!
