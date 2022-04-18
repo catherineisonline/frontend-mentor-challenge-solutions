@@ -65,7 +65,7 @@ export default function Countries() {
                     </div>
                     <ul className="info-block">
                       <h2 className="p">{name}</h2>
-                      <li className="p"><span className="category">Population:</span> {population}</li>
+                      <li className="p"><span className="category">Population:</span> {population.toLocaleString()}</li>
                       <li className="p"><span className="category">Region:</span> {region}</li>
                       <li className="p"><span className="category">Capital:</span> {capital}</li>
                     </ul>
@@ -83,17 +83,15 @@ export default function Countries() {
                       key={name}
                       className="inside-container"
                     >
-                      {/* <div> */}
                         <div className="image-container">
                           <img className="image" src={flags.png} alt="" />
                        </div>
                         <ul className="info-block">
                           <h2 className="p"> {name}</h2>
-                          <li className="p"><span className="category">Population:</span> {population}</li>
+                          <li className="p"><span className="category">Population:</span> {population.toLocaleString()}</li>
                           <li className="p"><span className="category">Region:</span> {region}</li>
                           <li className="p"><span className="category">Capital:</span> {capital}</li>
                         </ul>
-                      {/* </div> */}
                     </Link>
                   )
                 )}

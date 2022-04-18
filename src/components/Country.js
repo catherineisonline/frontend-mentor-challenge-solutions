@@ -2,33 +2,22 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 export default function Country() {
   const [country, setCountry] = useState([]);
-  const [borders, setBorders] = useState([]);
+  const [borderGroup, setCountryBorders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { name } = useParams();
-  const { alpha3Code } = useParams();
-
   useEffect(() => {
     const fetchCountryData = async () => {
       const url = `https://restcountries.com/v2/name/${name}`;
       const response = await fetch(url);
       const data = await response.json();
       setCountry(data);
+      data.forEach((borderArray) => setCountryBorders(borderArray.borders));
       setIsLoading(false);
     };
-    fetchCountryData();
 
-    const fetchCountryBorders = async () => {
-      alpha3Code.toLowerCase();
-      console.log(alpha3Code)
-      const url = `https://restcountries.com/v2/alpha/${alpha3Code}`;
-      const response = await fetch(url);
-      const data = await response.json();
-     
-      setBorders(data);
-      console.log(data);
-    };
-    fetchCountryBorders();
-  }, [name, alpha3Code]);
+    fetchCountryData();
+  }, [name, borderGroup]);
+
   return (
     <>
       {isLoading ? (
@@ -38,7 +27,7 @@ export default function Country() {
       ) : (
         <div className="">
           <div className="back">
-            <Link to="/rest-countries">
+            <Link to="/rest-countries" className="back-link">
               <span>&larr;</span> Back
             </Link>
           </div>
@@ -57,11 +46,7 @@ export default function Country() {
             }) => (
               <div key={name} className="country-block">
                 <div className="country-image-container">
-                  <img
-                    className="country-image"
-                    src={flags.png}
-                    alt="country flag"
-                  />
+                  <img className="country-image" src={flags.png} alt={name} />
                 </div>
                 <div className="country-block-info">
                   <h2 className="p">{name}</h2>
@@ -73,7 +58,7 @@ export default function Country() {
                       </li>
                       <li className="p">
                         <span className="details-span">Population:</span>{" "}
-                        {population}
+                        {population.toLocaleString()}
                       </li>
                       <li className="p">
                         <span className="details-span">Region:</span> {region}
@@ -100,12 +85,21 @@ export default function Country() {
                         {languages[0].name}
                       </li>
                     </ul>
-                    <div>
-                      <p>Border Countries:</p>
-                      {borders.map(({ data }) => (
-                        <p key={data}>{data.borders} {data}</p>
-                      ))}
-                    </div>
+                  </div>
+                  <div className="border-countries">
+                    <p className="border-countries-title">Border Countries:</p>
+                    {borderGroup?.length ? (
+                      borderGroup.map((borders) => (
+                        <Link
+                          className="border-country"
+                          to={`/rest-countries/`}
+                        >
+                          {borders}
+                        </Link>
+                      ))
+                    ) : (
+                      <p className="border-country-none">No Borders...</p>
+                    )}
                   </div>
                 </div>
               </div>

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 
 export default function Search({ searchCountries, searchInput, setCountries }) {
+  
   const regions = [
     {
       label: "Africa",
@@ -16,17 +17,19 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
     { label: "Oceania", name: "oceania" },
   ];
 
-  const fetchRegion = async (e) => {
-    const url = `https://restcountries.com/v2/region/${e}`;
-    e = e.value;
-    const response = await fetch(url);
-    const data = await response.json();
-    setCountries(data);
-    console.log(data);
-  };
+  // const fetchRegion = async (e) => {
+  //   const url = `https://restcountries.com/v2/region/${e}`;
+  //   e = e.name;
+  //   // e = regions.name;
+  //   console.log(regions);
+  //   const response = await fetch(url);
+  //   const data = await response.json();
+  //   setCountries(data);
+  //   console.log(data);
+  // };
 
   useEffect(() => {
-    fetchRegion();
+    // fetchRegion();
   }, []);
 
   return (
@@ -47,12 +50,12 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
           className="select-region"
           name="select"
           id=""
-          onChange={(e) => fetchRegion(e.target.value)}
+          // onChange={(e) => fetchRegion(e.target.value)} 
         >
           <summary>Filter by Region</summary>
-          <ul>
+          <ul >
             {regions.map((region) => (
-              <li value={region.name}>{region.label}</li>
+              <li  value={region.name}>{region.label}</li>
             ))}
           </ul>
         </details>
