@@ -1,4 +1,4 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/rest-countries/blob/main/public/project-preview.png?raw=true"></img>
 
 <h1 align="center">REST Countries API with color theme switcher</h1>
 
