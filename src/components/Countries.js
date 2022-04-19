@@ -79,7 +79,7 @@ export default function Countries() {
                 {countries.map(
                   ({ name, population, region, capital, flags }) => (
                     <Link
-                      to={`/rest-countries/${name}`}
+                      to={`/rest-countries/${name.toLowerCase()}`}
                       key={name}
                       className="inside-container"
                     >
