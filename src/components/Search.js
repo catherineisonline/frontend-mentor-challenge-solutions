@@ -44,7 +44,7 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
           onChange={(e) => searchCountries(e.target.value)}
         ></input>
       </div>
-      {/* <>
+      <>
         <details
           className="select-region"
           id="regions"
@@ -61,7 +61,7 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
             ))}
           </div>
         </details>
-      </> */}
+      </>
     </div>
   );
 }
