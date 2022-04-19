@@ -256,7 +256,8 @@ details[open] summary:after {
   height: 9%;
   display: flex;
   flex-direction: row;
-  width: 9%;
+  min-width: 9%;
+  width: 9rem;
   gap: 0.3rem;
   align-items: center;
   justify-content: center;
@@ -278,7 +279,7 @@ details[open] summary:after {
 }
 
 .country-image-container img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -399,13 +400,16 @@ details[open] summary:after {
   }
 }
 
-
 @media screen and (max-width: 1201px) {
   .container-block {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 2rem;
     column-gap: 2rem;
     justify-items: center;
+  }
+  .country-block {
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -417,11 +421,13 @@ details[open] summary:after {
 
   .search-section {
     flex-direction: column;
-   align-items: center;
-   gap: 2rem;
+    align-items: center;
+    gap: 2rem;
+  }
+  .border-countries {
+    gap: 15px;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   nav {
@@ -432,11 +438,13 @@ details[open] summary:after {
   }
   .container-block {
     grid-template-columns: repeat(1, 1fr);
-  
   }
 
   .search-section {
-   align-items: initial;
-   padding: 1.5rem;
+    align-items: initial;
+    padding: 1.5rem;
+  }.details-block {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
