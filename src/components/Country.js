@@ -22,12 +22,12 @@ export default function Country() {
     <>
       {isLoading ? (
         <div className="searching-block">
-          <h1 className="searching-h1">Searching...</h1>
+          <h2 className="searching-h1">Searching...</h2>
         </div>
       ) : (
         <div className="">
           <div className="back">
-            <Link to="/rest-countries" className="back-link">
+            <Link to="/" className="back-link">
               <span>&larr;</span> Back
             </Link>
           </div>
@@ -51,54 +51,53 @@ export default function Country() {
                 <div className="country-block-info">
                   <h2 className="p">{name}</h2>
                   <div className="details-block">
-                    <ul className="country-info-block-1">
-                      <li className="p">
+                    <div className="details-block-one">
+                      <p className="p">
                         <span className="details-span">Native Name:</span>{" "}
                         {nativeName}
-                      </li>
-                      <li className="p">
+                      </p>
+                      <p className="p">
                         <span className="details-span">Population:</span>{" "}
                         {population.toLocaleString()}
-                      </li>
-                      <li className="p">
+                      </p>
+                      <p className="p">
                         <span className="details-span">Region:</span> {region}
-                      </li>
-                      <li className="p">
+                      </p>
+                      <p className="p">
                         <span className="details-span">Sub Region:</span>{" "}
                         {subregion}
-                      </li>
-                      <li className="p">
+                      </p>
+                      <p className="p">
                         <span className="details-span">Capital:</span> {capital}
-                      </li>
-                    </ul>
-                    <ul className="country-info-block-3">
-                      <li className="p">
+                      </p>
+                    </div>
+                    <div className="details-block-two">
+                      <p className="p">
                         <span className="details-span">Top Level Domain:</span>{" "}
                         {topLevelDomain}
-                      </li>
-                      <li className="p">
+                      </p>
+                      <p className="p">
                         <span className="details-span">Currencies:</span>{" "}
                         {currencies[0].name}
-                      </li>
-                      <li className="p">
+                      </p>
+                      <p className="p">
                         <span className="details-span">Languages:</span>{" "}
                         {languages[0].name}
-                      </li>
-                    </ul>
+                      </p>
+                    </div>
                   </div>
                   <div className="border-countries">
                     <p className="border-countries-title">Border Countries:</p>
                     {borderGroup?.length ? (
                       borderGroup.map((borders) => (
-                        <Link
-                          className="border-country"
-                          to={`/rest-countries/`}
-                        >
+                        <Link className="border-country" to="/rest-countries">
                           {borders}
                         </Link>
                       ))
                     ) : (
-                      <p className="border-country-none">No Borders...</p>
+                      <Link to="/" className="border-country-none">
+                        No Borders...
+                      </Link>
                     )}
                   </div>
                 </div>

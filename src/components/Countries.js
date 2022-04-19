@@ -7,14 +7,12 @@ export default function Countries() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filtered, setFiltered] = useState([]);
-  // const [filteredRegion, setFilteredRegion] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const fetchCountries = async () => {
     const response = await fetch(url);
     const data = await response.json();
     setCountries(data);
     setIsLoading(false);
-   
   };
   useEffect(() => {
     fetchCountries();
@@ -40,7 +38,7 @@ export default function Countries() {
     <>
       {isLoading ? (
         <div className="searching-block">
-        <h1 className="searching-h1">Searching...</h1>
+          <h2 className="searching-h1">Searching...</h2>
         </div>
       ) : (
         <div>
@@ -55,7 +53,7 @@ export default function Countries() {
             <div className="container-block">
               {filtered.map(({ name, population, region, capital, flags }) => (
                 <Link
-                  to={`/rest-countries/${name}`}
+                  to={`/${name.toLowerCase()}`}
                   key={name}
                   className="inside-container"
                 >
@@ -63,12 +61,19 @@ export default function Countries() {
                     <div className="image-container">
                       <img className="image" src={flags.png} alt="" />
                     </div>
-                    <ul className="info-block">
+                    <div className="info-block">
                       <h2 className="p">{name}</h2>
-                      <li className="p"><span className="category">Population:</span> {population.toLocaleString()}</li>
-                      <li className="p"><span className="category">Region:</span> {region}</li>
-                      <li className="p"><span className="category">Capital:</span> {capital}</li>
-                    </ul>
+                      <p className="p">
+                        <span className="category">Population:</span>{" "}
+                        {population.toLocaleString()}
+                      </p>
+                      <p className="p">
+                        <span className="category">Region:</span> {region}
+                      </p>
+                      <p className="p">
+                        <span className="category">Capital:</span> {capital}
+                      </p>
+                    </div>
                   </div>
                 </Link>
               ))}
@@ -79,19 +84,28 @@ export default function Countries() {
                 {countries.map(
                   ({ name, population, region, capital, flags }) => (
                     <Link
-                      to={`/rest-countries/${name.toLowerCase()}`}
+                      to={`/${name.toLowerCase()}`}
                       key={name}
                       className="inside-container"
                     >
-                        <div className="image-container">
-                          <img className="image" src={flags.png} alt="" />
-                       </div>
-                        <ul className="info-block">
-                          <h2 className="p"> {name}</h2>
-                          <li className="p"><span className="category">Population:</span> {population.toLocaleString()}</li>
-                          <li className="p"><span className="category">Region:</span> {region}</li>
-                          <li className="p"><span className="category">Capital:</span> {capital}</li>
-                        </ul>
+                      <div className="image-container">
+                        <img className="image" src={flags.png} alt="" />
+                      </div>
+                      <div className="info-block">
+                        <h2 className="p"> {name}</h2>
+                        <div>
+                          <p className="p">
+                            <span className="category">Population:</span>{" "}
+                            {population.toLocaleString()}
+                          </p>
+                          <p className="p">
+                            <span className="category">Region:</span> {region}
+                          </p>
+                          <p className="p">
+                            <span className="category">Capital:</span> {capital}
+                          </p>
+                        </div>
+                      </div>
                     </Link>
                   )
                 )}

@@ -13,15 +13,15 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <main className="mainContainer">
-      <Header />
-      <Routes>
-        <Route exact path="/rest-countries" element={<Countries />} />
-        <Route  path="/rest-countries/:name" element={<Country />} />
-        <Route  path="*" element={<Error />} />
-      </Routes>
-      </main>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <div className="mainContainer">
+        <Header />
+        <Routes>
+          <Route exact path="/:name" element={<Country />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/" exact element={<Countries />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

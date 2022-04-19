@@ -7,6 +7,7 @@
   --white: hsl(0, 0%, 100%);
   --dark-mode-bg: hsl(207, 26%, 17%);
   --dark-mode-elements: hsl(209, 23%, 22%);
+  --purple: rgb(143, 43, 236);
 }
 
 body {
@@ -113,14 +114,13 @@ h2 {
   padding: 0 0.2rem;
   -webkit-box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
-  border-color: transparent;
+  background-color: var(--white);
 }
 .select-region[open] {
   z-index: 1;
 }
 
 .select-region summary {
-  width: 10.5rem;
   padding: 1.3rem 0.8rem;
   cursor: pointer;
   border-radius: 5px;
@@ -168,9 +168,9 @@ details[open] summary:after {
   transform: rotate(-45deg) translate(0%, 0%);
 }
 
-.select-region ul {
+.region-list {
   max-width: 100%;
-  width: 10.5rem;
+  width: 100%;
   background-color: var(--white);
   position: absolute;
   top: calc(100% + 0.5rem);
@@ -179,17 +179,25 @@ details[open] summary:after {
   margin: 0;
   box-sizing: border-box;
   border-radius: 10px;
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
   list-style: none;
   line-height: 1.8rem;
+  -webkit-box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
+  box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
+}
+
+.region-list option {
+  cursor: pointer;
+  color: var(--dark-mode-bg);
+  transition: all ease-in-out 0.3s;
 }
 
 /* CONTAINER BLOCK */
 .container-block {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 5.6rem;
+  row-gap: 4.7rem;
   column-gap: 4.5rem;
   width: 89%;
   margin: 0 auto;
@@ -209,10 +217,10 @@ details[open] summary:after {
 .info-block {
   display: flex;
   flex-direction: column;
-  line-height: 1.5rem;
-  list-style: none;
   padding: 0 26px;
-  margin-top: 8px;
+  margin-top: 1rem;
+  line-height: 10px;
+  padding-bottom: 2rem;
 }
 .image-container {
   width: 100%;
@@ -287,12 +295,12 @@ details[open] summary:after {
   flex-direction: row;
   gap: 9rem;
 }
-.details-block ul {
-  list-style: none;
+.details-block .details-block-one,
+.details-block .details-block-two {
   padding: 0;
-  line-height: 2rem;
+  line-height: 1rem;
   font-size: 1rem;
-  margin-top: -0.5rem;
+  margin-top: -1rem;
 }
 
 .details-span {
@@ -305,7 +313,7 @@ details[open] summary:after {
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  margin-top: 2.6rem;
+  margin-top: 2.9rem;
   align-items: center;
 }
 .border-countries-title {
@@ -320,6 +328,7 @@ details[open] summary:after {
   -webkit-box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   cursor: pointer;
+  font-size: 0.7rem;
 }
 
 /* SEARCHING BLOCK */
@@ -342,23 +351,23 @@ details[open] summary:after {
   color: var(--white);
 }
 
-.dark nav {
-  background-color: var(--dark-mode-elements);
+.dark nav,
+.dark .inside-container,
+.dark .input-block input,
+.dark .select-region,
+.dark .region-list,
+.dark .back a,
+.dark .border-country {
   -webkit-box-shadow: 0px 7px 6px -4px rgba(4, 4, 4, 0.27);
   box-shadow: 0px 7px 6px -4px rgba(9, 9, 9, 0.27);
-}
-
-.dark .inside-container {
   background-color: var(--dark-mode-elements);
-  -webkit-box-shadow: 0px 7px 6px -4px rgba(4, 4, 4, 0.27);
-  box-shadow: 0px 7px 6px -4px rgba(9, 9, 9, 0.27);
 }
 
 .dark .input-block input,
 .dark .select-region {
-  background-color: var(--dark-mode-elements);
-  -webkit-box-shadow: 0px 7px 6px -4px rgba(4, 4, 4, 0.27);
-  box-shadow: 0px 7px 6px -4px rgba(9, 9, 9, 0.27);
+  color: var(--white);
+}
+.dark .region-list option {
   color: var(--white);
 }
 .dark .input-block input::placeholder {
@@ -368,20 +377,19 @@ details[open] summary:after {
   color: var(--white);
 }
 
-.dark .select-region ul {
-  background-color: var(--dark-mode-bg);
+.dark .region-list {
   color: var(--white);
-}
-
-.dark .back a {
-  background-color: var(--dark-mode-elements);
-  -webkit-box-shadow: 0px 7px 6px -4px rgba(4, 4, 4, 0.27);
-  box-shadow: 0px 7px 6px -4px rgba(9, 9, 9, 0.27);
 }
 
 .dark .border-country {
-  background-color: var(--dark-mode-elements);
   color: var(--white);
-  -webkit-box-shadow: 0px 7px 6px -4px rgba(4, 4, 4, 0.27);
-  box-shadow: 0px 7px 6px -4px rgba(9, 9, 9, 0.27);
+}
+
+/* HOVER */
+@media (hover: hover) {
+  .region-list option:hover,
+  .dark .region-list option:hover {
+    color: var(--purple);
+    transition: all ease-in-out 0.3s;
+  }
 }
