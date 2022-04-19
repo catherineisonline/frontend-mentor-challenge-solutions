@@ -36,6 +36,7 @@ nav {
   padding: 0.3rem 5.1rem;
   -webkit-box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
+  background-color: var(--white);
 }
 
 h1 {
