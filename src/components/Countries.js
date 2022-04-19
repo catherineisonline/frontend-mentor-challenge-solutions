@@ -53,7 +53,7 @@ export default function Countries() {
             <div className="container-block">
               {filtered.map(({ name, population, region, capital, flags }) => (
                 <Link
-                  to={`/${name.toLowerCase()}`}
+                  to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
                   key={name}
                   className="inside-container"
                 >
@@ -84,7 +84,7 @@ export default function Countries() {
                 {countries.map(
                   ({ name, population, region, capital, flags }) => (
                     <Link
-                      to={`/${name.toLowerCase()}`}
+                      to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
                       key={name}
                       className="inside-container"
                     >

@@ -90,7 +90,7 @@ export default function Country() {
                     <p className="border-countries-title">Border Countries:</p>
                     {borderGroup?.length ? (
                       borderGroup.map((borders) => (
-                        <Link className="border-country" to="/rest-countries">
+                        <Link className="border-country" to="/">
                           {borders}
                         </Link>
                       ))
