@@ -215,6 +215,10 @@ details[open] summary:after {
 .category {
   font-weight: 600;
 }
+
+.info-block-h2 {
+  line-height: 1.3rem;
+}
 .info-block {
   display: flex;
   flex-direction: column;
@@ -392,5 +396,47 @@ details[open] summary:after {
   .dark .region-list option:hover {
     color: var(--purple);
     transition: all ease-in-out 0.3s;
+  }
+}
+
+
+@media screen and (max-width: 1201px) {
+  .container-block {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .container-block {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+
+  .search-section {
+    flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 1rem;
+  }
+  .input-block {
+    width: 20rem;
+  }
+  .container-block {
+    grid-template-columns: repeat(1, 1fr);
+  
+  }
+
+  .search-section {
+   align-items: initial;
+   padding: 1.5rem;
   }
 }

@@ -62,7 +62,7 @@ export default function Countries() {
                       <img className="image" src={flags.png} alt="" />
                     </div>
                     <div className="info-block">
-                      <h2 className="p">{name}</h2>
+                      <h2 className="info-block-h2">{name}</h2>
                       <p className="p">
                         <span className="category">Population:</span>{" "}
                         {population.toLocaleString()}
@@ -92,7 +92,7 @@ export default function Countries() {
                         <img className="image" src={flags.png} alt="" />
                       </div>
                       <div className="info-block">
-                        <h2 className="p"> {name}</h2>
+                        <h2 className="info-block-h2"> {name}</h2>
                         <div>
                           <p className="p">
                             <span className="category">Population:</span>{" "}
