@@ -1,20 +1,20 @@
 <template>
-  <main class="main">
-    <header
-      class="header"
-      v-for="headerDetail in headerDetails"
-      v-bind:key="headerDetail.id"
-    >
-      <div class="header-info">
+  <main>
+    <header v-for="headerDetail in headerDetails" v-bind:key="headerDetail.id">
+      <section class="header-info">
         <img :src="headerDetail.headerIcon" alt="icon" />
         <a :href="headerDetail.projectUrl">
           <h1><span>Frontend</span> Mentor Challenge Solutions</h1>
         </a>
-      </div>
+      </section>
       <nav class="icon-navigation">
-        <div class="nav-icon">
-          <img :src="headerDetail.navIcon" alt="" @click="click" />
-        </div>
+        <img
+          class="nav-icon"
+          :src="headerDetail.navIcon"
+          alt=""
+          @click="click"
+        />
+
         <ul class="main-menu">
           <li>
             <i class="fas fa-home"></i
@@ -51,7 +51,7 @@
       </nav>
     </header>
     <section class="all-solutions">
-      <h2 class="all-solutions-h2">All solutions</h2>
+      <h2>All solutions</h2>
       <!-- Solutions Container -->
       <ul class="solutions">
         <li
@@ -60,21 +60,21 @@
           v-bind:key="solution.id"
         >
           <!-- Project Preview -->
-          <div class="project-preview">
+          <section class="project-preview">
             <img
               class="project-image"
               v-bind:src="solution.projectPreview"
               alt="project preview"
             />
-          </div>
+          </section>
           <!-- Project Info -->
-          <div class="project-info">
+          <section class="project-info">
             <!-- Project Name -->
-            <div class="project-name">
-              <p>{{ solution.projectName }}</p>
-            </div>
+
+            <p class="project-name">{{ solution.projectName }}</p>
+
             <!-- Project Stack -->
-            <div class="project-stacks">
+            <section class="project-stacks">
               <p
                 class="project-stack"
                 v-for="projectStack in solution.projectStack"
@@ -83,13 +83,13 @@
               >
                 {{ projectStack }}
               </p>
-            </div>
+            </section>
             <!-- Project Describtion -->
-            <div class="project-describtion">
+            <section class="project-describtion">
               <p>{{ solution.projectDescribtion }}</p>
-            </div>
+            </section>
             <!-- Links -->
-            <div
+            <section
               class="links-container"
               @mouseenter="mouseenter"
               @mouseleave="mouseleave"
@@ -108,8 +108,8 @@
                   >
                 </li>
               </ul>
-            </div>
-          </div>
+            </section>
+          </section>
         </li>
       </ul>
     </section>
@@ -126,8 +126,7 @@ export default {
         {
           headerIcon: require("@/assets/images/favicon.png"),
           navIcon: require("@/assets/images/nav-icon.jpg"),
-          projectUrl:
-            "https://frontend-mentor-challenge-solutions.netlify.app/",
+          projectUrl: "https://frontend-mentor-challenge-solutions.vercel.app/",
           frontendMentorUrl:
             "https://www.frontendmentor.io/profile/catherineisonline",
           gitHubUrl:

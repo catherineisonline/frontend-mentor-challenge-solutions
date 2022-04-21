@@ -1,0 +1,236 @@
+@use "base"
+//Main
+.main
+    margin: 0 auto
+    width: 100%
+    display: flex
+    flex-direction: column
+//Header
+header
+    display: flex
+    flex-direction: row
+    background-color: base.$white
+    border-bottom: 1px solid rgba(190, 190, 190, 0.253)
+    box-shadow: base.$menu-box-shadow
+    padding: 0.5rem
+    justify-content: center
+    align-items: center
+    img
+        object-fit: cover
+        height: 100%
+    .header-info
+        display: flex
+        flex-direction: row
+        align-items: center
+        width: 100%
+        gap: 10px
+        a
+            text-decoration: none
+            color: base.$black
+    h1
+        font-size: 1.2rem
+        letter-spacing: 2px
+        font-weight: 400
+        font-family: base.$barlow
+        span
+            text-decoration: underline wavy base.$wavy-underline
+//Navigation
+nav
+    img
+        border-radius: 50%
+        width: 3rem
+        height: 3rem
+        margin-right: 1rem
+        object-fit: cover
+        cursor: pointer
+    .main-menu
+        display: none
+    .show-menu
+        background-color: base.$white
+        display: flex
+        flex-direction: column
+        position: absolute
+        width: fit-content
+        height: fit-content
+        list-style: none
+        top: 5rem
+        right: 2rem
+        font-size: 1rem
+        font-family: base.$barlow
+        text-transform: uppercase
+        gap: 20px
+        border-radius: 10px
+        padding: 1.5rem
+        li
+            border-bottom: 1px solid rgba(190, 190, 190, 0.253)
+            display: flex
+            gap: 10px
+            align-items: center
+            text-align: center
+        a
+            text-decoration: none
+            color: base.$black
+            text-transform: capitalize
+//ALL SOLUTIONS
+.all-solutions
+    display: flex
+    flex-direction: column
+    margin-top: 2rem
+    margin-bottom: 5rem
+    h2
+        font-family: base.$barlow
+        text-transform: uppercase
+        font-size: 2.5rem
+        text-align: center
+        padding: 5rem
+        letter-spacing: 2px
+    .solutions
+        display: inline-grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 4rem
+        align-items: stretch
+        justify-content: center
+        width: calc(80% + 1.875rem)
+        margin: 0 auto
+        .solution
+            justify-content: stretch
+            align-items: stretch
+            display: inline-flex
+            flex-direction: column
+            border-width: 1px
+            border-style: solid
+            border-color: base.$border-color
+            border-radius: 1rem
+            img
+                display: block
+                width: 100%
+                height: 100%
+                object-fit: contain
+                border-radius: 1rem 1rem 0 0
+                transition: all ease-in-out 0.3s
+
+            .project-info
+                display: flex
+                flex-direction: column
+                padding: 2rem
+                .project-name
+                    font-size: 1.5rem
+                    font-family: base.$barlow
+                .project-stacks
+                    display: inline-flex
+                    flex-direction: row
+                    gap: 1rem
+                    .project-stack
+                        font-family: base.$barlow
+                        text-transform: uppercase
+                        font-size: 1.2rem
+                        font-weight: 600
+                    .HTML
+                        color: base.$html-text-color
+                    .CSS
+                        color: base.$css-text-color
+                    .JS
+                        color: base.$js-text-color
+                    .API
+                        color: base.$api-text-color
+
+                .project-describtion
+                    p
+                        font-family: var(--heebo)
+                        font-weight: 400
+                        color: var(--project-describtion)
+                        transition: all ease-in-out 0.3s
+    @media (max-width: base.$lg-width)
+    .solutions
+        gap: 2rem
+        grid-template-columns: repeat(2, 1fr)
+        width: 70%
+    @media (max-width: base.$md-width)
+    .solutions
+        grid-template-columns: 1fr
+//LINKS
+
+.links-container
+    .learn-more-btn
+        position: relative
+        display: flex
+        cursor: pointer
+        width: max-content
+        font-size: 1rem
+        text-decoration: none
+        font-family: base.$barlow
+        border-radius: 15px
+        background-color: transparent
+        transition: all ease-in-out 0.2s
+        align-items: center
+        padding: 0
+        margin: 1.5rem
+        border: none
+        white-space: nowrap
+        text-align: center
+    .hidden
+        display: none
+    .learn-more-btn::after
+        background-color: rgb(237, 44, 73)
+        bottom: -1px
+        content: ""
+        height: 2px
+        width: 100%
+        position: absolute
+        transform: scaleX(1)
+        transition: transform 0.3s ease 0s
+        text-align: center
+        justify-content: center
+
+    .links
+        display: none
+    .shown-links
+        width: 100%
+        height: 5rem
+        display: flex
+        flex-direction: row
+        background-color: transparent
+        border-radius: 1rem 1rem 0 0
+        transition: 0.1s
+        .link-btn
+            font-size: 1rem
+            text-decoration: none
+            font-family: base.$barlow
+            color: var(--js-text-color)
+            border-radius: 15px
+            background-color: transparent
+            transition: all ease-in-out 0.2s
+            text-align: center
+            justify-content: center
+            align-items: center
+            position: relative
+            list-style: none
+            padding: 0
+            margin: 1.5rem
+            a
+                position: relative
+                width: max-content
+                text-decoration: none
+                color: base.$black
+            a::after
+                background-color: rgb(237, 44, 73)
+                bottom: -10px
+                left: 0
+                content: ""
+                height: 2px
+                width: 100%
+                position: absolute
+                transform: scaleX(1)
+                transition: transform 0.3s ease 0s
+
+//HOVER
+@media (hover:hover)
+.shown-links
+    .link-btn
+        a:hover::after
+            transform: scaleX(0)
+.solutions
+    img:hover
+        cursor: pointer
+        transform: scale(0.9)
+        transition: all ease-in-out 0.3s
