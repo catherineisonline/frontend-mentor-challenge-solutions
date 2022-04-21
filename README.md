@@ -13,7 +13,7 @@
       Solution
     </a>
    <span> | </span>
-    <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">
+    <a href="https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC">
       Challenge
     </a>
   </h3>
