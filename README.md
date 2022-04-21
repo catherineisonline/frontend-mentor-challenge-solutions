@@ -28,7 +28,7 @@ npm run build
 
 ### Fylo dark theme landing page
 
-<a href="https://catherineisonline.github.io/fylo-dark-theme-landing-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/fylo-dark-theme-landing-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/fylo-dark-theme-landing-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/fylo-dark-theme-landing-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd">Try Out</a>
 
 ### Sunnyside agency landing page
 
