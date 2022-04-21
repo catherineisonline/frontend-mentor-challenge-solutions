@@ -24,7 +24,7 @@ npm run build
 
 ### REST Countries API with color theme switcher
 
-<a href="https://catherineisonline.github.io/rest-countries/">Live</a> | <a href="https://github.com/catherineisonline/rest-countries">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/rest-countries/">Live</a> | <a href="https://github.com/catherineisonline/rest-countries">Repo</a> | <a href="https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca">Try Out</a>
 
 ### Fylo dark theme landing page
 
@@ -32,35 +32,35 @@ npm run build
 
 ### Sunnyside agency landing page
 
-<a href="https://catherineisonline.github.io/sunnyside-agency-landing-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/sunnyside-agency-landing-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/sunnyside-agency-landing-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/sunnyside-agency-landing-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">Try Out</a>
 
 ### Pricing component with toggle
 
-<a href="https://catherineisonline.github.io/pricing-component-with-toggle-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/pricing-component-with-toggle-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/pricing-component-with-toggle-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/pricing-component-with-toggle-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC">Try Out</a>
 
 ### Intro component with sign-up form
 
-<a href="https://catherineisonline.github.io/intro-component-with-sign-up-form-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/intro-component-with-sign-up-form-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/intro-component-with-sign-up-form-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/intro-component-with-sign-up-form-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1">Try Out</a>
 
 ### Advice generator app
 
-<a href="https://catherineisonline.github.io/advice-generator-app-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/advice-generator-app-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/advice-generator-app-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/advice-generator-app-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db">Try Out</a>
 
 ### Base Apparel coming soon page
 
-<a href="https://catherineisonline.github.io/base-apparel-coming-soon-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/base-apparel-coming-soon-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/base-apparel-coming-soon-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/base-apparel-coming-soon-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0">Try Out</a>
 
 ### FAQ Accordion Card
 
-<a href="https://catherineisonline.github.io/faq-accordion-card-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/faq-accordion-card-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/faq-accordion-card-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/faq-accordion-card-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam">Try Out</a>
 
 ### Ping coming soon page
 
-<a href="https://catherineisonline.github.io/ping-coming-soon-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/ping-coming-soon-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/ping-coming-soon-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/ping-coming-soon-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da">Try Out</a>
 
 ### Article preview component
 
-<a href="https://catherineisonline.github.io/article-preview-component-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/article-preview-component-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+<a href="https://catherineisonline.github.io/article-preview-component-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/article-preview-component-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT">Try Out</a>
 
 ### URL shortening API landing page
 
