@@ -340,6 +340,156 @@ export default {
           repoLink:
             "https://github.com/catherineisonline/url-shortening-api-frontendmentor",
         },
+        {
+          id: 15,
+          projectName: "Article preview component",
+          projectDescribtion:
+            "Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/article-preview-component.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/article-preview-component-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/article-preview-component-USFNBjIaV",
+          repoLink:
+            "https://github.com/catherineisonline/article-preview-component-frontendmentor",
+        },
+        {
+          id: 16,
+          projectName: "Ping coming soon page",
+          projectDescribtion:
+            "This challenge is great for beginners and offers a chance to practice basic client-side form validation.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/ping-coming-soon.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/ping-coming-soon-page-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/ping-coming-soon-page-iKops4Jwj",
+          repoLink:
+            "https://github.com/catherineisonline/ping-coming-soon-page-frontendmentor",
+        },
+        {
+          id: 17,
+          projectName: "FAQ Accordion Card",
+          projectDescribtion:
+            "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/FAQ-accordion-card.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/faq-accordion-card-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/faq-accordion-card-tFrPJh5hD",
+          repoLink:
+            "https://github.com/catherineisonline/faq-accordion-card-frontendmentor",
+        },
+        {
+          id: 18,
+          projectName: "Base Apparel coming soon page",
+          projectDescribtion:
+            "This layout looks simple enough, but there are some interesting details to it that will test your CSS skills. You'll also get to practice basic form validation.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/Base-Apparel-coming-soon-page.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/base-apparel-coming-soon-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-KdvKyw8NE",
+          repoLink:
+            "https://github.com/catherineisonline/base-apparel-coming-soon-frontendmentor",
+        },
+        {
+          id: 19,
+          projectName: "Advice generator app",
+          projectDescribtion:
+            "The perfect project if you're learning how to interact with 3rd-party APIs. This challenge uses the Advice Slip API to generate random quotes of advice.",
+          projectStack: ["HTML", "CSS", "JS", "API"],
+          projectPreview: require("@/assets/images/advice-generator-app.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/advice-generator-app-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/advice-generator-app-wYjTeAeAf",
+          repoLink:
+            "https://github.com/catherineisonline/advice-generator-app-frontendmentor",
+        },
+        {
+          id: 20,
+          projectName: "Intro component with sign-up form",
+          projectDescribtion:
+            "Practice building out a sign-up form complete with client-side validation using JavaScript.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/Intro-component-with-sign-up-form.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/intro-component-with-sign-up-form-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/intro-component-with-signup-form-BfhVbWQEM",
+          repoLink:
+            "https://github.com/catherineisonline/intro-component-with-sign-up-form-frontendmentor",
+        },
+        {
+          id: 21,
+          projectName: "Pricing component with toggle",
+          projectDescribtion:
+            "This challenge will get you thinking about building an accessible custom toggle control and also test your layout skills.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/pricing-component-with-toggle.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/pricing-component-with-toggle-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/pricing-component-with-toggle-IUaYc_2FA",
+          repoLink:
+            "https://github.com/catherineisonline/pricing-component-with-toggle-frontendmentor",
+        },
+        {
+          id: 22,
+          projectName: "Sunnyside agency landing page",
+          projectDescribtion:
+            "This challenge will be a perfect test of your layout and responsive skills. There's a tiny bit of JS for the mobile menu, but the focus is HTML & CSS.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/sunnyside-agency-landing-page.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/sunnyside-agency-landing-page-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-QfXrSGu5A",
+          repoLink:
+            "https://github.com/catherineisonline/sunnyside-agency-landing-page-frontendmentor",
+        },
+        {
+          id: 23,
+          projectName: "Fylo dark theme landing page",
+          projectDescribtion:
+            "This design has some nice layout challenges in it. A perfect training ground to practice your Flexbox and/or Grid skills.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/fylo-dark-theme-landing-page.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/fylo-dark-theme-landing-page-frontendmentor/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-97wbDcVX8",
+          repoLink:
+            "https://github.com/catherineisonline/fylo-dark-theme-landing-page-frontendmentor",
+        },
+              {
+          id: 24,
+          projectName: "REST Countries API with color theme switcher",
+          projectDescribtion:
+            "If you're wanting to test your JavaScript skills this is the challenge for you. Use whichever JS framework you prefer and pull data from the REST Countries API.",
+          projectStack: ["HTML", "CSS", "JS", "API"],
+          projectPreview: require("@/assets/images/rest-countries-api-with-color-theme-switcher.jpg"),
+          liveLink:
+            "https://catherineisonline.github.io/rest-countries/",
+
+          projectLink:
+            "https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-SySqXmn49",
+          repoLink:
+            "https://github.com/catherineisonline/rest-countries",
+        },
       ],
     };
   },
