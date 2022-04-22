@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "gh-pages": "^3.2.3",
     "sass": "^1.50.1",
+    "travis-cli": "^1.0.9",
     "vue": "^2.6.11"
   },
   "devDependencies": {
