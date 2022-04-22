@@ -475,20 +475,18 @@ export default {
           repoLink:
             "https://github.com/catherineisonline/fylo-dark-theme-landing-page-frontendmentor",
         },
-              {
+        {
           id: 24,
           projectName: "REST Countries API with color theme switcher",
           projectDescribtion:
             "If you're wanting to test your JavaScript skills this is the challenge for you. Use whichever JS framework you prefer and pull data from the REST Countries API.",
           projectStack: ["HTML", "CSS", "JS", "API"],
           projectPreview: require("@/assets/images/rest-countries-api-with-color-theme-switcher.jpeg"),
-          liveLink:
-            "https://catherineisonline.github.io/rest-countries/",
+          liveLink: "https://catherineisonline.github.io/rest-countries/",
 
           projectLink:
             "https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-SySqXmn49",
-          repoLink:
-            "https://github.com/catherineisonline/rest-countries",
+          repoLink: "https://github.com/catherineisonline/rest-countries",
         },
       ],
     };
