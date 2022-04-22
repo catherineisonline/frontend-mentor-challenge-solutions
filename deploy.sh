@@ -23,3 +23,13 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
 
 cd -
+
+
+
+
+
+##OR
+
+npm run build
+cd dist
+git push <LINK TO REPO> main:gh-pages

@@ -113,6 +113,7 @@ nav
                 display: flex
                 flex-direction: column
                 padding: 2rem
+                line-height: 1.5rem
                 .project-name
                     font-size: 1.5rem
                     font-family: base.$barlow
@@ -143,7 +144,7 @@ nav
     @media (max-width: base.$md-width)
         .solutions
             grid-template-columns: 1fr
-            width: 70%
+            width: 90%
             gap: 2rem
 //LINKS
 
@@ -153,23 +154,24 @@ nav
         display: flex
         cursor: pointer
         width: max-content
-        font-size: 1rem
+        font-size: 1.2rem
         text-decoration: none
         font-family: base.$barlow
+        color: base.$black
         border-radius: 15px
         background-color: transparent
         transition: all ease-in-out 0.2s
         align-items: center
         padding: 0
-        margin: 1.5rem
         border: none
         white-space: nowrap
         text-align: center
+        height: 5rem
     .hidden
         display: none
     .learn-more-btn::after
         background-color: rgb(237, 44, 73)
-        bottom: -1px
+        top: 65%
         content: ""
         height: 2px
         width: 100%
@@ -209,6 +211,7 @@ nav
                 width: max-content
                 text-decoration: none
                 color: base.$black
+                font-size: 1.2rem
             a::after
                 background-color: rgb(237, 44, 73)
                 bottom: -10px
@@ -219,7 +222,11 @@ nav
                 position: absolute
                 transform: scaleX(1)
                 transition: transform 0.3s ease 0s
-
+    @media (max-width: base.$lg-width)
+        .learn-more-btn
+            font-size: 1.3rem
+        a
+            font-size: 1.3rem
 //HOVER
 @media (hover:hover)
 .shown-links
