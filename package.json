@@ -2,8 +2,7 @@
   "name": "frontend-mentor-challenge-solutions",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/frontend-mentor-challenge-solutions",
-  "wst": "/dist/",
+ 
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

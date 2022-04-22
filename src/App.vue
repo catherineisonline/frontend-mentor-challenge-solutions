@@ -125,7 +125,7 @@ export default {
       headerDetails: [
         {
           headerIcon: require("@/assets/images/favicon.png"),
-          navIcon: require("@/assets/images/nav-icon.jpg"),
+          navIcon: require("@/assets/images/nav-icon.jpeg"),
           projectUrl: "https://frontend-mentor-challenge-solutions.vercel.app/",
           frontendMentorUrl:
             "https://www.frontendmentor.io/profile/catherineisonline",
@@ -141,7 +141,7 @@ export default {
           projectDescribtion:
             "This is a great small challenge to help get you used to building to a design. There's no JS in this project, so you'll be able to focus on your HTML & CSS skills.",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/stats-preview-card-component.jpg"),
+          projectPreview: require("@/assets/images/stats-preview-card-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/stats-preview-card-component-frontendmentor/",
           projectLink:
@@ -155,7 +155,7 @@ export default {
           projectDescribtion:
             "A perfect project for newbies who are starting to build confidence with layouts!",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/order-summary-component.jpg"),
+          projectPreview: require("@/assets/images/order-summary-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/order-summary-component-frontendmentor/",
           projectLink:
@@ -169,7 +169,7 @@ export default {
           projectDescribtion:
             "This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/profile-card-component.jpg"),
+          projectPreview: require("@/assets/images/profile-card-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/profile-card-component-frontendmentor/",
           projectLink:
@@ -183,7 +183,7 @@ export default {
           projectDescribtion:
             "In this challenge, you will build out the pricing component to the designs provided. This is perfect for beginners and people who want to complete a smaller challenge.",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/single-price-grid-component.jpg"),
+          projectPreview: require("@/assets/images/single-price-grid-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/single-price-grid-component-frontendmentor/",
 
@@ -198,7 +198,7 @@ export default {
           projectDescribtion:
             "This challenge is perfect if you're just getting started. The shift between the layouts will be a nice test if you're new to building responsive projects.",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/3-column-preview-card-component.jpg"),
+          projectPreview: require("@/assets/images/3-column-preview-card-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/3-column-card-component-frontendmentor/",
           projectLink:
@@ -212,7 +212,7 @@ export default {
           projectDescribtion:
             "This project will test your layout skills. If you're starting to get confident with Flexbox or Grid, this will provide a nice challenge!",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/social-proof-section.jpg"),
+          projectPreview: require("@/assets/images/social-proof-section.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/social-proof-section-frontendmentor/",
 
@@ -227,7 +227,7 @@ export default {
           projectDescribtion:
             "A nice layout-based challenge for beginners. This will test anyone who is new to multi-column and responsive layouts.",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/four-card-feature-section.jpg"),
+          projectPreview: require("@/assets/images/four-card-feature-section.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/four-card-feature-section-frontendmentor/",
 
@@ -242,7 +242,7 @@ export default {
           projectDescribtion:
             "This HTML & CSS only challenge is perfect for anyone just starting out or anyone wanting a small project to play around with.",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/NFT-preview-card-component.jpg"),
+          projectPreview: require("@/assets/images/NFT-preview-card-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/nft-preview-card-frontendmentor/",
 
@@ -257,7 +257,7 @@ export default {
           projectDescribtion:
             "A perfect challenge for beginners, this project will get you working with a two column layout.",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/huddle-landing-page-with-a-single-introductory section.jpg"),
+          projectPreview: require("@/assets/images/huddle-landing-page-with-a-single-introductory section.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/huddle-landing-page-with-a-single-introductory-section-frontendmentor/",
 
@@ -272,7 +272,7 @@ export default {
           projectDescribtion:
             "This component has some interesting CSS challenges in the design. If you're looking to test your CSS skills, this will be a great project for you!",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/fylo-data-storage-component.jpg"),
+          projectPreview: require("@/assets/images/fylo-data-storage-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/fylo-data-storage-component-frontendmentor/",
           projectLink:
@@ -286,7 +286,7 @@ export default {
           projectDescribtion:
             "A perfect first challenge if you're new to HTML and CSS. The card layout doesn't shift, so it's ideal if you haven't learned about building responsive layouts yet.",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/QR-code-component.jpg"),
+          projectPreview: require("@/assets/images/QR-code-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/QR-code-component-frontendmentor/",
 
@@ -301,7 +301,7 @@ export default {
           projectDescribtion:
             "This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!",
           projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/testimonials-grid-section.jpg"),
+          projectPreview: require("@/assets/images/testimonials-grid-section.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/testimonials-grid-section-frontendmentor/",
 
@@ -316,7 +316,7 @@ export default {
           projectDescribtion:
             "In this challenge, you'll be using two separate APIs together to create an IP Address Tracking app.",
           projectStack: ["HTML", "CSS", "JS", "API"],
-          projectPreview: require("@/assets/images/IP-address-tracker-challenge.jpg"),
+          projectPreview: require("@/assets/images/IP-address-tracker-challenge.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/ip-address-tracker-frontendmentor/",
 
@@ -331,7 +331,7 @@ export default {
           projectDescribtion:
             "Integrate with the shrtcode URL shortening API and play with browser storage in this landing page challenge.",
           projectStack: ["HTML", "CSS", "JS", "API"],
-          projectPreview: require("@/assets/images/URL-shortening-API-landing-page.jpg"),
+          projectPreview: require("@/assets/images/URL-shortening-API-landing-page.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/url-shortening-api-frontendmentor/",
 
@@ -346,7 +346,7 @@ export default {
           projectDescribtion:
             "Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well.",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/article-preview-component.jpg"),
+          projectPreview: require("@/assets/images/article-preview-component.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/article-preview-component-frontendmentor/",
 
@@ -361,7 +361,7 @@ export default {
           projectDescribtion:
             "This challenge is great for beginners and offers a chance to practice basic client-side form validation.",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/ping-coming-soon.jpg"),
+          projectPreview: require("@/assets/images/ping-coming-soon.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/ping-coming-soon-page-frontendmentor/",
 
@@ -376,7 +376,7 @@ export default {
           projectDescribtion:
             "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/FAQ-accordion-card.jpg"),
+          projectPreview: require("@/assets/images/FAQ-accordion-card.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/faq-accordion-card-frontendmentor/",
 
@@ -391,7 +391,7 @@ export default {
           projectDescribtion:
             "This layout looks simple enough, but there are some interesting details to it that will test your CSS skills. You'll also get to practice basic form validation.",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/Base-Apparel-coming-soon-page.jpg"),
+          projectPreview: require("@/assets/images/Base-Apparel-coming-soon-page.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/base-apparel-coming-soon-frontendmentor/",
 
@@ -406,7 +406,7 @@ export default {
           projectDescribtion:
             "The perfect project if you're learning how to interact with 3rd-party APIs. This challenge uses the Advice Slip API to generate random quotes of advice.",
           projectStack: ["HTML", "CSS", "JS", "API"],
-          projectPreview: require("@/assets/images/advice-generator-app.jpg"),
+          projectPreview: require("@/assets/images/advice-generator-app.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/advice-generator-app-frontendmentor/",
 
@@ -421,7 +421,7 @@ export default {
           projectDescribtion:
             "Practice building out a sign-up form complete with client-side validation using JavaScript.",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/Intro-component-with-sign-up-form.jpg"),
+          projectPreview: require("@/assets/images/Intro-component-with-sign-up-form.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/intro-component-with-sign-up-form-frontendmentor/",
 
@@ -436,7 +436,7 @@ export default {
           projectDescribtion:
             "This challenge will get you thinking about building an accessible custom toggle control and also test your layout skills.",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/pricing-component-with-toggle.jpg"),
+          projectPreview: require("@/assets/images/pricing-component-with-toggle.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/pricing-component-with-toggle-frontendmentor/",
 
@@ -451,7 +451,7 @@ export default {
           projectDescribtion:
             "This challenge will be a perfect test of your layout and responsive skills. There's a tiny bit of JS for the mobile menu, but the focus is HTML & CSS.",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/sunnyside-agency-landing-page.jpg"),
+          projectPreview: require("@/assets/images/sunnyside-agency-landing-page.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/sunnyside-agency-landing-page-frontendmentor/",
 
@@ -466,7 +466,7 @@ export default {
           projectDescribtion:
             "This design has some nice layout challenges in it. A perfect training ground to practice your Flexbox and/or Grid skills.",
           projectStack: ["HTML", "CSS", "JS"],
-          projectPreview: require("@/assets/images/fylo-dark-theme-landing-page.jpg"),
+          projectPreview: require("@/assets/images/fylo-dark-theme-landing-page.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/fylo-dark-theme-landing-page-frontendmentor/",
 
@@ -481,7 +481,7 @@ export default {
           projectDescribtion:
             "If you're wanting to test your JavaScript skills this is the challenge for you. Use whichever JS framework you prefer and pull data from the REST Countries API.",
           projectStack: ["HTML", "CSS", "JS", "API"],
-          projectPreview: require("@/assets/images/rest-countries-api-with-color-theme-switcher.jpg"),
+          projectPreview: require("@/assets/images/rest-countries-api-with-color-theme-switcher.jpeg"),
           liveLink:
             "https://catherineisonline.github.io/rest-countries/",
 
