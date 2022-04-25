@@ -1,25 +1,25 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/interactive-rating-component-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 <h1 align="center">Interactive rating component
 </h1>
 
 <div align="center">
   <h3>
-    <a href="" color="white">
+    <a href="https://catherineisonline.github.io/interactive-rating-component-frontendmentor/" color="white">
       Live
     </a>
     <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/solutions/interactive-rating-component-B1FOwAQB9">
       Solution
     </a>
    <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI">
       Challenge
     </a>
   </h3>
 </div>
 <div align="center">
-   Solution for a challenge from  <a href="" target="_blank">frontendmentor.io</a>.
+   Solution for a challenge from  <a href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI" target="_blank">frontendmentor.io</a>.
 </div>
 <br>
 <br>
@@ -58,4 +58,4 @@ When I first started learning JavaScript it used to be very ahrd to understand h
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/interactive-rating-component-B1FOwAQB9">solution</a>. It definitely helps to find new ways to code and find easier solutions!
