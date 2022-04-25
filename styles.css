@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --orange: hsl(25, 97%, 53%);
+  --container-bg: #1f2630;
+  --body-font: "Overpass", sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: var(--body-font);
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+main {
+  display: flex;
+  justify-content: center;
+  background-color: var(--very-dark-blue);
+  min-height: 100vh;
+}
+
+.dark-bg {
+  background-color: var(--container-bg);
+}
+
+/********** FRONT ACTIVE  **********/
+.back-section {
+  display: none;
+}
+
+.front-section {
+  width: 42%;
+  margin: 0 auto;
+  margin-top: 13rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.95rem;
+  padding: 2rem 1.95rem;
+  height: 40%;
+  padding-bottom: 4rem;
+}
+
+.star-img {
+  position: relative;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  padding: 1rem;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.content h1 {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.content p {
+  color: var(--light-grey);
+  line-height: 1.5rem;
+}
+
+.rating-numbers {
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
+}
+
+/* RADIO BUTTON */
+.radio-btn {
+  display: none;
+}
+
+.rating-number {
+  cursor: pointer;
+  color: var(--light-grey);
+  border-radius: 50%;
+  padding: 1.1rem;
+  background-color: var(--dark-blue);
+  width: 1.1rem;
+  height: 1.1rem;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.rating-number.default-active {
+  background-color: rgb(149, 158, 172);
+  color: var(--white);
+}
+
+.was-selected {
+  background-color: var(--orange);
+  color: var(--white);
+}
+/**********  SUBMIT BTN **********/
+.btn {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--white);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+  width: 97%;
+  padding: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+}
+
+/********** BACK ACTIVE **********/
+.front-section.hide-card {
+  display: none;
+}
+
+.back-section.show-card {
+  display: inline-block;
+  width: 42%;
+  margin: 0 auto;
+  margin-top: 13rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 1.6rem 1.95rem;
+  height: 42%;
+  padding-bottom: 3.3rem;
+  font-family: var(--body-font);
+}
+
+.back-section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.6rem;
+}
+
+.result-text {
+  color: var(--orange);
+  background-color: var(--dark-blue);
+  border-radius: 25px;
+  padding: 0.4rem 0.6rem;
+  width: 50%;
+  text-align: center;
+}
+
+.thankyou-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--white);
+}
+.thankyou-section h1 {
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+
+.thankyou-section p {
+  color: var(--medium-grey);
+}
+
+/** Transitions **/
+.rating-number.default-active,
+.rating-number.default-active:hover,
+.rating-number:hover,
+.btn,
+.btn:hover {
+  transition: all ease-in-out 0.3s;
+}
+@media (hover: hover) {
+  .rating-number.default-active:hover,
+  .rating-number:hover {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+  .btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .front-section,
+  .back-section.show-card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .front-section,
+  .back-section.show-card {
+    width: 70%;
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .front-section,
+  .back-section.show-card {
+    width: 80%;
+  }
+}

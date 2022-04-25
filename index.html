@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Interactive rating component</title>
+</head>
+
+<body>
+  <main>
+    <div class="main-container">
+      <div class="front-section dark-bg">
+        <!-- FRONT -->
+        <div class="star-section"><img class="star-img" src="images/icon-star.svg" alt="star"></div>
+        <div class="content">
+          <h1>How did we do?</h1>
+          <p>Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!</p>
+        </div>
+        <div class="rating-numbers">
+          <input class="radio-btn" value="1" type="radio" id="one" checked></input>
+          <label class="rating-number one default-active" for="one">1</label>
+          <input class="radio-btn" value="2" type="radio" id="two"></input>
+          <label class="rating-number two" for="two">2</label>
+          <input class="radio-btn" value="3" type="radio" id="three"></input>
+          <label class="rating-number three " for="three">3</label>
+          <input class="radio-btn" value="4" type="radio" id="four"></input>
+          <label class="rating-number four" for="four">4</label>
+          <input class="radio-btn" value="5" type="radio" id="five"></input>
+          <label class="rating-number five" for="five">5</label>
+        </div>
+        <div><button class="btn">submit</button></div>
+      </div>
+      <!-- END OF FRONT -->
+      <!-- BACK -->
+      <div class="back-section dark-bg">
+        <div class="back-section-inner">
+          <img src="images/illustration-thank-you.svg" alt="review icon">
+
+          <p class="result-text"></p>
+
+          <div class="thankyou-section">
+            <h1>Thank you!</h1>
+            <p> We appreciate you taking the time to give a rating. If you ever need more support,
+              don’t hesitate to get in touch!</p>
+          </div>
+        </div>
+      </div>
+      <!-- END OF BACK -->
+    </div>
+  </main>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
