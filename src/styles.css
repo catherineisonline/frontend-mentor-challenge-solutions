@@ -171,6 +171,8 @@ details[open] summary:after {
 
 .region-list {
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: var(--white);
   position: absolute;
@@ -188,10 +190,11 @@ details[open] summary:after {
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
 }
 
-.region-list option {
+.region-list li {
   cursor: pointer;
   color: var(--dark-mode-bg);
   transition: all ease-in-out 0.3s;
+
 }
 
 /* CONTAINER BLOCK */

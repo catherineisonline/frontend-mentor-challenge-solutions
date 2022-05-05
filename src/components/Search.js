@@ -18,18 +18,11 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
 
   const fetchRegion = async (e) => {
     const url = `https://restcountries.com/v2/region/${e}`;
-    e = e.value;
-    // e = regions.name;
     console.log(regions);
     const response = await fetch(url);
     const data = await response.json();
     setCountries(data);
-    console.log(data);
   };
-
-  useEffect(() => {
-    fetchRegion();
-  }, []);
 
   return (
     <div className="search-section">
@@ -45,19 +38,17 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
         ></input>
       </div>
       <>
-        <details
-          className="select-region"
-          id="regions"
-        >
+        <details className="select-region" id="regions">
           <summary>Filter by Region</summary>
           <div className="region-list">
             {regions.map((region) => (
-              <option
-                onClick={(e) => fetchRegion(e.target.value)}
+              <li
+                onClick={() => fetchRegion(region.name)}
                 value={region.name}
+                key={region.label}
               >
                 {region.label}
-              </option>
+              </li>
             ))}
           </div>
         </details>
