@@ -1,7 +1,9 @@
-import { useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-
+import { useState } from "react";
+import { useEffect } from "react";
 export default function Search({ searchCountries, searchInput, setCountries }) {
+  const [isVisible, setVisibility] = useState(false);
+
   const regions = [
     {
       label: "Africa",
@@ -18,15 +20,23 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
 
   const fetchRegion = async (e) => {
     const url = `https://restcountries.com/v2/region/${e}`;
-    console.log(regions);
     const response = await fetch(url);
     const data = await response.json();
     setCountries(data);
   };
+  function addDropdown() {
+    setVisibility(true);
+    setVisibility(true);
+  }
 
+  function removeDropdown() {
+    setVisibility(false);
+  }
+
+  console.log(isVisible);
   return (
-    <div className="search-section">
-      <div className="input-block">
+    <section className="search-section">
+      <section className="input-block">
         <FaSearch className="search-icon" />
         <input
           type="search"
@@ -36,23 +46,35 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
           value={searchInput}
           onChange={(e) => searchCountries(e.target.value)}
         ></input>
-      </div>
+      </section>
       <>
         <details className="select-region" id="regions">
-          <summary>Filter by Region</summary>
-          <div className="region-list">
-            {regions.map((region) => (
-              <li
-                onClick={() => fetchRegion(region.name)}
-                value={region.name}
-                key={region.label}
-              >
-                {region.label}
-              </li>
-            ))}
-          </div>
+  
+          <summary
+            onClick={() => {
+              addDropdown();
+            }}
+          >
+            Filter by Region
+          </summary>
+          {isVisible ? (
+            <div className="region-list">
+              {regions.map((region) => (
+                <li
+                  onClick={() => {
+                    fetchRegion(region.name);
+                    removeDropdown();
+                  }}
+                  value={region.name}
+                  key={region.label}
+                >
+                  {region.label}
+                </li>
+              ))}
+            </div>
+          ) : null}
         </details>
       </>
-    </div>
+    </section>
   );
 }

@@ -19,18 +19,18 @@ export default function Country() {
   }, [name, borderGroup]);
 
   return (
-    <>
+    <article>
       {isLoading ? (
-        <div className="searching-block">
+        <section className="searching-block">
           <h2 className="searching-h1">Searching...</h2>
-        </div>
+        </section>
       ) : (
-        <div className="">
-          <div className="back">
+        <section className="">
+          <section className="back">
             <Link to="/" className="back-link">
               <span>&larr;</span> Back
             </Link>
-          </div>
+          </section>
           {country.map(
             ({
               name,
@@ -44,14 +44,14 @@ export default function Country() {
               currencies,
               languages,
             }) => (
-              <div key={name} className="country-block">
-                <div className="country-image-container">
+              <section key={name} className="country-block">
+                <section className="country-image-container">
                   <img className="country-image" src={flags.png} alt={name} />
-                </div>
-                <div className="country-block-info">
+                </section>
+                <section className="country-block-info">
                   <h2 className="p">{name}</h2>
-                  <div className="details-block">
-                    <div className="details-block-one">
+                  <section className="details-block">
+                    <section className="details-block-one">
                       <p className="p">
                         <span className="details-span">Native Name:</span>{" "}
                         {nativeName}
@@ -70,8 +70,8 @@ export default function Country() {
                       <p className="p">
                         <span className="details-span">Capital:</span> {capital}
                       </p>
-                    </div>
-                    <div className="details-block-two">
+                    </section>
+                    <section className="details-block-two">
                       <p className="p">
                         <span className="details-span">Top Level Domain:</span>{" "}
                         {topLevelDomain}
@@ -84,9 +84,9 @@ export default function Country() {
                         <span className="details-span">Languages:</span>{" "}
                         {languages[0].name}
                       </p>
-                    </div>
-                  </div>
-                  <div className="border-countries">
+                    </section>
+                  </section>
+                  <section className="border-countries">
                     <p className="border-countries-title">Border Countries:</p>
                     {borderGroup?.length ? (
                       borderGroup.map((borders) => (
@@ -99,13 +99,13 @@ export default function Country() {
                         No Borders...
                       </Link>
                     )}
-                  </div>
-                </div>
-              </div>
+                  </section>
+                </section>
+              </section>
             )
           )}
-        </div>
+        </section>
       )}
-    </>
+    </article>
   );
 }

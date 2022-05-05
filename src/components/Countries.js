@@ -20,7 +20,6 @@ export default function Countries() {
 
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue);
-    console.log(searchValue);
     if (searchInput) {
       const filteredCountries = countries.filter((country) =>
         Object.values(country)
@@ -35,33 +34,33 @@ export default function Countries() {
   };
 
   return (
-    <>
+    <article>
       {isLoading ? (
-        <div className="searching-block">
+        <section className="searching-block">
           <h2 className="searching-h1">Searching...</h2>
-        </div>
+        </section>
       ) : (
-        <div>
-          <div>
+        <section>
+          <section>
             <Search
               searchCountries={searchCountries}
               searchInput={searchInput}
               setCountries={setCountries}
             />
-          </div>
+          </section>
           {searchInput.length > 0 ? (
-            <div className="container-block">
+            <section className="container-block">
               {filtered.map(({ name, population, region, capital, flags }) => (
                 <Link
                   to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
                   key={name}
                   className="inside-container"
                 >
-                  <div>
-                    <div className="image-container">
-                      <img className="image" src={flags.png} alt="" />
-                    </div>
-                    <div className="info-block">
+                  <section>
+                    <section className="image-container">
+                      <img className="image" src={flags.png} alt="flag" />
+                    </section>
+                    <section className="info-block">
                       <h2 className="info-block-h2">{name}</h2>
                       <p className="p">
                         <span className="category">Population:</span>{" "}
@@ -73,27 +72,27 @@ export default function Countries() {
                       <p className="p">
                         <span className="category">Capital:</span> {capital}
                       </p>
-                    </div>
-                  </div>
+                    </section>
+                  </section>
                 </Link>
               ))}
-            </div>
+            </section>
           ) : (
-            <>
-              <div className="container-block">
-                {countries.map(
-                  ({ name, population, region, capital, flags }) => (
+            <section>
+              <section className="container-block">
+                {countries
+                  .map(({ name, population, region, capital, flags }) => (
                     <Link
                       to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
                       key={name}
                       className="inside-container"
                     >
-                      <div className="image-container">
+                      <section className="image-container">
                         <img className="image" src={flags.png} alt="" />
-                      </div>
-                      <div className="info-block">
+                      </section>
+                      <section className="info-block">
                         <h2 className="info-block-h2"> {name}</h2>
-                        <div>
+                        <section>
                           <p className="p">
                             <span className="category">Population:</span>{" "}
                             {population.toLocaleString()}
@@ -104,16 +103,16 @@ export default function Countries() {
                           <p className="p">
                             <span className="category">Capital:</span> {capital}
                           </p>
-                        </div>
-                      </div>
+                        </section>
+                      </section>
                     </Link>
-                  )
-                )}
-              </div>
-            </>
+                  ))
+                  }
+              </section>
+            </section>
           )}
-        </div>
+        </section>
       )}
-    </>
+    </article>
   );
 }
