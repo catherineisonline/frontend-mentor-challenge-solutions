@@ -6,6 +6,10 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
 
   const regions = [
     {
+      label: "All",
+      name: "all",
+    },
+    {
       label: "Africa",
       name: "africa",
     },
@@ -19,10 +23,19 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
   ];
 
   const fetchRegion = async (e) => {
-    const url = `https://restcountries.com/v2/region/${e}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    setCountries(data);
+    if(e === "all") {
+      const url = `https://restcountries.com/v2/all`;
+      const response = await fetch(url);
+      const data = await response.json();
+      setCountries(data);
+    }
+    else {
+      const url = `https://restcountries.com/v2/region/${e}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      setCountries(data);
+    }
+   
   };
   function addDropdown() {
     setVisibility(true);
@@ -32,8 +45,6 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
   function removeDropdown() {
     setVisibility(false);
   }
-
-  console.log(isVisible);
   return (
     <section className="search-section">
       <section className="input-block">

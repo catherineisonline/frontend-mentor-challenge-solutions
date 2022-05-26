@@ -350,7 +350,7 @@ h2 {
 .dark .select-region {
   color: var(--white);
 }
-.dark .region-list option {
+.dark .region-list li {
   color: var(--white);
 }
 .dark .input-block input::placeholder {
