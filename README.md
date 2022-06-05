@@ -4,15 +4,15 @@
 
 <div align="center">
   <h3>
-    <a href="" color="white">
+    <a href="https://catherineisonline.github.io/calculator/" color="white">
       Live
     </a>
     <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/solutions/calculator-app-QeAU-DdsSj">
       Solution
     </a>
    <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29">
       Challenge
     </a>
   </h3>
@@ -61,4 +61,4 @@ I learned how to do simple math calculations using functions, condiitons and per
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/calculator-app-QeAU-DdsSj">solution</a>. It definitely helps to find new ways to code and find easier solutions!
