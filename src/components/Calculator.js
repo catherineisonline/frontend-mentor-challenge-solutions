@@ -69,9 +69,9 @@ export default function Calculator() {
 
   return (
     <main>
-      <div className="calculator">
-        <div className="screen">{calc || "0"}</div>
-        <div className="keypad">
+      <article className="calculator">
+        <section className="screen">{calc || "0"}</section>
+        <section className="keypad">
           <button className="key" value="7" onClick={() => updateCalc("7")}>
             7
           </button>
@@ -152,8 +152,8 @@ export default function Calculator() {
           >
             =
           </button>
-        </div>
-      </div>
+        </section>
+      </article>
     </main>
   );
 }

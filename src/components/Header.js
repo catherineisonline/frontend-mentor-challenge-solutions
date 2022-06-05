@@ -7,21 +7,21 @@ export default function Header({ HandleThemeChange }) {
   return (
     <header>
       <h1 className="title">calc</h1>
-      <div className="themes">
+      <section className="themes">
         <p>THEME</p>
-        <div className="theme-toggle">
-          <div className="theme-number">
-            <div id="color-theme1" className="theme-number">
+        <section className="theme-toggle">
+          <section className="theme-number">
+            <section id="color-theme1" className="theme-number">
               1
-            </div>
-            <div id="color-theme2" className="theme-number">
+            </section>
+            <section id="color-theme2" className="theme-number">
               2
-            </div>
-            <div id="color-theme3" className="theme-number">
+            </section>
+            <section id="color-theme3" className="theme-number">
               3
-            </div>
-          </div>
-          <div className="theme-value">
+            </section>
+          </section>
+          <section className="theme-value">
             <ThemeButton
               aria-label="basic"
               className="theme-btn basic active"
@@ -39,9 +39,9 @@ export default function Header({ HandleThemeChange }) {
               className="theme-btn dark"
               onClick={(e) => HandleThemeChange(dark, e)}
             ></ThemeButton>
-          </div>
-        </div>
-      </div>
+          </section>
+        </section>
+      </section>
     </header>
   );
 }
