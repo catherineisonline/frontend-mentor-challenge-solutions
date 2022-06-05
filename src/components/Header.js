@@ -2,11 +2,8 @@
 import { ThemeButton } from "../assets/ThemeSwitching.styled";
 // THEMES
 import { basic, light, dark } from "../assets/Theme.styled.js";
-import { useState } from "react";
 
 export default function Header({ HandleThemeChange }) {
-  
-
   return (
     <header>
       <h1 className="title">calc</h1>
@@ -44,7 +41,6 @@ export default function Header({ HandleThemeChange }) {
             ></ThemeButton>
           </div>
         </div>
-        {/* </div> */}
       </div>
     </header>
   );

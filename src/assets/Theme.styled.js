@@ -15,6 +15,9 @@ export const basic = {
     key: "hsl(30, 25%, 89%)",
     keyText: "hsl(221, 14%, 31%)",
     keyShadow: "hsl(28, 16%, 65%)",
+    numberKeyHover: "white",
+    actionKeyHover: "#A2B2E1",
+    equalKeyHover: "#F96B5B",
   },
 };
 
@@ -35,6 +38,9 @@ export const light = {
     key: "hsl(45, 7%, 89%)",
     keyText: "hsl(60, 10%, 19%)",
     keyShadow: "hsl(35, 11%, 61%)",
+    numberKeyHover: "white",
+    actionKeyHover: "#62B5BC",
+    equalKeyHover: "#FF8A38",
   },
 };
 
@@ -55,5 +61,8 @@ export const dark = {
     key: " hsl(268, 47%, 21%)",
     keyText: "hsl(52, 100%, 62%)",
     keyShadow: "hsl(290, 70%, 36%)",
+    numberKeyHover: "#6C34AC",
+    actionKeyHover: "#8631AF",
+    equalKeyHover: "#93FFF8",
   },
 };

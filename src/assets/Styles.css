@@ -89,6 +89,7 @@ header {
   margin: 0 auto;
   max-width: 100%;
   width: 538px;
+  margin-bottom: 5rem;
 }
 .calculator * {
   transition: background-color 1s, color 0.1s ease-in-out;
@@ -141,8 +142,4 @@ header {
   grid-column: 3 / span 2;
 }
 
-@media (hover:hover) {
-  #del:hover, #reset-key:hover, #equals-key:hover, .theme-btn.active:hover {
 
-  }
-}

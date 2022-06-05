@@ -18,6 +18,9 @@ header {
   background-color: ${({ theme }) => theme.colors.key};
   box-shadow: 0 4px 0 0 ${({ theme }) => theme.colors.keyShadow};
   color: ${({ theme }) => theme.colors.keyText};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.numberKeyHover};
+  }
 }
 .screen {
   border-radius: 5px;
@@ -29,12 +32,18 @@ header {
   background-color: ${({ theme }) => theme.colors.actionKey};
   box-shadow: 0 4px 0 0 ${({ theme }) => theme.colors.actionKeyShadow};
   color: ${({ theme }) => theme.colors.actionKeyText};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.actionKeyHover};
+  }
 }
 .equals-key {
   border-radius: 5px;
   background-color: ${({ theme }) => theme.colors.equalsKey};
   box-shadow: 0 4px 0 0 ${({ theme }) => theme.colors.equalsKeyShadow};
   color: ${({ theme }) => theme.colors.equalsKeyText};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.equalKeyHover};
+  }
 }
 .theme-value {
   background-color:  ${({ theme }) => theme.colors.keypad};
@@ -43,6 +52,11 @@ header {
 .theme-btn.active 
 {
   background-color: ${({ theme }) => theme.colors.equalsKey};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.equalKeyHover};
+  }
 }
+
+
 
 `;
