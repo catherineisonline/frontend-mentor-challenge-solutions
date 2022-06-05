@@ -141,3 +141,15 @@ header {
 #equals-key {
   grid-column: 3 / span 2;
 }
+
+@media screen and (max-width: 600px) {
+  header,
+  .calculator {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .keypad {
+    padding: 1rem;
+  }
+}
