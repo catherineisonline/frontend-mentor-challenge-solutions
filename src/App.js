@@ -4,14 +4,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { GlobalStyles } from "./assets/GlobalStyles.js";
 import { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
-import { light } from "./assets/Theme.styled.js";
+import { basic } from "./assets/Theme.styled.js";
 
 //Componnets
 import Header from "./components/Header";
 import Calculator from "./components/Calculator";
 
 export default function App() {
-  const [selectedTheme, setSelectedTheme] = useState(light);
+  const [selectedTheme, setSelectedTheme] = useState(basic);
   // function to handle user theme selection on click and save it to local storage
   const HandleThemeChange = (theme) => {
     setSelectedTheme(theme);
