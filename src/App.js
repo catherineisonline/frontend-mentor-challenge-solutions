@@ -43,7 +43,7 @@ export default function App() {
       <BrowserRouter>
         <Header HandleThemeChange={HandleThemeChange} />
         <Routes>
-          <Route path="/calculator-app" exact element={<Calculator />} />
+          <Route path="/calculator" exact element={<Calculator />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
