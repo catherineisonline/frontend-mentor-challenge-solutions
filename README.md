@@ -1,4 +1,4 @@
-<img src="https://github.com/catherineisonline/interactive-rating-component-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
+<img src=""></img>
 
 <h1 align="center">Product preview card component
 </h1>
