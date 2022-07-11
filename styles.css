@@ -55,7 +55,7 @@ main {
 }
 
 .image-container {
-  background-image: url("/images/image-product-desktop.jpg");
+  background-image: url("images/image-product-desktop.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -148,7 +148,7 @@ button {
     height: 100%;
   }
   .image-container {
-    background-image: url("/images/image-product-mobile.jpg");
+    background-image: url("images/image-product-mobile.jpg");
     border-radius: 15px 15px 0 0;
   }
 }
