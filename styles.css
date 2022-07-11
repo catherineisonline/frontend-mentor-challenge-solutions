@@ -79,8 +79,9 @@ h1 {
 }
 h2 {
   font-family: var(--fraunces);
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 2rem;
+  font-weight: 700;
 }
 
 .info-section p {
