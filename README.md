@@ -5,15 +5,15 @@
 
 <div align="center">
   <h3>
-    <a href="" color="white">
+    <a href="https://catherineisonline.github.io/product-preview-card-frontendmentor/" color="white">
       Live
     </a>
     <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/solutions/product-preview-card-component-2dVqjwidC2">
       Solution
     </a>
    <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa">
       Challenge
     </a>
   </h3>
@@ -42,13 +42,12 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flex
+- Grid
 - Desktop-first workflow
-- Vanilla JavaScript
 
 ## What I learned
 
-When I first started learning JavaScript it used to be very ahrd to understand how to interact with DOM elements when they have the same class name. With time, it's getting much easier and I am happy to practice it one more time!
+A very easy project to keep updated with the Frontend Mentor projects and remember the basics!
 
 ## Useful resources
 
@@ -57,4 +56,4 @@ When I first started learning JavaScript it used to be very ahrd to understand h
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/product-preview-card-component-2dVqjwidC2">solution</a>. It definitely helps to find new ways to code and find easier solutions!
