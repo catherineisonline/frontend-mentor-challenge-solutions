@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap');
 
 :root {
   --cream: hsl(30, 38%, 92%);
