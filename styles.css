@@ -47,7 +47,6 @@ main {
   grid-template-columns: repeat(2, 1fr);
   max-width: 90%;
   width: 37.5rem;
-  height: 450px;
   margin: 0 auto;
   margin-top: 11rem;
   margin-bottom: 10%;
