@@ -1,4 +1,4 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/fylo-landing-page-with-two-column-layout-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 <h1 align="center">Fylo landing page with two column layout
 </h1>
