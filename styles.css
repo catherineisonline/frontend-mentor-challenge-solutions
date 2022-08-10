@@ -153,11 +153,13 @@ main {
 /* Section Two */
 .section-two {
   position: relative;
-
+  background-color: hsl(240, 75%, 98%);
   flex-direction: row-reverse;
-  width: 89%;
+  /* width: 89%; */
   margin: 0 auto;
   margin-top: 25.5%;
+  /* padding-right: 5rem; */
+  padding-left: 5rem;
   padding-bottom: 5.8rem;
 }
 
@@ -165,17 +167,24 @@ main {
   content: "";
   position: absolute;
   width: 100%;
+  /* width: 100rem; */
+  height: 14rem;
   z-index: -1;
-  height: 100%;
   background-image: url("images/bg-curve-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100%;
+  background-position: center top;
+  padding: 0;
+  margin: 0;
+  margin-top: -15.5%;
+  /* padding-right: 0; */
 }
 
 .section-two img {
-  max-width: 42%;
-  height: 57%;
+  max-width: 40%;
+  height: 53%;
+  padding-right: 4.6rem;
+  /* margin-top: 0.5rem; */
 }
 
 .section-description-2 {
@@ -534,7 +543,13 @@ footer img {
     text-align: center;
     gap: 3.5rem;
   }
-
+  .section-two {
+    padding-left: initial;
+  }
+  .section-two::after {
+    margin-top: -120%;
+    margin-left: 0;
+  }
   .section-one-email,
   .section-three-email {
     display: grid;
@@ -585,6 +600,9 @@ footer img {
   .input-one.error::after {
     margin-top: 5px;
   }
+  .section-two::after {
+    margin-top: -150%;
+  }
 }
 @media screen and (max-width: 600px) {
   .socials {
@@ -593,6 +611,9 @@ footer img {
 }
 
 @media screen and (max-width: 530px) {
+  .section-two::after {
+    margin-top: -200%;
+  }
   nav {
     padding: 1rem;
     flex-wrap: wrap;
