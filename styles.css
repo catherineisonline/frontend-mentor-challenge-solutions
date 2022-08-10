@@ -180,7 +180,7 @@ main {
   /* padding-right: 0; */
 }
 
-.section-two img {
+.section-two-cover {
   max-width: 40%;
   height: 53%;
   padding-right: 4.6rem;
@@ -583,7 +583,7 @@ footer img {
     width: 100%;
   }
   .section-one img,
-  .section-two img {
+  .section-two-cover {
     max-width: 80%;
   }
   .info,
