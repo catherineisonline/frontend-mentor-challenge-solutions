@@ -1,22 +1,14 @@
 import { useState } from "react";
-import { useRef } from "react";
 import React from "react";
 import { useEffect } from "react";
 import Screen from "./Screen";
 import Keypad from "./Keypad";
 export default function Calculator() {
   const [calc, setCalc] = useState("");
-  const [result, setResult] = useState("");
+  // const [result, setResult] = useState("");
   const [calculated, setCalculated] = useState(false);
   const operations = ["/", "*", "+", "-", "."];
   const ref = React.createRef();
-  //update calculator screen
-  // useEffect(() => {
-
-  // return () => {};
-  // });
-
-  // useEffect(() => {
 
   const updateCalc = (value) => {
     const screenText = ref.current;
@@ -27,7 +19,7 @@ export default function Calculator() {
       return;
     }
     if (!operations.includes(value)) {
-      setResult(eval(calc + value).toString());
+      setCalc(eval(calc + value).toString());
 
       if (value === "0" && calc.length === 0) {
         return;
@@ -49,34 +41,29 @@ export default function Calculator() {
       setCalculated(false);
 
       setCalc(value);
-      return setResult(eval(calc + value).toString());
+      return setCalc(eval(calc + value).toString());
     }
 
     setCalc((current) => [...current, value]);
+    const findOctalLiteralArray = [...calc, value];
+
+    if (findOctalLiteralArray[findOctalLiteralArray.length - 1] === "0") {
+      return clear();
+    }
 
     setCalc(calc + value);
   };
 
-  // const clickedButton = ref.current;
-  // console.log(clickedButton);
-  // // console.log(clickedButton);
-  // clickedButton.addEventListener("click", updateCalc(clickedButton.value));
-
-  // // return () => {
-  // clickedButton.removeEventListener("click", updateCalc(clickedButton.value));
-  // };
-  // }, []);
   const calculate = () => {
     setCalculated(true);
     if (eval(calc) === undefined) {
       return;
     }
-    console.log(calc);
     setCalc(eval(calc).toString());
   };
   const clear = () => {
     setCalc("");
-    setResult("");
+    setCalc("");
   };
   const del = () => {
     if (calc === "") {
