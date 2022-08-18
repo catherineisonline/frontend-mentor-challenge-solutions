@@ -1,14 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { GlobalStyles } from "./assets/GlobalStyles.js";
+import { GlobalStyles } from "./styledComponents/GlobalStyles";
 import { useEffect } from "react";
+// import { ThemeProvider } from "./styledComponents/GlobalStyles";
 import { ThemeProvider } from "styled-components";
-import { basic } from "./assets/Theme.styled.js";
+// import { basic } from "./styledComponents/Theme.styled.js";
+import { basic } from "./styledComponents/Theme.styled";
 
 //Componnets
-import Header from "./components/Header";
-import Calculator from "./components/Calculator";
+import Header from "./components/header/Header";
+import Calculator from "./components/calculator/Calculator";
 
 export default function App() {
   const [selectedTheme, setSelectedTheme] = useState(basic);
