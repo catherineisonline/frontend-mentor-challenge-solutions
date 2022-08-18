@@ -1,10 +1,14 @@
 import { useState } from "react";
-
+import { useRef } from "react";
+import { useEffect } from "react";
 export default function Calculator() {
   const [calc, setCalc] = useState("");
   const [result, setResult] = useState("");
   const [calculated, setCalculated] = useState(false);
   const operations = ["/", "*", "+", "-", "."];
+  const ref = useRef(null);
+  const screenText = ref.current;
+  //update calculator screen
   const updateCalc = (value) => {
     if (
       (operations.includes(value) && calc === "") ||
@@ -14,6 +18,15 @@ export default function Calculator() {
     }
     if (!operations.includes(value)) {
       setResult(eval(calc + value).toString());
+      const screenText = ref.current;
+      // console.log(el2);
+      if (calc.length > 7) {
+        screenText.style.fontSize = "2.5rem";
+      }
+      if (calc.length >= 11) {
+        screenText.style.width = "fit-content";
+        screenText.style.overflow = "hidden";
+      }
     }
 
     if (operations.includes(value) && calculated === true) {
@@ -27,6 +40,7 @@ export default function Calculator() {
     }
     setCalc(calc + value);
   };
+
   const calculate = () => {
     setCalculated(true);
     if (eval(calc) === undefined) {
@@ -42,6 +56,10 @@ export default function Calculator() {
     if (calc === "") {
       return;
     }
+    if (calc.length < 7) {
+      screenText.style.fontSize = "3.3rem";
+    }
+
     const value = calc.slice(0, -1);
     setCalc(value);
   };
@@ -70,7 +88,9 @@ export default function Calculator() {
   return (
     <main>
       <article className="calculator">
-        <section className="screen">{calc || "0"}</section>
+        <section className="screen">
+          <p ref={ref}>{calc || "0"}</p>
+        </section>
         <section className="keypad">
           <button className="key" value="7" onClick={() => updateCalc("7")}>
             7

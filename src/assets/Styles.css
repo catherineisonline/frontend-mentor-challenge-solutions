@@ -110,7 +110,12 @@ header {
   letter-spacing: 1px;
   border-radius: 5px;
   margin-top: 0.9rem;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
+
 .keypad {
   display: grid;
   row-gap: 1.9rem;
