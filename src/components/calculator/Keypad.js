@@ -1,7 +1,16 @@
+// const Keypad = (props, ref) => {
+//   return (
+// import React from "react";
 const Keypad = (props) => {
   return (
     <section className="keypad">
-      <button className="key" value="7" onClick={() => props.updateCalc("7")}>
+      <button
+        className="key"
+        value="7"
+        onClick={() => {
+          props.updateCalc("7");
+        }}
+      >
         7
       </button>
       <button className="key" value="8" onClick={() => props.updateCalc("8")}>
