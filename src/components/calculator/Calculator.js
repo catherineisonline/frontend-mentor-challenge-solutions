@@ -5,9 +5,6 @@ import Screen from "./Screen";
 import Keypad from "./Keypad";
 export default function Calculator() {
   const [calc, setCalc] = useState("");
-  const [oneValue, setOneValue] = useState("");
-  const [secondValue, setSecondValue] = useState("");
-  const [result, setResult] = useState("");
   const [calculated, setCalculated] = useState(false);
   const operations = ["/", "*", "+", "-", "."];
   const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -15,59 +12,59 @@ export default function Calculator() {
 
   const updateCalc = (value) => {
     const displayValue = ref.current;
-
-    if (
+    //************* BEFORE CALCULATION *************//
+    if (value === "0" && calc === "0") {
+      return clear();
+    } else if (
       (operations.includes(value) && calc === "") ||
       (operations.includes(value) && operations.includes(calc.slice(-1)))
     ) {
       return;
-    }
-    if (!operations.includes(value)) {
-      setCalc(eval(calc + value).toString());
+    } else if (!operations.includes(value)) {
+      setCalc((+calc + +value).toString());
 
-      if (value === "0" && calc.length === 0) {
-        return;
-      }
       if (calc.length > 7) {
         displayValue.style.fontSize = "2.5rem";
       }
-      if (calc.length >= 11) {
+      if (calc.length >= 11 && !operations.includes(value)) {
         displayValue.style.width = "fit-content";
         displayValue.style.overflow = "hidden";
+        return setCalc(calc);
+      } else {
+        console.error();
       }
     }
-    //When you did calculation but continue it with the same number
-    if (operations.includes(value) && calculated === true) {
+
+    //************* AFTER CALCULATION *************//
+    //When you did calculation but continue operation with the result number
+    if (calculated === true && operations.includes(value)) {
       setCalculated(false);
     }
-    //Reset values if operation was finished and we start with a new number instead of operation
-    if (!operations.includes(value) && calculated === true) {
+    //When you did calculation but start with a new number instead of operation
+    else if (calculated === true && !operations.includes(value)) {
       setCalculated(false);
       return setCalc(value);
+    } else if (calculated === true && value === "0") {
+      setCalculated(false);
+      return setCalc("");
+    } else {
+      console.error();
     }
-
-    setCalc((current) => [...current, value]);
-    const findOctalLiteralArray = [...calc, value];
-    console.log(findOctalLiteralArray);
-    if (findOctalLiteralArray[findOctalLiteralArray.length - 1] === "0") {
-      return clear();
-    }
-    // if(findOctalLiteralArray.includes(".")) {
-
-    // }
+    //Deal with Octal Literals (When number starts with 0 / e.g. 06, 07, 08)
+    // setCalc((current) => [...current, value]);
+    // const findOctalLiteralArray = [...calc, value];
 
     setCalc(calc + value);
   };
 
   const calculate = () => {
-    setCalculated(true);
     if (eval(calc) === undefined) {
       return;
     }
+    setCalculated(true);
     setCalc(eval(calc).toString());
   };
   const clear = () => {
-    // setCalc("");
     setCalculated(false);
     setCalc("");
   };
