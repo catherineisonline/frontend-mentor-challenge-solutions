@@ -5,13 +5,17 @@ import Screen from "./Screen";
 import Keypad from "./Keypad";
 export default function Calculator() {
   const [calc, setCalc] = useState("");
-  // const [result, setResult] = useState("");
+  const [oneValue, setOneValue] = useState("");
+  const [secondValue, setSecondValue] = useState("");
+  const [result, setResult] = useState("");
   const [calculated, setCalculated] = useState(false);
   const operations = ["/", "*", "+", "-", "."];
+  const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
   const ref = React.createRef();
 
   const updateCalc = (value) => {
-    const screenText = ref.current;
+    const displayValue = ref.current;
+
     if (
       (operations.includes(value) && calc === "") ||
       (operations.includes(value) && operations.includes(calc.slice(-1)))
@@ -25,31 +29,32 @@ export default function Calculator() {
         return;
       }
       if (calc.length > 7) {
-        screenText.style.fontSize = "2.5rem";
+        displayValue.style.fontSize = "2.5rem";
       }
       if (calc.length >= 11) {
-        screenText.style.width = "fit-content";
-        screenText.style.overflow = "hidden";
+        displayValue.style.width = "fit-content";
+        displayValue.style.overflow = "hidden";
       }
     }
-
+    //When you did calculation but continue it with the same number
     if (operations.includes(value) && calculated === true) {
       setCalculated(false);
     }
-
+    //Reset values if operation was finished and we start with a new number instead of operation
     if (!operations.includes(value) && calculated === true) {
       setCalculated(false);
-
-      setCalc(value);
-      return setCalc(eval(calc + value).toString());
+      return setCalc(value);
     }
 
     setCalc((current) => [...current, value]);
     const findOctalLiteralArray = [...calc, value];
-
+    console.log(findOctalLiteralArray);
     if (findOctalLiteralArray[findOctalLiteralArray.length - 1] === "0") {
       return clear();
     }
+    // if(findOctalLiteralArray.includes(".")) {
+
+    // }
 
     setCalc(calc + value);
   };
@@ -62,16 +67,17 @@ export default function Calculator() {
     setCalc(eval(calc).toString());
   };
   const clear = () => {
-    setCalc("");
+    // setCalc("");
+    setCalculated(false);
     setCalc("");
   };
   const del = () => {
     if (calc === "") {
       return;
     }
-    const screenText = ref.current;
+    const displayValue = ref.current;
     if (calc.length < 7) {
-      screenText.style.fontSize = "3.3rem";
+      displayValue.style.fontSize = "3.3rem";
     }
 
     const value = calc.slice(0, -1);
@@ -79,23 +85,9 @@ export default function Calculator() {
   };
 
   const onKeyDown = (e) => {
-    if (e.key === "0") updateCalc("0");
-    else if (e.key === "1") updateCalc("1");
-    else if (e.key === "2") updateCalc("2");
-    else if (e.key === "3") updateCalc("3");
-    if (e.key === "4") updateCalc("4");
-    if (e.key === "5") updateCalc("5");
-    if (e.key === "6") updateCalc("6");
-    if (e.key === "7") {
-      return updateCalc("7");
-    } else if (e.key === "8") updateCalc("8");
-    else if (e.key === "9") updateCalc("9");
-    else if (e.key === "/") updateCalc("/");
-    else if (e.key === "*") updateCalc("*");
-    else if (e.key === "+") updateCalc("+");
-    else if (e.key === "-") updateCalc("-");
-    else if (e.key === ".") updateCalc(".");
-    if (e.key === "Enter" || e.key === "=") {
+    if (operations.includes(e.key) || numbers.includes(e.key)) {
+      updateCalc(e.key);
+    } else if (e.key === "Enter" || e.key === "=") {
       calculate();
     } else if (e.key === "Backspace") del();
   };

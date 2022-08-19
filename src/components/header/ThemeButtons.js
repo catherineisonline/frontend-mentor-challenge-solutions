@@ -4,7 +4,7 @@ import ThemeNumbers from "./ThemeNumbers.js";
 
 const ThemeButtons = (props) => {
   return (
-    <section className="theme-toggle">
+    <nav className="theme-toggle">
       <ThemeNumbers />
       <section className="theme-value">
         <ThemeButton
@@ -25,7 +25,7 @@ const ThemeButtons = (props) => {
           onClick={(e) => props.HandleThemeChange(dark, e)}
         ></ThemeButton>
       </section>
-    </section>
+    </nav>
   );
 };
 
