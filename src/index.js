@@ -6,9 +6,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./styles.css";
 //Componnets
 import Header from "./components/Header";
-import Countries from "./components/Countries";
-import Country from "./components/Country";
-import Error from "./components/Error";
+import Countries from "./components/allCountries/Countries";
+import Country from "./components/singleCountry/Country";
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
@@ -18,7 +17,7 @@ root.render(
         <Header />
         <Routes>
           <Route exact path="/:name" element={<Country />} />
-          <Route path="*" element={<Error />} />
+
           <Route path="/" exact element={<Countries />} />
         </Routes>
       </div>

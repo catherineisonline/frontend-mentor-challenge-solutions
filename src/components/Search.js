@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 export default function Search({ searchCountries, searchInput, setCountries }) {
   const [isVisible, setVisibility] = useState(false);
+  const [activeRegion, setActiveRegion] = useState("");
 
   const regions = [
     {
@@ -22,20 +23,22 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
     { label: "Oceania", name: "oceania" },
   ];
 
-  const fetchRegion = async (e) => {
-    if(e === "all") {
+  const fetchRegion = async (e, label) => {
+    if (e === "all") {
       const url = `https://restcountries.com/v2/all`;
       const response = await fetch(url);
       const data = await response.json();
       setCountries(data);
-    }
-    else {
+      setActiveRegion(label);
+      // console.log(activeRegion);
+    } else {
       const url = `https://restcountries.com/v2/region/${e}`;
       const response = await fetch(url);
       const data = await response.json();
       setCountries(data);
+      setActiveRegion(label);
+      // console.log(activeRegion);
     }
-   
   };
   function addDropdown() {
     setVisibility(true);
@@ -45,6 +48,7 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
   function removeDropdown() {
     setVisibility(false);
   }
+
   return (
     <section className="search-section">
       <section className="input-block">
@@ -60,20 +64,21 @@ export default function Search({ searchCountries, searchInput, setCountries }) {
       </section>
       <>
         <details className="select-region" id="regions">
-  
           <summary
             onClick={() => {
               addDropdown();
             }}
           >
-            Filter by Region
+            {activeRegion === "All" || !activeRegion
+              ? "Filter by Region"
+              : activeRegion}
           </summary>
           {isVisible ? (
             <div className="region-list">
               {regions.map((region) => (
                 <li
                   onClick={() => {
-                    fetchRegion(region.name);
+                    fetchRegion(region.name, region.label);
                     removeDropdown();
                   }}
                   value={region.name}

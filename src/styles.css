@@ -117,6 +117,12 @@ h2 {
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   background-color: var(--white);
 }
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
 
 .select-region summary {
   padding: 1.3rem 0.8rem;
@@ -129,6 +135,7 @@ h2 {
   align-items: center;
   font-size: 0.9rem;
   font-weight: 400;
+  justify-content: space-between;
 }
 .select-region summary:after {
   content: "";
@@ -142,7 +149,6 @@ h2 {
   transform-origin: center center;
   transition: all ease-in-out 0.3s;
 }
-
 
 .region-list {
   max-width: 100%;
