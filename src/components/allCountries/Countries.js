@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Search from "../Search";
 import AllCountries from "./AllCountries";
 import FilteredCountries from "./FilteredCountries";
@@ -11,13 +10,24 @@ export default function Countries() {
   const [filtered, setFiltered] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const fetchCountries = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setCountries(data);
-    setIsLoading(false);
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setCountries(data);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   useEffect(() => {
-    fetchCountries();
+    let mounted = true;
+    fetchCountries().then((items) => {
+      if (mounted) {
+        fetchCountries(items);
+      }
+    });
+    return () => (mounted = false);
   }, []);
 
   const searchCountries = (searchValue) => {

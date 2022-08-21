@@ -376,8 +376,8 @@ details > summary::-webkit-details-marker {
 
 /* HOVER */
 @media (hover: hover) {
-  .region-list option:hover,
-  .dark .region-list option:hover {
+  .region-list li:hover,
+  .dark .region-list li:hover {
     color: var(--purple);
     transition: all ease-in-out 0.3s;
   }
