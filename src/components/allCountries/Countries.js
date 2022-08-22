@@ -7,6 +7,7 @@ export default function Countries() {
   const url = `https://restcountries.com/v2/all`;
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [foundFilter, setFoundFilter] = useState(true);
   const [filtered, setFiltered] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const fetchCountries = async () => {
@@ -33,38 +34,42 @@ export default function Countries() {
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue);
     if (searchInput) {
-      const filteredCountries = countries.filter((country) =>
-        Object.values(country)
-          .join("")
-          .toLowerCase()
-          .includes(searchValue.toLowerCase())
+      setFiltered(
+        countries.filter((country) =>
+          Object.values(country)
+            .join("")
+            .toLowerCase()
+            .includes(searchValue.toLowerCase())
+        )
       );
-      setFiltered(filteredCountries);
+      setFoundFilter(true);
+      if (filtered.length <= 0) {
+        console.log(filtered);
+        setFoundFilter(false);
+      }
     } else {
       setFiltered(countries);
     }
   };
 
   return (
-    <article>
+    <main>
       {isLoading ? (
-        <section className="searching">
-          <h2>Searching...</h2>
-        </section>
+        <h2 className="searching">Searching...</h2>
       ) : (
-        <section>
+        <>
           <Search
             searchCountries={searchCountries}
             searchInput={searchInput}
             setCountries={setCountries}
           />
           {searchInput.length > 0 ? (
-            <FilteredCountries filtered={filtered} />
+            <FilteredCountries filtered={filtered} foundFilter={foundFilter} />
           ) : (
             <AllCountries countries={countries} />
           )}
-        </section>
+        </>
       )}
-    </article>
+    </main>
   );
 }

@@ -14,7 +14,6 @@ export default function Country() {
         const response = await fetch(url);
         const data = await response.json();
         setCountry(data[0]);
-        console.log(data[0].name);
         data[0]?.borders?.forEach((border) => {
           return findCountryData(border);
         });
@@ -37,18 +36,16 @@ export default function Country() {
   }, [name]);
 
   return (
-    <article>
+    <main>
       {isLoading ? (
-        <section className="searching">
-          <h2>Searching...</h2>
-        </section>
+        <h2 className="searching">Searching...</h2>
       ) : (
-        <section>
+        <>
           <Link to="/" className="back-link">
             <span>&larr;</span> Back
           </Link>
           <section key={name} className="country-block">
-            <img className="country-image" src={country.flags.png} alt={name} />
+            <img className="country-image" src={country.flags.svg} alt={name} />
             <section className="country-block-info">
               <h2>{name}</h2>
               <section className="details-block">
@@ -100,8 +97,8 @@ export default function Country() {
               </section>
             </section>
           </section>
-        </section>
+        </>
       )}
-    </article>
+    </main>
   );
 }

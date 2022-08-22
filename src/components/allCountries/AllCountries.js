@@ -10,7 +10,11 @@ export default function AllCountries(props) {
             className="inside-container"
           >
             <section className="image-container">
-              <img className="image" src={flags.png} alt="" />
+              <img
+                className="image"
+                src={flags ? flags.svg : flags.png}
+                alt=""
+              />
             </section>
             <section className="info-block">
               <h2 className="info-block-h2"> {name}</h2>

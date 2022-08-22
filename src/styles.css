@@ -45,7 +45,11 @@ h1 {
 h2 {
   font-size: 1.2rem;
 }
-
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 .toggle-light,
 .toggle-dark {
   cursor: pointer;
@@ -251,16 +255,19 @@ details > summary::-webkit-details-marker {
 .country-block {
   width: 89%;
   margin: 0 auto;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
+  margin-bottom: 10%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 25rem;
+  /* height: 25rem; */
 }
 
 .country-block img {
+  max-width: 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-height: 22rem;
+  /* object-fit: contain; */
 }
 
 .country-block-info {
@@ -299,7 +306,7 @@ details > summary::-webkit-details-marker {
 .border-countries {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1rem;
   margin-top: 2.9rem;
   align-items: center;
   flex-wrap: wrap;
@@ -321,15 +328,15 @@ details > summary::-webkit-details-marker {
 }
 
 /* SEARCHING BLOCK */
+
 .searching {
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto;
   text-align: center;
-}
-.searching h2 {
   font-size: 2rem;
   letter-spacing: 1px;
   font-weight: 400;
+  margin-top: 5%;
 }
 /* DARKMODE */
 .dark {
@@ -405,7 +412,7 @@ details > summary::-webkit-details-marker {
 
   .search-section {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     gap: 2rem;
   }
   .border-countries {
@@ -425,7 +432,11 @@ details > summary::-webkit-details-marker {
     width: 20rem;
   }
   .container-block {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    /* width: 80%; */
+  }
+  .inside-container {
+    width: 80%;
   }
 
   .search-section {
