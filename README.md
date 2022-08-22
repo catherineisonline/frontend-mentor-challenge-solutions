@@ -64,6 +64,7 @@ I also finally started to understand how to use states depending whether it's a 
 1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
 2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
 3. <a href="https://restcountries.com/">Rest Countries API</a> - information about countries via a RESTful API
+4. <a href="https://www.framer.com/motion/">Framer Motion</a> - React library for animations
 
 ## Acknowledgments
 
