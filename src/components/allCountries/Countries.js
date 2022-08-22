@@ -48,18 +48,16 @@ export default function Countries() {
   return (
     <article>
       {isLoading ? (
-        <section className="searching-block">
-          <h2 className="searching-h1">Searching...</h2>
+        <section className="searching">
+          <h2>Searching...</h2>
         </section>
       ) : (
         <section>
-          <section>
-            <Search
-              searchCountries={searchCountries}
-              searchInput={searchInput}
-              setCountries={setCountries}
-            />
-          </section>
+          <Search
+            searchCountries={searchCountries}
+            searchInput={searchInput}
+            setCountries={setCountries}
+          />
           {searchInput.length > 0 ? (
             <FilteredCountries filtered={filtered} />
           ) : (

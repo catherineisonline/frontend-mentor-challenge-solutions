@@ -223,11 +223,11 @@ details > summary::-webkit-details-marker {
 }
 
 /* COUNTRY BLOCK */
-.back {
+.back-link {
   margin-top: 4.5rem;
   margin-left: 5rem;
 }
-.back span {
+.back-link span {
   font-size: 1.7rem;
 }
 .back-link {
@@ -257,7 +257,7 @@ details > summary::-webkit-details-marker {
   height: 25rem;
 }
 
-.country-image-container img {
+.country-block img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -272,6 +272,7 @@ details > summary::-webkit-details-marker {
 
 .country-block-info h2 {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 .details-block {
@@ -283,12 +284,13 @@ details > summary::-webkit-details-marker {
 .details-block .details-block-one,
 .details-block .details-block-two {
   padding: 0;
-  line-height: 1rem;
+  line-height: 2.5rem;
   font-size: 1rem;
   margin-top: -1rem;
+  list-style: none;
 }
-
-.details-span {
+.details-block .details-block-one span,
+.details-block .details-block-two span {
   font-weight: 600;
 }
 
@@ -315,15 +317,16 @@ details > summary::-webkit-details-marker {
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
   cursor: pointer;
   font-size: 0.7rem;
+  transition: all ease-in-out 0.3s;
 }
 
 /* SEARCHING BLOCK */
-.searching-block {
+.searching {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
-.searching-h1 {
+.searching h2 {
   font-size: 2rem;
   letter-spacing: 1px;
   font-weight: 400;
@@ -342,7 +345,7 @@ details > summary::-webkit-details-marker {
 .dark .input-block input,
 .dark .select-region,
 .dark .region-list,
-.dark .back a,
+.dark .back-link,
 .dark .border-country {
   -webkit-box-shadow: 0px 7px 6px -4px rgba(4, 4, 4, 0.27);
   box-shadow: 0px 7px 6px -4px rgba(9, 9, 9, 0.27);
@@ -375,6 +378,11 @@ details > summary::-webkit-details-marker {
 @media (hover: hover) {
   .region-list li:hover,
   .dark .region-list li:hover {
+    color: var(--purple);
+    transition: all ease-in-out 0.3s;
+  }
+  .border-country:hover,
+  .dark .border-country:hover {
     color: var(--purple);
     transition: all ease-in-out 0.3s;
   }

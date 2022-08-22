@@ -15,7 +15,6 @@ root.render(
       <Header />
       <Routes>
         <Route exact path="/:name" element={<Country />} />
-
         <Route path="/" exact element={<Countries />} />
       </Routes>
     </BrowserRouter>
