@@ -6,28 +6,28 @@ export default function AllCountries(props) {
     <section className="container-block">
       {props.countries.map(
         ({ name, population, region, capital, flags, index }) => (
-          <motion.div
+          <Link
             key={name}
-            initial={{
-              opacity: 0,
-              translateX: -500,
-              rotate: 10,
-            }}
-            animate={{
-              opacity: 1,
-              translateX: 0,
-              rotate: 0,
-            }}
-            transition={{
-              delay: index * 0.01,
-            }}
-            whileHover={{
-              translateY: -10,
-            }}
+            to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
+            className="inside-container"
           >
-            <Link
-              to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
-              className="inside-container"
+            <motion.div
+              initial={{
+                opacity: 0,
+                translateX: -500,
+                rotate: 10,
+              }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+                rotate: 0,
+              }}
+              transition={{
+                delay: index * 0.02,
+              }}
+              whileHover={{
+                translateY: -10,
+              }}
             >
               <section className="image-container">
                 <img
@@ -51,8 +51,8 @@ export default function AllCountries(props) {
                   </p>
                 </section>
               </section>
-            </Link>
-          </motion.div>
+            </motion.div>
+          </Link>
         )
       )}
     </section>
