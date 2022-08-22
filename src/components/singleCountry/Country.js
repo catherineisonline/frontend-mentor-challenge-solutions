@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+
 export default function Country() {
   const [country, setCountry] = useState([]);
   const [borderCountries, setBorderCountry] = useState([]);
@@ -38,14 +40,36 @@ export default function Country() {
   return (
     <main>
       {isLoading ? (
-        <h2 className="searching">Searching...</h2>
+        <h2 animate={{ opacity: 1 }} className="searching">
+          Searching...
+        </h2>
       ) : (
-        <>
+        <AnimatePresence>
           <Link to="/" className="back-link">
             <span>&larr;</span> Back
           </Link>
           <section key={name} className="country-block">
-            <img className="country-image" src={country.flags.svg} alt={name} />
+            <motion.img
+              initial={{
+                opacity: 0,
+                translateX: -500,
+              }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                translateX: -500,
+              }}
+              exit={{
+                opacity: 0,
+                translateX: -500,
+              }}
+              className="country-image"
+              src={country.flags.svg}
+              alt={name}
+            />
             <section className="country-block-info">
               <h2>{name}</h2>
               <section className="details-block">
@@ -88,7 +112,22 @@ export default function Country() {
                       className="border-country"
                       to={`/${country}`}
                     >
-                      {country}
+                      <motion.div
+                        initial={{
+                          opacity: 0,
+                          translateY: -50,
+                        }}
+                        animate={{
+                          opacity: 1,
+                          translateY: 0,
+                        }}
+                        transition={{
+                          duration: 0.2,
+                          delay: index * 0.1,
+                        }}
+                      >
+                        {country}
+                      </motion.div>
                     </Link>
                   ))
                 ) : (
@@ -97,7 +136,7 @@ export default function Country() {
               </section>
             </section>
           </section>
-        </>
+        </AnimatePresence>
       )}
     </main>
   );

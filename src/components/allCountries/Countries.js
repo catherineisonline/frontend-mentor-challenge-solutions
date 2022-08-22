@@ -44,7 +44,6 @@ export default function Countries() {
       );
       setFoundFilter(true);
       if (filtered.length <= 0) {
-        console.log(filtered);
         setFoundFilter(false);
       }
     } else {
