@@ -1,4 +1,4 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/crowdfunding-product-page-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 <h1 align="center">Crowdfunding product page
 </h1>
