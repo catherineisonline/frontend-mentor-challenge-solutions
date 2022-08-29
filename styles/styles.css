@@ -38,7 +38,7 @@ h4 {
   line-height: 1.7em;
 }
 header {
-  background-image: url("/images/image-hero-desktop.jpg");
+  background-image: url("../images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 25rem;
@@ -132,9 +132,7 @@ h1 {
   font-weight: 700;
   font-size: 1rem;
 }
-.back-btn:hover {
-  background-color: var(--dark-cyan);
-}
+
 .bookmark {
   position: relative;
   cursor: pointer;
@@ -162,9 +160,6 @@ h1 {
   top: 0;
 }
 
-.bookmark:hover svg circle {
-  fill: var(--svg-gray);
-}
 .bookmark.bookmarked button {
   color: var(--dark-cyan);
 }
@@ -325,9 +320,7 @@ h1 {
   font-size: 0.85rem;
   font-family: var(--body-font);
 }
-.select-reward:hover {
-  background-color: var(--dark-cyan);
-}
+
 .project-description .project-types .item.out-of-stock {
   opacity: 0.5;
 }
@@ -389,10 +382,7 @@ h1 {
 .info .item-header > * {
   margin: 0;
 }
-.info .item-header h3:hover {
-  color: var(--moderate-cyan);
-  cursor: pointer;
-}
+
 .pledge {
   display: none;
 }
@@ -425,9 +415,6 @@ h1 {
   cursor: pointer;
 }
 
-.container:hover {
-  border-color: var(--moderate-cyan);
-}
 .container label {
   font-weight: 700;
   color: var(--dark-gray);
@@ -463,9 +450,7 @@ h1 {
   cursor: pointer;
   font-weight: 700;
 }
-.cta-continue:hover {
-  background-color: var(--dark-cyan);
-}
+
 .close-modal {
   position: absolute;
   top: 2rem;
@@ -506,6 +491,46 @@ h1 {
   cursor: pointer;
   border: none;
 }
-.got-it:hover {
-  background-color: var(--dark-cyan);
+.got-it,
+.cta-continue,
+.container,
+.info .item-header h3,
+.select-reward,
+.bookmark svg circle,
+.back-btn {
+  transition: all ease-in 0.2s;
+}
+@media (hover: hover) {
+  .got-it:hover,
+  .cta-continue:hover,
+  .container:hover,
+  .info .item-header h3:hover,
+  .select-reward:hover,
+  .bookmark:hover svg circle,
+  .back-btn:hover {
+    transition: all ease-in 0.2s;
+  }
+
+  .got-it:hover {
+    background-color: var(--dark-cyan);
+  }
+  .cta-continue:hover {
+    background-color: var(--dark-cyan);
+  }
+  .container:hover {
+    border-color: var(--moderate-cyan);
+  }
+  .info .item-header h3:hover {
+    color: var(--moderate-cyan);
+    cursor: pointer;
+  }
+  .select-reward:hover {
+    background-color: var(--dark-cyan);
+  }
+  .bookmark:hover svg circle {
+    fill: var(--svg-gray);
+  }
+  .back-btn:hover {
+    background-color: var(--dark-cyan);
+  }
 }

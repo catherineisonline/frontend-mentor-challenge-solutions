@@ -47,7 +47,6 @@ bookmarkBtn.addEventListener("click", () => {
 //Type selection
 typeSelection.forEach((button) => {
   button.addEventListener("change", () => {
-    // console.log(button.classList);
     typeSelection.forEach((btn) => {
       if (btn.checked) {
         btn.parentElement.parentElement.classList.add("item-selected");
@@ -78,7 +77,6 @@ pledgeName.forEach((item) => {
 });
 //Pledge input
 pledgeInput.forEach((form) => {
-  console.log(form);
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     completeModal();
@@ -100,13 +98,6 @@ gotItBtn.addEventListener("click", () => {
 //Hamburger menu
 hamburgerBtn.addEventListener("click", () => {
   navigationMenu.classList.toggle("active");
-  hamburgerBtn.classList.toggle("active");
-  //   let par = hamburgerBtn.parentElement;
-  //   if (par.classList.contains("active")) {
-  //     par.classList.remove("active");
-  //   } else {
-  //     par.classList.add("active");
-  //   }
 });
 //Reward selection
 selectReward.forEach((reward) => {
