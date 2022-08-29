@@ -20,7 +20,7 @@
 
 @media (max-width: 768px) {
   header {
-    background-image: url("/images/image-hero-mobile.jpg");
+    background-image: url("images/image-hero-mobile.jpg");
   }
   .hambruger-navigation {
     display: flex;
@@ -30,7 +30,7 @@
   .hamburger-menu {
     width: 16px;
     height: 15px;
-    background: url("/images/icon-hamburger.svg") no-repeat;
+    background: url("images/icon-hamburger.svg") no-repeat;
     display: block;
     transition: all 0.2s;
     cursor: pointer;
@@ -42,7 +42,7 @@
     display: inline-block;
   }
   .hamburger-menu.active {
-    background: url("/images/icon-close-menu.svg") no-repeat;
+    background: url("images/icon-close-menu.svg") no-repeat;
     background-size: contain;
   }
   .menu {

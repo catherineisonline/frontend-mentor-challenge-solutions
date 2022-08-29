@@ -38,7 +38,7 @@ h4 {
   line-height: 1.7em;
 }
 header {
-  background-image: url("/images/image-hero-desktop.jpg");
+  background-image: url("images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 25rem;
