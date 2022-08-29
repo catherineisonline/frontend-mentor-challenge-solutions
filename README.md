@@ -9,7 +9,7 @@
       Live
     </a>
     <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/solutions/crowdfunding-product-page-wi6gkRysnF">
       Solution
     </a>
    <span> | </span>
@@ -58,4 +58,4 @@ A very easy project to keep updated with the Frontend Mentor projects and rememb
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/crowdfunding-product-page-wi6gkRysnF">solution</a>. It definitely helps to find new ways to code and find easier solutions!
