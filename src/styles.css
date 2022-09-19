@@ -147,6 +147,7 @@ details > summary::-webkit-details-marker {
   font-weight: 400;
   justify-content: space-between;
 }
+
 .select-region summary:after {
   content: "";
   display: inline-block;
@@ -158,6 +159,7 @@ details > summary::-webkit-details-marker {
   transform: rotate(45deg) translate(50%, 0);
   transform-origin: center center;
   transition: all ease-in-out 0.3s;
+  color: var(--dark-mode-elements);
 }
 
 .region-list {
@@ -366,24 +368,13 @@ details > summary::-webkit-details-marker {
 }
 
 .dark .input-block input,
-.dark .select-region {
-  color: var(--white);
-}
-.dark .region-list li {
-  color: var(--white);
-}
-.dark .input-block input::placeholder {
-  color: var(--white);
-}
-.dark .search-icon {
-  color: var(--white);
-}
-
-.dark .region-list {
-  color: var(--white);
-}
-
-.dark .border-country {
+.dark .select-region,
+.dark .region-list li,
+.dark .input-block input::placeholder,
+.dark .search-icon,
+.dark .region-list,
+.dark .border-country,
+.dark .select-region summary:after {
   color: var(--white);
 }
 
