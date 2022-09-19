@@ -90,7 +90,6 @@ main {
   font-size: 1.1rem;
   padding-left: 2rem;
 }
-
 .input-block input {
   padding: 1.2rem;
   -webkit-box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
@@ -102,18 +101,17 @@ main {
 }
 
 .input-block input::placeholder {
+  opacity: 0.4;
   font-size: 0.9rem;
   color: var(--light-mode-text);
-  opacity: 0.4;
-  padding-left: 1rem;
+  font-weight: 600;
   font-family: var(--body-font);
 }
 
 .input-block input[type="search"] {
   font-size: 0.9rem;
   color: var(--light-mode-text);
-  padding-left: 3.5rem;
-  font-weight: 600;
+  padding-left: 5rem;
   font-family: var(--body-font);
 }
 
@@ -160,6 +158,10 @@ details > summary::-webkit-details-marker {
   transform-origin: center center;
   transition: all ease-in-out 0.3s;
   color: var(--dark-mode-elements);
+}
+.active-regions.select-region summary:after {
+  transform: rotate(-45deg) translate(50%, 0);
+  transition: all ease-in-out 0.3s;
 }
 
 .region-list {

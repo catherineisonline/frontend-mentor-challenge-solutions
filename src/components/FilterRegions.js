@@ -42,7 +42,11 @@ const FilterRegions = (props) => {
   };
 
   return (
-    <section className="select-region" id="regions">
+    <section
+      // className="select-region"
+      className={isVisible ? "active-regions select-region" : "select-region"}
+      id="regions"
+    >
       <summary onClick={(e) => addDropdown(e)}>
         {activeRegion === "All" || !activeRegion
           ? "Filter by Region"
