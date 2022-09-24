@@ -1,6 +1,4 @@
-// const Keypad = (props, ref) => {
-//   return (
-// import React from "react";
+
 const Keypad = (props) => {
   return (
     <section className="keypad">

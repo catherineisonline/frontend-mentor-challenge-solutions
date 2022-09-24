@@ -3,9 +3,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { GlobalStyles } from "./styledComponents/GlobalStyles";
 import { useEffect } from "react";
-// import { ThemeProvider } from "./styledComponents/GlobalStyles";
 import { ThemeProvider } from "styled-components";
-// import { basic } from "./styledComponents/Theme.styled.js";
 import { basic } from "./styledComponents/Theme.styled";
 
 //Componnets

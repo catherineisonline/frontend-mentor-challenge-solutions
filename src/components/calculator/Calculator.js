@@ -52,10 +52,6 @@ export default function Calculator() {
     } else {
       console.error();
     }
-    //Deal with Octal Literals (When number starts with 0 / e.g. 06, 07, 08)
-    // setCalc((current) => [...current, value]);
-    // const findOctalLiteralArray = [...calc, value];
-
     setCalc(calc + value);
   };
 
