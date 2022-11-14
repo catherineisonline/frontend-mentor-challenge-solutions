@@ -1,4 +1,4 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/huddle-landing-page-with-feature-blocks-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 <h1 align="center">Huddle landing page with alternating feature blocks
 </h1>
@@ -13,7 +13,7 @@
       Solution
     </a>
    <span> | </span>
-    <a href="">
+    <a href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100">
       Challenge
     </a>
   </h3>
