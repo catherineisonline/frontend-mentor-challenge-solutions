@@ -31,7 +31,7 @@
   <main>
     <article class="highlights">
       <section class="highlight-block one">
-        <img src="./images/illustration-grow-together.svg" alt="together" />
+        <img src="./images/illustration-grow-together.svg" aria-label="together" />
         <section class="highlights-content">
           <h2>Grow Together</h2>
           <p>Generate meaningful discussions with your audience and build a strong, loyal community.
@@ -41,7 +41,7 @@
       </section>
 
       <section class="highlight-block two">
-        <img src="./images/illustration-flowing-conversation.svg" alt="convo" />
+        <img src="./images/illustration-flowing-conversation.svg" aria-label="convo" />
         <section class="highlights-content">
           <h2>Flowing Conversations</h2>
           <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads
@@ -50,7 +50,7 @@
         </section>
       </section>
       <section class="highlight-block three">
-        <img src="./images/illustration-your-users.svg" alt="users" />
+        <img src="./images/illustration-your-users.svg" aria-label="users" />
         <section class="highlights-content">
           <h2>Your Users</h2>
           <p>It takes no time at all to integrate Huddle with your app's authentication solution.
@@ -67,16 +67,21 @@
   </main>
   <footer>
     <img src="./images//logo-footer.svg" alt="huddle logo" />
-    <div class="footer-section">
+    <nav class="footer-section">
       <ul class="footer-menu-1">
         <li class="location">
-          <img src="./images/icon-location.svg" alt="location" class="icon" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua</p>
+          <a target="_blank"
+            href="https://www.google.com/maps/place/United+Kingdom/@54.2314329,-13.4298263,5z/data=!3m1!4b1!4m5!3m4!1s0x25a3b1142c791a9:0xc4f8a0433288257a!8m2!3d54.882927!4d-0.5273438">
+            <img src="./images/icon-location.svg" alt="location" class="icon" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua</p>
+          </a>
         </li>
         <li>
-          <img src="./images/icon-phone.svg" alt="phone" class="icon" />
-          <p>+1-543-123-4567</p>
+          <a target="_blank" href="/">
+            <img src="./images/icon-phone.svg" alt="phone" class="icon" />
+            <p>+1-543-123-4567</p>
+          </a>
         </li>
         <li>
           <img src="./images/icon-email.svg" alt="email" class="icon" />
@@ -94,14 +99,14 @@
         <li><a href="/contact">Contact Us</a></li>
       </ul>
       <ul class="footer-socials">
-        <li><a class="socials-link" href="facebook.com" target="_blank" aria-label="facebook page">
+        <li><a class="socials-link" href="facebook.com" target="_blank" aria-label="facebook page" alt="facebook icon">
             <?xml version="1.0"?><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
               width="100px" height="100px">
               <path
                 d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z" />
             </svg>
           </a></li>
-        <li><a class="socials-link" href="twitter.com" target="_blank" aria-label="twitter page">
+        <li><a class="socials-link" href="twitter.com" target="_blank" aria-label="twitter page" alt="twitter icon">
             <?xml version="1.0"?><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="90px"
               height="90px">
               <path
@@ -109,7 +114,7 @@
             </svg>
           </a></li>
         <li>
-          <a class="socials-link" href="instagram.com" target="_blank" aria-label="instagram page">
+          <a class="socials-link" href="instagram.com" target="_blank" aria-label="instagram page" alt="instagram icon">
             <?xml version="1.0"?><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96px"
               height="96px">
               <path
@@ -118,7 +123,7 @@
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
     <p class="copyright">&copy; Copyright 2018 Huddle. All rights reserved.</p>
   </footer>
 </body>

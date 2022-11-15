@@ -42,6 +42,7 @@ footer,
 /* Row Flex Containers */
 header nav,
 .footer-menu-1 li,
+.footer-menu-1 li a,
 .footer-menu-2 li,
 .footer-menu-3 li,
 .footer-socials {
@@ -224,12 +225,17 @@ footer img {
 }
 
 .footer-menu-1 li,
+.footer-menu-1 li a,
 .footer-menu-2 li,
 .footer-menu-3 li {
     gap: 1.5rem;
     align-items: center;
 }
-.location {
+.footer-menu-1 li a {
+    color: var(--white);
+    text-decoration: none;
+}
+.location a {
     align-items: flex-start !important;
 }
 .footer-menu-2 a,
