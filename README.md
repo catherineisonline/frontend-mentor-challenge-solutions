@@ -1,4 +1,4 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/news-homepage-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 # News homepage
 
