@@ -28,6 +28,7 @@ body {
     height: 100%;
 }
 body {
+    min-height:100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
@@ -202,7 +203,7 @@ nav ul li a {
     width: 52.9%;
     text-align: center;
     letter-spacing: 4px;
-    margin-top: -0.6rem;
+/*     margin-top: -0.6rem; */
 }
 
 /* New */
@@ -254,7 +255,7 @@ nav ul li a {
     justify-content: space-between;
 }
 .post {
-    align-items: top;
+    align-items: flex-start;;
     gap: 1.4rem;
     max-width: 21.8rem;
     min-height: 7rem;
