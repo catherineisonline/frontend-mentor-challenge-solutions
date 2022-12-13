@@ -7,7 +7,8 @@
     --gsrayish-blue: hsl(233, 8%, 79%);
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
-    --light-gray: rgba(60, 60, 60, 0.46);
+    --light-gray: hsla(0, 0%, 24%, 0.46);
+    --light-cream: rgba(254, 253, 249, 255);
     --inter-font: "Inter", sans-serif;
     --transition: all ease-in-out 0.3s;
 }
@@ -35,6 +36,7 @@ body {
     font-size: 15px;
     position: relative;
     font-family: var(--inter-font);
+    background-color: var(--light-cream);
 }
 body::-webkit-scrollbar {
     display: none;
