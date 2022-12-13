@@ -28,7 +28,6 @@ body {
     height: 100%;
 }
 body {
-    min-height:100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
@@ -255,7 +254,7 @@ nav ul li a {
     justify-content: space-between;
 }
 .post {
-    align-items: flex-start;;
+    align-items: top;
     gap: 1.4rem;
     max-width: 21.8rem;
     min-height: 7rem;
