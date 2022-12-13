@@ -3,9 +3,7 @@
 # News homepage
 
 
-- [Live]()
-- [Solution]()
-- [Challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
+[Live]() | [Solution]() | [Challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
 
