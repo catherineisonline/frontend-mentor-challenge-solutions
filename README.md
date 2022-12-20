@@ -1,7 +1,8 @@
-<img src="https://github.com/catherineisonline/crowdfunding-product-page-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/catherineisonline/crowdfunding-product-page-frontendmentor/blob/main/images/project-preview.png?raw=true)
 
-<h1 align="center">Crowdfunding product page
-</h1>
+
+
+# Crowdfunding product page
 
 <div align="center">
   <h3>
@@ -27,9 +28,11 @@
 
 ## About The Project
 
-<p>This challenge will test both your layout and state management skills. As visitors make pledges, your goal is to keep track of the changes.
+This challenge will test both your layout and state management skills. As visitors make pledges, your goal is to keep track of the changes.
 
-<br><br>Users should be able to: <br>
+
+
+Users should be able to:
 
 1. View the optimal layout depending on their device's screen size
 2. See hover states for interactive elements
@@ -37,7 +40,8 @@
 4. See an updated progress bar and total money raised based on their pledge total after confirming a pledge
 5. See the number of total backers increment by one after confirming a pledge
 6. Toggle whether or not the product is bookmarked
-   <br>
+
+
 
 ## Built with
 
