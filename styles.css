@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+    --epilogue-font: "Epilogue", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--epilogue-font);
+}
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+img {
+    display: block;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+nav ul {
+    display: none;
+}
+
+main,
+.remote,
+.remote-information {
+    display: flex;
+    flex-direction: column;
+}
+.remote {
+    gap: 2rem;
+}
+.remote-information {
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+.remote-information p {
+    color: var(--medium-gray);
+}
+
+.remote-information a {
+    border-radius: 15px;
+    border: none;
+    background-color: var(--almost-black);
+    width: max-content;
+    padding: 1rem;
+    color: var(--almost-white);
+    text-decoration: none;
+}
+
+.partners {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.partners img {
+    width: 4.5rem;
+    object-fit: contain;
+}
