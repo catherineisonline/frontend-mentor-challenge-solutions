@@ -10,28 +10,30 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <h1>
       <a href="/">
         <img src="./images//logo.svg" alt="Snap icon" />
       </a>
     </h1>
-    <nav>
-      <img src="./images//icon-menu.svg" />
+    <img class="hamburger" src="./images//icon-menu.svg" alt="" aria-hidden="true" />
+    <nav class="menu">
       <ul>
-        <li><a href="/"></a>Features</li>
-        <li><a href="/"></a>Company</li>
-        <li><a href="/"></a>Careers</li>
-        <li><a href="/"></a>About</li>
+        <li><a href="/">Features<img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" /></a></li>
+        <li><a href="/">Company<img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" /></a></li>
+        <li><a href="/">Careers</a></li>
+        <li><a href="/">About</a></li>
       </ul>
-      <ul>
+    </nav>
+    <nav>
+      <ul class="nav-buttons">
         <li><button>Login</button></li>
         <li><button>Register</button></li>
       </ul>
     </nav>
   </header>
   <main>
-    <img src="./images/image-hero-mobile.png" alt="Man with laptop" />
+    <img class="hero" src="./images/image-hero-mobile.png" alt="Man with laptop" />
     <section class="remote">
       <section class="remote-information">
         <h2>Make remote work</h2>

@@ -50,6 +50,7 @@ ol,
 li {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 input,
 button,
@@ -75,11 +76,52 @@ h6 {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
+    padding: 1.5rem 2.6rem;
+    position: relative;
+    align-items: center;
 }
-nav ul {
+nav {
     display: none;
+}
+
+header.active nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--almost-white);
+    right: 0;
+    left: 40%;
+    height: 100%;
+}
+header.active nav ul {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+nav ul a {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: var(--medium-gray);
+    text-decoration: none;
+    align-items: center;
+    font-size: 14px;
+}
+nav ul a img {
+    height: max-content;
+}
+.hamburger {
+    cursor: pointer;
+    z-index: 99;
+}
+header.active .hamburger {
+    content: url("./images/icon-close-menu.svg");
 }
 
 main,
@@ -89,7 +131,7 @@ main,
     flex-direction: column;
 }
 .remote {
-    gap: 2rem;
+    gap: 8.7rem;
 }
 .remote-information {
     text-align: center;
@@ -99,7 +141,8 @@ main,
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 4.9rem;
+    line-height: 5rem;
 }
 .remote-information p {
     color: var(--medium-gray);
@@ -119,10 +162,76 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding: 1rem;
     justify-content: space-between;
 }
 .partners img {
-    width: 4.5rem;
+    width: 7.3rem;
+    height: 100%;
     object-fit: contain;
+}
+
+@media screen and (min-width: 600px) {
+    .hero {
+        content: url("./images/image-hero-desktop.png");
+        object-fit: cover;
+        grid-column: 2;
+        max-height: 41.5rem;
+    }
+    .remote {
+        grid-row: 1;
+    }
+    main {
+        gap: 8.7rem;
+        display: grid;
+        grid-template-columns: 560px 1fr;
+        width: 82%;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+    }
+    header {
+        gap: 3.8rem;
+    }
+    nav {
+        display: flex;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .remote {
+        margin-top: 6.5rem;
+        margin-left: 2.2rem;
+        justify-content: space-between;
+        max-width: 94%;
+    }
+
+    .remote-information {
+        text-align: left;
+        align-items: left;
+        padding: 0;
+        gap: 3rem;
+    }
+    .menu ul {
+        gap: 2.3rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+    .nav-buttons {
+        gap: 1rem;
+        align-items: center;
+    }
+    .nav-buttons li:first-child button {
+        background-color: transparent;
+        border: none;
+        color: var(--medium-gray);
+    }
+    .nav-buttons li:last-child button {
+        background-color: transparent;
+        border: 1px solid var(--medium-gray);
+        color: var(--medium-gray);
+        padding: 0.5rem;
+        border-radius: 15px;
+    }
 }
