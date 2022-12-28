@@ -132,7 +132,7 @@ h1 {
 }
 
 .pricing-detail p {
-  color: hsl(224, 23%, 55%);
+  color: var(--desaturated-blue);
   line-height: 10px;
   font-weight: 400;
 }
@@ -146,7 +146,6 @@ h1 {
 }
 
 /** Payment/Cancel Buttons **/
-
 .buttons {
   display: flex;
   flex-direction: column;
@@ -154,6 +153,7 @@ h1 {
   gap: 2.1rem;
   margin-top: -0.7rem;
 }
+
 .payment-btn {
   background-color: var(--bright-blue);
   border-radius: 10px;
@@ -168,40 +168,35 @@ h1 {
   font-weight: 700;
 }
 
-.payment-btn:hover,
-.cancel-btn:hover,
-.change-btn:hover {
-  cursor: pointer;
-  opacity: 0.7;
-  text-decoration: none;
-}
-
 /** Cancel Button **/
 .cancel-btn {
   background-color: transparent;
   border: none;
-  /* margin-bottom: 10rem; */
   font-weight: 700;
-  /* margin-top: 2rem; */
   text-transform: capitalize;
   color: var(--light-grey);
-  text-decoration: none;
   font-size: 1rem;
 }
 
-.cancel-btn:hover {
-  color: var(--dark-blue);
+.payment-btn,
+.cancel-btn,
+.change-btn {
+  transition: all ease-in-out 0.3s;
 }
-
-/** Media Queries **/
-@media screen and (max-width: 480px) {
-  /* .center-container {
-    margin-top: 70px;
-  } */
-  /** Pricing Container **/
-  /* .pricing-container {
-    justify-content: space-evenly;
-    padding: 2rem;
-    gap: 3rem;
-  } */
+@media (hover: hover) {
+  .payment-btn:hover,
+  .cancel-btn:hover,
+  .change-btn:hover {
+    transition: all ease-in-out 0.3s;
+  }
+  .cancel-btn:hover {
+    color: var(--dark-blue);
+  }
+  .payment-btn:hover,
+  .cancel-btn:hover,
+  .change-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    text-decoration: none;
+  }
 }
