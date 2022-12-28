@@ -18,7 +18,7 @@
 }
 
 body {
-   -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   box-sizing: border-box;
@@ -41,7 +41,7 @@ main {
 }
 
 /** Feature Header**/
-.feature-header {
+header {
   text-align: center;
   color: var(--dark-blue);
   width: 100%;
@@ -55,16 +55,14 @@ h1 {
   font-weight: 600;
   font-size: 2.3rem;
 }
-.feature-header span {
+header span {
   font-weight: 200;
 }
-.feature-details {
+header p {
   margin: 0 auto;
   text-align: center;
   margin-top: 1.3rem;
   width: 40%;
-}
-.feature-details p {
   color: var(--grayish-blue);
   line-height: 1.5rem;
   word-spacing: -1px;
