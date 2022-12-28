@@ -119,7 +119,8 @@ header p {
 .card-four {
   border-top-style: solid;
   border-top-width: 5px;
-  width: fit-content;
+  max-width: 350px;
+  width: 100%;
   min-height: 15rem;
   height: 30%;
 }
@@ -157,29 +158,5 @@ header p {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-  }
-
-  .card-two,
-  .card-three {
-    width: 100%;
-  }
-
-  .card-one,
-  .grid-center-container,
-  .card-four {
-    width: 60%;
-    place-self: initial;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .card-one,
-  .grid-center-container,
-  .card-four {
-    width: 90%;
-  }
-
-  .feature-details {
-    width: 100%;
   }
 }
