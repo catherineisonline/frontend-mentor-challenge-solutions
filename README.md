@@ -5,20 +5,14 @@
 <h1 align="center">Four card feature section</h1>
 
 <div align="center">
-    <a href="https://catherineisonline.github.io/four-card-feature-section-frontendmentor/" color="white">
-      Live
-    </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/four-card-feature-section-fUDThIzoK">
-      Solution
-    </a>
- | [Challenge](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
+
+| [Live](https://catherineisonline.github.io/four-card-feature-section-frontendmentor)
+| [Solution](https://www.frontendmentor.io/solutions/four-card-feature-section-fUDThIzoK)
+| [Challenge](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
+
+Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
+
 </div>
-<h4 align="center">
-   Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
-</h4>
-<br>
-<br>
-<br>
 
 ## About The Project
 
@@ -27,7 +21,7 @@ The main challenge is to build out this feature section and get it looking as cl
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 Your users should be able to:
-1. View the optimal layout depending on their device's screen size
+View the optimal layout depending on their device's screen size
 
 
 I do not have access to the Figma sketch so the design is not pixel perfect
