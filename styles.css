@@ -38,20 +38,18 @@ body::-webkit-scrollbar {
 }
 
 .center-container {
-  position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 28.3rem;
-  height: 100vh;
-  max-height: 44rem;
+  height: 43.8rem;
+  max-height: 43.8rem;
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
   justify-content: center;
   align-content: center;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 25px;
   text-align: center;
-  overflow: hidden;
   box-shadow: var(--container-box-shadow);
   -webkit-box-shadow: var(--container-box-shadow);
   -moz-box-shadow: var(--container-box-shadow);
@@ -59,7 +57,7 @@ body::-webkit-scrollbar {
 
 .header-container {
   width: 100%;
-  height: 100%;
+  height: 5rem;
   min-height: 14rem;
   background-image: url("images/illustration-hero.svg");
   background-repeat: no-repeat;
@@ -68,27 +66,30 @@ body::-webkit-scrollbar {
   border-radius: 25px 25px 0 0;
   overflow: hidden;
 }
-
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem;
+  align-items: center;
+  gap: 1.5rem;
+}
 /** Title **/
 .title-container {
-  width: 80%;
-  height: 100%;
-  max-height: 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   font-family: var(--main-font);
   color: var(--dark-blue);
   text-align: center;
   margin: 0 auto;
-  margin-top: 3rem;
 }
-.title-container h1 {
-  font-size: 1.5rem;
-  letter-spacing: 2px;
+h1 {
+  font-size: 1.8rem;
   font-weight: 900;
 }
 .title-container p {
   font-weight: lighter;
   color: var(--desaturated-blue);
-  margin-top: 1.2rem;
   line-height: 25px;
 }
 
@@ -96,15 +97,15 @@ body::-webkit-scrollbar {
 .pricing-container {
   background-color: var(--very-pale-blue);
   font-family: var(--main-font);
-  width: 70%;
-  display: inline-flex;
+  max-width: 22rem;
+  width: 100%;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: space-between;
   align-items: center;
   border-radius: 10px;
-  margin-top: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.4rem;
 }
 
 .music-icon {
@@ -112,51 +113,58 @@ body::-webkit-scrollbar {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 1rem;
+  gap: 1.1rem;
   font-size: 1rem;
   font-weight: 900;
 }
 
 .music-img {
-  width: 3.5rem;
-  height: 3rem;
-  background-image: url("images/icon-music.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  width: 3.1rem;
+  height: 3.1rem;
+  object-fit: cover;
 }
 
 .pricing-detail .annual-plan {
   color: var(--dark-blue);
   margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .pricing-detail p {
   color: hsl(224, 23%, 55%);
   line-height: 10px;
+  font-weight: 400;
 }
 
 /** Change button **/
 .change-btn {
   background-color: transparent;
   color: var(--bright-blue);
-  font-weight: 900;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 /** Payment/Cancel Buttons **/
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.1rem;
+  margin-top: -0.7rem;
+}
 .payment-btn {
   background-color: var(--bright-blue);
-  border-radius: 15px;
+  border-radius: 10px;
   font-family: var(--main-font);
-  width: 80%;
-  min-width: 80%;
-  padding: 1rem;
-  margin-top: 2rem;
+  width: 100%;
+  max-width: 22rem;
+  padding: 0.9rem;
   border: transparent;
   box-shadow: var(--btn-box-shadow);
   color: var(--white);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -172,9 +180,9 @@ body::-webkit-scrollbar {
 .cancel-btn {
   background-color: transparent;
   border: none;
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
   font-weight: 700;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   text-transform: capitalize;
   color: var(--light-grey);
   text-decoration: none;
@@ -187,13 +195,13 @@ body::-webkit-scrollbar {
 
 /** Media Queries **/
 @media screen and (max-width: 480px) {
-  .center-container {
+  /* .center-container {
     margin-top: 70px;
-  }
+  } */
   /** Pricing Container **/
-  .pricing-container {
+  /* .pricing-container {
     justify-content: space-evenly;
     padding: 2rem;
     gap: 3rem;
-  }
+  } */
 }

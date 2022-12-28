@@ -14,19 +14,20 @@
 <body>
     <main>
         <section class="center-container">
-            <div class="order-container">
-                <div class="header-container"></div>
-                <!-- Title -->
-                <div class="title-container">
+            <div class="header-container"></div>
+            <!-- Title -->
+            <section class="content-container">
+                <section class="title-container">
                     <h1>Order Summary</h1>
                     <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you
                         like!</p>
-                </div>
+                </section>
                 <!-- Pricing Container-->
                 <div class="pricing-container">
                     <div class="music-icon">
                         <!-- Music Icon -->
-                        <div class="music-img"></div>
+                        <img class="music-img" src="./images/icon-music.svg" />
+                        <!-- <div class="music-img"></div> -->
                         <!-- Pricing Details -->
                         <div class="pricing-detail">
                             <p class="annual-plan">Annual Plan</p>
@@ -34,13 +35,17 @@
                         </div>
                     </div>
                     <!-- Change Button -->
-                    <div><a class="change-btn-link change-btn" href="">Change</a>
-                    </div>
+                    <a class="change-btn-link change-btn" href="">Change</a>
                 </div>
-                <!-- Payment/Cancel Buttons  -->
+            </section>
+            <!-- Payment/Cancel Buttons  -->
+            <section class="buttons">
+
+
                 <button class="payment-btn">Proceed to Payment</button>
                 <button class="cancel-btn">Cancel Order</button>
-            </div>
+            </section>
+            <!-- </div> -->
         </section>
     </main>
 </body>
