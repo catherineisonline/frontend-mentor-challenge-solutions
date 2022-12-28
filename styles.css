@@ -84,6 +84,7 @@ header p {
 .card-two,
 .card-three,
 .card-four {
+  position: relative;
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
@@ -102,12 +103,21 @@ header p {
   line-height: 1.5rem;
   padding-top: 9px;
 }
-.card-icon {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem 1.9rem;
-}
+
 /** Icon images **/
+
+.icon-1,
+.icon-2,
+.icon-3,
+.icon-4 {
+  position: static;
+  height: 4rem;
+  margin-left: 73%;
+  margin-top: 3%;
+  width: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .icon-1 {
   background-image: url("images/icon-supervisor.svg");
 }
@@ -122,18 +132,6 @@ header p {
 .icon-4 {
   background-image: url("images/icon-calculator.svg");
 }
-.icon-1,
-.icon-2,
-.icon-3,
-.icon-4 {
-  height: 100%;
-  min-height: 4rem;
-  width: 100%;
-  max-width: 4rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .card-one,
 .card-two,
 .card-three,
