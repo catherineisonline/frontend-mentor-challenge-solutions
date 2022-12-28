@@ -1,5 +1,5 @@
 
-![Four card feature section]("https://github.com/catherineisonline/four-card-feature-section-frontendmentor/blob/main/images/project%20preview.png?raw=true")
+![Four card feature section](https://github.com/catherineisonline/four-card-feature-section-frontendmentor/blob/main/images/project%20preview.png?raw=true)
 
 
 <h1 align="center">Four card feature section</h1>
@@ -11,12 +11,10 @@
   <span> | </span>    <a href="https://www.frontendmentor.io/solutions/four-card-feature-section-fUDThIzoK">
       Solution
     </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK">
-      [Challenge]("https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK")
-    </a>
+ | [Challenge](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
 </div>
 <h4 align="center">
-   Solution for a challenge from [frontendmentor.io]("https://www.frontendmentor.io/")
+   Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
 </h4>
 <br>
 <br>
