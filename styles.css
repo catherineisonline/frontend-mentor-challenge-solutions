@@ -198,3 +198,9 @@ h1 {
     text-decoration: none;
   }
 }
+
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+}
