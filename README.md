@@ -1,33 +1,22 @@
-<img src="https://github.com/catherineisonline/huddle-landing-page-with-feature-blocks-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
+![Huddle landing page with alternating feature blocks](https://github.com/catherineisonline/huddle-landing-page-with-feature-blocks-frontendmentor/blob/main/images/project-preview.png?raw=true)
 
-<h1 align="center">Huddle landing page with alternating feature blocks
-</h1>
+<h1 align="center">Huddle landing page with alternating feature blocks</h1>
 
 <div align="center">
-  <h3>
-    <a href="https://catherineisonline.github.io/huddle-landing-page-with-feature-blocks-frontendmentor/" color="white">
-      Live
-    </a>
-    <span> | </span>
-    <a href="https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb">
-      Solution
-    </a>
-   <span> | </span>
-    <a href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100">
-      Challenge
-    </a>
-  </h3>
+
+[Live](https://catherineisonline.github.io/huddle-landing-page-with-feature-blocks-frontendmentor/)
+| [Solution](https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb)
+| [Challenge](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100)
+
+Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
+
 </div>
-<div align="center">
-   Solution for a challenge from  <a href="https://www.frontendmentor.io" target="_blank">frontendmentor.io</a>.
-</div>
-<br>
-<br>
-<br>
+
+
 
 ## About The Project
 
-<p>This challenge is perfect if you're wanting to practice your layout skills. If you're starting to get a bit more confident laying out a web page, give this project a go.
+This challenge is perfect if you're wanting to practice your layout skills. If you're starting to get a bit more confident laying out a web page, give this project a go.
 
 ## Built with
 
@@ -42,9 +31,9 @@ A very easy project to keep updated with the Frontend Mentor projects and rememb
 
 ## Useful resources
 
-1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
-2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
+1. [Figma](https://www.figma.com/) - Paste your design image to check the size of containers, width, etc.
+2. [Perfect Pixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) - Awesome Chrome extension that helps you to match the pixels of the provided design.
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb">solution</a>. It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my [solution](https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb). It definitely helps to find new ways to code and find easier solutions! 
