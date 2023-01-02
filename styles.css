@@ -54,6 +54,8 @@ body::-webkit-scrollbar {
 
 /** Header BG **/
 .header-bg {
+  width: 100%;
+  height: auto;
   border-radius: 15px 15px 0 0;
 }
 
@@ -77,7 +79,7 @@ body::-webkit-scrollbar {
   font-size: 18px;
 }
 
-.personal-details h3 span {
+.personal-details h2 span {
   color: var(--grayish-blue);
   font-weight: 100;
 }
@@ -105,7 +107,7 @@ hr {
   line-height: 20px;
 }
 
-.info-container h3 {
+.info-container h2 {
   font-size: 19px;
   color: var(--very-dark-blue);
   font-weight: 700;
