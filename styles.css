@@ -79,7 +79,7 @@ main {
   background-color: var(--soft-violet);
   max-width: 100%;
 }
-.main-image {
+img {
   width: 100%;
   height: auto;
   mix-blend-mode: multiply;
@@ -110,10 +110,12 @@ h1 {
 
 .describtion {
   color: var(--light-white);
-  font-family: var(--lexend-deca);
-  margin-top: 1.4rem;
+  font-family: var(--inter);
+  font-weight: 400;
+  margin-top: 1.3rem;
   line-height: 25px;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  width: 90%;
 }
 
 /** Numbers Container **/
@@ -131,7 +133,7 @@ h2 {
   color: var(--white);
 }
 
-.title-p {
+.nums p {
   color: var(--light-white);
   text-transform: uppercase;
   font-family: var(--lexend-deca);
@@ -149,7 +151,7 @@ h2 {
   .image-container {
     border-radius: 10px 10px 0 0;
   }
-  .main-image {
+  img {
     border-radius: 0;
   }
 
@@ -157,28 +159,15 @@ h2 {
     text-align: center;
     padding: 2rem;
   }
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    line-height: 2rem;
-  }
-
-  .describtion {
-    font-size: 0.9rem;
-  }
   .numbers-container {
     flex-direction: column;
     gap: 2.5rem;
     margin-top: 2rem;
   }
-  .title-p {
-    font-size: 0.7rem;
-  }
 }
 
 @media screen and (max-width: 700px) {
-  .main-image {
+  img {
     content: url("./images//image-header-mobile.jpg");
   }
 }
