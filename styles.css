@@ -5,11 +5,7 @@
   --background-color: hsl(229, 57%, 11%);
   --container-background-color: hsl(228, 56%, 26%);
   --pale-blue: hsl(243, 100%, 93%);
-  --gradient: linear-gradient(
-    90deg,
-    rgba(255, 163, 153, 1) 36%,
-    rgba(255, 77, 151, 1) 100%
-  );
+  --gradient: linear-gradient(90deg, rgba(255, 163, 153, 1) 36%, rgba(255, 77, 151, 1) 100%);
   --white: rgb(255, 255, 255);
   --dark-blue: hsl(229, 57%, 11%);
   --grayish-blue: hsl(229, 7%, 55%);
@@ -20,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 body {
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   min-height: 100vh;
@@ -42,7 +38,7 @@ body::-webkit-scrollbar {
 }
 
 /** Main Container **/
-.main-container {
+main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
@@ -69,18 +65,16 @@ body::-webkit-scrollbar {
   align-items: left;
   border-radius: 15px 90px 15px 15px;
   padding: 2.5rem;
-  padding-right: 8rem;
+  padding-right: 8.3rem;
   grid-area: a;
+  gap: 2rem;
 }
 
 .logo {
-  background-image: url("images/logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 80%;
-  height: 5rem;
-  text-align: left;
+  width: 8.5rem;
+  height: auto;
 }
+
 .icons {
   display: flex;
   flex-direction: row;
@@ -93,32 +87,16 @@ body::-webkit-scrollbar {
   padding: 0.8rem;
 }
 
-.img-one,
-.img-two,
-.img-three {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-img img {
   width: 1.4rem;
   height: 1.4rem;
-}
-
-.img-one {
-  background-image: url("images/icon-document.svg");
-}
-.img-two {
-  background-image: url("images/icon-folder.svg");
-}
-.img-three {
-  background-image: url("images/icon-upload.svg");
 }
 
 /** Storage Container **/
 .storage-container {
   border-radius: 15px;
-  padding: 2.1rem 2.9rem;
-  height: 50%;
-  max-height: 9.375rem;
+  padding: 1.4rem 2.5rem;
+  height: 7rem;
   position: relative;
   grid-area: b;
 }
@@ -143,6 +121,8 @@ h1 span {
   border-radius: 50px;
   width: 100%;
   height: 1rem;
+  margin-top: -5px;
+  padding: 1px;
 }
 
 .gradient-bar {
@@ -152,7 +132,7 @@ h1 span {
   background: var(--gradient);
   border-radius: 50px;
   filter: saturate();
-  width: 75%;
+  width: 74%;
   height: 0.8rem;
   position: relative;
 }
@@ -173,7 +153,7 @@ h1 span {
   margin-right: 2px;
 }
 
-.memory-points {
+h2 {
   color: var(--pale-blue);
   font-size: 12px;
   font-weight: 700;
@@ -204,12 +184,12 @@ h1 span {
 
 .gb-left {
   position: absolute;
-  border-radius: 5px 5px 0 5px;
+  border-radius: 10px 10px 0 10px;
   max-width: 9.6rem;
   min-width: 5rem;
   width: 90%;
-  left: 75%;
-  top: -20%;
+  left: 76%;
+  top: -30%;
   transform: translate(-50%, 0);
   background-color: var(--white);
   padding: 0.8rem;
@@ -237,13 +217,7 @@ h1 span {
     background-size: cover;
   }
 
-  .logo {
-    width: 9rem;
-    height: 3rem;
-    padding: 1rem;
-  }
-
-  .main-container {
+  main {
     margin-top: 8.125rem;
     grid-template-areas:
       "a a"
@@ -252,12 +226,12 @@ h1 span {
   }
 
   .storage-container {
-    height: 100%;
+    /* height: 100%; */
   }
   .gb-left {
     position: relative;
     left: 50%;
-    top: 30%;
+    top: 5%;
     text-align: center;
   }
   .gb-left:after {
