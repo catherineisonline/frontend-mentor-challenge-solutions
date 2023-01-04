@@ -1,38 +1,29 @@
-
-<img src="https://github.com/catherineisonline/fylo-data-storage-component-frontendmentor/blob/main/images/project-preview.png?raw=true" ></img>
+![Fylo data storage component](https://github.com/catherineisonline/fylo-data-storage-component-frontendmentor/blob/main/images/project-preview.png?raw=true)
 
 
 <h1 align="center">Fylo data storage component</h1>
 
 <div align="center">
-  <h3>
-    <a href="https://catherineisonline.github.io/fylo-data-storage-component-frontendmentor/" color="white">
-      Live
-    </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/fylo-data-storage-component-gpaJOs4EP">
-      Solution
-    </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n">
-      Challenge
-    </a>
-  </h3>
+
+[Live](https://catherineisonline.github.io/fylo-data-storage-component-frontendmentor/)
+| [Solution](https://www.frontendmentor.io/solutions/fylo-data-storage-component-gpaJOs4EP)
+| [Challenge](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n)
+
+Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
 </div>
-<div align="center">
-   Solution for a challenge from  <a href="https://www.frontendmentor.io/" target="_blank">frontendmentor.io</a>.
-</div>
-<br>
-<br>
-<br>
+
+
 
 ## About The Project
 
-<p>This component has some interesting CSS challenges in the design. If you're looking to test your CSS skills, this will be a great project for you!
+This component has some interesting CSS challenges in the design. If you're looking to test your CSS skills, this will be a great project for you!
 The main challenge is to build out this data storage component and get it looking as close to the design as possible.
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-<br><br>Your users should be able to:
-<br>1. View the optimal layout depending on their device's screen size</p>
-<br>
-<br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
+
+Your users should be able to:
+1. View the optimal layout depending on their device's screen size</p>
+
+I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
 
 
@@ -51,9 +42,9 @@ This project helped me to practice some grid as it's a little difficult for me t
 
 ## Useful resources
 
-1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
-2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
+1. [Figma](https://www.figma.com/) - Paste your design image to check the size of containers, width, etc.
+2. [Perfect Pixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) - Awesome Chrome extension that helps you to match the pixels of the provided design.
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/fylo-data-storage-component-gpaJOs4EP">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my [solution](https://www.frontendmentor.io/solutions/fylo-data-storage-component-gpaJOs4EP). It definitely helps to find new ways to code and find easier solutions! 
