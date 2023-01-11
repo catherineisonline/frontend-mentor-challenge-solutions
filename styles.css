@@ -124,7 +124,7 @@ hr {
 
 .data-section p {
   color: var(--very-dark-gray);
-  font-size: 1.5rem;
+  font-size: 3vw;
   font-weight: 700;
 }
 
@@ -139,10 +139,13 @@ hr {
 #map {
   height: 100%;
 }
-
+.data-section article:first-child {
+  width: 16rem;
+  word-wrap: break-word;
+}
 /** Responsive **/
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1110px) {
   .header-section {
     height: 17.6rem;
   }
@@ -157,6 +160,9 @@ hr {
     line-height: 2.4rem;
     height: 9rem;
     max-height: 90%;
+  }
+  .data-section p {
+    font-size: 1.5rem;
   }
   hr {
     display: inline-block;

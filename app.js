@@ -29,12 +29,9 @@ let lat
 let lng
 
 let url = `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}=`
-// console.log(url)
 fetch(url)
   .then((response) => response.json())
   .then((response) => {
-    // data = response
-    console.log(response)
     ipAddress = response.ip
     timeZone = response.time_zone.offset
     countryLocation = response.country_name
@@ -66,7 +63,7 @@ const mapLocation = (lat, lng) => {
 
   L.marker([lat, lng], { icon: markerIcon }).addTo(map)
 }
-// mapLocation()
+
 //Search by IP + validation
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault()
@@ -80,7 +77,6 @@ submitBtn.addEventListener('click', (event) => {
     fetch(url)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response)
         ipAddress = response.ip
         timeZone = response.time_zone.offset
         countryLocation = response.country_name
@@ -96,7 +92,6 @@ submitBtn.addEventListener('click', (event) => {
         ispInput.innerHTML = isp
         mapLocation(lat, lng)
       })
-    // return apiFunc()
   } else {
     alert('You have entered an invalid IP address!')
     return false
