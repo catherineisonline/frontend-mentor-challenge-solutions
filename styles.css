@@ -78,7 +78,8 @@ header {
     flex-direction: row;
     padding: 1.5rem 2.6rem;
     position: relative;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 nav {
     display: none;
@@ -123,7 +124,10 @@ nav ul a img {
 header.active .hamburger {
     content: url("./images/icon-close-menu.svg");
 }
-
+h1 img {
+    width: 6rem;
+    margin-top: 9px;
+}
 main,
 .remote,
 .remote-information {
@@ -131,68 +135,100 @@ main,
     flex-direction: column;
 }
 .remote {
-    gap: 8.7rem;
+    gap: 6.6rem;
 }
 .remote-information {
     text-align: center;
     align-items: center;
     padding: 1rem;
-    gap: 1rem;
+    gap: 3.1rem;
 }
-
+main {
+    gap: 8.8rem;
+}
 h2 {
     font-size: 4.9rem;
     line-height: 5rem;
 }
 .remote-information p {
     color: var(--medium-gray);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    width: 90%;
 }
 
 .remote-information a {
     border-radius: 15px;
     border: none;
     background-color: var(--almost-black);
-    width: max-content;
-    padding: 1rem;
+    padding: 0.9rem 1.9rem;
     color: var(--almost-white);
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 3.5px;
 }
 
 .partners {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    justify-content: space-between;
+    gap: 0.8rem;
+    justify-content: space-around;
 }
 .partners img {
-    width: 7.3rem;
+    max-width: 100px;
     height: 100%;
     object-fit: contain;
 }
+.nav-buttons {
+    gap: 1.2rem;
+    align-items: center;
+}
+.nav-buttons li:first-child button {
+    background-color: transparent;
+    border: none;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+.nav-buttons li:last-child button {
+    background-color: transparent;
+    border: 1px solid var(--medium-gray);
+    color: var(--medium-gray);
+    padding: 0.5rem 1.35rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1200px) {
     .hero {
         content: url("./images/image-hero-desktop.png");
         object-fit: cover;
         grid-column: 2;
         max-height: 41.5rem;
+        max-width: 30rem;
     }
     .remote {
         grid-row: 1;
     }
     main {
-        gap: 8.7rem;
+        gap: 8.8rem;
         display: grid;
         grid-template-columns: 560px 1fr;
-        width: 82%;
         margin: 0 auto;
-        margin-top: 2.5rem;
+        margin-top: 2.7rem;
+        max-width: 1000px;
+        justify-content: center;
     }
     header {
         gap: 3.8rem;
     }
     nav {
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
     nav ul {
         display: flex;
@@ -200,17 +236,16 @@ h2 {
     }
     .remote {
         margin-top: 6.5rem;
-        margin-left: 2.2rem;
-        justify-content: space-between;
+        margin-left: 2.3rem;
         max-width: 94%;
     }
 
     .remote-information {
         text-align: left;
-        align-items: left;
+        align-items: flex-start;
         padding: 0;
-        gap: 3rem;
     }
+
     .menu ul {
         gap: 2.3rem;
     }
@@ -218,20 +253,7 @@ h2 {
     .hamburger {
         display: none;
     }
-    .nav-buttons {
-        gap: 1rem;
-        align-items: center;
-    }
-    .nav-buttons li:first-child button {
-        background-color: transparent;
-        border: none;
-        color: var(--medium-gray);
-    }
-    .nav-buttons li:last-child button {
-        background-color: transparent;
-        border: 1px solid var(--medium-gray);
-        color: var(--medium-gray);
-        padding: 0.5rem;
-        border-radius: 15px;
+    .partners {
+        justify-content: space-between;
     }
 }
