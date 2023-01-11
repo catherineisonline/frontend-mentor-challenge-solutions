@@ -19,9 +19,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //API
 let ipAddress
-// let randomIP = '186.19.189.122'
 let randomIP = ''
-let data
 let timeZone
 let countryLocation
 let cityLocation
@@ -29,7 +27,7 @@ let postalCode
 let isp
 let lat
 let lng
-// let url = 'https://api.freegeoip.app/json/?apikey=' + key
+
 let url = `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}=`
 // console.log(url)
 fetch(url)
