@@ -40,7 +40,7 @@ I do not have access to the Figma sketch so the design is not pixel perfect.
 - CSS custom properties
 - Flex
 - Mobile-first workflow
-- IPify (geolocation API)
+- Free IP Geo Location
 - Leaflet (map API)
 
 ## What I learned
@@ -56,7 +56,7 @@ For some reason the gitignore is havin'g issues so I decided to keep the API key
 1. [Figma](https://www.figma.com/) - Paste your design image to check the size of containers, width, etc.
 2. [Perfect Pixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) - Awesome Chrome extension that helps you to match the pixels of the provided design.
 4. [Leaflet](https://geo.ipify.org/) - an open-source JavaScript library for mobile-friendly interactive maps
-5. [Free Geo IP](https://ipgeolocation.io/) - provides a free IP gelocation API for software developers I am currently using. This is a temporary replacement
+5. [Free IP Geo Location](https://ipgeolocation.io/) - provides a free IP gelocation API for software developers I am currently using. This is a temporary replacement
 
 
 
