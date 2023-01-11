@@ -1,3 +1,3 @@
-let MY_API_TOKEN = "ebccfeb0-8e64-11ec-8a3a-0d36b7ad0b99";
-
-export default MY_API_TOKEN;
+// config.js
+const API_KEY = '9c095da267384cf0a9fccc8c7cb83ec5&ip'
+export default API_KEY
