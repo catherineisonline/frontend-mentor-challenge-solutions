@@ -5,6 +5,7 @@
     --medium-gray: hsl(0, 0%, 41%);
     --almost-black: hsl(0, 0%, 8%);
     --epilogue-font: "Epilogue", sans-serif;
+    --transition: all ease-in-out 0.3s;
 }
 
 *,
@@ -113,7 +114,9 @@ nav ul a {
     text-decoration: none;
     align-items: center;
     font-size: 14px;
+    transition: var(--transition);
 }
+
 nav ul a img {
     height: max-content;
 }
@@ -160,7 +163,7 @@ h2 {
 
 .remote-information a {
     border-radius: 15px;
-    border: none;
+    border: 1px solid transparent;
     background-color: var(--almost-black);
     padding: 0.9rem 1.9rem;
     color: var(--almost-white);
@@ -168,6 +171,7 @@ h2 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 3.5px;
+    transition: var(--transition);
 }
 
 .partners {
@@ -185,19 +189,45 @@ h2 {
     gap: 1.2rem;
     align-items: center;
 }
+
 .nav-buttons li:first-child button {
     background-color: transparent;
     border: none;
     color: var(--medium-gray);
     font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
 }
+
 .nav-buttons li:last-child button {
     background-color: transparent;
-    border: 1px solid var(--medium-gray);
+    border: 2px solid var(--medium-gray);
     color: var(--medium-gray);
     padding: 0.5rem 1.35rem;
     border-radius: 15px;
     font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+@media (hover: hover) {
+    nav ul a:hover,
+    .remote-information a:hover,
+    .nav-buttons li button:hover {
+        color: var(--almost-black);
+        transition: var(--transition);
+    }
+    .nav-buttons li:last-child button {
+        border-color: var(--almost-black);
+        transition: var(--transition);
+    }
+    .remote-information a:hover {
+        background-color: transparent;
+        border: 1px solid var(--medium-gray);
+        transition: var(--transition);
+    }
 }
 
 @media screen and (min-width: 1200px) {
