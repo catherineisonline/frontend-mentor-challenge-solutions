@@ -1,41 +1,41 @@
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Country() {
-  const [country, setCountry] = useState([]);
-  const [borderCountries, setBorderCountry] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  let { name } = useParams();
+  const [country, setCountry] = useState([])
+  const [borderCountries, setBorderCountry] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  let { name } = useParams()
 
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scroll(0, 0)
     const fetchCountryData = async (name) => {
       try {
-        const url = `https://restcountries.com/v2/name/${name}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        setCountry(data[0]);
+        const url = `https://restcountries.com/v2/name/${name}`
+        const response = await fetch(url)
+        const data = await response.json()
+        setCountry(data[0])
         data[0]?.borders?.forEach((border) => {
-          return findCountryData(border);
-        });
-        setIsLoading(false);
+          return findCountryData(border)
+        })
+        setIsLoading(false)
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
-    };
-    fetchCountryData(name);
+    }
+    fetchCountryData(name)
     const findCountryData = async (border) => {
       try {
-        const url = `https://restcountries.com/v2/alpha/${border}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        setBorderCountry((cur) => [...cur, data.name]);
+        const url = `https://restcountries.com/v2/alpha/${border}`
+        const response = await fetch(url)
+        const data = await response.json()
+        setBorderCountry((cur) => [...cur, data.name])
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
-    };
-  }, [name]);
+    }
+  }, [name])
 
   return (
     <main>
@@ -78,7 +78,7 @@ export default function Country() {
                     <span>Native Name:</span> {country.nativeName}
                   </li>
                   <li>
-                    <span>Population:</span>{" "}
+                    <span>Population:</span>{' '}
                     {country.population.toLocaleString()}
                   </li>
                   <li>
@@ -96,7 +96,10 @@ export default function Country() {
                     <span>Top Level Domain:</span> {country.topLevelDomain}
                   </li>
                   <li>
-                    <span>Currencies:</span> {country.currencies[0].name}
+                    <span>Currencies:</span>{' '}
+                    {country.currencies
+                      ? country.currencies[0]?.name
+                      : 'Unknown'}
                   </li>
                   <li>
                     <span>Languages:</span> {country.languages[0].name}
@@ -139,5 +142,5 @@ export default function Country() {
         </AnimatePresence>
       )}
     </main>
-  );
+  )
 }
