@@ -2,6 +2,7 @@
 
 :root {
     --almost-white: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
     --medium-gray: hsl(0, 0%, 41%);
     --almost-black: hsl(0, 0%, 8%);
     --epilogue-font: "Epilogue", sans-serif;
@@ -92,20 +93,41 @@ header.active nav {
     flex-direction: column;
     padding: 1rem;
     background-color: var(--almost-white);
-    right: 0;
     left: 40%;
     height: 100%;
+    right: 0;
+    top: 0;
+    gap: 2rem;
 }
-header.active nav ul {
+header.active::before {
+    content: "";
+    display: inline-block;
+    position: fixed;
+    background-color: rgba(6, 6, 6, 0.15);
+    backdrop-filter: blur(3px);
+    height: 100%;
+    width: 20rem;
+    top: 0;
+    left: -15%;
+}
+header.active .nav-menu {
     position: static;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: center;
+    align-items: left;
     margin-top: 3rem;
 }
+header.active .nav-buttons {
+    width: max-content;
+    margin: 0 auto;
+}
+header.active .nav-buttons li:last-child button {
+    padding: 0.5rem 3rem;
+}
 
-nav ul a {
+nav ul a,
+nav ul button {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -115,18 +137,56 @@ nav ul a {
     align-items: center;
     font-size: 14px;
     transition: var(--transition);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
-
-nav ul a img {
+nav ul button:hover img {
+    transform: rotate(180deg);
+    transition: var(--transition);
+}
+nav ul button img {
     height: max-content;
+    transition: var(--transition);
 }
 .hamburger {
     cursor: pointer;
     z-index: 99;
+    position: fixed;
+    margin-left: 80%;
 }
 header.active .hamburger {
     content: url("./images/icon-close-menu.svg");
 }
+
+.hidden-features li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hidden-features,
+.hidden-company {
+    display: none;
+}
+.features-btn,
+.company-btn {
+    position: relative;
+}
+.features-btn:hover .hidden-features,
+.company-btn:hover .hidden-company {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--almost-white);
+    width: max-content;
+    border-radius: 10px;
+}
+
 h1 img {
     width: 6rem;
     margin-top: 9px;
@@ -214,6 +274,7 @@ h2 {
 
 @media (hover: hover) {
     nav ul a:hover,
+    nav ul button:hover,
     .remote-information a:hover,
     .nav-buttons li button:hover {
         color: var(--almost-black);
@@ -231,6 +292,18 @@ h2 {
 }
 
 @media screen and (min-width: 1200px) {
+    .features-btn:hover .hidden-features,
+    .hidden-features:hover,
+    .company-btn:hover .hidden-company,
+    .hidden-company:hover {
+        position: absolute;
+        background-color: var(--white);
+        top: 1.2rem;
+        box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+        -webkit-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+        -moz-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+    }
+
     .hero {
         content: url("./images/image-hero-desktop.png");
         object-fit: cover;
