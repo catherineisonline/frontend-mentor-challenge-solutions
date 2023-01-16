@@ -30,6 +30,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: var(--epilogue-font);
+    background-color: var(--almost-white);
 }
 body::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
