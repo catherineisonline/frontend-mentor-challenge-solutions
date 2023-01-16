@@ -6,26 +6,17 @@
 # Intro section with dropdown navigation
 
 <div align="center">
-  <h3>
-    <a href="" color="white">
-      Live
-    </a>
-    <span> | </span>
-    <a href="">
-      Solution
-    </a>
-   <span> | </span>
-    <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5">
-      Challenge
-    </a>
-  </h3>
+
+[Live](https://catherineisonline.github.io/intro-section-with-dropdown-navigation-frontendmentor/)
+| [Solution](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-V6T07Ji6vJ)
+| [Challenge](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5)
+
+Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-V6T07Ji6vJ)
+
 </div>
-<div align="center">
-   Solution for a challenge from  <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">frontendmentor.io</a>.
-</div>
-<br>
-<br>
-<br>
+
+
+
 
 ## About The Project
 
@@ -43,11 +34,11 @@ Users should be able to:
 
 ## Built with
 
-<!-- - Semantic HTML5 markup
+- Semantic HTML5 markup
 - CSS custom properties
-- Grid & Flex
-- Desktop-first responsive workflow
-- Vanilla JavaScript -->
+- Flex
+- Mobile-first responsive workflow
+- Vanilla JavaScript
 
 ## What I learned
 
@@ -55,9 +46,9 @@ A very easy project to keep updated with the Frontend Mentor projects and rememb
 
 ## Useful resources
 
-1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
-2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
+1. [Figma](https://www.figma.com/) - Paste your design image to check the size of containers, width, etc.
+2. [Perfect Pixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) - Awesome Chrome extension that helps you to match the pixels of the provided design.
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my [solution](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-V6T07Ji6vJ). It definitely helps to find new ways to code and find easier solutions!
