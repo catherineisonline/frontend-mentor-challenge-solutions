@@ -291,14 +291,15 @@ h2 {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
     .features-btn:hover .hidden-features,
     .hidden-features:hover,
     .company-btn:hover .hidden-company,
     .hidden-company:hover {
         position: absolute;
         background-color: var(--white);
-        top: 1.2rem;
+        padding: 1rem;
+        top: 0;
         box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
         -webkit-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
         -moz-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
