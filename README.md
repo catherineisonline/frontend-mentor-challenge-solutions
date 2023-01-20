@@ -22,22 +22,60 @@ npm run build
 
 ## Project List
 
+
+![]()
+### Intro section with dropdown navigation
+[Live](https://catherineisonline.github.io/intro-section-with-dropdown-navigation-frontendmentor/) | [Repo](https://github.com/catherineisonline/intro-section-with-dropdown-navigation-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5)
+
+![]()
+### News homepage
+[Live](https://catherineisonline.github.io/news-homepage-frontendmentor/) | [Repo](https://github.com/catherineisonline/news-homepage-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
+
+![]()
+### Huddle landing page with alternating feature blocks
+[Live](https://catherineisonline.github.io/huddle-landing-page-with-feature-blocks-frontendmentor/) | [Repo](https://github.com/catherineisonline/huddle-landing-page-with-feature-blocks-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100)
+
+![]()
+### Crowdfunding product page
+[Live](https://catherineisonline.github.io/crowdfunding-product-page-frontendmentor/) | [Repo](https://github.com/catherineisonline/crowdfunding-product-page-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR)
+
+![]()
+### Fylo landing page with two column layout
+[Live](https://catherineisonline.github.io/fylo-landing-page-with-two-column-layout-frontendmentor/) | [Repo](https://github.com/catherineisonline/fylo-landing-page-with-two-column-layout-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/fylo-landing-page-with-two-column-layout-5ca5ef041e82137ec91a50f5)
+
+![]()
+### Product preview card component
+[Live](https://catherineisonline.github.io/product-preview-card-frontendmentor/) | [Repo](https://github.com/catherineisonline/product-preview-card-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa)
+
+![]()
+### Calculator App
+[Live](https://catherineisonline.github.io/calculator/) | [Repo](https://github.com/catherineisonline/calculator) | [Try Out](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
+
+![]()
+### Interactive rating component
+[Live](https://catherineisonline.github.io/interactive-rating-component-frontendmentor/) | [Repo](https://github.com/catherineisonline/interactive-rating-component-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI)
+
+![]()
 ### REST Countries API with color theme switcher
 
 <a href="https://catherineisonline.github.io/rest-countries/">Live</a> | <a href="https://github.com/catherineisonline/rest-countries">Repo</a> | <a href="https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca">Try Out</a>
 
+![]()
 ### Fylo dark theme landing page
 
 <a href="https://catherineisonline.github.io/fylo-dark-theme-landing-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/fylo-dark-theme-landing-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd">Try Out</a>
 
+![]()
 ### Sunnyside agency landing page
 
 <a href="https://catherineisonline.github.io/sunnyside-agency-landing-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/sunnyside-agency-landing-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">Try Out</a>
 
+![]()
 ### Pricing component with toggle
 
 <a href="https://catherineisonline.github.io/pricing-component-with-toggle-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/pricing-component-with-toggle-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC">Try Out</a>
 
+![]()
 ### Intro component with sign-up form
 
 <a href="https://catherineisonline.github.io/intro-component-with-sign-up-form-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/intro-component-with-sign-up-form-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1">Try Out</a>
