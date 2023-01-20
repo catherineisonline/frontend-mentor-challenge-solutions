@@ -68,6 +68,7 @@ npm run build
 ![Sunnyside agency landing page](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/blob/main/src/assets/images/sunnyside-agency-landing-page.jpeg?raw=true)
 ### Sunnyside agency landing page
 
+
 <a href="https://catherineisonline.github.io/sunnyside-agency-landing-page-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/sunnyside-agency-landing-page-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">Try Out</a>
 
 ![Pricing component with toggle](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/blob/main/src/assets/images/pricing-component-with-toggle.jpeg?raw=true)
@@ -108,7 +109,8 @@ npm run build
 ![URL shortening API landing page](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/blob/main/src/assets/images/URL-shortening-API-landing-page.jpeg?raw=true)
 ### URL shortening API landing page
 
-<a href="https://catherineisonline.github.io/url-shortening-api-frontendmentor/">Live</a> | <a href="https://github.com/catherineisonline/url-shortening-api-frontendmentor">Repo</a> | <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">Try Out</a>
+[Live](https://catherineisonline.github.io/url-shortening-api-frontendmentor/) | [Repo](https://github.com/catherineisonline/url-shortening-api-frontendmentor) | [Try Out](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)
+
 
 ![IP Address Tracker](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/blob/main/src/assets/images/IP-address-tracker-challenge.jpeg?raw=true)
 ### IP Address Tracker
