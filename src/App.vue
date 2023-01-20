@@ -488,6 +488,98 @@ export default {
             "https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-SySqXmn49",
           repoLink: "https://github.com/catherineisonline/rest-countries",
         },
+        {
+          id: 25,
+          projectName: "Interactive rating component",
+          projectDescribtion:
+            "This is a nice, small project to practice handling user interactions and updating the DOM. Perfect for anyone who has learned the basics of JavaScript!",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/interactive-rating-component.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/interactive-rating-component-frontendmentor/",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI",
+          repoLink: "https://github.com/catherineisonline/interactive-rating-component-frontendmentor",
+        },
+        {
+          id: 26,
+          projectName: "Calculator App",
+          projectDescribtion:
+            "This small app is perfect for anyone starting to get to grips with JavaScript. The calculator functionality will be a nice test!",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/calculator-app.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/calculator",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29",
+          repoLink: "https://github.com/catherineisonline/calculator",
+        },
+
+        {
+          id: 27,
+          projectName: "Product preview card component",
+          projectDescribtion:
+            "This HTML & CSS-only challenge will be perfect for anyone starting to build responsive projects.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/product-preview-card-component.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/product-preview-card-frontendmentor/",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa",
+          repoLink: "https://github.com/catherineisonline/product-preview-card-frontendmentor",
+        },
+        {
+          id: 28,
+          projectName: "Fylo landing page with two column layout",
+          projectDescribtion:
+            "This project is great if you're starting to get confident with slightly more complex layouts. The second section with the testimonial area will provide a nice challenge.",
+          projectStack: ["HTML", "CSS"],
+          projectPreview: require("@/assets/images/fylo-landing-page-with-two-column-layout.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/crowdfunding-product-page-frontendmentor/",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR",
+          repoLink: "https://github.com/catherineisonline/crowdfunding-product-page-frontendmentor",
+        },
+        {
+          id: 29,
+          projectName: "Huddle landing page with alternating feature blocks",
+          projectDescribtion:
+            "This challenge is perfect if you're wanting to practice your layout skills. If you're starting to get a bit more confident laying out a web page, give this project a go.",
+          projectStack: ["HTML", "CSS"],
+          projectPreview: require("@/assets/images/huddle-landing-page-with-alternating-feature-blocks.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/huddle-landing-page-with-feature-blocks-frontendmentor/",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100",
+          repoLink: "https://github.com/catherineisonline/huddle-landing-page-with-feature-blocks-frontendmentor",
+        },
+        {
+          id: 30,
+          projectName: "News homepage",
+          projectDescribtion:
+            "This news homepage will be an excellent opportunity to practice your CSS Grid skills. There will be lots of tricky decisions to make and plenty of learning opportunities!",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/news-homepage.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/news-homepage-frontendmentor/",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl",
+          repoLink: "https://github.com/catherineisonline/news-homepage-frontendmentor",
+        },
+        {
+          id: 31,
+          projectName: "Intro section with dropdown navigation",
+          projectDescribtion:
+            "This challenge will test your ability to create dropdown navigation menus, a common pattern on larger sites. It will also provide some nice basic layout challenges.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/intro-section-with-dropdown-navigation.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/intro-section-with-dropdown-navigation-frontendmentor/",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5",
+          repoLink: "https://github.com/catherineisonline/intro-section-with-dropdown-navigation-frontendmentor",
+        },
       ],
     };
   },
