@@ -1,6 +1,6 @@
 # Frontend Mentor Challenge Solutions
 
-This is the collection of all my Frontend Mentor challenge solutions. You can find links to their repositories, live demos and direct links to challenges on Frontend Mentor so you can try them out yourself. Follow the instcutions below in case you decide to download or fork the project. I am using Vue so you will need additonal node modules to run the project locally.
+Frontend Mentor: A showcase of my front-end skills. This collection features my solutions to various Frontend Mentor challenges, each providing a real-life workflow experience. From designs, assets, and style requirements, I have honed my skills in building responsive and visually appealing websites. Explore my solutions and see the live demos
 
 ## Project setup
 
