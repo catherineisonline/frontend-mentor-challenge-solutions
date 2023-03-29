@@ -1,4 +1,4 @@
-![The Fylo dark theme landing page]()
+![The Fylo dark theme landing page](https://github.com/catherineisonline/fylo-dark-theme-landing-page-frontendmentor/blob/main/images/project-preview.png?raw=true)
 
 
 <h1 align="center">The Fylo dark theme landing page</h1>
