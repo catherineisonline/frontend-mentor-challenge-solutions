@@ -36,7 +36,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4.4rem;
+  margin-top: 4.3rem;
 }
 /* Header Logo */
 .header-logo {
@@ -86,6 +86,7 @@ main {
   padding: 0.9rem;
   border-radius: 35px;
   border-color: var(--pale-blue);
+  opacity: 0.7;
   border-width: 1px;
   border-style: solid;
 }
@@ -127,9 +128,8 @@ main {
   color: var(--white);
   background-color: var(--blue);
   border-color: transparent;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 0.8rem;
-  letter-spacing: 1px;
   cursor: pointer;
   box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.31);
   -webkit-box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.31);
@@ -169,15 +169,23 @@ footer {
   gap: 0.5rem;
   margin: 0 auto;
 }
-
-.social-media .fa-brands {
-  font-size: 0.8rem;
-  color: var(--blue);
-  border-radius: 60%;
-  border-color: var(--pale-blue);
+.social-media a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   border-width: 1px;
   border-style: solid;
-  padding: 0.4rem;
+  border-color: var(--pale-blue);
+}
+.social-media .fa-brands {
+  color: var(--blue);
+  font-size: 0.8rem;
+  opacity: 0.8;
   font-weight: 700;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
@@ -190,10 +198,12 @@ footer {
 }
 
 @media (hover: hover) {
-  .social-media .fa-brands:hover {
+  .social-media a:hover {
     background-color: var(--blue);
-    color: var(--white);
     transition: all ease-in-out 0.3s;
+  }
+  .social-media a:hover .fa-brands {
+    color: var(--white);
   }
   .input-section button:hover {
     background-color: var(--pale-blue);
