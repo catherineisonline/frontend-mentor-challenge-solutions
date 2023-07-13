@@ -119,6 +119,8 @@ header {
 
 /** Registration Button **/
 .registration-button {
+  text-decoration: none;
+  text-align: center;
   width: 32%;
   background-color: var(--white);
   color: var(--background-color);
@@ -169,7 +171,7 @@ header {
 
 /** Nonsticky Hover **/
 @media (hover: hover) {
-  button:hover {
+  .registration-button:hover {
     background-color: var(--hover-color);
     color: var(--white);
     cursor: pointer;
