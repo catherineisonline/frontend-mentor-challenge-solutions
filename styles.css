@@ -7,7 +7,11 @@
   --very-dark-blue: hsl(229, 23%, 23%);
   --grayish-blue: hsl(227, 10%, 46%);
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +31,9 @@ body {
   overflow-y: scroll;
   font-family: var(--kumbh-sans);
   background: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
-  background-position: top -900px left -700px, bottom -1250px right -550px;
+  background-position:
+    top -900px left -700px,
+    bottom -1250px right -550px;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--background-color);
