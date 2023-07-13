@@ -10,12 +10,13 @@
 }
 
 body {
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
-  background-image: url("images/bg-pattern-top-mobile.svg"),
-    url("images/bg-pattern-bottom-mobile.svg");
-  background-position: left 50px top 0, right 0 bottom -300px;
+  background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+  background-position:
+    left 50px top 0,
+    right 0 bottom -300px;
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   background-size: contain, contain;
@@ -182,15 +183,18 @@ body::-webkit-scrollbar {
 /** Media Queries **/
 @media only screen and (min-width: 600px) {
   body {
-    background-position: left 100px top -100px, right 0 bottom -500px;
+    background-position:
+      left 100px top -100px,
+      right 0 bottom -500px;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   body {
-    background-image: url("images/bg-pattern-top-desktop.svg"),
-      url("images/bg-pattern-bottom-desktop.svg");
-    background-position: left -800px top 0, right -250px bottom 0;
+    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+    background-position:
+      left -800px top 0,
+      right -250px bottom 0;
   }
   .main-container {
     grid-template-columns: repeat(2, 1fr);
