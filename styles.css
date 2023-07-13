@@ -143,7 +143,7 @@ h2 {
 
 /** Media Queries **/
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .center-container {
     flex-direction: column-reverse;
   }
