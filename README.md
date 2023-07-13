@@ -12,7 +12,7 @@
   <span> | </span>    <a href="https://www.frontendmentor.io/solutions/3column-preview-card-component-3icyN8S1s">
       Solution
     </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj">
+  <span> | </span>    <a href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-">
       Challenge
     </a>
   </h3>

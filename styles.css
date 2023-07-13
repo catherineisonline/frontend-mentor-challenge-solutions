@@ -10,22 +10,27 @@
   --dark-cyan: hsl(184, 100%, 22%);
   --very-dark-cyan: hsl(179, 100%, 13%);
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
   padding: 0;
   margin: 0;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 body {
-   -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
-  box-sizing: border-box;
   background-color: var(--light-gray);
-  font-size: 15px;
+  font-size: 0.93rem;
 }
 
 body::-webkit-scrollbar {
@@ -33,7 +38,6 @@ body::-webkit-scrollbar {
 }
 
 h1 {
-
 }
 
 /** Main Container **/
@@ -91,22 +95,15 @@ h1 {
   border-color: transparent;
   border-radius: 35px;
   font-family: var(--lexend-ceda);
-  width: 55%;
+  width: 55.5%;
   text-transform: capitalize;
   margin-top: 3.4rem;
   padding: 0.9rem;
   justify-content: center;
   text-align: center;
   text-decoration: none;
-}
-
-.buttons:hover {
-  border: 1px solid var(--light-gray);
-  background-color: transparent;
-  cursor: pointer;
-}
-.buttons:hover {
-  color: var(--light-gray);
+  border: 1px solid transparent;
+  transition: all ease-in-out 0.3s;
 }
 
 /** Container 1 **/
@@ -135,30 +132,37 @@ h1 {
   color: var(--very-dark-cyan);
 }
 
+@media (hover: hover) {
+  .buttons:hover {
+    border-color: var(--light-gray);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    color: var(--light-gray);
+  }
+}
 /** Media Queries **/
 @media screen and (max-width: 1025px) {
   .main-container {
     flex-direction: column;
     margin-top: 5.3rem;
-   justify-content: center;
-   align-content: center;
+    justify-content: center;
+    align-content: center;
   }
 
   .info-container {
     gap: 1rem;
   }
-  
-    .container-one {
-        border-radius: 5px 5px 0 0;
+
+  .container-one {
+    border-radius: 5px 5px 0 0;
   }
-  
-  .container-two 
-  {
-        border-radius: 0;
+
+  .container-two {
+    border-radius: 0;
   }
-   .container-three 
-  {
-        border-radius: 0 0 5px 5px;
+  .container-three {
+    border-radius: 0 0 5px 5px;
   }
   .container-one,
   .container-two,
@@ -168,13 +172,13 @@ h1 {
   .buttons {
     width: 40%;
     margin-top: 1.5rem;
-}
+  }
 
-@media screen and (max-width: 600px) {
-
-  .container-one,
-  .container-two,
-  .container-three {
-    width: 80%;
+  @media screen and (max-width: 600px) {
+    .container-one,
+    .container-two,
+    .container-three {
+      width: 80%;
+    }
   }
 }
