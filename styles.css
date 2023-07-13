@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 13px;
+  font-size: 0.81rem;
 }
 
 body {
@@ -83,6 +83,9 @@ body::-webkit-scrollbar {
 .section-3 {
   grid-row: span 2;
 }
+.section-3 .highlight-content p {
+  color: var(--dark-grayish-blue);
+}
 .section-5 {
   background-color: var(--dark-blackish-blue);
   grid-column: span 2;
@@ -143,6 +146,9 @@ body::-webkit-scrollbar {
 .highlight-content {
   font-size: 1.5rem;
   word-spacing: 1.7px;
+}
+.highlight-content p {
+  font-weight: 600;
 }
 
 /** Content **/
