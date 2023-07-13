@@ -1,7 +1,7 @@
 <img src="https://github.com/catherineisonline/article-preview-component-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
 
-<h1 align="center">Testimonials Grid Section</h1>
+<h1 align="center">Article preview component</h1>
 
 <div align="center">
   <h3>

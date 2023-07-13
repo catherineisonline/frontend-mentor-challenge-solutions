@@ -7,6 +7,7 @@
   --grayish-blue: hsl(212, 23%, 69%);
   --light-grayish-blue: hsl(210, 46%, 95%);
   --white: white;
+  --box-shadow: -1px 1px 25px 0px rgba(0, 0, 0, 0.17);
 }
 
 html {
@@ -34,9 +35,9 @@ body {
   grid-template-columns: 1fr;
   background-color: var(--white);
   border-radius: 15px;
-  box-shadow: -1px 1px 25px 0px rgba(0, 0, 0, 0.17);
-  -webkit-box-shadow: -1px 1px 25px 0px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: -1px 1px 25px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
 }
 
 /* Info Container */
@@ -171,6 +172,7 @@ body {
   text-transform: uppercase;
   color: var(--grayish-blue);
   letter-spacing: 3px;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -215,9 +217,9 @@ body {
     border-radius: 10px;
     padding: 0.2rem;
     width: 80%;
-    box-shadow: -1px 1px 25px 0px rgba(0, 0, 0, 0.17);
-    -webkit-box-shadow: -1px 1px 25px 0px rgba(0, 0, 0, 0.17);
-    -moz-box-shadow: -1px 1px 25px 0px rgba(0, 0, 0, 0.17);
+    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
   }
   .share-section.shown::after {
     position: absolute;
