@@ -11,7 +11,7 @@
 }
 
 body {
-   -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   box-sizing: border-box;
@@ -67,15 +67,7 @@ body::-webkit-scrollbar {
   min-height: 18.75rem;
   height: auto;
   background-image: none;
-}
-.color-image:hover {
-  background-image: url("images/icon-view.svg");
-  background-color: var(--cyan);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 20% 20%;
-  opacity: 0.5;
-  transition: background-color ease-in-out 0.3s;
+  background-color: transparent;
 }
 
 /** Container Title **/
@@ -87,6 +79,7 @@ body::-webkit-scrollbar {
   color: var(--white);
   font-size: 1.4rem;
   font-weight: 400;
+  transition: color ease-in 0.3s;
 }
 
 .container-title p {
@@ -166,13 +159,26 @@ body::-webkit-scrollbar {
   color: var(--white);
   text-decoration: none;
   font-weight: 400;
+  transition: color ease-in 0.3s;
 }
 
 /** Active States **/
-.author-name:hover,
-.container-title h1 a:hover {
-  color: var(--cyan);
-  transition: color ease-in 0.3s;
+@media (hover: hover) {
+  .author-name:hover,
+  .container-title h1 a:hover {
+    color: var(--cyan);
+    transition: color ease-in 0.3s;
+  }
+
+  .color-image:hover {
+    background-image: url("images/icon-view.svg");
+    background-color: var(--cyan);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20% 20%;
+    opacity: 0.5;
+    transition: background-color ease-in-out 0.3s;
+  }
 }
 
 /** Media Queries **/
