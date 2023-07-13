@@ -8,6 +8,7 @@
   --gray: hsl(0, 0%, 59%);
   --very-dark-blue: hsl(209, 33%, 12%);
   --white: white;
+  --box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.31);
 }
 
 * {
@@ -138,9 +139,9 @@ main {
   font-weight: 600;
   font-size: 0.8rem;
   cursor: pointer;
-  box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.31);
-  -webkit-box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.31);
-  -moz-box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.31);
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
   transition: all ease-in-out 0.3s;
 }
 
@@ -177,8 +178,8 @@ footer {
   margin: 0 auto;
 }
 .social-media a {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   display: flex;
   border-radius: 50%;
   flex-direction: column;
@@ -188,6 +189,7 @@ footer {
   border-width: 1px;
   border-style: solid;
   border-color: var(--pale-blue);
+  transition: all ease-in-out 0.3s;
 }
 .social-media .fa-brands {
   color: var(--blue);
@@ -211,6 +213,7 @@ footer {
   }
   .social-media a:hover .fa-brands {
     color: var(--white);
+    transition: all ease-in-out 0.3s;
   }
   .input-section button:hover {
     background-color: var(--pale-blue);
