@@ -12,6 +12,11 @@
   --blue: hsl(212, 86%, 64%);
   --box-shadow: 0px 12px 14px -10px hsla(212, 86%, 64%, 0.301);
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +26,6 @@ body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
-  box-sizing: border-box;
   background-color: var(--light-gray);
   font-family: var(--body--font);
   min-height: 100vh;
