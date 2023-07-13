@@ -31,7 +31,9 @@ body {
   background-image: url("images/bg-top.svg"), url("images/bg-bottom.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 26.5%, 26.5%;
-  background-position: top 0 right -1rem, bottom -4.7rem left -1.9rem;
+  background-position:
+    top 0 right -1rem,
+    bottom -4.7rem left -1.9rem;
 }
 
 body::-webkit-scrollbar {
@@ -114,6 +116,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
   margin-top: 5.8rem;
+  max-width: 1440px;
 }
 
 .pricing {
@@ -203,18 +206,17 @@ hr {
 .container-2 button {
   color: var(--purple);
   background-color: var(--white);
+  transition: var(--transition);
 }
 .container-1 button,
 .container-3 button {
   color: var(--white);
   background: linear-gradient(var(--gradient));
   background-repeat: no-repeat;
+  transition: background ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s;
 }
-.container-1 button,
-.container-3 button,
-.container-2 button {
-  transition: var(--transition);
-}
+
 @media (hover: hover) {
   .container-1 button:hover,
   .container-3 button:hover {
@@ -222,7 +224,8 @@ hr {
     border-color: var(--light-grayish-blue);
     color: var(--purple);
     border-width: 1px;
-    transition: var(--transition);
+    transition: background ease-in-out 0.3s;
+    transition: color ease-in-out 0.3s;
   }
   .container-2 button:hover {
     background-color: transparent;
@@ -260,7 +263,9 @@ hr {
 @media screen and (max-width: 800px) {
   body {
     background-size: 80%, 26.5%;
-    background-position: top 0 right -10rem, bottom -4.7rem left -1.9rem;
+    background-position:
+      top 0 right -10rem,
+      bottom -4.7rem left -1.9rem;
   }
   .pricing-container {
     width: 60%;
