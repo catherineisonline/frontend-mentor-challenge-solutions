@@ -6,6 +6,7 @@
   --container-background-color: hsl(228, 56%, 26%);
   --pale-blue: hsl(243, 100%, 93%);
   --gradient: linear-gradient(90deg, rgba(255, 163, 153, 1) 36%, rgba(255, 77, 151, 1) 100%);
+  --gradient-bar: rgb(255, 163, 153);
   --white: rgb(255, 255, 255);
   --dark-blue: hsl(229, 57%, 11%);
   --grayish-blue: hsl(229, 7%, 55%);
@@ -128,7 +129,7 @@ h1 span {
 .gradient-bar {
   display: flex;
   align-items: center;
-  background: rgb(255, 163, 153);
+  background: var(--gradient-bar);
   background: var(--gradient);
   border-radius: 50px;
   filter: saturate();
@@ -225,9 +226,6 @@ h2 {
     gap: 1rem;
   }
 
-  .storage-container {
-    /* height: 100%; */
-  }
   .gb-left {
     position: relative;
     left: 50%;
