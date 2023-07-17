@@ -521,6 +521,13 @@ footer {
     font-size: 1.2;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .menu-section-two {
+    position: relative;
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 1110px) {
   .intro-section {
     width: 85%;
@@ -544,9 +551,6 @@ footer {
     width: 30%;
   }
 
-  .menu-section-two {
-    position: relative;
-  }
   .socials-section {
     position: absolute;
     width: 100%;
@@ -593,7 +597,6 @@ footer {
   footer,
   .footer-inner,
   .menu-section,
-  .menu-section-two,
   .menu-pages {
     flex-direction: column;
     text-align: left;
