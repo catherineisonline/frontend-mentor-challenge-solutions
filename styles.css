@@ -117,11 +117,14 @@ input {
   border-style: solid;
   border-color: var(--grayish-blue);
   opacity: 0.8;
+  font-family: var(--body-font);
+  padding-left: 1rem;
 }
+
 input::placeholder {
   font-weight: 700;
   font-size: 0.9rem;
-  padding-left: 0.8rem;
+  font-family: var(--body-font);
 }
 input:focus-visible {
   outline-width: 1px;
@@ -179,7 +182,6 @@ input:focus-visible {
   font-size: 0.9rem;
   font-weight: 600;
   transition: all ease-in-out 0.3s;
-
 }
 
 .tnc {
@@ -195,11 +197,11 @@ input:focus-visible {
   font-weight: 600;
 }
 
-@media (hover:hover) {
-    .submit-info:hover{
-        opacity: 0.7;
-        transition: all ease-in-out 0.2s;
-    }
+@media (hover: hover) {
+  .submit-info:hover {
+    opacity: 0.7;
+    transition: all ease-in-out 0.2s;
+  }
 }
 
 @media screen and (max-width: 801px) {
