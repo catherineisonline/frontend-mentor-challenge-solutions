@@ -19,7 +19,7 @@
   </h3>
 </div>
 <div align="center">
-   Solution for a challenge from  <a href="https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC" target="_blank">frontendmentor.io</a>.
+   Solution for a challenge from  <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef" target="_blank">frontendmentor.io</a>.
 </div>
 <br>
 <br>
