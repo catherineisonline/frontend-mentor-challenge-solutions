@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap");
 
 :root {
   --cream: hsl(30, 38%, 92%);
@@ -23,7 +23,7 @@ body {
   overflow-y: scroll;
   box-sizing: border-box;
   background-color: var(--cream);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
@@ -106,6 +106,7 @@ h2 {
   align-items: center;
   gap: 1.6rem;
   margin-top: 1rem;
+  font-weight: 700;
 }
 
 .pricing p span {

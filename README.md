@@ -19,7 +19,7 @@
   </h3>
 </div>
 <div align="center">
-   Solution for a challenge from  <a href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI" target="_blank">frontendmentor.io</a>.
+   Solution for a challenge from  <a href="https://www.frontendmentor.io" target="_blank">frontendmentor.io</a>.
 </div>
 <br>
 <br>
