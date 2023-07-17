@@ -91,6 +91,11 @@ h1 span {
   width: 100%;
   padding: 1.7rem;
   overflow: hidden;
+  background-color: transparent;
+  font-family: var(--body-font);
+}
+.input-field::placeholder {
+  font-family: var(--body-font);
 }
 
 .btn {
@@ -102,7 +107,6 @@ h1 span {
   top: 0;
   right: 0;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  /* background-repeat: no-repeat; */
   width: 23%;
   height: 3.5rem;
   border: none;
