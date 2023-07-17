@@ -3,9 +3,9 @@
 # News homepage
 
 
-[Live]() | [Solution]() | [Challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
+[Live]("https://catherineisonline.github.io/news-homepage-frontendmentor/") | [Solution]("https://www.frontendmentor.io/solutions/news-homepage-Es-yC3RZgB") | [Challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
 
-Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
+Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
 
 
 ## About The Project
@@ -31,7 +31,7 @@ The main challenge is to build out this news website homepage and get it looking
 
 ## What I learned
 
-Another great project to practise some mobile-first wworkflow and remember the basics!
+Another great project to practise some mobile-first workflow and remember the basics!
 
 
 ## Useful resources
@@ -43,4 +43,4 @@ Another great project to practise some mobile-first wworkflow and remember the b
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my [solution](""). It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my [solution]("https://www.frontendmentor.io/solutions/news-homepage-Es-yC3RZgB"). It definitely helps to find new ways to code and find easier solutions! 
