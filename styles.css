@@ -12,7 +12,6 @@
   padding: 0;
 }
 
-
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -29,19 +28,11 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 57.5% 1fr;
   min-height: 100vh;
- 
 }
 
-.logo-area {
-  width: 100%;
-  height: 2.3rem;
-}
 .logo {
-  background-image: url("images/logo.svg");
-  background-repeat: no-repeat;
-  background-size: 33%;
   height: 2.3rem;
-  width: 100%;
+  max-width: 100%;
 }
 
 /* Info Section */
@@ -51,8 +42,7 @@ body::-webkit-scrollbar {
   grid-template-columns: 1fr;
   padding: 4rem 10.2rem;
   gap: 1rem;
-  background: url("images/bg-pattern-desktop.svg"),
-    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background: url("images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   background-size: cover;
   justify-content: space-evenly;
 }
@@ -81,7 +71,7 @@ h1 span {
   padding-top: 1.2rem;
 }
 .text-section {
-  max-width: 100%;
+  max-width: 550px;
 }
 /* Input Section */
 .input-section {
@@ -112,12 +102,13 @@ h1 span {
   top: 0;
   right: 0;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   width: 23%;
   height: 3.5rem;
   border: none;
   border-radius: 25px;
   overflow: hidden;
+  transition: all ease-in-out 0.3s;
 }
 
 .arrow-img {
@@ -164,12 +155,9 @@ h1 span {
 
 @media (hover: hover) {
   .btn:hover {
-    background: transparent;
-    background-color: hsl(0, 80%, 86%);
-    width: 24%;
-    height: 3.7rem;
     -webkit-box-shadow: -1px 16px 17px -6px rgba(0, 0, 0, 0.51);
     box-shadow: -1px 16px 17px -6px rgba(0, 0, 0, 0.51);
+    transition: all ease-in-out 0.3s;
   }
 }
 
@@ -179,7 +167,7 @@ h1 span {
   }
 }
 
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 900px) {
   .info-section {
     display: initial;
   }
@@ -191,22 +179,17 @@ h1 span {
       "icon"
       "hero"
       "info";
-    
   }
 
   .img-section {
     grid-area: hero;
   }
 
-  .logo-area {
+  .logo {
     position: absolute;
     grid-area: icon;
     top: 5%;
     left: 5%;
-    width: 70%;
-  }
-  .logo {
-    height: 4rem;
   }
 
   .info-section {
