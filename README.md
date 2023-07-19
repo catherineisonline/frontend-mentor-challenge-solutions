@@ -5,7 +5,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/url-shortening-api-frontendmentor/" color="white">
+    <a href="https://catherineisonline.github.io/advice-generator-app-frontendmentor/" color="white">
       Live
     </a>
     <span> | </span>
