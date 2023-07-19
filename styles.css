@@ -66,7 +66,7 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 .input-field {
-  cursor: pointer;
+  cursor: text;
   width: 80%;
   max-width: 29rem;
   border-color: transparent;
@@ -88,6 +88,7 @@ body::-webkit-scrollbar {
   padding: 1rem;
   border-radius: 0 15px 15px 0;
   cursor: pointer;
+  transition: all ease-in-out 0.3s;
 }
 
 .fa-angle-right {
@@ -139,11 +140,15 @@ hr {
 #map {
   height: 100%;
 }
-.data-section article:first-child {
-  width: 16rem;
-  word-wrap: break-word;
-}
+
 /** Responsive **/
+
+@media (hover: hover) {
+  .submit-btn:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: var(--very-dark-gray);
+  }
+}
 
 @media screen and (min-width: 1110px) {
   .header-section {
@@ -160,6 +165,10 @@ hr {
     line-height: 2.4rem;
     height: 9rem;
     max-height: 90%;
+  }
+  .data-section article:first-child {
+    width: 16rem;
+    word-wrap: break-word;
   }
   .data-section p {
     font-size: 1.5rem;

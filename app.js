@@ -46,7 +46,7 @@ fetch(url)
     countryLocationInput.innerHTML = `${countryLocation}, ${cityLocation} ${postalCode}`
     ispInput.innerHTML = isp
     mapLocation(lat, lng)
-  })
+  }).catch(error => console.log(error))
 
 const mapLocation = (lat, lng) => {
   var markerIcon = L.icon({
@@ -91,7 +91,7 @@ submitBtn.addEventListener('click', (event) => {
         countryLocationInput.innerHTML = `${countryLocation}, ${cityLocation} ${postalCode}`
         ispInput.innerHTML = isp
         mapLocation(lat, lng)
-      })
+      }).catch(error => console.log(error))
   } else {
     alert('You have entered an invalid IP address!')
     return false
