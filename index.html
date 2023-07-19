@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Interactive rating component - Frontend Mentor">
+  <meta name="keywords" content="Interactive rating component, Frontend Mentor">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <title>Interactive rating component</title>
@@ -15,34 +16,30 @@
     <article class="main-container">
       <section class="front-section dark-bg">
         <!-- FRONT -->
-        <section class="star-section"><img class="star-img" src="images/icon-star.svg" alt="" aria-hidden=“true”></section>
-        <section class="content">
-          <h1>How did we do?</h1>
-          <p>Please let us know how we did with your support request. All feedback is appreciated
-            to help us improve our offering!</p>
-        </section>
+        <img class="star-img" src="images/icon-star.svg" alt="" aria-hidden=“true”>
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
         <section class="rating-numbers">
-          <input class="radio-btn" value="1" type="radio" id="one" checked></input>
+          <input name="rating" class="radio-btn" value="1" type="radio" id="one" checked></input>
           <label class="rating-number one default-active" for="one">1</label>
-          <input class="radio-btn" value="2" type="radio" id="two"></input>
+          <input name="rating" class="radio-btn" value="2" type="radio" id="two"></input>
           <label class="rating-number two" for="two">2</label>
-          <input class="radio-btn" value="3" type="radio" id="three"></input>
+          <input name="rating" class="radio-btn" value="3" type="radio" id="three"></input>
           <label class="rating-number three " for="three">3</label>
-          <input class="radio-btn" value="4" type="radio" id="four"></input>
+          <input name="rating" class="radio-btn" value="4" type="radio" id="four"></input>
           <label class="rating-number four" for="four">4</label>
-          <input class="radio-btn" value="5" type="radio" id="five"></input>
+          <input name="rating" class="radio-btn" value="5" type="radio" id="five"></input>
           <label class="rating-number five" for="five">5</label>
         </section>
-        <section><button class="btn">submit</button></section>
+        <button class="btn">submit</button>
       </section>
       <!-- END OF FRONT -->
       <!-- BACK -->
       <section class="back-section dark-bg">
         <section class="back-section-inner">
-          <img src="images/illustration-thank-you.svg" alt="review icon">
-
+          <img src="images/illustration-thank-you.svg" alt="" aria-hidden="true">
           <p class="result-text"></p>
-
           <section class="thankyou-section">
             <h1>Thank you!</h1>
             <p> We appreciate you taking the time to give a rating. If you ever need more support,

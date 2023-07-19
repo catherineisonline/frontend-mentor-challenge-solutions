@@ -65,21 +65,19 @@ main {
   padding: 1rem;
   margin-top: 5px;
   margin-left: 5px;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+  width: 100%;
+  height: auto;
+  max-width: 1.2rem;
 }
 
-.content h1 {
+.front-section h1 {
   color: var(--white);
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
 }
 
-.content p {
+.front-section p {
   color: var(--light-grey);
   line-height: 1.5rem;
 }

@@ -17,8 +17,14 @@ ratingNumbers.forEach((button) => {
 //Rendering selected value
 submitbtn.addEventListener("click", function () {
   const wasSelected = document.querySelector(".was-selected");
-  let selectedValue = wasSelected.textContent;
-  resultCard.classList.add("show-card");
-  questionCard.classList.add("hide-card");
-  resultText.textContent = `You selected ${selectedValue} out of 5`;
+  // Check if the value was selected
+  if (wasSelected === null) {
+    window.alert("Please select a value ⁉️");
+  }
+  else {
+    resultCard.classList.add("show-card");
+    questionCard.classList.add("hide-card");
+    resultText.textContent = `You selected ${wasSelected.textContent} out of 5`;
+  }
+
 });
