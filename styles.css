@@ -75,6 +75,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: var(--desaturated-blue);
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 nav ul {
@@ -97,6 +99,7 @@ main {
   width: 89%;
   margin: 0 auto;
   margin-top: 1.5rem;
+  max-width: 1440px;
 }
 .section-one img {
   max-width: 50%;
@@ -155,36 +158,31 @@ main {
   position: relative;
   background-color: hsl(240, 75%, 98%);
   flex-direction: row-reverse;
-  /* width: 89%; */
   margin: 0 auto;
   margin-top: 25.5%;
-  /* padding-right: 5rem; */
   padding-left: 5rem;
   padding-bottom: 5.8rem;
 }
 
-.section-two::after {
+.section-two::before {
   content: "";
   position: absolute;
   width: 100%;
-  /* width: 100rem; */
-  height: 14rem;
+  height: 100%;
   z-index: -1;
   background-image: url("images/bg-curve-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   padding: 0;
   margin: 0;
-  margin-top: -15.5%;
-  /* padding-right: 0; */
+  margin-top: -13rem;
 }
 
 .section-two-cover {
   max-width: 40%;
   height: 53%;
   padding-right: 4.6rem;
-  /* margin-top: 0.5rem; */
 }
 
 .section-description-2 {
@@ -229,7 +227,7 @@ main {
   width: max-content;
 }
 .linked-info svg {
-  width: 0.9rem;
+  width: 1rem;
   height: 1rem;
 }
 .linked-info a::after {
@@ -469,7 +467,9 @@ footer img {
 
 /* Errors */
 .input-one.error,
-.input-two.error {
+.input-two.error,
+.input-one.success,
+.input-two.success {
   position: relative;
 }
 .input-one.error input,
@@ -479,24 +479,17 @@ footer img {
 .input-one.error::after,
 .input-two.error::after {
   position: absolute;
-  content: "Please check your email";
+  content: "Please write a valid email";
   color: var(--error);
-  left: 0;
+  right: 2rem;
   width: inherit;
-  text-align: left;
+  text-align: right;
   font-family: var(--primary-font);
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 5px;
-}
-.input-two.error::after {
-  margin-top: 50px;
 }
 
 /* Success */
-.input-one.success,
-.input-two.success {
-  position: relative;
-}
 .input-one.success input,
 .input-two.success input {
   outline: 1px solid var(--moderate-cyan);
@@ -506,12 +499,21 @@ footer img {
   position: absolute;
   content: "We sent you an email!";
   color: var(--moderate-cyan);
-  left: 0;
+  right: 2rem;
   width: inherit;
-  text-align: left;
+  text-align: right;
   font-family: var(--primary-font);
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 5px;
+}
+.input-one.error::after,
+.input-one.success::after {
+  text-align: left;
+  right: 0;
+}
+.input-two.error::after,
+.input-two.success::after {
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 1200px) {
