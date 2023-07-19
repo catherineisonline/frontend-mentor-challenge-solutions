@@ -40,7 +40,7 @@ h4 {
 header {
   background-image: url("../images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 25rem;
   background-position: top;
 }
@@ -214,6 +214,8 @@ h1 {
   padding: 0;
   outline: none;
   pointer-events: none;
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   height: 0.75rem;
   background: linear-gradient(
@@ -225,6 +227,8 @@ h1 {
   );
 }
 .stats .progress::-webkit-slider-thumb {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   width: 0.75rem;
   height: 0.75rem;
@@ -299,6 +303,7 @@ h1 {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
+
 .capacity {
   display: flex;
   align-items: center;
@@ -324,10 +329,11 @@ h1 {
 .project-description .project-types .item.out-of-stock {
   opacity: 0.5;
 }
+
 .out-of-stock .select-reward {
   background-color: var(--dark-gray);
-  pointer-events: none;
   padding: 1rem 2.5rem;
+  cursor: not-allowed;
 }
 
 /* Modal */
@@ -422,6 +428,8 @@ h1 {
   font-size: 0.85em;
 }
 .pledge-input {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   outline: none;
   border: none;
@@ -437,6 +445,8 @@ h1 {
 }
 .pledge-input::-webkit-outer-spin-button,
 .pledge-input::-webkit-inner-spin-button {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   margin: 0;
 }
@@ -487,10 +497,10 @@ h1 {
   background-color: var(--moderate-cyan);
   color: var(--white);
   font-weight: 700;
-
   cursor: pointer;
   border: none;
 }
+
 .got-it,
 .cta-continue,
 .container,
@@ -526,6 +536,9 @@ h1 {
   }
   .select-reward:hover {
     background-color: var(--dark-cyan);
+  }
+  #reward-3:hover {
+    background-color: var(--dark-gray);
   }
   .bookmark:hover svg circle {
     fill: var(--svg-gray);

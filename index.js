@@ -16,6 +16,17 @@ const item3 = document.querySelector("#item-3");
 const item3Selection = document.querySelector("#item-2 .type-selection");
 const item4 = document.querySelector("#item-4");
 const item4Selection = document.querySelector("#item-2 .type-selection");
+const forms = document.querySelectorAll(".form");
+
+// Data
+// let amountBacked = 89914;
+let amountBackedTotal = 89914;
+let totalBackers = 5007;
+let bambooCapacity = 101;
+let blackCapacity = 64;
+let amountPledged = 0;
+
+
 
 function showModal() {
   document.body.classList.add("show-modal");
@@ -75,14 +86,80 @@ pledgeName.forEach((item) => {
     item.parentElement.previousElementSibling.click();
   });
 });
-//Pledge input
-pledgeInput.forEach((form) => {
+
+forms.forEach((form) => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    const targetInput = e.target.querySelector(".pledge-input");
+
+    if (targetInput.value === targetInput.defaultValue) {
+      if (localStorage) {
+        localStorage.setItem("amountPledged", +targetInput.defaultValue + +localStorage.getItem("amountPledged"));
+      }
+      else {
+        localStorage.setItem("amountPledged", +targetInput.defaultValue + amountPledged);
+      }
+
+    }
+    else {
+      if (localStorage) {
+        localStorage.setItem("amountPledged", +targetInput.value + +localStorage.getItem("amountPledged"));
+      }
+      else {
+        localStorage.setItem("amountPledged", +targetInput.value + amountPledged);
+      }
+    }
+
+    if (localStorage) {
+      AnimateIncreaseNum(document.getElementById("increment-one"), 0, amountBackedTotal + +localStorage.getItem("amountPledged"));
+    }
+    else {
+      AnimateIncreaseNum(document.getElementById("increment-one"), 0, amountBackedTotal + amountPledged);
+    }
+
+
+
+    //! Bamboo Capacity
+    if (+localStorage.getItem("bambooCapacityStorage") > 0 && e.target.querySelector(`[aria-label="Bamboo"]`) !== null) {
+      localStorage.setItem("bambooCapacityStorage", +localStorage.getItem("bambooCapacityStorage") - 1);
+      // document.querySelector(".bamboo-capacity").textContent = +localStorage.getItem("bambooCapacityStorage");
+    }
+    //! Black Capacity
+    if (+ localStorage.getItem("blackCapacityStorage") > 0 && e.target.querySelector(`[aria-label="Black"]`) !== null) {
+      localStorage.setItem("blackCapacityStorage", +localStorage.getItem("blackCapacityStorage") - 1);
+    }
+
+    //! Black Capacity
+    if (+localStorage.getItem("blackCapacityStorage") === 0 && e.target.querySelector(`[aria-label="Black"]`) !== null) {
+      localStorage.setItem("blackCapacityStorage", blackCapacity - 1);
+    }
+    //! Bamboo Capacity
+    if (+ localStorage.getItem("bambooCapacityStorage") === 0 && e.target.querySelector(`[aria-label="Bamboo"]`) !== null) {
+      localStorage.setItem("bambooCapacityStorage", bambooCapacity - 1);
+    }
+
+    // ! Update HTML if capacity changed
+    if (+localStorage.getItem("bambooCapacityStorage") === 0) {
+      document.querySelectorAll(".bamboo-capacity").forEach(span => span.textContent = bambooCapacity);
+    }
+
+    else {
+      document.querySelectorAll(".bamboo-capacity").forEach(span => span.textContent = +localStorage.getItem("bambooCapacityStorage"));
+    }
+    // ! Update HTML if capacity changed
+    if (+localStorage.getItem("blackCapacityStorage") === 0) {
+      document.querySelectorAll(".black-capacity").forEach(span => span.textContent = blackCapacity);
+    }
+
+    else {
+      document.querySelectorAll(".black-capacity").forEach(span => span.textContent = +localStorage.getItem("blackCapacityStorage"));
+    }
+
     completeModal();
     scrollToItem();
   });
-});
+})
+
 //'Got It' Btn
 gotItBtn.addEventListener("click", () => {
   hideModal();
@@ -130,7 +207,7 @@ function AnimateIncreaseNum(
       start = end;
     }
     if (dollar) {
-      target.innerHTML = `$${start}`;
+      target.innerHTML = `${start}`;
     } else {
       target.innerHTML = `${start}`;
     }
@@ -139,13 +216,18 @@ function AnimateIncreaseNum(
 let Scroll100Flag = true;
 window.addEventListener("scroll", () => {
   if (Scroll100Flag) {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 50) {
       Scroll100Flag = false;
-      AnimateIncreaseNum(document.getElementById("increment-one"), 0, 89914);
+      if (localStorage) {
+        AnimateIncreaseNum(document.getElementById("increment-one"), 0, amountBackedTotal + +localStorage.getItem("amountPledged"));
+      }
+      else {
+        AnimateIncreaseNum(document.getElementById("increment-one"), 0, amountBackedTotal + amountPledged);
+      }
       AnimateIncreaseNum(
         document.getElementById("increment-two"),
         0,
-        5007,
+        totalBackers,
         (increment = 10),
         (dollar = false)
       );
@@ -159,3 +241,20 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+
+
+
+
+window.addEventListener("load", () => {
+  if (localStorage) {
+    document.getElementById("increment-one").textContent = amountBackedTotal + +localStorage.getItem("amountPledged");
+  }
+  else {
+    AnimateIncreaseNum(document.getElementById("increment-one"), 0, amountBackedTotal + amountPledged);
+
+  }
+  document.getElementById("increment-two").textContent = totalBackers;
+  document.getElementById("increment-three").textContent = 56;
+
+})

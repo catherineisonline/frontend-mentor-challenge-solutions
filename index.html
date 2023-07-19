@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Crowdfunding product page - Frontend Mentor">
+    <meta name="keywords" content="Crowdfunding product page, Frontend Mentor">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
@@ -68,7 +70,7 @@
 
             <section class="stats-numbers">
 
-                <p class="stat"><span id="increment-one">$89914</span><br>of $100,000 backed</p>
+                <p class="stat"><span>$</span><span id="increment-one"></span><br>of $100,000 backed</p>
                 <p class="stat"><span id="increment-two">5007</span><br>total backers</p>
                 <p class="stat"><span id="increment-three">56</span><br>days left</p>
             </section>
@@ -105,7 +107,7 @@
                         you’ll be added to a special Backer member list.</p>
                     <section class="info">
 
-                        <p class="capacity"><span>101</span> left</p>
+                        <p class="capacity"><span class="bamboo-capacity">101</span> left</p>
                         <button class="select-reward" id="reward-1">Select Reward</button>
                     </section>
                 </section>
@@ -121,7 +123,7 @@
                         member list. Shipping is included.</p>
                     <section class="info">
 
-                        <p class="capacity"><span>64</span> left</p>
+                        <p class="capacity"><span class="black-capacity">64</span> left</p>
                         <button class="select-reward" id="reward-2">Select Reward</button>
                     </section>
                 </section>
@@ -173,11 +175,11 @@
 
                         <section class="info">
 
-                            <input type="radio" name="type-selection" class="type-selection" aria-label="Bamboo Stand">
+                            <input type="radio" name="type-selection" class="type-selection" aria-label="Bamboo">
                             <section class="item-header">
                                 <h3>Bamboo Stand</h3>
                                 <p class="price-range">Pledge $25 or more</p>
-                                <p class="capacity"><span>101</span> left</p>
+                                <p class="capacity"><span class="bamboo-capacity">101</span> left</p>
                             </section>
                             <p class="description">You get an ergonomic stand of natural bamboo. You have helped us
                                 launch
@@ -188,12 +190,12 @@
                         <section class="pledge">
 
                             <p>Enter your pledge</p>
-                            <form>
+                            <form action="post" class="form">
                                 <section class="container">
 
                                     <label>$</label>
                                     <input type="number" name="pledge-input" min="25" value="25" class="pledge-input"
-                                        aria-label="Bamboo Stand Price Input">
+                                        aria-label="Bamboo">
                                 </section>
                                 <button type="submit" class="cta-continue">Continue</button>
                             </form>
@@ -203,12 +205,11 @@
 
                         <section class="info">
 
-                            <input type="radio" name="type-selection" class="type-selection"
-                                aria-label="Black Special Edition">
+                            <input type="radio" name="type-selection" class="type-selection" aria-label="Black">
                             <section class="item-header">
                                 <h3>Black Special Edition</h3>
                                 <p class="price-range">Pledge $75 or more</p>
-                                <p class="capacity"><span>64</span> left</p>
+                                <p class="capacity"><span class="black-capacity">64</span> left</p>
                             </section>
                             <p class="description">You get a Black Special Edition computer stand and a personal thank
                                 you.
@@ -218,12 +219,12 @@
                         <section class="pledge">
 
                             <p>Enter your pledge</p>
-                            <form>
+                            <form action="" class="form">
                                 <section class="container">
 
                                     <label>$</label>
                                     <input type="number" name="pledge-input" min="75" value="75" class="pledge-input"
-                                        aria-label="Black Special Edition price input">
+                                        aria-label="Black">
                                 </section>
                                 <button type="submit" class="cta-continue">Continue</button>
                             </form>
