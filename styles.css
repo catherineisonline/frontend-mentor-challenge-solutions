@@ -109,9 +109,9 @@ header.active::before {
     background-color: rgba(6, 6, 6, 0.15);
     backdrop-filter: blur(3px);
     height: 100%;
-    width: 20rem;
+    width: 100%;
     top: 0;
-    left: -15%;
+    left: 0;
 }
 header.active .nav-menu {
     position: static;
@@ -144,19 +144,11 @@ nav ul button {
     background-color: transparent;
     border: none;
 }
-/* nav ul button:hover img {
-    transform: rotate(180deg);
-    transition: var(--transition);
-}
-nav ul button img {
-    height: max-content;
-    transition: var(--transition);
-} */
 .hamburger {
     cursor: pointer;
     z-index: 99;
     position: fixed;
-    margin-left: 80%;
+    margin-left: 85%;
 }
 header.active .hamburger {
     content: url("./images/icon-close-menu.svg");
@@ -179,13 +171,9 @@ header.active .hamburger {
 }
 .hidden-features.active,
 .hidden-company.active {
-    /* position: static; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* margin-top: 1rem; */
-    /* padding: 1rem; */
-    /* background-color: var(--almost-white); */
     width: max-content;
     border-radius: 10px;
     position: absolute;
