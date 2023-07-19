@@ -33,6 +33,7 @@ function showModal() {
 }
 function hideModal() {
   document.body.classList.remove("show-modal");
+
 }
 function uncompleteModal() {
   modal.classList.remove("completed");
@@ -56,30 +57,7 @@ bookmarkBtn.addEventListener("click", () => {
 });
 
 //Type selection
-typeSelection.forEach((button) => {
-  button.addEventListener("change", () => {
-    typeSelection.forEach((btn) => {
-      if (btn.checked) {
-        btn.parentElement.parentElement.classList.add("item-selected");
-      } else {
-        btn.parentElement.parentElement.classList.remove("item-selected");
-      }
-      if (button.id == "support") {
-        completeModal();
-        scrollToItem();
-      }
-    });
-    if (button.checked) {
-      button.parentElement.parentElement.classList.add("item-selected");
-    } else {
-      button.parentElement.parentElement.classList.remove("item-selected");
-    }
-    if (button.id == "support") {
-      completeModal();
-      scrollToItem();
-    }
-  });
-});
+
 //Choose pledge
 pledgeName.forEach((item) => {
   item.addEventListener("click", () => {
@@ -176,22 +154,50 @@ gotItBtn.addEventListener("click", () => {
 hamburgerBtn.addEventListener("click", () => {
   navigationMenu.classList.toggle("active");
 });
+
+const getReward = (activeItem, passiveItem) => {
+  passiveItem.querySelector(".type-selection").checked = false;
+  passiveItem.classList.remove("item-selected");
+  activeItem.scrollIntoView(true);
+  activeItem.querySelector(".type-selection").checked = true;
+  activeItem.classList.add("item-selected");
+}
+
+const toggleClass = (on, off) => {
+  off.classList.remove("item-selected");
+  on.classList.add("item-selected");
+}
+
 //Reward selection
 selectReward.forEach((reward) => {
   reward.addEventListener("click", () => {
     showModal();
     if (reward.id == "reward-1") {
-      item2Selection.click();
-      item2.scrollIntoView(true);
-    } else if (reward.id == "reward-2") {
-      item3Selection.click();
-      item3.scrollIntoView(true);
-    } else {
-      item4Selection.click();
-      item4.scrollIntoView(true);
+      getReward(item2, item3);
     }
+    if (reward.id == "reward-2") {
+      getReward(item3, item2);
+    }
+    typeSelection.forEach((button) => {
+      button.addEventListener("change", (e) => {
+        if (e.target.value == "bamboo") {
+          toggleClass(item2, item3);
+        }
+        else if (e.target.value == "black") {
+          toggleClass(item3, item2);
+
+        }
+        if (button.id == "support") {
+          completeModal();
+          scrollToItem();
+        }
+      });
+    });
   });
+
 });
+
+
 // Numbers Animation
 function AnimateIncreaseNum(
   target,
