@@ -351,3 +351,9 @@ h2 {
         max-width: 100px;
     }
 }
+
+@media screen and (max-width: 800px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
