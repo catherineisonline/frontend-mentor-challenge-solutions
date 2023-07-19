@@ -27,7 +27,7 @@ This challenge is perfect if you're wanting to practice your layout skills. If y
 
 ## What I learned
 
-A very easy project to keep updated with the Frontend Mentor projects and remember the basics! Decided to go with mobile-first flow this time as I always do it desktop-first and needed some challenge.
+A very easy project to keep updated with the Frontend Mentor projects and remember the basics! Decided to go with the mobile-first flow this time as I always do it desktop-first and needed some challenge.
 
 ## Useful resources
 
