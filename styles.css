@@ -160,7 +160,6 @@ h1 {
   line-height: 5.2rem;
 }
 .section-1 {
-  /* white-space: nowrap; */
   overflow-x: none;
 }
 .section-1 img {
@@ -244,7 +243,7 @@ h1 {
   border-radius: 10px;
   width: 18%;
   padding: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /** Section 3 **/
@@ -266,10 +265,6 @@ h1 {
   gap: 2rem;
 }
 
-/* .hidden-result {
-  display: none;
-} */
-
 .result {
   display: flex;
   flex-direction: row;
@@ -279,7 +274,7 @@ h1 {
   margin: 0 auto;
   background-color: white;
   color: black;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 15px;
   font-size: 1.1rem;
 }
@@ -299,6 +294,12 @@ h1 {
 .results p {
   color: var(--cyan);
 }
+.inserted-link {
+  width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 .copy-btn {
   color: var(--white);
@@ -309,6 +310,7 @@ h1 {
   text-align: center;
   font-size: 1rem;
   padding: 0.5rem 1rem;
+  transition: all ease-in-out 0.2s;
 }
 
 .section-3 h2 {
@@ -448,7 +450,7 @@ footer {
 
 .social-media img {
   width: 1.6rem;
-  height: 1.5rem;
+  height: 1.6rem;
   max-height: 100%;
   max-width: 100%;
   object-fit: cover;
@@ -481,6 +483,10 @@ footer {
   }
   .fa-solid.fa-bars:hover {
     cursor: pointer;
+  }
+  .copy-btn:hover {
+    background-color: var(--dark-violet);
+    transition: all ease-in-out 0.2s;
   }
 }
 
@@ -523,7 +529,7 @@ footer {
     top: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
     max-width: 50%;
     min-width: 70%;
     z-index: 2;
@@ -578,9 +584,6 @@ footer {
     overflow-y: hidden;
   }
 
-  .inserted-link {
-    overflow-y: hidden;
-  }
   .result-block-hr {
     display: inline-block;
     border-color: var(--white);
@@ -639,19 +642,9 @@ footer {
   .logo-img {
     padding-left: 0;
   }
-  .social-media {
-    /* display: grid; */
-    /* grid-template-columns: repeat(4, 1fr); */
-    /* grid-template-rows: auto; */
-    /* justify-items: center; */
-    /* gap: 0; */
-  }
 }
 
 @media screen and (max-width: 801px) {
-  /* .menu-section.show {
-    transform: translate(20%, 60%);
-  } */
   .section-2 {
     width: 80%;
     display: grid;
