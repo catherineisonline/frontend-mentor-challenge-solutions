@@ -13,7 +13,8 @@ const Search = (props) => {
           placeholder="Search for a country..."
           value={props.searchInput}
           onChange={(e) => props.searchCountries(e.target.value)}
-        ></input>
+        />
+        <button className="delete-icon" onClick={props.resetInput}>X</button>
       </section>
       <FilterRegions setCountries={props.setCountries} />
     </article>

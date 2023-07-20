@@ -84,11 +84,19 @@ main {
   /* gap: 2rem; */
 }
 
-.search-icon {
+.search-icon,
+.delete-icon {
   position: absolute;
   opacity: 0.4;
   font-size: 1.1rem;
   padding-left: 2rem;
+  cursor: pointer;
+}
+.delete-icon {
+  background-color: transparent;
+  border: none;
+  right: 0;
+  padding-right: 1rem;
 }
 .input-block input {
   padding: 1.2rem;
@@ -374,6 +382,7 @@ details > summary::-webkit-details-marker {
 .dark .region-list li,
 .dark .input-block input::placeholder,
 .dark .search-icon,
+.dark .delete-icon,
 .dark .region-list,
 .dark .border-country,
 .dark .select-region summary:after {

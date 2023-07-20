@@ -33,7 +33,7 @@ export default function AllCountries(props) {
                 <img
                   className="image"
                   src={flags ? flags.svg : flags.png}
-                  alt=""
+                  alt={name}
                 />
               </section>
               <section className="info-block">

@@ -32,7 +32,7 @@ export default function FilteredCountries(props) {
               >
                 <section>
                   <section className="image-container">
-                    <img className="image" src={flags.png} alt="flag" />
+                    <img className="image" src={flags.png} alt={name} />
                   </section>
                   <section className="info-block">
                     <h2 className="info-block-h2">{name}</h2>
