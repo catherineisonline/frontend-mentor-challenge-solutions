@@ -2,11 +2,12 @@
 
 const shortlyInput = document.querySelector(".url-input");
 const shortlyBtn = document.querySelector(".url-button");
-const shortlyResult = document.querySelector(".hidden-result");
-const insertedLink = document.querySelector(".inserted-link");
-const shortCode = document.querySelector(".short-code");
 const parentNode = document.querySelector(".search-result-block");
 const errorMsg = document.querySelector(".error-msg");
+
+let resultSkeleton = ''
+let resultStorage = [];
+
 
 //URL Validiation
 function urlValidation(defaultUrl) {
@@ -20,7 +21,8 @@ function urlValidation(defaultUrl) {
 }
 
 // URL Submission Click Event
-const apiFunc = shortlyBtn.addEventListener("click", function () {
+shortlyBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   let inputValue = shortlyInput.value;
   //URL Validation
   if (!urlValidation(inputValue)) {
@@ -31,108 +33,73 @@ const apiFunc = shortlyBtn.addEventListener("click", function () {
   } else {
     errorMsg.classList.remove("shown");
     shortlyInput.classList.remove("shown");
-
     //Passed Validation - init API
     fetch(`https://api.shrtco.de/v2/shorten?url=` + inputValue)
       .then((response) => response.json())
       .then((response) => {
         if (response.ok) {
           let shortlyCode = response.result.code;
-          //Started Cloning
-          let mainClone = shortlyResult.cloneNode(true);
-          // mainClone.classList = "search-result";
-          mainClone.classList.replace("hidden-result", "search-result");
 
-          //Finished Cloning
-          //Storage
-          sessionStorage.setItem("cloneCache", parentNode.innerHTML);
+          resultSkeleton = `<div class="result">
+          <p class="inserted-link">${inputValue}</p>
+          <hr class="result-block-hr">
+          <div class="results">
+            <p class="short-code">shrtco.de/${shortlyCode}</p>
+            <button class="copy-btn">Copy</button>
+          </div>
+          </div>`;
 
-          //Target clone child elements
-          let cloneLink = mainClone.querySelector(".inserted-link");
-
-          let cloneResultLink = mainClone.querySelector(".short-code");
-          let cloneCopyBtn = mainClone.querySelector(".copy-btn");
-          //Storage
-          sessionStorage.setItem("cloneCopyBtn", cloneCopyBtn.outerHTML);
-
-          //Inserting value of search input
-          cloneLink.textContent = `${inputValue}`;
-
-          //Storage
-          sessionStorage.setItem("cloneLink", cloneLink.textContent);
-
-          //Inserting the result value
-          cloneResultLink.textContent = `shrtco.de/${shortlyCode}`;
-
-          //Storage
-          sessionStorage.setItem(
-            "cloneResultLink",
-            cloneResultLink.textContent
-          );
-
-          parentNode.appendChild(mainClone);
-
-          //Link Copy Event
-          cloneCopyBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            //Target text
-            let textToCopy = cloneResultLink.textContent;
-            //  Copy Text
-            navigator.clipboard.writeText(textToCopy);
-            //Change CSS
-            cloneCopyBtn.textContent = "Copied!";
-            cloneCopyBtn.style.backgroundColor = "var(--dark-violet)";
-            setTimeout(function () {
-              cloneCopyBtn.textContent = "Copy";
-              cloneCopyBtn.style.backgroundColor = "var(--cyan)";
-            }, 1000);
-          });
-        } else {
-          console.log("error");
+          //check if I have some storage and show results from it
+          if (sessionStorage.getItem("resultsStorage") !== null) {
+            sessionStorage.getItem("resultsStorage");
+            resultStorage = [sessionStorage.getItem("resultsStorage"), resultSkeleton].reverse();
+            parentNode.innerHTML = resultStorage.join(" ");
+            sessionStorage.setItem("resultsStorage", resultStorage);
+          }
+          //if I don't have storage just show the first/current result
+          else {
+            parentNode.innerHTML = resultSkeleton;
+            //then push this first result to my storage and then session storage
+            resultStorage.push(resultSkeleton);
+            sessionStorage.setItem("resultsStorage", resultStorage);
+          }
         }
       });
   }
 });
 
-// Reload function
-window.onload = () => {
-  let mainClone = shortlyResult.cloneNode(true);
-  mainClone.classList.replace("hidden-result", "search-result");
-  let cloneLinkField = mainClone.querySelector(".inserted-link");
-  let cloneResultLink = mainClone.querySelector(".short-code");
-
-  //Retrieving
-  let originalHtml = sessionStorage.getItem("cloneCache");
-  let cloneLink = sessionStorage.getItem("cloneLink");
-  let cloneResultLinks = sessionStorage.getItem("cloneResultLink");
-
-  //Injecting
-  cloneLinkField.innerHTML = cloneLink;
-  cloneResultLink.textContent = cloneResultLinks;
-  parentNode.appendChild(mainClone);
-  parentNode.innerHTML = originalHtml;
-
-  //Repeating Copy Event
-  let cloneCopyBtn = parentNode.querySelector(".copy-btn");
-  console.log(cloneCopyBtn);
-
-  cloneCopyBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    //Target text
-    let textToCopy = cloneResultLink.textContent;
-    //  Copy Text
+parentNode.addEventListener("click", function (e) {
+  e.stopPropagation();
+  const copyBtn = e.target.parentNode.querySelector(".copy-btn");
+  if (e.target.classList.value === 'copy-btn') {
+    let textToCopy = e.target.parentNode.querySelector(".short-code").textContent;
     navigator.clipboard.writeText(textToCopy);
-    //Change CSS
-    cloneCopyBtn.textContent = "Copied!";
-    cloneCopyBtn.style.backgroundColor = "var(--dark-violet)";
-    setTimeout(function () {
-      cloneCopyBtn.textContent = "Copy";
-      cloneCopyBtn.style.backgroundColor = "var(--cyan)";
-    }, 1000);
-  });
-};
+  }
+  else {
+    return null;
+  }
+  //Change CSS
+  copyBtn.textContent = "Copied!";
+  copyBtn.style.backgroundColor = "var(--dark-violet)";
+  setTimeout(function () {
+    copyBtn.textContent = "Copy";
+    copyBtn.style.backgroundColor = "var(--cyan)";
+  }, 1000);
+});
 
-// sessionStorage.clear();
+
+
+// Reload function
+window.addEventListener("load", () => {
+  if (sessionStorage.getItem("resultsStorage") !== null) {
+    parentNode.innerHTML = sessionStorage.getItem("resultsStorage");
+  }
+  else {
+    parentNode.innerHTML = "";
+  }
+
+})
+
 
 //Hamburger Menu
 const burgerIcon = document.querySelector(".fa-bars");

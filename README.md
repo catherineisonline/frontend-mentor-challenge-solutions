@@ -71,4 +71,4 @@ The hardest part which I never managed to finish is saving cache after reload. I
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/url-shortening-api-landing-page-MfZ-mjKlV">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
