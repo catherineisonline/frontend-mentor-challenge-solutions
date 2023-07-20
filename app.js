@@ -55,6 +55,8 @@ shortlyBtn.addEventListener("click", (e) => {
             resultStorage = [sessionStorage.getItem("resultsStorage"), resultSkeleton].reverse();
             parentNode.innerHTML = resultStorage.join(" ");
             sessionStorage.setItem("resultsStorage", resultStorage);
+
+            parentNode.insertAdjacentHTML('afterbegin', resetResults);
           }
           //if I don't have storage just show the first/current result
           else {
@@ -62,7 +64,13 @@ shortlyBtn.addEventListener("click", (e) => {
             //then push this first result to my storage and then session storage
             resultStorage.push(resultSkeleton);
             sessionStorage.setItem("resultsStorage", resultStorage);
+            parentNode.insertAdjacentHTML('afterbegin', resetResults);
           }
+          document.querySelector(".reset-results").addEventListener("click", () => {
+            sessionStorage.clear();
+            parentNode.innerHTML = "";
+            shortlyInput.value = "";
+          })
         }
       });
   }
@@ -70,7 +78,11 @@ shortlyBtn.addEventListener("click", (e) => {
 
 parentNode.addEventListener("click", function (e) {
   e.stopPropagation();
-  const copyBtn = e.target.parentNode.querySelector(".copy-btn");
+  let copyBtn;
+  if (e.target.parentNode !== null) {
+    copyBtn = e.target.parentNode.querySelector(".copy-btn");
+  }
+
   if (e.target.classList.value === 'copy-btn') {
     let textToCopy = e.target.parentNode.querySelector(".short-code").textContent;
     navigator.clipboard.writeText(textToCopy);
@@ -89,13 +101,20 @@ parentNode.addEventListener("click", function (e) {
 
 
 
+const resetResults = `<button class="reset-results cyan-btn">Clear Results
+</button>`;
+
 // Reload function
 window.addEventListener("load", () => {
+
   if (sessionStorage.getItem("resultsStorage") !== null) {
     parentNode.innerHTML = sessionStorage.getItem("resultsStorage");
+
+
   }
   else {
     parentNode.innerHTML = "";
+
   }
 
 })

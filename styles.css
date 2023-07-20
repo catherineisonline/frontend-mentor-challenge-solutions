@@ -253,6 +253,8 @@ h1 {
   background-color: #f0f1f6;
   z-index: 0;
   padding-bottom: 6.5rem;
+
+  gap: 1rem;
 }
 
 /** Shortening **/
@@ -261,8 +263,16 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 6.5rem;
   gap: 2rem;
+  margin-top: 8rem;
+  align-items: center;
+}
+.reset-results {
+  width: max-content;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .result {
@@ -570,9 +580,9 @@ footer {
   .section-2 {
     width: 90%;
   }
-  .search-result-block {
+  /* .search-result-block {
     margin-top: 7.5rem;
-  }
+  } */
   .result,
   .results {
     display: flex;
