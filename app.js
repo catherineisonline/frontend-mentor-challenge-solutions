@@ -7,6 +7,8 @@ const errorMsg = document.querySelector(".error-msg");
 
 let resultSkeleton = ''
 let resultStorage = [];
+const resetResults = `<button class="reset-results cyan-btn">Clear Results
+</button> `;
 
 
 //URL Validiation
@@ -51,11 +53,11 @@ shortlyBtn.addEventListener("click", (e) => {
 
           //check if I have some storage and show results from it
           if (sessionStorage.getItem("resultsStorage") !== null) {
-            sessionStorage.getItem("resultsStorage");
-            resultStorage = [sessionStorage.getItem("resultsStorage"), resultSkeleton].reverse();
-            parentNode.innerHTML = resultStorage.join(" ");
-            sessionStorage.setItem("resultsStorage", resultStorage);
+            // sessionStorage.getItem("resultsStorage");
+            resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")].reverse();
+            parentNode.innerHTML = [resultStorage].join().replaceAll(',', "");
 
+            sessionStorage.setItem("resultsStorage", [resultStorage].join().replaceAll(',', ""));
             parentNode.insertAdjacentHTML('afterbegin', resetResults);
           }
           //if I don't have storage just show the first/current result
@@ -66,11 +68,6 @@ shortlyBtn.addEventListener("click", (e) => {
             sessionStorage.setItem("resultsStorage", resultStorage);
             parentNode.insertAdjacentHTML('afterbegin', resetResults);
           }
-          document.querySelector(".reset-results").addEventListener("click", () => {
-            sessionStorage.clear();
-            parentNode.innerHTML = "";
-            shortlyInput.value = "";
-          })
         }
       });
   }
@@ -101,16 +98,21 @@ parentNode.addEventListener("click", function (e) {
 
 
 
-const resetResults = `<button class="reset-results cyan-btn">Clear Results
-</button>`;
+// document.querySelector(".reset-results").addEventListener("click", () => {
+//   console.log('hi')
+//   sessionStorage.clear();
+//   parentNode.innerHTML = "";
+//   shortlyInput.value = "";
+//   resultStorage = [];
+// })
+
 
 // Reload function
 window.addEventListener("load", () => {
-
+  // console.log(document.querySelector(".reset-results"));
   if (sessionStorage.getItem("resultsStorage") !== null) {
     parentNode.innerHTML = sessionStorage.getItem("resultsStorage");
-
-
+    parentNode.insertAdjacentHTML('afterbegin', resetResults);
   }
   else {
     parentNode.innerHTML = "";

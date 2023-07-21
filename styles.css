@@ -28,7 +28,6 @@ body {
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
@@ -170,7 +169,7 @@ h1 {
   margin-left: -3rem;
   margin-top: -4rem;
   align-items: stretch;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 
 /** Section 2 **/
@@ -570,6 +569,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
   }
 
   .section-1 img {
@@ -580,9 +580,7 @@ footer {
   .section-2 {
     width: 90%;
   }
-  /* .search-result-block {
-    margin-top: 7.5rem;
-  } */
+
   .result,
   .results {
     display: flex;
