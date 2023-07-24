@@ -29,7 +29,6 @@ shortlyBtn.addEventListener("click", (e) => {
   let inputValue = shortlyInput.value;
   //URL Validation
   if (!urlValidation(inputValue)) {
-    // alert("Please enter a valid URL!");
     errorMsg.classList.add("shown");
     shortlyInput.classList.add("shown");
     errorMsg.innerHTML = "Please enter a link";
@@ -54,7 +53,6 @@ shortlyBtn.addEventListener("click", (e) => {
 
           //check if I have some storage and show results from it
           if (sessionStorage.getItem("resultsStorage") !== null) {
-            // sessionStorage.getItem("resultsStorage");
             resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")].reverse();
             parentNode.innerHTML = [resultStorage].join().replaceAll(',', "");
 

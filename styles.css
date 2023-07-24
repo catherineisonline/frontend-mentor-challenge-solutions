@@ -338,7 +338,7 @@ h1 {
   text-align: center;
   color: var(--grayish-violet);
   font-weight: 500;
-  width: 38%;
+  max-width: 38vw;
   margin: 0 auto;
   padding: 0.5rem;
 }
@@ -537,6 +537,10 @@ footer {
     display: none;
   }
 
+  .section-3 .info {
+    max-width: 90vw;
+    padding: 2rem 1rem;
+  }
   .menu-section.show {
     position: absolute;
     left: 0;
