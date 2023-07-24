@@ -4,11 +4,12 @@ const shortlyInput = document.querySelector(".url-input");
 const shortlyBtn = document.querySelector(".url-button");
 const parentNode = document.querySelector(".search-result-block");
 const errorMsg = document.querySelector(".error-msg");
+const resetResults = document.querySelector(".reset-results");
+const sectionThree = document.querySelector(".section-3");
 
 let resultSkeleton = ''
 let resultStorage = [];
-const resetResults = `<button class="reset-results cyan-btn">Clear Results
-</button> `;
+
 
 
 //URL Validiation
@@ -58,7 +59,7 @@ shortlyBtn.addEventListener("click", (e) => {
             parentNode.innerHTML = [resultStorage].join().replaceAll(',', "");
 
             sessionStorage.setItem("resultsStorage", [resultStorage].join().replaceAll(',', ""));
-            parentNode.insertAdjacentHTML('afterbegin', resetResults);
+            resetResults.classList.add("active");
           }
           //if I don't have storage just show the first/current result
           else {
@@ -66,7 +67,7 @@ shortlyBtn.addEventListener("click", (e) => {
             //then push this first result to my storage and then session storage
             resultStorage.push(resultSkeleton);
             sessionStorage.setItem("resultsStorage", resultStorage);
-            parentNode.insertAdjacentHTML('afterbegin', resetResults);
+            resetResults.classList.add("active");
           }
         }
       });
@@ -98,21 +99,24 @@ parentNode.addEventListener("click", function (e) {
 
 
 
-// document.querySelector(".reset-results").addEventListener("click", () => {
-//   console.log('hi')
-//   sessionStorage.clear();
-//   parentNode.innerHTML = "";
-//   shortlyInput.value = "";
-//   resultStorage = [];
-// })
+sectionThree.addEventListener("click", (e) => {
+  if (e.target.classList.value === resetResults.classList.value) {
+    sessionStorage.clear();
+    parentNode.innerHTML = "";
+    shortlyInput.value = "";
+    resultStorage = [];
+    resetResults.classList.remove("active");
+  }
+  else sectionThree.removeEventListener("click");
+
+})
 
 
 // Reload function
 window.addEventListener("load", () => {
-  // console.log(document.querySelector(".reset-results"));
   if (sessionStorage.getItem("resultsStorage") !== null) {
     parentNode.innerHTML = sessionStorage.getItem("resultsStorage");
-    parentNode.insertAdjacentHTML('afterbegin', resetResults);
+    resetResults.classList.add("active");
   }
   else {
     parentNode.innerHTML = "";

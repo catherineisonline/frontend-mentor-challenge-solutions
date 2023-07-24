@@ -204,13 +204,6 @@ h1 {
   width: 72%;
 }
 
-.url-input {
-  padding: 1rem;
-  border-radius: 10px;
-  border-color: transparent;
-  cursor: text;
-}
-
 .url-input.shown {
   border-color: var(--red);
   border-width: 4px;
@@ -219,12 +212,19 @@ h1 {
 .url-input.shown::placeholder {
   color: var(--red);
 }
-
-.section-2 input::placeholder {
-  font-size: 1.2rem;
-  text-align: left;
-  font-size: 500;
+.url-input {
+  border-radius: 10px;
+  border-color: transparent;
+  font-size: 1.1rem;
+  font-weight: 500;
   padding: 14px;
+  cursor: text;
+  color: var(--gray);
+}
+.url-input::placeholder {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gray);
 }
 
 .error-msg {
@@ -249,10 +249,11 @@ h1 {
 .section-3 {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #f0f1f6;
   z-index: 0;
   padding-bottom: 6.5rem;
-
+  margin-top: 7rem;
   gap: 1rem;
 }
 
@@ -263,10 +264,15 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   gap: 2rem;
-  margin-top: 8rem;
+  margin-top: 2rem;
   align-items: center;
 }
 .reset-results {
+  display: none;
+}
+
+.reset-results.active {
+  display: inline-block;
   width: max-content;
   border-radius: 10px;
   padding: 20px;
@@ -308,6 +314,7 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-align: center;
 }
 
 .copy-btn {
