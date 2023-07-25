@@ -30,8 +30,8 @@
             >
           </li>
           <li>
-            <i class="fab fa-github-square"></i
-            ><a
+            <i class="fab fa-github-square"></i>
+            <a
               :href="headerDetail.gitHubUrl"
               @click="removeMenu"
               target="_blank"
@@ -530,11 +530,11 @@ export default {
         },
         {
           id: 28,
-          projectName: "Fylo landing page with two column layout",
+          projectName: "Crowdfunding product page",
           projectDescribtion:
-            "This project is great if you're starting to get confident with slightly more complex layouts. The second section with the testimonial area will provide a nice challenge.",
-          projectStack: ["HTML", "CSS"],
-          projectPreview: require("@/assets/images/fylo-landing-page-with-two-column-layout.webp"),
+            "This challenge will test both your layout and state management skills. As visitors make pledges, your goal is to keep track of the changes.",
+          projectStack: ["HTML", "CSS", "JS"],
+          projectPreview: require("@/assets/images/crowdfunding-product-page.webp"),
         
           liveLink: "https://catherineisonline.github.io/crowdfunding-product-page-frontendmentor/",
           projectLink:
@@ -579,6 +579,19 @@ export default {
           projectLink:
             "https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5",
           repoLink: "https://github.com/catherineisonline/intro-section-with-dropdown-navigation-frontendmentor",
+        },
+        {
+          id: 32,
+          projectName: "Fylo landing page with two column layout",
+          projectDescribtion:
+            "This project is great if you're starting to get confident with slightly more complex layouts. The second section with the testimonial area will provide a nice challenge.",
+          projectStack: ["HTML", "CSS"],
+          projectPreview: require("@/assets/images/fylo-landing-page-with-two-column-layout.webp"),
+        
+          liveLink: "https://catherineisonline.github.io/fylo-landing-page-with-two-column-layout-frontendmentor/",
+          projectLink:
+            "https://www.frontendmentor.io/challenges/fylo-landing-page-with-two-column-layout-5ca5ef041e82137ec91a50f5",
+          repoLink: "https://github.com/catherineisonline/fylo-landing-page-with-two-column-layout-frontendmentor",
         },
       ],
     };

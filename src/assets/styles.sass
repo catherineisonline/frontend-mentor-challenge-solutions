@@ -1,5 +1,6 @@
 @use "base"
 //Main
+
 .main
     margin: 0 auto
     width: 100%
@@ -45,11 +46,10 @@ nav
         cursor: pointer
     .main-menu
         display: none
-    .show-menu
-        background-color: base.$white
         display: flex
+        background-color: base.$white
         flex-direction: column
-        position: absolute
+        position: fixed
         width: fit-content
         height: fit-content
         list-style: none
@@ -58,16 +58,21 @@ nav
         font-size: 1rem
         font-family: base.$barlow
         text-transform: uppercase
-        gap: 20px
+        gap: 2rem
         border-radius: 10px
-        padding: 1.5rem
-        li
+        padding: 2rem
+        transform: translateX(150%)
+        z-index: 999
+    .show-menu   
+        transform: translateX(-10%)
+        transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+    li
             border-bottom: 1px solid rgba(190, 190, 190, 0.253)
             display: flex
             gap: 10px
             align-items: center
             text-align: center
-        a
+    a
             text-decoration: none
             color: base.$black
             text-transform: capitalize
@@ -232,6 +237,11 @@ nav
     .link-btn
         a:hover::after
             transform: scaleX(0)
+            transition: all ease-in-out 0.3s
+.show-menu
+    a:hover
+            color: red
+            transition: all ease-in-out 0.3s
 .solutions
     img:hover
         cursor: pointer
