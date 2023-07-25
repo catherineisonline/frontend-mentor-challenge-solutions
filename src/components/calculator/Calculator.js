@@ -24,6 +24,7 @@ export default function Calculator() {
 
     ) {
       return null; //Then do nothing
+
     }
     // Check if the user already used dots in a single number
     else if (([...calc].includes(".") && value === ".")) {
@@ -41,9 +42,9 @@ export default function Calculator() {
         displayValue.style.overflow = "hidden";
         return setCalc(calc.toString());
       } else if (calc.length === 11 && operations.includes(value)) {
-        console.log("hi");
+        console.log("hi"); // Placeholder code (not explained)
       } else {
-        console.error();
+        console.error(); // Placeholder code (not explained)
       }
     }
 
@@ -58,7 +59,7 @@ export default function Calculator() {
       setCalculated(false); // When starting with "0" after calculation
       return setCalc("");
     } else {
-      console.error("Calcualtion error");
+      console.error(); // Placeholder code (not explained)
     }
     setCalc(calc + value); // Update the calculator value with the input value
   };
