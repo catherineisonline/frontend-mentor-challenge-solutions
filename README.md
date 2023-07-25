@@ -20,6 +20,24 @@ npm run serve
 npm run build
 ```
 
+### In case of issues with gh-pages
+- delete gh-branch if any
+
+```
+npm run build
+
+```
+
+```
+git add dist && git commit -m "Initial dist subtree commit"
+
+```
+
+```
+git subtree push --prefix dist origin gh-pages
+
+```
+
 ## Project List
 
 
