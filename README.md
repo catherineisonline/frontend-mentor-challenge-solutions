@@ -54,6 +54,10 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 I learned how to do simple math calculations using functions, condiitons and performing actions using keyboard. I also tried styled components for the first time, to achieve theme toggle funcionality. It turned out to be an amazing experience and I definitely would love to do some more project suing styled components.
 
+## Contribution
+
+This project serves as a project to show off my personal skills. I do not accept any contributions like pull requests to this project however if you have any suggestions or ideas feel free to message me or submit an idea in the [discussions](https://github.com/catherineisonline/calculator/discussions). Otherwise, you are free to fork this project and change it for your own purposes. 
+
 ## Useful resources
 
 1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
