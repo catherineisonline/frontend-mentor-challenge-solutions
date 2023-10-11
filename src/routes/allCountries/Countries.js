@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Search from "../Search";
+import Search from "../../components/Search";
 import AllCountries from "./AllCountries";
-import FilteredCountries from "./FilteredCountries";
+import FilteredCountries from "../../components/FilterRegions";
 
 export default function Countries() {
   const url = `https://restcountries.com/v2/all`;

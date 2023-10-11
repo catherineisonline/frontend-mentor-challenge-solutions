@@ -1,4 +1,5 @@
 import { FaMoon, FaSun } from "react-icons/fa";
+
 import { useState } from "react";
 export default function Toggle() {
   const [darkMode, setDarkMode] = useState(false);
