@@ -3,7 +3,7 @@ import Search from "../../components/Search";
 import AllCountries from "./AllCountries";
 import FilteredCountries from "../../components/FilterRegions";
 
-export default function Countries() {
+const Countries = () => {
   const url = `https://restcountries.com/v2/all`;
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -104,3 +104,6 @@ export default function Countries() {
     </main>
   );
 }
+
+
+export default Countries;

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2016",
     "module": "ESNext",
     "strict": true,
     "jsx": "react",
@@ -13,6 +13,6 @@
     
   },
   
-  "include": ["src/**/*.tsx", "src/**/*.ts", "src/components/Header.js"],
-  "exclude": ["node_modules"]
+  // "include": ["src/**/*.tsx", "src/**/*.ts", "src/components/Header.js", "src/routes/countries/Countries.js", "src/routes/countries/AllCountries.js"],
+  // "exclude": ["node_modules"]
 }
