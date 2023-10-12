@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2016",
-    "module": "CommonJS", // Set the module option to "CommonJS"
+    "module": "CommonJS",
     "strict": true,
     "jsx": "react",
     "esModuleInterop": true,
@@ -12,7 +12,7 @@
     "isolatedModules": true,
     
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "**/*.tsx"]
-  // "include": ["src/**/*.tsx", "src/**/*.ts", "src/components/Header.js", "src/routes/countries/Countries.js", "src/routes/countries/AllCountries.js"],
-  // "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "**/*.tsx"],
+  "typeRoots": ["node_modules/@types", "src/types"]
+
 }

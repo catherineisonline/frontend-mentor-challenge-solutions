@@ -1,13 +1,13 @@
-module.exports = {
-    // ...other ESLint config settings
+// module.exports = {
+//     // ...other ESLint config settings
 
-    rules: {
-        // ...other rules
+//     rules: {
+//         // ...other rules
 
-        // Replace references to 'originalKeywordKind' with 'identifierToKeywordKind(identifier)'
-        'some-rule': [
-            'error',
-            { someOption: identifierToKeywordKind('someIdentifier') },
-        ],
-    },
-};
+//         // Replace references to 'originalKeywordKind' with 'identifierToKeywordKind(identifier)'
+//         'some-rule': [
+//             'error',
+//             { someOption: identifierToKeywordKind('someIdentifier') },
+//         ],
+//     },
+// };
