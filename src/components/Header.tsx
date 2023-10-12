@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import React, { Link } from "react-router-dom";
 import Toggle from "./Toggle";
 
-export default function Header() {
+function Header() {
   return (
     <header>
       <nav>
@@ -13,3 +13,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

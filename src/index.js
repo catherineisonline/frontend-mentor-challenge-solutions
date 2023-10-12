@@ -1,22 +1,19 @@
+import ReactDOM from 'react-dom/client';
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-//Styles
-import "./styles.css";
-//Componnets
-import Header from "./components/Header";
-import Countries from "./components/allCountries/Countries";
-import Country from "./components/singleCountry/Country";
+import { BrowserRouter as Router } from "react-router-dom";
+//Component
+import { App } from "./App.js"
+//CSS
+import "./core-ui/styles.css";
+import "./routes/countries/countries.css";
+import "./routes/country/country.css";
+
 const container = document.getElementById("root");
-const root = createRoot(container);
+const root = ReactDOM.createRoot(container);
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Header />
-      <Routes>
-        <Route exact path="/:name" element={<Country />} />
-        <Route path="/" exact element={<Countries />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 );

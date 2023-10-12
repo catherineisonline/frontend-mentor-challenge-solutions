@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import React, { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { CountriesInterface } from "../../types/interfaces";
 
-export default function AllCountries(props) {
+
+function AllCountries(props: any) {
   return (
     <section className="container-block">
       {props.countries.map(
-        ({ name, population, region, capital, flags, index }) => (
+        ({ name, population, region, capital, flags, index }: CountriesInterface) => (
           <Link
             key={name}
             to={`/${name.toLowerCase().replace(/\s/g, "%20")}`}
@@ -32,7 +34,7 @@ export default function AllCountries(props) {
               <section className="image-container">
                 <img
                   className="image"
-                  src={flags ? flags.svg : flags.png}
+                  src={flags?.svg || flags?.png}
                   alt={name}
                 />
               </section>
@@ -58,3 +60,6 @@ export default function AllCountries(props) {
     </section>
   );
 }
+
+
+export default  AllCountries;
