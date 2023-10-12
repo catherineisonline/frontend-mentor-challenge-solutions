@@ -4,6 +4,7 @@ import AllCountries from "./AllCountries";
 // import FilteredCountries from "../../components/FilterRegions";
 import { CountriesInterface } from "../../types/interfaces";
 import FilteredCountries from "./FilteredCountries";
+import SearchingMessage from "../../components/SearchingMessage";
 
 const Countries = () => {
   const url = `https://restcountries.com/v2/all`;
@@ -88,7 +89,7 @@ const Countries = () => {
   return (
     <main>
       {isLoading ? (
-        <h2 className="searching">Searching...</h2>
+       <SearchingMessage/>
       ) : (
         <>
           <Search

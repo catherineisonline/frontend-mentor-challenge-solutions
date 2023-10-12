@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import {  SingleCountryInterface } from '../../types/interfaces';
+import SearchingMessage from '../../components/SearchingMessage';
 
  function Country() {
   const [country, setCountry] = useState<SingleCountryInterface | null>(null);
@@ -47,9 +48,7 @@ import {  SingleCountryInterface } from '../../types/interfaces';
   return (
     <main>
       {isLoading ? (
-        <h2  className="searching">
-          Searching...
-        </h2>
+        <SearchingMessage/>
       ) : (
         
         <AnimatePresence>
