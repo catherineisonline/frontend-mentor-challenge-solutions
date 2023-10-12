@@ -1,16 +1,19 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Search from "../../components/Search";
 import AllCountries from "./AllCountries";
-import FilteredCountries from "../../components/FilterRegions";
+// import FilteredCountries from "../../components/FilterRegions";
+import { CountriesInterface } from "../../types/interfaces";
+import FilteredCountries from "./FilteredCountries";
 
 const Countries = () => {
   const url = `https://restcountries.com/v2/all`;
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [foundFilter, setFoundFilter] = useState(false);
-  const [filtered, setFiltered] = useState([]);
+  const [filtered, setFiltered] = useState<CountriesInterface[] | null>(null);
   const [searchInput, setSearchInput] = useState("");
-  const fetchCountries = async () => {
+
+  const fetchCountries = useCallback(async (): Promise<void> => {
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -19,57 +22,57 @@ const Countries = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }, []);
 
   useEffect(() => {
     let mounted = true;
-    fetchCountries().then((items) => {
+    // fetchCountries().then((items) => {
       if (mounted) {
-        fetchCountries(items);
+        fetchCountries();
       }
-    });
-    return () => (mounted = false);
+    // });
+  
+    return () => {
+      mounted = false; 
+    };
   }, []);
 
   // This function filters a list of countries based on a search value.
   // It updates the state variables 'searchInput', 'filtered', and 'foundFilter' accordingly.
 
-  const searchCountries = (searchValue) => {
-    // Set the 'searchInput' state variable to the provided 'searchValue'.
+  const searchCountries = (searchValue: string): void => {
     setSearchInput(searchValue);
-
-    // If 'searchInput' is not empty (truthy value), proceed with filtering.
     if (searchInput) {
-      // Filter the 'countries' array based on the provided 'searchValue' and update 'filtered'.
+        let filter: CountriesInterface[] = countries.filter((country) =>
+        Object.values(country)
+          .join("")
+          .toLowerCase()
+          .includes(searchValue.toLowerCase())
+      );
       setFiltered(
-        countries.filter((country) =>
-          // Convert the values of the 'country' object into a single string,
-          // make it lowercase, and check if it includes the lowercase 'searchValue'.
-          Object.values(country)
-            .join("")
-            .toLowerCase()
-            .includes(searchValue.toLowerCase())
-        )
+        filter
       );
 
-      // Check if the filtered array is empty.
-      if (
-        countries.filter((country) =>
-          // Convert the values of the 'country' object into a single string,
-          // make it lowercase, and check if it includes the lowercase 'searchValue'.
-          Object.values(country)
-            .join("")
-            .toLowerCase()
-            .includes(searchValue.toLowerCase())
-        ).length === 0
-      ) {
-        // If the filtered array is empty, set 'foundFilter' to false.
-        // This ensures 'foundFilter' is false when there are no matches for the search.
+      if (filter.length === 0) {
         setFoundFilter(false);
       } else {
-        // If the filtered array is not empty, set 'foundFilter' to true.
         setFoundFilter(true);
       }
+      // if (
+      //   countries.filter((country) =>
+      //     Object.values(country)
+      //       .join("")
+      //       .toLowerCase()
+      //       .includes(searchValue.toLowerCase())
+      //   ).length === 0
+      // ) {
+      //   setFoundFilter(false);
+      // } 
+      
+      // else {
+      //   // If the filtered array is not empty, set 'foundFilter' to true.
+      //   setFoundFilter(true);
+      // }
     }
 
     // If 'searchInput' is empty (falsy value), reset 'filtered' to the original 'countries' array.
@@ -79,7 +82,7 @@ const Countries = () => {
   };
 
 
-  const resetInput = () => {
+  const resetInput = (): void => {
     return setSearchInput("");
   }
   return (

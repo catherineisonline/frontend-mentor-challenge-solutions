@@ -1,37 +1,51 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { CountriesInterface, RegionsInterface } from "../types/interfaces";
 
-const FilterRegions = (props) => {
+const regions: RegionsInterface[] = [
+  {
+    label: "All",
+    name: "all",
+  },
+  {
+    label: "Africa",
+    name: "africa",
+  },
+  {
+    label: "Americas",
+    name: "americas"
+  },
+  {
+    label: "Asia",
+    name: "asia",
+  },
+  {
+    label: "Europe",
+    name: "europe"
+  },
+  {
+    label: "Oceania",
+    name: "oceania"
+  },
+];
+
+
+
+const FilterRegions = ({setCountries} : {setCountries: (value: CountriesInterface) => void}) => {
+
   const [isVisible, setVisibility] = useState(false);
   const [activeRegion, setActiveRegion] = useState("");
-  const regions = [
-    {
-      label: "All",
-      name: "all",
-    },
-    {
-      label: "Africa",
-      name: "africa",
-    },
-    { label: "Americas", name: "americas" },
-    {
-      label: "Asia",
-      name: "asia",
-    },
-    { label: "Europe", name: "europe" },
-    { label: "Oceania", name: "oceania" },
-  ];
 
-  const fetchRegion = async (regionName) => {
+  const fetchRegion = async (regionName: string) => { 
     if (regionName === "all") {
       const url = `https://restcountries.com/v2/all`;
       const response = await fetch(url);
       const data = await response.json();
-      props.setCountries(data);
+   setCountries(data);
     } else {
       const url = `https://restcountries.com/v2/region/${regionName}`;
       const response = await fetch(url);
       const data = await response.json();
-      props.setCountries(data);
+      setCountries(data);
     }
   };
   const addDropdown = () => {
@@ -43,11 +57,10 @@ const FilterRegions = (props) => {
 
   return (
     <section
-      // className="select-region"
       className={isVisible ? "active-regions select-region" : "select-region"}
       id="regions"
     >
-      <summary onClick={(e) => addDropdown(e)}>
+      <summary onClick={addDropdown}>
         {activeRegion === "All" || !activeRegion
           ? "Filter by Region"
           : activeRegion}
@@ -72,4 +85,5 @@ const FilterRegions = (props) => {
     </section>
   );
 };
+
 export default FilterRegions;

@@ -1,7 +1,11 @@
+import React from "react";
+import { SearchProps } from "../types/interfaces";
 import { FaSearch } from "react-icons/fa";
 import FilterRegions from "./FilterRegions";
 
-const Search = (props) => {
+
+
+const Search = ({ searchCountries, setCountries, searchInput, resetInput }: SearchProps) => {
   return (
     <article className="search-section">
       <section className="input-block">
@@ -11,12 +15,12 @@ const Search = (props) => {
           name="search"
           id="search"
           placeholder="Search for a country..."
-          value={props.searchInput}
-          onChange={(e) => props.searchCountries(e.target.value)}
+          value={searchInput}
+          onChange={(e) => searchCountries(e.target.value)}
         />
-        <button className="delete-icon" onClick={props.resetInput}>X</button>
+        <button className="delete-icon" onClick={resetInput}>X</button>
       </section>
-      <FilterRegions setCountries={props.setCountries} />
+      <FilterRegions setCountries={setCountries} />
     </article>
   );
 };

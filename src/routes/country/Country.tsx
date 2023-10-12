@@ -1,54 +1,62 @@
-import { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
+import {  SingleCountryInterface } from '../../types/interfaces';
 
-export default function Country() {
-  const [country, setCountry] = useState([])
-  const [borderCountries, setBorderCountry] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-  let { name } = useParams()
+ function Country() {
+  const [country, setCountry] = useState<SingleCountryInterface | null>(null);
+  const [borderCountries, setBorderCountry] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  let { name } = useParams();
+  const fetchCountryData = useCallback( async (name: string) => {
+    try {
+      const url = `https://restcountries.com/v2/name/${name}`
+      const response = await fetch(url)
+      const data = await response.json()
+      setCountry(data[0])
+      data[0]?.borders?.forEach((border: string) => {
+       if(border) {
+        findCountryData(border);
+       }
+      })
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error)
+    }
+  }, []) 
+  
+  const findCountryData = useCallback( async (border: string) => {
+    try {
+      const url = `https://restcountries.com/v2/alpha/${border}`
+      const response = await fetch(url)
+      const data = await response.json();
+      setBorderCountry((cur) => [...cur, data.name]);
+    } catch (error) {
+      console.log(error)
+    }
+  }, [])
+
 
   useEffect(() => {
-    window.scroll(0, 0)
-    const fetchCountryData = async (name) => {
-      try {
-        const url = `https://restcountries.com/v2/name/${name}`
-        const response = await fetch(url)
-        const data = await response.json()
-        setCountry(data[0])
-        data[0]?.borders?.forEach((border) => {
-          return findCountryData(border)
-        })
-        setIsLoading(false)
-      } catch (error) {
-        console.log(error)
-      }
+    window.scroll(0, 0);
+    if(name) {
+      fetchCountryData(name);
     }
-    fetchCountryData(name)
-    const findCountryData = async (border) => {
-      try {
-        const url = `https://restcountries.com/v2/alpha/${border}`
-        const response = await fetch(url)
-        const data = await response.json()
-        setBorderCountry((cur) => [...cur, data.name])
-      } catch (error) {
-        console.log(error)
-      }
-    }
-  }, [name])
+  }, [fetchCountryData, name]);
 
   return (
     <main>
       {isLoading ? (
-        <h2 animate={{ opacity: 1 }} className="searching">
+        <h2  className="searching">
           Searching...
         </h2>
       ) : (
+        
         <AnimatePresence>
           <Link to="/" className="back-link">
             <span>&larr;</span> Back
           </Link>
-          <section key={name} className="country-block">
+        {country ?  <section key={name} className="country-block">
             <motion.img
               initial={{
                 opacity: 0,
@@ -102,7 +110,9 @@ export default function Country() {
                       : 'Unknown'}
                   </li>
                   <li>
-                    <span>Languages:</span> {country.languages[0].name}
+                    <span>Languages:</span> {country.languages
+                      ? country.languages[0]?.name
+                      : 'Unknown'}
                   </li>
                 </ul>
               </section>
@@ -138,9 +148,11 @@ export default function Country() {
                 )}
               </section>
             </section>
-          </section>
+          </section> : null}
         </AnimatePresence>
       )}
     </main>
   )
 }
+
+export default Country;
