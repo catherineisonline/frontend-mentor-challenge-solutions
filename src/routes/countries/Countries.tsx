@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Search from "../../components/Search";
 import AllCountries from "./AllCountries";
-// import FilteredCountries from "../../components/FilterRegions";
 import { CountriesInterface } from "../../types/interfaces";
 import FilteredCountries from "./FilteredCountries";
 import SearchingMessage from "../../components/SearchingMessage";
@@ -27,20 +26,14 @@ const Countries = () => {
 
   useEffect(() => {
     let mounted = true;
-    // fetchCountries().then((items) => {
       if (mounted) {
         fetchCountries();
       }
-    // });
   
     return () => {
       mounted = false; 
     };
   }, []);
-
-  // This function filters a list of countries based on a search value.
-  // It updates the state variables 'searchInput', 'filtered', and 'foundFilter' accordingly.
-
   const searchCountries = (searchValue: string): void => {
     setSearchInput(searchValue);
     if (searchInput) {
@@ -59,24 +52,7 @@ const Countries = () => {
       } else {
         setFoundFilter(true);
       }
-      // if (
-      //   countries.filter((country) =>
-      //     Object.values(country)
-      //       .join("")
-      //       .toLowerCase()
-      //       .includes(searchValue.toLowerCase())
-      //   ).length === 0
-      // ) {
-      //   setFoundFilter(false);
-      // } 
-      
-      // else {
-      //   // If the filtered array is not empty, set 'foundFilter' to true.
-      //   setFoundFilter(true);
-      // }
     }
-
-    // If 'searchInput' is empty (falsy value), reset 'filtered' to the original 'countries' array.
     else {
       setFiltered(countries);
     }

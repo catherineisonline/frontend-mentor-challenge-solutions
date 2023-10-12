@@ -73,7 +73,6 @@ import SearchingMessage from '../../components/SearchingMessage';
                 opacity: 0,
                 translateX: -500,
               }}
-              className="country-image"
               src={country.flags.svg}
               alt={name}
             />

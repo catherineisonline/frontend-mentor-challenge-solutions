@@ -5,6 +5,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { App } from "./App.js"
 //CSS
 import "./core-ui/styles.css";
+import "./routes/countries/countries.css";
+import "./routes/country/country.css";
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
