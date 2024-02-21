@@ -9,39 +9,44 @@ import SearchingMessage from '../../components/SearchingMessage';
   const [borderCountries, setBorderCountry] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   let { name } = useParams();
-  const fetchCountryData = useCallback( async (name: string) => {
-    try {
-      const url = `https://restcountries.com/v2/name/${name}`
-      const response = await fetch(url)
-      const data = await response.json()
-      setCountry(data[0])
-      data[0]?.borders?.forEach((border: string) => {
-       if(border) {
-        findCountryData(border);
-       }
-      })
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error)
-    }
-  }, []) 
-  
-  const findCountryData = useCallback( async (border: string) => {
+
+  const findBorders = useCallback( async (border: string) => {
     try {
       const url = `https://restcountries.com/v2/alpha/${border}`
       const response = await fetch(url)
       const data = await response.json();
-      setBorderCountry((cur) => [...cur, data.name]);
+      return data.name;
     } catch (error) {
       console.log(error)
     }
   }, [])
 
 
+  const fetchCountryData = useCallback( async (name: string) => {
+    try {
+      const url = `https://restcountries.com/v2/name/${name}`
+      const response = await fetch(url)
+      const data = await response.json()
+      setCountry(data[0])
+      // Collecting promises for all border data fetches
+     const borderPromises = (data[0]?.borders || []).map((border: string) => findBorders(border));
+
+    // Wait for all promises to resolve
+    const borderNames = await Promise.all(borderPromises);
+    setBorderCountry(borderNames.filter(Boolean)); 
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error)
+    }
+  }, [findBorders]) 
+  
+  
+
   useEffect(() => {
     window.scroll(0, 0);
     if(name) {
       fetchCountryData(name);
+
     }
   }, [fetchCountryData, name]);
 
