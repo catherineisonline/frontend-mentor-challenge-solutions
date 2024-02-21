@@ -53,7 +53,8 @@ You can use any JavaScript framework/library on the front-end such as React or V
 - Flex
 - Grid
 - Desktop-first workflow
-- Shrtco - url shortening API
+- Shrtco - url shortening API (old)
+- Ulvis - url shortening API (current)
 
 ## What I learned
 Another attempt to play around with API and understand it better. Not very hard as I only need one data from get request. This will be my 3rd small project using API. Working with it is not hard however it does get a little harder when I have to work with dynamic DOM elements. Once again was glad to practice some CSS and eventlisteners. I try not to match the original design as much as I did before as it takes more time and I prefer to spend it mostly on JavaScript.
@@ -69,7 +70,8 @@ This project serves as a project to show off my personal skills. I do not accept
 
 1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
 2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
-3. <a href="https://shrtco.de/">Shrtco</a> - url shortening API.
+3. <a href="https://shrtco.de/">Shrtco</a> - url shortening API (old).
+3. <a href="https://ulvis.net/developer.html">Ulvis</a> - url shortening API (current).
 
 
 
