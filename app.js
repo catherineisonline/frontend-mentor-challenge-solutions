@@ -37,39 +37,43 @@ shortlyBtn.addEventListener("click", (e) => {
         errorMsg.classList.remove("shown");
         shortlyInput.classList.remove("shown");
         //Passed Validation - init API
-        fetch(`https://api.shrtco.de/v2/shorten?url=` + inputValue)
-            .then((response) => response.json())
-            .then((response) => {
-                if (response.ok) {
-                    let shortlyCode = response.result.code;
-                    resultSkeleton = `<div class="result">
-          <p class="inserted-link">${inputValue}</p>
-          <hr class="result-block-hr">
-          <div class="results">
-            <p class="short-code">shrtco.de/${shortlyCode}</p>
-            <button class="copy-btn">Copy</button>
-          </div>
-          </div>`;
-                    //check if I have some storage and show results from it
-                    if (sessionStorage.getItem("resultsStorage") !== null) {
-                        resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")].reverse();
-                        parentNode.innerHTML = [resultStorage].join('').split(',').join('');
-                        sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
-                        resetResults.classList.add("active");
-                    }
-                    //if I don't have storage just show the first/current result
-                    else {
-                        parentNode.innerHTML = resultSkeleton;
-                        //then push this first result to my storage and then session storage
-                        resultStorage.push(resultSkeleton);
-                        console.log(resultSkeleton);
-                        sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
-                        resetResults.classList.add("active");
-                    }
-                }
-            });
+        fetchBackupUrl(inputValue);
     }
 });
+
+function fetchBackupUrl(inputValue) {
+    fetch(`https://ulvis.net/API/write/get?url=${inputValue}`)
+        .then((response) => response.json())
+        .then((response) => {
+            if (response.success) {
+                let shortlyCode = response.data.url;
+                resultSkeleton = `<div class="result">
+<p class="inserted-link">${inputValue}</p>
+<hr class="result-block-hr">
+<div class="results">
+ <p class="short-code">${shortlyCode}</p>
+ <button class="copy-btn">Copy</button>
+</div>
+</div>`;
+                //check if I have some storage and show results from it
+                if (sessionStorage.getItem("resultsStorage") !== null) {
+                    resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")].reverse();
+                    parentNode.innerHTML = [resultStorage].join('').split(',').join('');
+                    sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
+                    resetResults.classList.add("active");
+                }
+                //if I don't have storage just show the first/current result
+                else {
+                    parentNode.innerHTML = resultSkeleton;
+                    //then push this first result to my storage and then session storage
+                    resultStorage.push(resultSkeleton);
+                    sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
+                    resetResults.classList.add("active");
+                }
+            }
+        }).catch(error => console.log(`Error with API: ${error.message}`))
+}
+
 parentNode.addEventListener("click", function (e) {
     var _a;
     e.stopPropagation();
