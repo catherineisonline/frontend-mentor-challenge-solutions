@@ -254,6 +254,10 @@ details > summary::-webkit-details-marker {
     align-items: left;
     gap: 2rem;
   }
+  .search-icon,
+  .delete-icon {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {

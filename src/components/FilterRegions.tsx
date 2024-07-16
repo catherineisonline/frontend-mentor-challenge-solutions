@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CountriesInterface, RegionsInterface } from "../types/interfaces";
+import { RegionsInterface } from "../types/interfaces";
 
 const regions: RegionsInterface[] = [
   {
@@ -29,50 +29,36 @@ const regions: RegionsInterface[] = [
 ];
 
 
+interface FilterRegionProps {
+  fetchRegion: (regionName: string) => void;
+  regionName: string;
+}
 
-const FilterRegions = ({setCountries} : {setCountries: (value: CountriesInterface) => void}) => {
-
+const FilterRegions: React.FC<FilterRegionProps> = ({ regionName, fetchRegion }) => {
   const [isVisible, setVisibility] = useState(false);
-  const [activeRegion, setActiveRegion] = useState("");
 
-  const fetchRegion = async (regionName: string) => { 
-    if (regionName === "all") {
-      const url = `https://restcountries.com/v2/all`;
-      const response = await fetch(url);
-      const data = await response.json();
-   setCountries(data);
-    } else {
-      const url = `https://restcountries.com/v2/region/${regionName}`;
-      const response = await fetch(url);
-      const data = await response.json();
-      setCountries(data);
-    }
+  const toggleDropdown = () => {
+    setVisibility(!isVisible)
   };
-  const addDropdown = () => {
-    return isVisible ? setVisibility(false) : setVisibility(true);
-  };
-  const removeDropdown = () => {
-    return isVisible ? setVisibility(false) : setVisibility(true);
-  };
+
+
 
   return (
     <section
       className={isVisible ? "active-regions select-region" : "select-region"}
-      id="regions"
-    >
-      <summary onClick={addDropdown}>
-        {activeRegion === "All" || !activeRegion
+      id="regions">
+      <summary onClick={toggleDropdown}>
+        {regionName === "all" || regionName.length === 0
           ? "Filter by Region"
-          : activeRegion}
+          : regionName.charAt(0).toUpperCase() + regionName.slice(1)}
       </summary>
-      {isVisible ? (
+      {isVisible &&
         <div className="region-list">
           {regions.map((region) => (
             <li
               onClick={() => {
                 fetchRegion(region.name);
-                setActiveRegion(region.label);
-                removeDropdown();
+                toggleDropdown();
               }}
               value={region.name}
               key={region.label}
@@ -80,8 +66,7 @@ const FilterRegions = ({setCountries} : {setCountries: (value: CountriesInterfac
               {region.label}
             </li>
           ))}
-        </div>
-      ) : null}
+        </div>}
     </section>
   );
 };

@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client';
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 //Component
-import { App } from "./App.js"
+import { App } from "./App.tsx"
 //CSS
 import "./core-ui/styles.css";
 import "./routes/countries/countries.css";
