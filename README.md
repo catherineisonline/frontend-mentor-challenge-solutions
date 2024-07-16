@@ -4,7 +4,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/rest-countries/" color="white">
+    <a href="https://restful-countries.vercel.app/" color="white">
       Live
     </a>
     <span> | </span>

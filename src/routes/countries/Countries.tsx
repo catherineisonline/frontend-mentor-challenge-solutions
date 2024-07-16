@@ -1,85 +1,29 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import Search from "../../components/Search";
-import AllCountries from "./AllCountries";
-import { CountriesInterface } from "../../types/interfaces";
-import FilteredCountries from "./FilteredCountries";
 import SearchingMessage from "../../components/SearchingMessage";
+import { CountriesInterface } from "../../types/interfaces";
+import AllCountries from "./AllCountries";
+interface CountriesProps {
+  countries: CountriesInterface[];
+  foundFilter: boolean;
+  isLoading: boolean;
+  searchCountries: (searchValue: string) => void;
+  fetchRegion: (regionName: string) => void;
+  setSearchInput: React.Dispatch<React.SetStateAction<string>>;
+  searchInput: string;
+  regionName: string;
 
-const Countries = () => {
-  const url = `https://restcountries.com/v2/all`;
-  const [countries, setCountries] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [foundFilter, setFoundFilter] = useState(false);
-  const [filtered, setFiltered] = useState<CountriesInterface[] | null>(null);
-  const [searchInput, setSearchInput] = useState("");
-
-  const fetchCountries = useCallback(async (): Promise<void> => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setCountries(data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
-  useEffect(() => {
-    let mounted = true;
-      if (mounted) {
-        fetchCountries();
-      }
-  
-    return () => {
-      mounted = false; 
-    };
-  }, []);
-  const searchCountries = (searchValue: string): void => {
-    setSearchInput(searchValue);
-    if (searchInput) {
-        let filter: CountriesInterface[] = countries.filter((country) =>
-        Object.values(country)
-          .join("")
-          .toLowerCase()
-          .includes(searchValue.toLowerCase())
-      );
-      setFiltered(
-        filter
-      );
-
-      if (filter.length === 0) {
-        setFoundFilter(false);
-      } else {
-        setFoundFilter(true);
-      }
-    }
-    else {
-      setFiltered(countries);
-    }
-  };
-
-
-  const resetInput = (): void => {
-    return setSearchInput("");
-  }
+}
+const Countries: React.FC<CountriesProps> = ({ regionName, countries, foundFilter, isLoading, searchCountries, fetchRegion, setSearchInput, searchInput }) => {
   return (
     <main>
       {isLoading ? (
-       <SearchingMessage/>
+        <SearchingMessage />
       ) : (
-        <>
-          <Search
-            searchCountries={searchCountries}
-            searchInput={searchInput}
-            setCountries={setCountries}
-            resetInput={resetInput}
-          />
-          {searchInput.length > 0 ? (
-            <FilteredCountries filtered={filtered} foundFilter={foundFilter} />
-          ) : (
-            <AllCountries countries={countries} />
-          )}
-        </>
+        <React.Fragment>
+          <Search regionName={regionName} searchCountries={searchCountries} fetchRegion={fetchRegion} setSearchInput={setSearchInput} searchInput={searchInput} />
+          <AllCountries countries={countries} foundFilter={foundFilter} />
+        </React.Fragment>
       )}
     </main>
   );

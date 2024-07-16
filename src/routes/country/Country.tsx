@@ -1,16 +1,16 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import {  SingleCountryInterface } from '../../types/interfaces';
+import { SingleCountryInterface } from '../../types/interfaces';
 import SearchingMessage from '../../components/SearchingMessage';
 
- function Country() {
+function Country() {
   const [country, setCountry] = useState<SingleCountryInterface | null>(null);
   const [borderCountries, setBorderCountry] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   let { name } = useParams();
 
-  const findBorders = useCallback( async (border: string) => {
+  const findBorders = useCallback(async (border: string) => {
     try {
       const url = `https://restcountries.com/v2/alpha/${border}`
       const response = await fetch(url)
@@ -22,29 +22,29 @@ import SearchingMessage from '../../components/SearchingMessage';
   }, [])
 
 
-  const fetchCountryData = useCallback( async (name: string) => {
+  const fetchCountryData = useCallback(async (name: string) => {
     try {
       const url = `https://restcountries.com/v2/name/${name}`
       const response = await fetch(url)
       const data = await response.json()
       setCountry(data[0])
       // Collecting promises for all border data fetches
-     const borderPromises = (data[0]?.borders || []).map((border: string) => findBorders(border));
+      const borderPromises = (data[0]?.borders || []).map((border: string) => findBorders(border));
 
-    // Wait for all promises to resolve
-    const borderNames = await Promise.all(borderPromises);
-    setBorderCountry(borderNames.filter(Boolean)); 
+      // Wait for all promises to resolve
+      const borderNames = await Promise.all(borderPromises);
+      setBorderCountry(borderNames.filter(Boolean));
       setIsLoading(false);
     } catch (error) {
       console.log(error)
     }
-  }, [findBorders]) 
-  
-  
+  }, [findBorders])
+
+
 
   useEffect(() => {
     window.scroll(0, 0);
-    if(name) {
+    if (name) {
       fetchCountryData(name);
 
     }
@@ -53,14 +53,14 @@ import SearchingMessage from '../../components/SearchingMessage';
   return (
     <main>
       {isLoading ? (
-        <SearchingMessage/>
+        <SearchingMessage />
       ) : (
-        
+
         <AnimatePresence>
           <Link to="/" className="back-link">
             <span>&larr;</span> Back
           </Link>
-        {country ?  <section key={name} className="country-block">
+          {country ? <section key={name} className="country-block">
             <motion.img
               initial={{
                 opacity: 0,
