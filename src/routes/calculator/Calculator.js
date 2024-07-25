@@ -109,19 +109,16 @@ export default function Calculator() {
   });
 
   return (
-    <main>
-      <article className="calculator">
-        {/* Calculator Display */}
-        <Screen ref={ref} calc={calc} />
-        {/* Calculator Keypad */}
-        <Keypad
-          updateCalc={updateCalc}
-          calculate={calculate}
-          del={del}
-          clear={clear}
-          onKeyDown={onKeyDown}
-        />
-      </article>
+    <main className="calculator">
+      {/* Calculator Display */}
+      <Screen ref={ref} calc={calc} />
+      {/* Calculator Keypad */}
+      <Keypad
+        updateCalc={updateCalc}
+        calculate={calculate}
+        del={del}
+        clear={clear}
+      />
     </main>
   );
 }

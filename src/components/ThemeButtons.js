@@ -1,6 +1,6 @@
-import { ThemeButton } from "../../styledComponents/ThemeSwitching.styled.js";
-import { basic, light, dark } from "../../styledComponents/Theme.styled.js";
-import ThemeNumbers from "./ThemeNumbers.js";
+import { ThemeButton } from "../styled-components/ThemeSwitching.styled.js";
+import { basic, light, dark } from "../styled-components/Theme.styled.js";
+import ThemeNumbers from "../ThemeNumbers.js";
 
 const ThemeButtons = (props) => {
   return (

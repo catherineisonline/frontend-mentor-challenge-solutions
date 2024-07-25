@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 //Styles
-import "./assets/Styles.css";
+import "./core-ui/index.css";
 import App from "./App";
 
 const Index = () => {
