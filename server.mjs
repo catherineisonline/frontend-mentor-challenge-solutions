@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.send('Server Deployed 🥳');
 });
 
-app.get(BACKEND_URL, async (req, res) => {
+app.get(`/users`, async (req, res) => {
     const { url } = req.query;
 
     if (!url) {

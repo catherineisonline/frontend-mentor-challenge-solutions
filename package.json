@@ -4,10 +4,22 @@
     "express": "^4.19.2",
     "node-fetch": "^3.3.2"
   },
+  "scripts": {
+    "inject-env": "node inject-env.js",
+    "build": "npm run inject-env && webpack --mode production",
+    "start": "live-server"
+  },
   "devDependencies": {
+    "@types/node": "^20.14.12",
     "dotenv": "^16.4.5",
     "dotenv-webpack": "^8.1.0",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
   }
 }

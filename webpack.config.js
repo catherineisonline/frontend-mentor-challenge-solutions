@@ -1,18 +1,18 @@
+// webpack.config.js
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: 'app.js', // Adjust the entry point as needed
+    entry: './app.js', // Your entry point
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: 'app.js',
+        path: path.resolve(__dirname, 'dist'), // Output directory
         clean: true,
     },
     plugins: [
-        new Dotenv(),
         new HtmlWebpackPlugin({
-            template: 'index.html', // Adjust the HTML template path as needed
+            template: './index.html', // Your HTML template
+            filename: 'index.html', // Output filename for HTML
         }),
     ],
     module: {
@@ -22,12 +22,15 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'], // Ensures ES6+ code works in older browsers
+                    },
                 },
             },
         ],
     },
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        static: path.join(__dirname, 'dist'), // Serve files from the 'dist' directory
         compress: true,
         port: 8080,
     },
