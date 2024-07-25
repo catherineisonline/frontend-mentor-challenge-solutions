@@ -43,7 +43,7 @@ shortlyBtn.addEventListener("click", (e) => {
     }
 });
 function fetchBackupUrl(inputValue) {
-    fetch(`${BACKEND_URL}=${encodeURIComponent(inputValue)}`)
+    fetch(`${BACKEND_URL}${encodeURIComponent(inputValue)}`)
         .then((response) => response.json())
         .then((response) => {
             if (response.success) {
