@@ -14,7 +14,6 @@ const mainElement = document.querySelector(".main-container");
 // Other
 let resultSkeleton = '';
 let resultStorage = [];
-const BACKEND_URL = "https://pizza-time-backend.vercel.app/users";
 
 //URL Validiation
 function urlValidation(defaultUrl) {
@@ -44,10 +43,11 @@ shortlyBtn.addEventListener("click", (e) => {
     }
 });
 function fetchBackupUrl(inputValue) {
-    fetch(`${BACKEND_URL}?url=${encodeURIComponent(inputValue)}`)
+    fetch(`https://ulvis.net/API/write/get?url=${encodeURIComponent(inputValue)}`)
         .then((response) => response.json())
         .then((response) => {
             if (response.data) {
+                console.log(response.data)
                 let shortlyCode = response.data.url;
                 resultSkeleton = `<div class="result">
 <p class="inserted-link">${inputValue}</p>

@@ -3,7 +3,7 @@ import cors from 'cors';
 import fetch from 'node-fetch';
 const app = express();
 const port = 3000;
-const BACKEND_URL = process.env.BACKEND_URL;
+
 const SHORTENER_API_URL = process.env.SHORTENER_API_URL;
 app.use(cors());
 app.use(json());
@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.send('Server Deployed 🥳');
 });
 
-app.get(`/users`, async (req, res) => {
+app.get(`/shortener`, async (req, res) => {
     const { url } = req.query;
 
     if (!url) {
