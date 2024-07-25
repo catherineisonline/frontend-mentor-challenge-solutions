@@ -10,9 +10,11 @@ const sectionThree = document.querySelector(".section-3");
 const burgerIcon = document.querySelector(".fa-bars");
 const navMenu = document.querySelector(".menu-section");
 const mainElement = document.querySelector(".main-container");
+
 // Other
 let resultSkeleton = '';
 let resultStorage = [];
+const BACKEND_URL = process.env.BACKEND_URL;
 //URL Validiation
 function urlValidation(defaultUrl) {
     const urlRule = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
@@ -41,7 +43,7 @@ shortlyBtn.addEventListener("click", (e) => {
     }
 });
 function fetchBackupUrl(inputValue) {
-    fetch(`http://localhost:3000/shorten?url=${encodeURIComponent(inputValue)}`)
+    fetch(`${BACKEND_URL}=${encodeURIComponent(inputValue)}`)
         .then((response) => response.json())
         .then((response) => {
             if (response.success) {
