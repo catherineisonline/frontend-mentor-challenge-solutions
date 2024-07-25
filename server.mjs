@@ -1,10 +1,10 @@
 import express, { json } from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
-
 const app = express();
 const port = 3000;
-
+const BACKEND_URL = process.env.BACKEND_URL;
+const SHORTENER_API_URL = process.env.SHORTENER_API_URL;
 app.use(cors());
 app.use(json());
 
@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.send('Server Deployed 🥳');
 });
 
-app.get('/shorten', async (req, res) => {
+app.get(BACKEND_URL, async (req, res) => {
     const { url } = req.query;
 
     if (!url) {
@@ -20,7 +20,7 @@ app.get('/shorten', async (req, res) => {
     }
 
     try {
-        const response = await fetch(`https://ulvis.net/API/write/get?url=${encodeURIComponent(url)}`);
+        const response = await fetch(`${SHORTENER_API_URL}${encodeURIComponent(url)}`);
         const data = await response.json();
 
         if (data.success) {
