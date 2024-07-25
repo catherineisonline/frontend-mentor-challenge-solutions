@@ -5,7 +5,7 @@ export const ThemeButton = styled.button`
   border: none;
   border-radius: 50%;
   width: 1rem;
-  height: 0.8rem;
+  height: 1rem;
   cursor: pointer;
  
 `;

@@ -57,6 +57,17 @@ header {
   }
 }
 
-
-
+.not-found h2, .not-found p
+{
+  color: ${({ theme }) => theme.colors.headerText};
+}
+.not-found a {
+  border-radius: 5px;
+  background-color: ${({ theme }) => theme.colors.actionKey};
+  box-shadow: 0 4px 0 0 ${({ theme }) => theme.colors.actionKeyShadow};
+  color: ${({ theme }) => theme.colors.actionKeyText};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.actionKeyHover};
+  }
+}
 `;

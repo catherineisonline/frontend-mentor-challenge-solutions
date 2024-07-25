@@ -1,14 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { GlobalStyles } from "./styledComponents/GlobalStyles";
+import { GlobalStyles } from "./styled-components/GlobalStyles";
 import { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
-import { basic } from "./styledComponents/Theme.styled";
+import { basic } from "./styled-components/Theme.styled";
 
 //Componnets
-import Header from "./components/header/Header";
-import Calculator from "./components/calculator/Calculator";
+import Header from "./components/Header";
+import Calculator from "./routes/calculator/Calculator";
+import NotFound from "./routes/not-found/NotFound";
 
 export default function App() {
   const [selectedTheme, setSelectedTheme] = useState(basic);
@@ -44,6 +45,7 @@ export default function App() {
         <Header HandleThemeChange={HandleThemeChange} />
         <Routes>
           <Route path="/calculator" exact element={<Calculator />} />
+          <Route path="*" exact element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

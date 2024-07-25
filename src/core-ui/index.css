@@ -1,18 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 :root {
   --main-font: "League Spartan", sans-serif;
+  --light-orange: hsl(6, 63%, 50%);
 }
 
 /* GENERAL */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+html,
+body {
+  height: 100%;
 }
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
-  box-sizing: border-box;
   font-family: var(--main-font);
 }
 body::-webkit-scrollbar {
@@ -34,7 +47,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
-  width: 538px;
+  width: 33.625rem;
   margin: 0 auto;
   margin-top: 5.5rem;
   padding: 1rem 0;
@@ -47,7 +60,7 @@ header {
   align-items: flex-end;
 }
 .themes p {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 .theme-toggle {
@@ -55,7 +68,6 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  font-weight: 0.9rem;
 }
 .theme-number,
 .theme-value {
@@ -71,11 +83,11 @@ header {
 .theme-value {
   border-radius: 15px;
   padding: 5px 4px;
-  width: 60px;
+  width: 3.75rem;
   max-width: 100%;
 }
 .theme-btn.active {
-  background-color: hsl(6, 63%, 50%);
+  background-color: var(--light-orange);
 }
 .theme-numbers {
   display: flex;
@@ -88,32 +100,36 @@ header {
   flex-direction: column;
   margin: 0 auto;
   max-width: 100%;
-  width: 538px;
+  width: 33.625rem;
   margin-bottom: 5rem;
 }
 .calculator * {
-  transition: background-color 1s, color 0.1s ease-in-out;
+  transition:
+    background-color 1s,
+    color 0.1s ease-in-out;
 }
 
 .calculator button {
   border: none;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
 }
 
 .screen {
-  font-size: 3.3rem;
-  padding: 2.5rem 1.9rem;
-  text-align: right;
-  height: 2.9rem;
-  letter-spacing: 1px;
-  border-radius: 5px;
-  margin-top: 0.9rem;
-  text-align: right;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  margin-top: 0.9rem;
+  border-radius: 5px;
+  height: 2.9rem;
+  padding: 2.5rem 1.9rem;
+}
+.screen p {
+  font-size: 3.3rem;
+  letter-spacing: 1px;
 }
 
 .keypad {
