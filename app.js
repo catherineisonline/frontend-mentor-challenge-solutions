@@ -40,9 +40,8 @@ shortlyBtn.addEventListener("click", (e) => {
         fetchBackupUrl(inputValue);
     }
 });
-
 function fetchBackupUrl(inputValue) {
-    fetch(`https://ulvis.net/API/write/get?url=${inputValue}`)
+    fetch(`http://localhost:3000/shorten?url=${encodeURIComponent(inputValue)}`)
         .then((response) => response.json())
         .then((response) => {
             if (response.success) {
@@ -55,23 +54,24 @@ function fetchBackupUrl(inputValue) {
  <button class="copy-btn">Copy</button>
 </div>
 </div>`;
-                //check if I have some storage and show results from it
+                // Check if I have some storage and show results from it
                 if (sessionStorage.getItem("resultsStorage") !== null) {
                     resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")].reverse();
                     parentNode.innerHTML = [resultStorage].join('').split(',').join('');
                     sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
                     resetResults.classList.add("active");
                 }
-                //if I don't have storage just show the first/current result
+                // If I don't have storage just show the first/current result
                 else {
                     parentNode.innerHTML = resultSkeleton;
-                    //then push this first result to my storage and then session storage
+                    // Then push this first result to my storage and then session storage
                     resultStorage.push(resultSkeleton);
                     sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
                     resetResults.classList.add("active");
                 }
             }
-        }).catch(error => console.log(`Error with API: ${error.message}`))
+        })
+        .catch(error => console.log(`Error with API: ${error.message}`));
 }
 
 parentNode.addEventListener("click", function (e) {
