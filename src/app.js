@@ -44,12 +44,18 @@ shortlyBtn.addEventListener("click", (e) => {
 });
 function fetchBackupUrl(inputValue) {
 
-    fetch(`http://localhost:3000/shortener?inputValue=${encodeURIComponent(inputValue)}`).then((response) => response.json())
-        .then((response) => {
+    fetch('https://pizza-time-backend.vercel.app/shortener', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ inputValue: inputValue })
+    }).then((response) => {
 
-            if (response.success) {
-                let shortlyCode = response.data.url;
-                resultSkeleton = `<div class="result">
+        if (response.success) {
+            let shortlyCode = response.data.url;
+            resultSkeleton = `<div class="result">
 <p class="inserted-link">${inputValue}</p>
 <hr class="result-block-hr">
 <div class="results">
@@ -58,22 +64,22 @@ function fetchBackupUrl(inputValue) {
 </div>
 </div>`;
 
-                if (sessionStorage.getItem("resultsStorage") !== null) {
-                    resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")]
-                    parentNode.innerHTML = [resultStorage].join('').split(',').join('');
-                    sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
-                    resetResults.classList.add("active");
-                }
-                else {
-                    parentNode.insertAdjacentHTML('afterbegin', resultSkeleton);
-
-                    resultStorage.push(resultSkeleton);
-                    sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
-                    resetResults.classList.add("active");
-                }
+            if (sessionStorage.getItem("resultsStorage") !== null) {
+                resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")]
+                parentNode.innerHTML = [resultStorage].join('').split(',').join('');
+                sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
+                resetResults.classList.add("active");
             }
+            else {
+                parentNode.insertAdjacentHTML('afterbegin', resultSkeleton);
 
-        })
+                resultStorage.push(resultSkeleton);
+                sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
+                resetResults.classList.add("active");
+            }
+        }
+
+    })
         .catch(error => console.log(`Error with API: ${error.message}`));
 }
 
