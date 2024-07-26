@@ -51,7 +51,7 @@ function fetchBackupUrl(inputValue) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ inputValue: inputValue })
-    }).then((response) => {
+    }).then(response => response.json()).then((response) => {
 
         if (response.success) {
             let shortlyCode = response.data.url;
