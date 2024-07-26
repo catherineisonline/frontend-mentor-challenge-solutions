@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './app.js', // Your entry point
+    entry: './src/app.js', // Your entry point
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, 'dist'), // Output directory
@@ -11,7 +11,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html', // Your HTML template
+            template: './src/index.html', // Your HTML template
             filename: 'index.html', // Output filename for HTML
         }),
     ],

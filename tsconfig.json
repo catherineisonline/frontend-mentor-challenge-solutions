@@ -8,6 +8,6 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node"]
   },
-  "include": ["./*.ts"],
+  "include": ["./*.ts", "./src/app.ts"],
   "exclude": ["node_modules"]
 }
