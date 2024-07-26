@@ -6,7 +6,7 @@
     "node-fetch": "^3.3.2"
   },
   "scripts": {
-    "start": "live-server",
+    "start": "live-server src",
     "build": "mkdir -p dist && cp -r src/* dist/",
     "deploy": "gh-pages -d dist",
     "server": "node server.mjs"
