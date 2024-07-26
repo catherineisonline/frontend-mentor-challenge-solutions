@@ -1,4 +1,4 @@
-<img src="https://github.com/catherineisonline/url-shortening-api-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
+<img src="https://github.com/catherineisonline/url-shortening-api-frontendmentor/blob/main/src/images/project-preview.png?raw=true"></img>
 
 
 <h1 align="center">URL shortening API landing page</h1>

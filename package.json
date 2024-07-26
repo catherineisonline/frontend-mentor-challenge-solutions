@@ -9,7 +9,7 @@
     "start": "live-server src",
     "build": "mkdir -p dist && cp -r src/* dist/",
     "deploy": "gh-pages -d dist",
-    "server": "node server.mjs"
+    "server": "node src/server.mjs"
   },
   "devDependencies": {
     "@types/node": "^20.14.12",
