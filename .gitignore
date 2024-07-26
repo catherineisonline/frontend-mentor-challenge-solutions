@@ -5,9 +5,9 @@
 /.pnp
 .pnp.js
 .env
+.github
 # testing
 /coverage
-
 # production
 /build
 

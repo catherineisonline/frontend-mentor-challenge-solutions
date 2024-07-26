@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 const app = express();
 const port = 3000;
 
-const SHORTENER_API_URL = process.env.SHORTENER_API_URL;
+
 app.use(cors());
 app.use(json());
 
@@ -20,7 +20,7 @@ app.get(`/shortener`, async (req, res) => {
     }
 
     try {
-        const response = await fetch(`${SHORTENER_API_URL}${encodeURIComponent(url)}`);
+        const response = await fetch(`https://ulvis.net/API/write/get?url=${(url)}`);
         const data = await response.json();
 
         if (data.success) {

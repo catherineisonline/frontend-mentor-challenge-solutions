@@ -43,7 +43,7 @@ shortlyBtn.addEventListener("click", (e) => {
     }
 });
 function fetchBackupUrl(inputValue) {
-    fetch(`https://ulvis.net/API/write/get?url=${encodeURIComponent(inputValue)}`)
+    fetch(`http://localhost:3000/shortener?url=${encodeURIComponent(inputValue)}`)
         .then((response) => response.json())
         .then((response) => {
             if (response.data) {
