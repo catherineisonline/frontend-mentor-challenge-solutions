@@ -1,10 +1,13 @@
 import express, { json } from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
+import dotenv from 'dotenv'
+dotenv.config();
 const app = express();
 const port = 3000;
 const SHORTENER_API_URL = process.env.SHORTENER_API_URL;
 const SHORTENER_API_KEY = process.env.SHORTENER_API_KEY;
+
 
 app.use(cors());
 app.use(json());
@@ -20,6 +23,7 @@ app.get(`/shortener`, async (req, res) => {
     }
 
     try {
+
         const apiUrl = SHORTENER_API_URL;
         const apiKey = SHORTENER_API_KEY;
         const payload = {
@@ -36,6 +40,8 @@ app.get(`/shortener`, async (req, res) => {
             body: JSON.stringify(payload)
         })
         if (!response.ok) {
+            const errorText = await response.text();
+            console.error(`HTTP error! Status: ${response.status} - ${errorText}`);
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
@@ -44,6 +50,7 @@ app.get(`/shortener`, async (req, res) => {
             const shortenedUrl = data.data.tiny_url;
             res.json({ success: true, data: { url: shortenedUrl } });
         } else {
+            console.error('Failed to shorten URL:', data);
             res.status(500).json({ success: false, message: 'Failed to shorten URL' });
         }
     } catch (error) {

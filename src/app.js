@@ -43,8 +43,10 @@ shortlyBtn.addEventListener("click", (e) => {
     }
 });
 function fetchBackupUrl(inputValue) {
+
     fetch(`http://localhost:3000/shortener?inputValue=${encodeURIComponent(inputValue)}`).then((response) => response.json())
         .then((response) => {
+
             if (response.success) {
                 let shortlyCode = response.data.url;
                 resultSkeleton = `<div class="result">
@@ -70,6 +72,7 @@ function fetchBackupUrl(inputValue) {
                     resetResults.classList.add("active");
                 }
             }
+
         })
         .catch(error => console.log(`Error with API: ${error.message}`));
 }
