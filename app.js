@@ -43,11 +43,9 @@ shortlyBtn.addEventListener("click", (e) => {
     }
 });
 function fetchBackupUrl(inputValue) {
-    fetch(`http://localhost:3000/shortener?url=${encodeURIComponent(inputValue)}`)
-        .then((response) => response.json())
+    fetch(`http://localhost:3000/shortener?inputValue=${encodeURIComponent(inputValue)}`).then((response) => response.json())
         .then((response) => {
-            if (response.data) {
-                console.log(response.data)
+            if (response.success) {
                 let shortlyCode = response.data.url;
                 resultSkeleton = `<div class="result">
 <p class="inserted-link">${inputValue}</p>
@@ -57,17 +55,16 @@ function fetchBackupUrl(inputValue) {
  <button class="copy-btn">Copy</button>
 </div>
 </div>`;
-                // Check if I have some storage and show results from it
+
                 if (sessionStorage.getItem("resultsStorage") !== null) {
-                    resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")].reverse();
+                    resultStorage = [resultSkeleton, sessionStorage.getItem("resultsStorage")]
                     parentNode.innerHTML = [resultStorage].join('').split(',').join('');
                     sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
                     resetResults.classList.add("active");
                 }
-                // If I don't have storage just show the first/current result
                 else {
-                    parentNode.innerHTML = resultSkeleton;
-                    // Then push this first result to my storage and then session storage
+                    parentNode.insertAdjacentHTML('afterbegin', resultSkeleton);
+
                     resultStorage.push(resultSkeleton);
                     sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
                     resetResults.classList.add("active");

@@ -67,7 +67,6 @@ shortlyBtn.addEventListener("click", (e) => {
             parentNode.innerHTML = resultSkeleton;
             //then push this first result to my storage and then session storage
             resultStorage.push(resultSkeleton);
-            console.log(resultSkeleton);
             sessionStorage.setItem("resultsStorage", [resultStorage].join('').split(',').join(''));
             resetResults.classList.add("active");
           }
