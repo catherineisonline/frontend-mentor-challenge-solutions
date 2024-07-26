@@ -3,8 +3,6 @@ import cors from 'cors';
 import fetch from 'node-fetch';
 const app = express();
 const port = 3000;
-
-
 app.use(cors());
 app.use(json());
 
