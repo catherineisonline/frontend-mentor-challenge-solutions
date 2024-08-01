@@ -2,7 +2,7 @@
   <main>
     <header v-for="headerDetail in headerDetails" v-bind:key="headerDetail.id">
       <section class="header-info">
-        <img :src="headerDetail.headerIcon" alt="icon" />
+        <img :src="headerDetail.headerIcon" alt="Frontend Mentor" />
         <a :href="headerDetail.projectUrl">
           <h1><span>Frontend</span> Mentor Challenge Solutions</h1>
         </a>
@@ -11,18 +11,16 @@
         <img
           class="nav-icon"
           :src="headerDetail.navIcon"
-          alt=""
+          alt="Open navigation menu"
           @click="click"
         />
 
         <ul class="main-menu">
           <li>
-            <i class="fas fa-home"></i
-            ><a :href="headerDetail.projectUrl" @click="removeMenu">Home</a>
+            <i class="fas fa-home"></i><a :href="headerDetail.projectUrl" @click="removeMenu">Home</a>
           </li>
           <li>
-            <i class="fas fa-project-diagram"></i
-            ><a
+            <i class="fas fa-project-diagram"></i><a
               :href="headerDetail.frontendMentorUrl"
               @click="removeMenu"
               target="_blank"
@@ -64,7 +62,7 @@
             <img
               class="project-image"
               v-bind:src="solution.projectPreview"
-              alt="project preview"
+              alt={{ solution.projectName }}
             />
           </section>
           <!-- Project Info -->
@@ -126,7 +124,7 @@ export default {
         {
           headerIcon: require("@/assets/images/favicon.png"),
           navIcon: require("@/assets/images/nav-icon.jpeg"),
-          projectUrl: "https://frontend-mentor-challenge-solutions.vercel.app/",
+          projectUrl: "https://catherineisonline.github.io/frontend-mentor-challenge-solutions/",
           frontendMentorUrl:
             "https://www.frontendmentor.io/profile/catherineisonline",
           gitHubUrl:
@@ -482,7 +480,7 @@ export default {
             "If you're wanting to test your JavaScript skills this is the challenge for you. Use whichever JS framework you prefer and pull data from the REST Countries API.",
           projectStack: ["HTML", "CSS", "JS", "API"],
           projectPreview: require("@/assets/images/rest-countries-api-with-color-theme-switcher.jpeg"),
-          liveLink: "https://catherineisonline.github.io/rest-countries/",
+          liveLink: "https://restful-countries.vercel.app/",
 
           projectLink:
             "https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-SySqXmn49",
