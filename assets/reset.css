@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    touch-action: manipulation;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+fieldset {
+    border: none;
+}
+
+body {
+    line-height: 1.6;
+}

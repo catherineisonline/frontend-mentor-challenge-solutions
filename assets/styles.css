@@ -1,0 +1,91 @@
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray500: hsl(0, 0%, 42%);
+    --gray950: hsl(0, 0%, 7%);
+    --font: "Figtree", serif;
+}
+
+body {
+    background-color: var(--yellow);
+    color: var(--gray950);
+    min-height: 100vh;
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    background-color: var(--white);
+    width: 336px;
+    max-width: 80vw;
+    height: 475px;
+    border: 1px inset var(--gray950);
+    padding: 1.4rem;
+    box-shadow: 8px 8px var(--gray950);
+    border-radius: 1.25rem;
+    margin-top: 8rem;
+}
+.card img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+}
+.card__inner {
+    display: grid;
+    grid-template-rows: 4.2rem 3.4rem 1fr;
+}
+.card__inner-tag {
+    background-color: var(--yellow);
+    border-radius: 4px;
+    width: max-content;
+    padding: 6px 12px;
+    font-weight: 800;
+    font-size: 14px;
+    transition: all ease-in-out 0.5s;
+}
+.card__inner time {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card__inner h1 {
+    font-weight: 800;
+    font-size: 24px;
+    transition: color ease-in-out 0.5s;
+}
+.card__inner-desc {
+    font-weight: 500;
+    color: var(--gray500);
+    line-height: 1.5rem;
+}
+.card__author {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+.card__author img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.card__author span {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+@media (hover: hover) {
+    .card__inner h1:hover {
+        color: var(--yellow);
+    }
+    .card__inner-tag:hover {
+        color: var(--yellow);
+        background-color: var(--gray950);
+    }
+}
