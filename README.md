@@ -5,7 +5,7 @@
 
 <div align="center">
 
-[Live]()
+[Live](https://catherineisonline.github.io/blog-preview-card-frontendmentor/)
 | [Solution]()
 | [Challenge](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
 
