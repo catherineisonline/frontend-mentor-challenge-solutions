@@ -6,7 +6,7 @@
 <div align="center">
 
 [Live](https://catherineisonline.github.io/blog-preview-card-frontendmentor/)
-| [Solution]()
+| [Solution](https://www.frontendmentor.io/solutions/blog-preview-card-AfTd4vSRNx)
 | [Challenge](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
@@ -34,7 +34,7 @@ Users should be able to:
 - Desktop-first workflow
 
 ## What I learned
-This was a great project to remmeber the basics and serves a task solutions for the Learning Path provided by FM.
+This was a great project to remember the basics and serves as a task solution for the Learning Path provided by FM.
 
 ## Useful resources
 
@@ -45,4 +45,4 @@ This was a great project to remmeber the basics and serves a task solutions for 
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my [solution](). It definitely helps to try new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my [solution](https://www.frontendmentor.io/solutions/blog-preview-card-AfTd4vSRNx). It definitely helps to try new ways to code and find easier solutions! 
