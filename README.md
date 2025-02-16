@@ -1,4 +1,4 @@
-![Blog preview card]()
+![Blog preview card](https://github.com/catherineisonline/blog-preview-card-frontendmentor/blob/main/assets/images/solution.png?raw=true)
 
 
 <h1 align="center">Blog preview card</h1>
