@@ -29,8 +29,8 @@ Users should be able to:
 ## Built with 
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flex, Grid
+- Tailwind CSS
+- Flex
 - Desktop-first workflow
 
 ## What I learned

@@ -571,8 +571,26 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[80vw\] {
+    max-width: 80vw;
+  }
+  .max-w-\[90vw\] {
+    max-width: 90vw;
+  }
+  .min-w-\[80vw\] {
+    min-width: 80vw;
+  }
+  .min-w-lg {
+    min-width: var(--container-lg);
+  }
+  .min-w-sm {
+    min-width: var(--container-sm);
+  }
   .flex-grow {
     flex-grow: 1;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .grid-rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -738,6 +756,56 @@
   .text-white {
     color: var(--color-white);
   }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-1 {
+    --tw-duration: 1ms;
+    transition-duration: 1ms;
+  }
+  .duration-\[1s\] {
+    --tw-duration: 1s;
+    transition-duration: 1s;
+  }
+  .duration-\[2\] {
+    --tw-duration: 2;
+    transition-duration: 2;
+  }
+  .duration-\[2s\] {
+    --tw-duration: 2s;
+    transition-duration: 2s;
+  }
+  .duration-\[2sec\] {
+    --tw-duration: 2sec;
+    transition-duration: 2sec;
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  .hover\:bg-green {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green);
+      }
+    }
+  }
+  .hover\:text-green {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green);
+      }
+    }
+  }
+  .hover\:text-grey-700 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-grey-700);
+      }
+    }
+  }
   .hover\:underline {
     &:hover {
       @media (hover: hover) {
@@ -784,6 +852,14 @@
   }
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
   syntax: "*";
   inherits: false;
 }
