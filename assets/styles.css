@@ -32,7 +32,6 @@ body {
 }
 .card img {
     max-width: 100%;
-    object-fit: cover;
     border-radius: 0.625rem;
 }
 .card__inner {
@@ -48,7 +47,8 @@ body {
     font-size: 14px;
     transition: all ease-in-out 0.5s;
 }
-.card__inner time {
+.card__inner-time,
+.card__inner-time time {
     font-weight: 500;
     font-size: 14px;
 }
