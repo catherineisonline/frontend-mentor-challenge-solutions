@@ -13,10 +13,10 @@ const StepTwo = () => {
     <section className="step" aria-labelledby="title">
       <div className="step__content">
         <header>
-          <h1 id="title">Select your plan</h1>
+          <h2 id="title">Select your plan</h2>
           <p>You have the option of monthly or yearly billing.</p>
         </header>
-        <form className="step__form">
+        <form className="step__form-2">
           <span className="form__error-second">{errors.plan}</span>
           <fieldset className="form__plans">
             <div className="form__plans-option">

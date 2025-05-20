@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  gap: 2.1875rem;
   height: 100%;
-  padding: 162px 3px 162px 3px;
+  padding: 10.125rem 0.1875rem 10.125rem 0.1875rem;
 }
 .step.five img {
   width: 5rem;
@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 .step.five h1 {
   color: var(--blue-950);
@@ -36,6 +36,14 @@
   text-decoration: none;
   transition: text-decoration ease-in-out 0.2s;
 }
-.step.five p address:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .step.five p address:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .step.five div {
+    padding: 1rem;
+  }
 }

@@ -14,7 +14,7 @@ const StepFour = () => {
     <section className="step" aria-labelledby="title">
       <div className="step__content">
         <header>
-          <h1 id="title">Finishing up</h1>
+          <h2 id="title">Finishing up</h2>
           <p>Double-check everything looks OK before confirming.</p>
         </header>
         <ul className="step__summary">

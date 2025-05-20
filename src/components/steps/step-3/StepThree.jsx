@@ -12,7 +12,7 @@ const StepThree = () => {
     <section className="step" aria-labelledby="title">
       <div className="step__content">
         <header>
-          <h1 id="title">Pick add-ons</h1>
+          <h2 id="title">Pick add-ons</h2>
           <p>Add-ons help enhance your gaming experience.</p>
         </header>
         <form className="step__form">

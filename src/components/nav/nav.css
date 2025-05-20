@@ -4,7 +4,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 40px 30px;
+  padding: 2.5rem 1.875rem;
 }
 .nav-steps {
   display: flex;
@@ -46,8 +46,8 @@ nav {
 }
 
 .nav-step-icon {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   font-weight: 500;
   display: flex;
   flex-direction: column;
@@ -56,4 +56,19 @@ nav {
   padding: 1rem;
   border: 1px solid var(--white);
   border-radius: 50%;
+}
+
+@media screen and (max-width: 690px) {
+  nav {
+    border-radius: 0;
+    background-image: url("../../assets/bg-sidebar-mobile.svg");
+  }
+  .nav-steps {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .nav-step__description {
+    display: none;
+  }
 }

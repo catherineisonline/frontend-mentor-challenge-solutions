@@ -1,4 +1,4 @@
-.step__form {
+.step__form-2 {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -6,7 +6,7 @@
 }
 .form__error-second {
   position: absolute;
-  top: -30px;
+  top: -1.875rem;
   color: var(--red-500);
   font-weight: 500;
 }
@@ -26,9 +26,7 @@
   border-radius: 10px;
   transition: border ease-in-out 0.2s;
 }
-.form__plans-option:hover {
-  border: 1px solid var(--purple-600);
-}
+
 .form__plans-option img {
   width: 2.5rem;
   height: 2.5rem;
@@ -44,12 +42,12 @@
 .form__plans-option label span:first-child {
   color: var(--grey-500);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .form__plans-option .bonus {
   color: var(--blue-950);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .form__plans-option input {
   height: 100%;
@@ -89,7 +87,7 @@
 .form__billing input[type="checkbox" i] {
   appearance: initial;
   background-color: var(--blue-950);
-  width: 35px;
+  width: 2.1875rem;
   height: 1.2rem;
   border-radius: 50px;
   position: relative;
@@ -98,8 +96,8 @@
 }
 .form__billing input[type="checkbox" i]::after {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   border-radius: 25px;
   background-color: var(--white);
   position: absolute;
@@ -111,4 +109,21 @@
 .form__billing input[type="checkbox" i]:checked::after {
   left: auto;
   right: 3px;
+}
+@media (hover: hover) {
+  .form__plans-option:hover {
+    border: 1px solid var(--purple-600);
+  }
+}
+@media screen and (max-width: 500px) {
+  .form__plans {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .form__plans-option {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+  }
 }

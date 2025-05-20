@@ -11,6 +11,7 @@ const Main = () => {
   const { targetIndex } = useForm();
   return (
     <main>
+      <h1 className="visually-hidden">Multi-step Form</h1>
       <Nav />
       {targetIndex === 0 ? (
         <StepOne />

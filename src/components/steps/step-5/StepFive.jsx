@@ -6,7 +6,7 @@ const StepFive = () => {
     <section className="step five" aria-labelledby="title">
       <img src={Success} alt="" aria-hidden="true" />
       <div>
-        <h1 id="title">Thank you!</h1>
+        <h2 id="title">Thank you!</h2>
         <p>
           Thanks for confirming your subscription! We hope you have fun using
           our platform. If you ever need support, please feel free to email us

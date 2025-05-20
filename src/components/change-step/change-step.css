@@ -17,11 +17,11 @@
   border: 1px solid var(--blue-950);
   background-color: var(--blue-950);
   color: var(--white);
-  padding: 14px 20px;
+  padding: 0.875rem 1.25rem;
   font-weight: 500;
 }
 .change-step--confirm {
-  padding: 14px 29px;
+  padding: 0.875rem 1.8125rem;
   background-color: var(--purple-600);
 }
 .change-step--back {
@@ -30,4 +30,14 @@
   background-color: transparent;
   color: var(--grey-500);
   font-weight: 500;
+}
+
+@media screen and (max-width: 690px) {
+  .change-step {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90vw;
+  }
 }

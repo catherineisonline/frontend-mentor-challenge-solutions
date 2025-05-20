@@ -12,10 +12,10 @@ const StepOne = () => {
     <section className="step" aria-labelledby="title">
       <div className="step__content">
         <header>
-          <h1 id="title">Personal info</h1>
+          <h2 id="title">Personal info</h2>
           <p>Please provide your name, email address, and phone number.</p>
         </header>
-        <form className="step__form">
+        <form className="step__form-1">
           <div className="form__group">
             <label htmlFor="name">
               Name

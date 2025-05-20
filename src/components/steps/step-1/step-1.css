@@ -1,14 +1,14 @@
-.step__form {
+.step__form-1 {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1rem;
   width: 100%;
 }
 
 .form__group {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 0.8rem;
 }
 .form__group label {
   color: var(--blue-950);
@@ -21,7 +21,7 @@
   border: 1px solid var(--grey-500);
   border-radius: 5px;
   width: 100%;
-  padding: 14px 12px;
+  padding: 0.875rem 0.75rem;
   cursor: pointer;
   color: var(--blue-950);
   font-weight: 700;
@@ -47,8 +47,8 @@
   border-radius: 5px 0 0 5px;
   border-right: none;
   margin-right: 0;
-  padding-right: 10px;
-  padding-left: 5px;
+  padding-right: 0.625rem;
+  padding-left: 0.3125rem;
   background-color: var(--grey-200);
 }
 .form__group .PhoneInputInput {
@@ -56,8 +56,8 @@
   border-left: none;
 }
 .PhoneInputCountrySelectArrow {
-  width: 11px;
-  height: 11px;
+  width: 0.6875rem;
+  height: 0.6875rem;
   color: var(--blue-950);
   border-bottom-width: 2px;
   border-right-width: 2px;
