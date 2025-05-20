@@ -1,0 +1,23 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 0 16px 0;
+  height: 100%;
+}
+.step header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue-950);
+}
+.step header p {
+  color: var(--grey-500);
+  line-height: 2.8;
+}
+.step__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.6rem;
+}

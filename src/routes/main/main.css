@@ -1,0 +1,22 @@
+main {
+  display: grid;
+  grid-template-columns: 17rem 28rem;
+  gap: 6rem;
+  background-color: var(--white);
+  width: 58.5rem;
+  height: 100%;
+  max-height: 37.5rem;
+  grid-template-areas: "nav step";
+  border-radius: 10px;
+  padding: 1rem 6.25rem 1rem 1rem;
+  margin: 0 auto;
+  margin-top: 6.5rem;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.step {
+  grid-area: step;
+}

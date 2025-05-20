@@ -1,0 +1,114 @@
+.step__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 2rem;
+}
+.form__error-second {
+  position: absolute;
+  top: -30px;
+  color: var(--red-500);
+  font-weight: 500;
+}
+.form__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.form__plans-option {
+  display: flex;
+  flex-direction: column;
+  gap: 2.7rem;
+  position: relative;
+  border: 1px solid var(--grey-500);
+  padding: 1.1rem;
+  border-radius: 10px;
+  transition: border ease-in-out 0.2s;
+}
+.form__plans-option:hover {
+  border: 1px solid var(--purple-600);
+}
+.form__plans-option img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.form__plans-option label {
+  display: flex;
+  flex-direction: column;
+  color: var(--blue-950);
+  font-weight: 700;
+  font-size: 1.1rem;
+  gap: 5px;
+}
+.form__plans-option label span:first-child {
+  color: var(--grey-500);
+  font-weight: 500;
+  font-size: 15px;
+}
+.form__plans-option .bonus {
+  color: var(--blue-950);
+  font-weight: 400;
+  font-size: 14px;
+}
+.form__plans-option input {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.form__plans-option:has(input[type="radio"]:checked) {
+  border: 1px solid var(--purple-600);
+  background-color: var(--blue-100);
+}
+
+.form__billing {
+  display: flex;
+  justify-content: center;
+  background-color: var(--blue-100);
+  padding: 0.8rem;
+  border: 5px;
+}
+.form__billing label {
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
+}
+.form__billing label span {
+  color: var(--grey-500);
+  font-weight: 700;
+}
+
+.form__billing label .yearly,
+.form__billing label .monthly {
+  color: var(--blue-950);
+}
+.form__billing input[type="checkbox" i] {
+  appearance: initial;
+  background-color: var(--blue-950);
+  width: 35px;
+  height: 1.2rem;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.form__billing input[type="checkbox" i]::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+}
+
+.form__billing input[type="checkbox" i]:checked::after {
+  left: auto;
+  right: 3px;
+}

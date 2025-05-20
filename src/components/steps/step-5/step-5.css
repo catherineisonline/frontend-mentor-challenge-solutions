@@ -1,0 +1,41 @@
+.step.five {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  height: 100%;
+  padding: 162px 3px 162px 3px;
+}
+.step.five img {
+  width: 5rem;
+  height: 5rem;
+}
+.step.five div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.step.five h1 {
+  color: var(--blue-950);
+  font-size: 2rem;
+}
+.step.five p {
+  color: var(--grey-500);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.step.five p address {
+  display: inline-block;
+  color: var(--grey-500);
+  font-style: normal;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration ease-in-out 0.2s;
+}
+.step.five p address:hover {
+  text-decoration: underline;
+}

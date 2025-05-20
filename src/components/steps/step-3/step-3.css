@@ -1,0 +1,88 @@
+.step__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+}
+
+.form__service {
+  display: grid;
+  grid-template-columns: 2rem 1fr 4rem;
+  gap: 1rem;
+  padding: 1.3rem 1.4rem;
+  align-items: center;
+  border: 1px solid var(--grey-500);
+  border-radius: 10px;
+  transition: border ease-in-out 0.2s;
+}
+.form__service:hover {
+  border: 1px solid var(--purple-600);
+}
+.form__service {
+  position: relative;
+}
+.form__service input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--grey-500);
+  background-color: transparent;
+  position: relative;
+}
+.form__service input:checked + .custom-checkbox {
+  background-color: var(--purple-600);
+  border-color: var(--purple-600);
+}
+
+.form__service .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  width: 5px;
+  height: 10px;
+  left: 6px;
+  top: 25%;
+  transform: rotate(45deg);
+}
+
+.form__service input:checked + .custom-checkbox::after {
+  display: block;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+}
+.form__service:has(input[type="checkbox"]:checked) {
+  border: 1px solid var(--purple-600);
+  background-color: var(--blue-100);
+}
+
+.form__service label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  color: var(--blue-950);
+  cursor: pointer;
+}
+
+.form__service label span {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--grey-500);
+}
+.form__service p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--purple-600);
+}

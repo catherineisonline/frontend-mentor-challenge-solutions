@@ -1,0 +1,33 @@
+.change-step {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.change-step.multiple {
+  justify-content: space-between;
+}
+
+.change-step button {
+  cursor: pointer;
+}
+.change-step--next,
+.change-step--confirm {
+  border-radius: 10px;
+  border: 1px solid var(--blue-950);
+  background-color: var(--blue-950);
+  color: var(--white);
+  padding: 14px 20px;
+  font-weight: 500;
+}
+.change-step--confirm {
+  padding: 14px 29px;
+  background-color: var(--purple-600);
+}
+.change-step--back {
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  color: var(--grey-500);
+  font-weight: 500;
+}
