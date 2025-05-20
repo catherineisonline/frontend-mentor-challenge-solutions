@@ -37,7 +37,7 @@ nav {
 }
 .nav-step__description span {
   font-size: 0.8rem;
-  color: var(--grey-500);
+  color: var(--blue-3300);
 }
 .nav-step__description p {
   font-weight: 500;

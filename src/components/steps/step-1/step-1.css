@@ -22,16 +22,15 @@
   border-radius: 5px;
   width: 100%;
   padding: 14px 12px;
+  cursor: pointer;
+  color: var(--blue-950);
+  font-weight: 700;
 }
 .form__group input::placeholder {
   color: var(--grey-500);
   font-weight: 500;
 }
-.form__group input {
-  cursor: pointer;
-  color: var(--blue-950);
-  font-weight: 700;
-}
+
 .form__error {
   color: var(--red-500);
   font-weight: 500;
@@ -39,4 +38,28 @@
 .form__group:has(.form__error) input,
 .form__group:has(.form__error.num) input {
   border: 1px solid var(--red-500);
+}
+.form__group .PhoneInput {
+  gap: 0;
+}
+.form__group .PhoneInputCountry {
+  border: 1px solid var(--blue-950);
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+  margin-right: 0;
+  padding-right: 10px;
+  padding-left: 5px;
+  background-color: var(--grey-200);
+}
+.form__group .PhoneInputInput {
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+}
+.PhoneInputCountrySelectArrow {
+  width: 11px;
+  height: 11px;
+  color: var(--blue-950);
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  opacity: 1;
 }

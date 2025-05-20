@@ -7,12 +7,13 @@ import PhoneInput from "react-phone-number-input";
 
 const StepOne = () => {
   const { handleForm, form, errors, isPhoneValid } = useForm();
+
   return (
     <section className="step" aria-labelledby="title">
       <div className="step__content">
         <header>
           <h1 id="title">Personal info</h1>
-          <p> Please provide your name, email address, and phone number.</p>
+          <p>Please provide your name, email address, and phone number.</p>
         </header>
         <form className="step__form">
           <div className="form__group">
@@ -58,7 +59,6 @@ const StepOne = () => {
               value={form.number}
               onChange={handleForm}
               countryCallingCodeEditable={false}
-              countrySelectProps={{ unicodeFlags: true }}
               international
               id="number"
               name="number"
