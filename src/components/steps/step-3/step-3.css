@@ -83,7 +83,11 @@
   font-weight: 400;
   color: var(--purple-600);
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .form__service {
+    transition: none;
+  }
+}
 @media (hover: hover) {
   .form__service:hover {
     border: 1px solid var(--purple-600);

@@ -36,6 +36,11 @@
   text-decoration: none;
   transition: text-decoration ease-in-out 0.2s;
 }
+@media (prefers-reduced-motion: reduce) {
+  .step.five p address {
+    transition: none;
+  }
+}
 @media (hover: hover) {
   .step.five p address:hover {
     text-decoration: underline;

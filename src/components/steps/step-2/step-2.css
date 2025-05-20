@@ -110,6 +110,11 @@
   left: auto;
   right: 3px;
 }
+@media (prefers-reduced-motion: reduce) {
+  .form__plans-option {
+    transition: none;
+  }
+}
 @media (hover: hover) {
   .form__plans-option:hover {
     border: 1px solid var(--purple-600);

@@ -73,7 +73,11 @@ hr {
   font-weight: 700;
   font-size: 1.25rem;
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .step__summary-billing div button {
+    transition: none;
+  }
+}
 @media (hover: hover) {
   .step__summary-billing div button:hover {
     font-weight: 700;
