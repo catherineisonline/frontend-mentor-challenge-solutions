@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --kumbh-sans: "Kumbh Sans", sans-serif;
+  --background-color: hsl(185, 75%, 39%);
+  --white: white;
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  font-family: var(--kumbh-sans);
+  background: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+  background-position:
+    top -900px left -700px,
+    bottom -1250px right -550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--background-color);
+  background-blend-mode: overlay;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/** Center Container **/
+.center-container {
+  position: relative;
+  width: 100%;
+  max-width: 21.9rem;
+  margin: 0 auto;
+  height: 23.5rem;
+  margin-top: 10.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+
+/** Header BG **/
+.header-bg {
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+}
+
+/** Profile Pic **/
+.profile-pic {
+  position: absolute;
+  top: 23%;
+  left: 35%;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+}
+
+/** Personal Details **/
+.personal-details {
+  margin-top: 20%;
+  line-height: 25px;
+}
+
+.personal-details h1 {
+  color: var(--very-dark-blue);
+  font-size: 18px;
+}
+
+.personal-details h2 span {
+  color: var(--grayish-blue);
+  font-weight: 100;
+}
+/** Location **/
+.location {
+  color: var(--grayish-blue);
+  font-weight: 100;
+  padding: 5px;
+}
+
+hr {
+  margin-top: 1rem;
+  opacity: 0.5;
+  width: 100%;
+}
+
+/** Info Container **/
+.info-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-items: center;
+  gap: 3rem;
+  padding: 1.9rem 1.4rem;
+  line-height: 20px;
+}
+
+.info-container h2 {
+  font-size: 19px;
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.info-container p {
+  font-size: 10px;
+  color: var(--grayish-blue);
+  letter-spacing: 2px;
+}
+
+/** Media Queries **/
+@media screen and (max-width: 1201px) {
+  .center-container {
+    margin-top: 9.3rem;
+  }
+}

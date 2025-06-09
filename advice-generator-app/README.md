@@ -1,14 +1,9 @@
 <img src="https://github.com/catherineisonline/advice-generator-app-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
-
 <h1 align="center">Advice generator app</h1>
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/advice-generator-app-frontendmentor/" color="white">
-      Live
-    </a>
-    <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/advice-generator-app-wYjTeAeAf#comment-621bb509145c6a78f0999ec4">
       Solution
     </a>
@@ -37,10 +32,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 3. Generate a new piece of advice by clicking the dice icon.
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -50,12 +42,12 @@ You can use any tools you like to help you complete the challenge. So if you've 
 - Advice Slip API - random quote generator
 
 ## What I learned
-Another fun project to practice API with JavaScript. After several complex projects, this one seemed much easier than before. The only thing which isn't as perfect as I would want to is that sometimes after requesting new quote, it generates the same so the visitor wouldn't notice it and think it didn't work. Probablt there are ways to avoid it but I decided not to spend much on this right now. 
 
-P.S. 
+Another fun project to practice API with JavaScript. After several complex projects, this one seemed much easier than before. The only thing which isn't as perfect as I would want to is that sometimes after requesting new quote, it generates the same so the visitor wouldn't notice it and think it didn't work. Probablt there are ways to avoid it but I decided not to spend much on this right now.
+
+P.S.
 
 Seems like the issue was cache, not repetitive quotes which is fixed now!
-
 
 ## Useful resources
 
@@ -63,8 +55,6 @@ Seems like the issue was cache, not repetitive quotes which is fixed now!
 2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
 3. <a href="https://api.adviceslip.com">Advice Slip API</a> - random quote generator.
 
-
-
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/advice-generator-app-wYjTeAeAf#comment-621bb509145c6a78f0999ec4">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/advice-generator-app-wYjTeAeAf#comment-621bb509145c6a78f0999ec4">solution</a>. It definitely helps to find new ways to code and find easier solutions!

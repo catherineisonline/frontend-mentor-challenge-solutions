@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --main-font: "Red Hat Display", sans-serif;
+  --background-color: hsl(225, 100%, 94%);
+  --container-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+  --btn-box-shadow: 5px 10px 20px hsl(245, 75%, 90%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --light-grey: rgb(136, 133, 133);
+  --white: rgb(255, 255, 255);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.center-container {
+  width: 100%;
+  max-width: 28.3rem;
+  height: 43.8rem;
+  max-height: 43.8rem;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--white);
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: var(--container-box-shadow);
+  -webkit-box-shadow: var(--container-box-shadow);
+  -moz-box-shadow: var(--container-box-shadow);
+}
+
+.header-container {
+  width: 100%;
+  height: 100%;
+  max-height: 13.8rem;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+/** Title **/
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--main-font);
+  color: var(--dark-blue);
+  text-align: center;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.title-container p {
+  font-weight: lighter;
+  color: var(--desaturated-blue);
+  line-height: 25px;
+}
+
+/** Pricing Container **/
+.pricing-container {
+  background-color: var(--very-pale-blue);
+  font-family: var(--main-font);
+  max-width: 22rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1.4rem;
+}
+
+.pricing-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.pricing-info img {
+  width: 3.1rem;
+  height: 3.1rem;
+  object-fit: cover;
+}
+
+.pricing-detail p:first-child {
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.pricing-detail p {
+  color: var(--desaturated-blue);
+  line-height: 10px;
+  font-weight: 400;
+}
+
+/** Change button **/
+.change-btn {
+  background-color: transparent;
+  color: var(--bright-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  text-decoration: underline;
+}
+
+/** Payment/Cancel Buttons **/
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.1rem;
+  margin-top: -0.7rem;
+}
+
+.payment-btn {
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+  font-family: var(--main-font);
+  width: 100%;
+  max-width: 22rem;
+  padding: 0.9rem;
+  border: transparent;
+  box-shadow: var(--btn-box-shadow);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/** Cancel Button **/
+.cancel-btn {
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--light-grey);
+  font-size: 1rem;
+}
+
+.payment-btn,
+.cancel-btn,
+.change-btn {
+  transition: all ease-in-out 0.3s;
+}
+@media (hover: hover) {
+  .payment-btn:hover,
+  .cancel-btn:hover,
+  .change-btn:hover {
+    transition: all ease-in-out 0.3s;
+  }
+  .cancel-btn:hover {
+    color: var(--dark-blue);
+  }
+  .payment-btn:hover,
+  .cancel-btn:hover,
+  .change-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+}

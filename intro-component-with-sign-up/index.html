@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Intro component with sign up form - Frontend Mentor">
+  <meta name="keywords" content="Intro component with sign up form,  Frontend Mentor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <title>Intro component with sign up form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Main Container -->
+  <main class="main-container">
+    <!-- Info Section -->
+    <section class="info-section">
+
+      <h1> Learn to code by watching others</h1>
+      <p> See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.</p>
+    </section>
+    <section class="form-section">
+      <button class="sales-btn"> Try it free 7 days <span>then $20/mo. thereafter</span>
+      </button>
+      <!-- Form -->
+      <form class="main-form">
+        <!-- Username-->
+        <div class="input-field">
+          <input class="first-name" id="first-name" type="text" placeholder="First Name">
+          <div class="first-name-error"></div>
+          <label for="first-name" class="name-label"></label>
+        </div>
+        <!-- Lastname -->
+        <div class="input-field">
+          <input class="last-name" type="text" placeholder="Last Name">
+          <div class="last-name-error"></div>
+          <label for="last-name" class="lastname-label"></label>
+        </div>
+        <!-- Email -->
+        <div class="input-field">
+          <input class="user-email" type="email" placeholder="Email Address">
+          <div class="user-email-error"></div>
+          <label for="user-email" class="email-label"></label>
+        </div>
+        <!-- Password -->
+        <div class="input-field">
+          <input class="user-pass" type="password" placeholder="Password">
+          <div class="user-pass-error"></div>
+          <label for="user-pass" class="pass-label"></label>
+        </div>
+        <div class="input-field">
+
+          <button class="submit-info" id="submit-info" type="submit">Claim your free trial</button>
+          <label for="submit-info" class="success-msg"></label>
+        </div>
+        <label class="tnc" for="submit-info"> By clicking the button, you are agreeing to our <a href="">Terms and
+            Services</a>
+        </label>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

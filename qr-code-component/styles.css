@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+:root {
+  --body-font: "Outfit", sans-serif;
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  font-size: 0.93rem;
+  font-family: var(--body-font);
+  background-color: var(--light-gray);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/** QR Container **/
+
+.qr-container {
+  width: max(20%, 20rem);
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 20px;
+  gap: 0.2rem;
+  box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+}
+
+/** Image Block **/
+.img-block img {
+  display: block;
+  max-width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+/** Info Block **/
+.info-block {
+  padding: 1.2rem;
+}
+h1 {
+  font-size: 1.4rem;
+  color: var(--dark-blue);
+}
+
+.info-block p {
+  padding: 1rem;
+  word-spacing: 1px;
+  color: var(--grayish-blue);
+}

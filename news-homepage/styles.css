@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --gsrayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    --light-gray: hsla(0, 0%, 24%, 0.46);
+    --light-cream: rgba(254, 253, 249, 255);
+    --inter-font: "Inter", sans-serif;
+    --transition: all ease-in-out 0.3s;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    position: relative;
+    font-family: var(--inter-font);
+    background-color: var(--light-cream);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+img {
+    display: block;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+header,
+.post {
+    display: flex;
+    flex-direction: row;
+}
+.nav.active,
+.nav.active .menu,
+.featured,
+.featured section,
+.featured section section,
+.new,
+.new-posts,
+.new-posts section,
+.posts,
+.post-meta {
+    display: flex;
+    flex-direction: column;
+}
+/* Header */
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.9rem;
+    padding: 1rem;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+nav ul {
+    display: none;
+    flex-direction: row;
+    gap: 2.36rem;
+}
+nav {
+    position: relative;
+}
+
+.nav.active {
+    position: fixed;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 30%;
+    background-color: var(--off-white);
+    padding: 1rem;
+}
+.nav.active::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-gray);
+    backdrop-filter: blur(2px);
+    top: 0;
+    left: -100%;
+}
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+}
+.nav.active .hamburger {
+    position: absolute;
+    right: 1rem;
+    top: 1.72rem;
+    content: url("./images/icon-menu-close.svg");
+}
+.nav.active .menu {
+    gap: 1rem;
+    margin-top: 50%;
+}
+nav ul li,
+nav ul li a {
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--dark-grayish-blue);
+}
+
+/* Featured */
+
+.featured {
+    gap: 2.1rem;
+    max-width: 45.6rem;
+    margin: 0 auto;
+}
+.featured img {
+    max-height: 18.8rem;
+    object-fit: cover;
+    object-position: top;
+}
+.featured section {
+    gap: 1.9rem;
+}
+
+.featured section p {
+    color: var(--dark-grayish-blue);
+}
+.featured h2 {
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+}
+.featured a {
+    padding: 0.8rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--soft-red);
+    color: var(--off-white);
+    text-decoration: none;
+    width: 52.9%;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+/* New */
+.new {
+    gap: 1.2rem;
+    background-color: var(--very-dark-blue);
+    padding: 1.45rem;
+}
+.new-posts,
+.new-posts section {
+    gap: 2rem;
+}
+.new h2 {
+    color: var(--soft-orange);
+    font-size: 2.5rem;
+}
+.new-posts {
+    gap: 1.8rem;
+}
+.new-posts section {
+    gap: 0.5rem;
+}
+
+.new-posts section h3 a {
+    text-decoration: none;
+    color: var(--off-white);
+    font-weight: 700;
+    font-size: 1.1rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.new-posts section p {
+    color: var(--gsrayish-blue);
+    word-spacing: 1px;
+    line-height: 1.6rem;
+}
+.new-posts hr {
+    height: 1px;
+    background-color: var(--gsrayish-blue);
+    border: none;
+    opacity: 0.5;
+}
+
+/* Posts */
+.posts {
+    gap: 1.1rem;
+    margin-bottom: 4rem;
+    justify-content: space-between;
+}
+.post {
+    align-items: top;
+    gap: 1.4rem;
+    max-width: 21.8rem;
+    min-height: 7rem;
+    max-height: 8rem;
+    height: 8rem;
+}
+.post-meta {
+    gap: 1rem;
+    line-height: 1.3rem;
+    padding-top: 8px;
+}
+.post img {
+    max-width: 100%;
+}
+.post h2 {
+    color: var(--gsrayish-blue);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.post h3 a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--very-dark-blue);
+}
+.post p {
+    color: var(--dark-grayish-blue);
+}
+
+.new-posts section h3 a,
+nav ul li a,
+.post h3 a,
+.featured section section a {
+    transition: var(--transition);
+}
+@media (hover: hover) {
+    .new-posts section h3:hover a,
+    nav ul li a:hover,
+    .post h3 a:hover,
+    .featured section section a:hover {
+        transition: var(--transition);
+    }
+    .new-posts section h3:hover a {
+        color: var(--soft-orange);
+    }
+    nav ul li a:hover,
+    .post h3 a:hover {
+        color: var(--soft-red);
+    }
+    .featured section section a:hover {
+        background-color: var(--very-dark-blue);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .featured section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .featured section section {
+        gap: 3rem;
+    }
+}
+@media screen and (min-width: 800px) {
+    header {
+        padding-top: 5.7rem;
+        padding-bottom: 2.4rem;
+    }
+
+    .featured img {
+        content: url("./images//image-web-3-desktop.jpg");
+    }
+    .hamburger {
+        display: none;
+    }
+    nav ul {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .featured {
+        grid-area: one;
+    }
+    .new {
+        grid-area: two;
+    }
+    .posts {
+        grid-area: three;
+    }
+    main {
+        row-gap: 4.5rem;
+        grid-template-columns: 45.6rem 1fr;
+        grid-template-areas:
+            "one two"
+            "three three";
+    }
+    .posts {
+        flex-direction: row;
+    }
+}

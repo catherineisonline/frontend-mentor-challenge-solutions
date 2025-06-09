@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --main-font: "Outfit", sans-serif;
+  --card-background: hsl(216, 50%, 16%);
+  --main-background: hsl(217, 54%, 11%);
+  --cyan: hsl(178, 100%, 50%);
+  --white: rgb(255, 255, 255);
+  --soft-blue: hsl(215, 51%, 70%);
+  --dark-blue: hsl(215, 32%, 27%);
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  background-color: var(--main-background);
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/** Main Container **/
+.main-container {
+  width: 80%;
+  max-width: 21.8rem;
+  margin: 0 auto;
+  margin-top: 9.1rem;
+  margin-bottom: 50px;
+}
+
+.nft-container {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--card-background);
+}
+
+/** Container Image **/
+.container-image {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  max-width: 18.75rem;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.main-image {
+  background-image: url("images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  min-height: 18.75rem;
+  width: 100%;
+}
+
+.color-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 18.75rem;
+  height: auto;
+  background-image: none;
+  background-color: transparent;
+}
+
+/** Container Title **/
+.container-title {
+  padding-top: 0.5rem;
+}
+.container-title h1 a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 400;
+  transition: color ease-in 0.3s;
+}
+
+.container-title p {
+  color: var(--soft-blue);
+  font-size: 1.1rem;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+/** Pricing and Timing **/
+.container-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -0.5rem;
+}
+
+.pricing,
+.timing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.pricing {
+  color: var(--cyan);
+  text-align: left;
+}
+
+.timing {
+  gap: 10px;
+  color: var(--soft-blue);
+  text-align: right;
+}
+
+.pricing-img,
+.timing-img {
+  min-width: 20px;
+  min-height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.pricing-img {
+  background-image: url("images/icon-ethereum.svg");
+}
+.timing-img {
+  background-image: url("images/icon-clock.svg");
+}
+
+.container-line {
+  border: 1px solid var(--dark-blue);
+  opacity: 0.5;
+}
+
+/** Author **/
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.author img {
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  width: 10%;
+  height: 10%;
+}
+
+.author p {
+  color: var(--soft-blue);
+}
+
+.author-name {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color ease-in 0.3s;
+}
+
+/** Active States **/
+@media (hover: hover) {
+  .author-name:hover,
+  .container-title h1 a:hover {
+    color: var(--cyan);
+    transition: color ease-in 0.3s;
+  }
+
+  .color-image:hover {
+    background-image: url("images/icon-view.svg");
+    background-color: var(--cyan);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20% 20%;
+    opacity: 0.5;
+    transition: background-color ease-in-out 0.3s;
+  }
+}
+
+/** Media Queries **/
+
+@media screen and (max-width: 600px) {
+  /** Main Container **/
+  .main-container {
+    margin-top: 3.75rem;
+  }
+}

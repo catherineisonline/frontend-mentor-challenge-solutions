@@ -5,8 +5,8 @@
 <div align="center">
 
 [Live](https://multistep-form-frontendmentor.vercel.app/)
-| [Solution]()
-| [Challenge]()
+| [Solution](https://www.frontendmentor.io/solutions/multi-step-form-g4hNvPeYzM)
+| [Challenge](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
 
@@ -48,4 +48,4 @@ I do not have access to the Figma sketch so the design is not pixel perfect.
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my [solution](). It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my [solution](https://www.frontendmentor.io/solutions/multi-step-form-g4hNvPeYzM). It definitely helps to find new ways to code and find easier solutions!
