@@ -2,6 +2,10 @@
 
 Frontend Mentor: A showcase of my front-end skills and learning progress. This collection features my solutions to various Frontend Mentor challenges, each providing a real-life workflow experience.
 
+## Contributions
+
+This project serves as a showcase of my personal skills. I do not accept any contributions like pull requests to this project. If you have any suggestions or ideas, feel free to message me or submit an idea. The projects marked as [PUBLIC ARCHIVE] are no longer maintained and updated.
+
 ## Full List
 
 [A](#aF) - [B](#bF) - [C](#cF) - [D](#dF) - [E](#eF) - [F](#fF) - [G](#gF) - [H](#hF) - [I](#iF) - [M](#mF) - [N](#nF) - [O](#oF) - [P](#pF)- [Q](#qF) - [R](#rF) - [S](#sF) - [T](#tF) - [U](#uF) - [W](#wF)
@@ -18,12 +22,8 @@ Frontend Mentor: A showcase of my front-end skills and learning progress. This c
 
 ## C <a id="cF"></a>
 
-- [Calculator](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/calculator) - single page calculator website with theme switcher made with HTML, CSS, React & Styled Components
+- [PUBLIC ARCHIVE] [Calculator](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/refactor/calculator) - single page calculator website with theme switcher made with HTML, CSS, React & Styled Components
 - [PUBLIC ARCHIVE] [Crowdfunding product page](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/crowdfunding-product-page) - a landing page made with HTML, CSS & Vanilla JavaScript
-
-## D <a id="dF"></a>
-
-## E <a id="eF"></a>
 
 ## F <a id="fF"></a>
 
@@ -43,13 +43,13 @@ Frontend Mentor: A showcase of my front-end skills and learning progress. This c
 
 - [PUBLIC ARCHIVE] [Interactive rating component](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/interactive-rating-component) - interactive rating component made with HTML, CSS, Vanilla JavaScript
 - [PUBLIC ARCHIVE] [Intro component with sign-up form](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/intro-component-with-sign-up) - sign-up form with input validation with HTML, CSS & Vanilla JavaScript
-- [PUBLIC ARCHIVE] [Intro section with dropdown navigation](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/intro-section-with-dropdown) -
+- [PUBLIC ARCHIVE] [Intro section with dropdown navigation](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/intro-section-with-dropdown) - testing ability to create dropdown navigation menus with HTML and CSS
 - [PUBLIC ARCHIVE] [IP address tracker](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/ip-address-tracker) - IP address tracker made with HTML, CSS, Vanilla JavaScript & API
 
 ## N <a id="nF"></a>
 
 - [Multi-step form](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/multi-step-form) - build with Vite, React, CSS
-- [PUBLIC ARCHIVE] [The news homepage](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/) -
+- [PUBLIC ARCHIVE] [News homepage](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/news-homepage) - practiced CSS Grid skills
 - [PUBLIC ARCHIVE] [NFT preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/nft-preview-card) - a single block of NFT preview card made with HTML & CSS
 
 ## O <a id="oF"></a>
@@ -70,7 +70,7 @@ Frontend Mentor: A showcase of my front-end skills and learning progress. This c
 ## S <a id="sF"></a>
 
 - [PUBLIC ARCHIVE] [Single price grid](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/single-price-grid) - a single block of price grid made with HTML & CSS
-- [Social links profile](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/social-links-profile) -
+- [Social links profile](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/social-links-profile) - built with Semantic HTML5 and Tailwind CSS
 - [PUBLIC ARCHIVE] [Social proof section](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/social-proof-section) - a simple social proof section component made with HTML & CSS
 - [PUBLIC ARCHIVE] [Stats preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/stats-preview-card) - a single block of stats preview card made with HTML & CSS
 - [PUBLIC ARCHIVE] [Sunny Side agency](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/sunnyside-agency-landing) - landing page made with HTML, CSS & Vanilla JavaScript
@@ -82,8 +82,8 @@ Frontend Mentor: A showcase of my front-end skills and learning progress. This c
 
 ## U <a id="uF"></a>
 
-- [URL shortening API](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/url-shortening-api) - desktop-first Vanilla JS project integrated with URL shortener API Ulvis
+- [PUBLIC ARCHIVE] [URL shortening API](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/url-shortening-api) - desktop-first Vanilla JS project integrated with URL shortener API Ulvis
 
 ## W <a id="wF"></a>
 
-- [Where in the world](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/) - countries data page along with color theme switcher made with HTML, CSS, React & API
+- [PUBLIC ARCHIVE] [REST Countries API](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/rest-countries) - countries data page along with color theme switcher made with HTML, CSS, React & API

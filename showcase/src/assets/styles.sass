@@ -63,19 +63,19 @@ nav
         padding: 2rem
         transform: translateX(150%)
         z-index: 999
-    .show-menu   
+    .show-menu
         transform: translateX(-10%)
         transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22)
     li
-            border-bottom: 1px solid rgba(190, 190, 190, 0.253)
-            display: flex
-            gap: 10px
-            align-items: center
-            text-align: center
+        border-bottom: 1px solid rgba(190, 190, 190, 0.253)
+        display: flex
+        gap: 10px
+        align-items: center
+        text-align: center
     a
-            text-decoration: none
-            color: base.$black
-            text-transform: capitalize
+        text-decoration: none
+        color: base.$black
+        text-transform: capitalize
 //ALL SOLUTIONS
 .all-solutions
     display: flex
@@ -116,6 +116,7 @@ nav
             .project-info
                 display: flex
                 flex-direction: column
+                max-height: 24rem
                 padding: 2rem
                 line-height: 1.5rem
                 .project-name
@@ -171,11 +172,12 @@ nav
         white-space: nowrap
         text-align: center
         height: 5rem
+
     .hidden
         display: none
     .learn-more-btn::after
         background-color: rgb(237, 44, 73)
-        top: 65%
+        bottom: 0
         content: ""
         height: 2px
         width: 100%
@@ -188,10 +190,11 @@ nav
     .links
         display: none
     .shown-links
-        width: 100%
-        height: 5rem
         display: flex
         flex-direction: row
+        align-items: flex-end
+        height: 5rem
+        gap: 1.2rem
         background-color: transparent
         border-radius: 1rem 1rem 0 0
         transition: 0.1s
@@ -203,13 +206,9 @@ nav
             border-radius: 15px
             background-color: transparent
             transition: all ease-in-out 0.2s
-            text-align: center
-            justify-content: center
-            align-items: center
             position: relative
             list-style: none
             padding: 0
-            margin: 1.5rem
             a
                 position: relative
                 width: max-content
@@ -240,10 +239,9 @@ nav
             transition: all ease-in-out 0.3s
 .show-menu
     a:hover
-            color: red
-            transition: all ease-in-out 0.3s
+        color: red
+        transition: all ease-in-out 0.3s
 .solutions
     img:hover
-        cursor: pointer
         transform: scale(0.9)
         transition: all ease-in-out 0.3s
