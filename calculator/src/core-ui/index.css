@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  --main-font: "League Spartan", sans-serif;
+  --light-orange: hsl(6, 63%, 50%);
+}
+
+/* GENERAL */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  font-family: var(--main-font);
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+image {
+  display: block;
+}
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+}
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 33.625rem;
+  margin: 0 auto;
+  margin-top: 5.5rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+.themes {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+.themes p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.theme-number,
+.theme-value {
+  display: flex;
+  flex-direction: row;
+}
+.theme-number {
+  gap: 0.9rem;
+}
+.theme-value {
+  gap: 2px;
+}
+.theme-value {
+  border-radius: 15px;
+  padding: 5px 4px;
+  width: 3.75rem;
+  max-width: 100%;
+}
+.theme-btn.active {
+  background-color: var(--light-orange);
+}
+.theme-numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CALCULATOR */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 33.625rem;
+  margin-bottom: 5rem;
+}
+.calculator * {
+  transition:
+    background-color 1s,
+    color 0.1s ease-in-out;
+}
+
+.calculator button {
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  margin-top: 0.9rem;
+  border-radius: 5px;
+  height: 2.9rem;
+  padding: 2.5rem 1.9rem;
+}
+.screen p {
+  font-size: 3.3rem;
+  letter-spacing: 1px;
+}
+
+.keypad {
+  display: grid;
+  row-gap: 1.9rem;
+  column-gap: 1.3rem;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  grid-auto-flow: row;
+  padding: 2rem;
+  border-radius: 5px;
+  margin-top: 1.6rem;
+}
+.keypad button {
+  border-radius: 10px;
+}
+.key,
+.operator {
+  padding: 0.8rem 0 0.5rem 0;
+  text-align: center;
+  border-radius: 10px;
+}
+#del,
+#reset-key,
+#equals-key {
+  font-size: 1.5rem;
+}
+#reset-key {
+  grid-column: 1 / span 2;
+}
+#equals-key {
+  grid-column: 3 / span 2;
+}
+
+@media screen and (max-width: 600px) {
+  header,
+  .calculator {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .keypad {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+    --almost-white: rgba(250, 250, 250, 255);
+    --white: hsl(0, 0%, 100%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+    --epilogue-font: "Epilogue", sans-serif;
+    --transition: all ease-in-out 0.3s;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--epilogue-font);
+    background-color: var(--almost-white);
+}
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+img {
+    display: block;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 2.6rem;
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+nav {
+    display: none;
+}
+
+header.active nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--almost-white);
+    left: 40%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    gap: 2rem;
+}
+header.active::before {
+    content: "";
+    display: inline-block;
+    position: fixed;
+    background-color: rgba(6, 6, 6, 0.15);
+    backdrop-filter: blur(3px);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+header.active .nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: left;
+    margin-top: 3rem;
+}
+header.active .nav-buttons {
+    width: max-content;
+    margin: 0 auto;
+}
+header.active .nav-buttons li:last-child button {
+    padding: 0.5rem 3rem;
+}
+
+nav ul a,
+nav ul button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: var(--medium-gray);
+    text-decoration: none;
+    align-items: center;
+    font-size: 14px;
+    transition: var(--transition);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.hamburger {
+    cursor: pointer;
+    z-index: 99;
+    position: fixed;
+    margin-left: 85%;
+}
+header.active .hamburger {
+    content: url("./images/icon-close-menu.svg");
+}
+
+.hidden-features li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hidden-features,
+.hidden-company {
+    display: none;
+}
+.features-btn,
+.company-btn {
+    position: relative;
+}
+.hidden-features.active,
+.hidden-company.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: max-content;
+    border-radius: 10px;
+    position: absolute;
+    background-color: var(--white);
+    padding: 1rem;
+    top: 2rem;
+    box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+    z-index: 1;
+}
+
+h1 img {
+    width: 6rem;
+    margin-top: 9px;
+}
+main,
+.remote,
+.remote-information {
+    display: flex;
+    flex-direction: column;
+}
+.remote {
+    gap: 6.6rem;
+}
+.remote-information {
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 3.1rem;
+}
+main {
+    gap: 8.8rem;
+}
+h2 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+}
+.remote-information p {
+    color: var(--medium-gray);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    width: 90%;
+}
+
+.remote-information a {
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background-color: var(--almost-black);
+    padding: 0.9rem 1.9rem;
+    color: var(--almost-white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 3.5px;
+    transition: var(--transition);
+}
+
+.partners {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.partners img {
+    max-width: 80px;
+    height: 100%;
+    object-fit: contain;
+}
+.nav-buttons {
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.nav-buttons li:first-child button {
+    background-color: transparent;
+    border: none;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-buttons li:last-child button {
+    background-color: transparent;
+    border: 2px solid var(--medium-gray);
+    color: var(--medium-gray);
+    padding: 0.5rem 1.35rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+@media (hover: hover) {
+    nav ul a:hover,
+    nav ul button:hover,
+    .remote-information a:hover,
+    .nav-buttons li button:hover {
+        color: var(--almost-black);
+        transition: var(--transition);
+    }
+    .nav-buttons li:last-child button {
+        border-color: var(--almost-black);
+        transition: var(--transition);
+    }
+    .remote-information a:hover {
+        background-color: transparent;
+        border: 1px solid var(--medium-gray);
+        transition: var(--transition);
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .hero {
+        content: url("./images/image-hero-desktop.png");
+        object-fit: cover;
+        grid-column: 2;
+        max-height: 41.5rem;
+        max-width: 30rem;
+    }
+    .remote {
+        grid-row: 1;
+    }
+    main {
+        gap: 8.8rem;
+        display: grid;
+        grid-template-columns: 560px 1fr;
+        margin: 0 auto;
+        margin-top: 2.7rem;
+        max-width: 1000px;
+        justify-content: center;
+    }
+    header {
+        gap: 3.8rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .remote {
+        margin-top: 6.5rem;
+        margin-left: 2.3rem;
+        max-width: 94%;
+    }
+
+    .remote-information {
+        text-align: left;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .menu ul {
+        gap: 2.3rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+    .partners {
+        justify-content: space-between;
+    }
+    .partners img {
+        max-width: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h2 {
+        font-size: 3rem;
+    }
+}

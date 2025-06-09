@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="IP Address Tracker - Frontend Mentor">
+  <meta name="keywords" content="IP Address Tracker, Frontend Mentor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Map API -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <title>IP Address Tracker</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <!-- Header Section -->
+    <section class="header-section">
+      <h1>IP Address Tracker</h1>
+      <!-- Search Form -->
+      <form method="get" class="search-form">
+        <input type="text" placeholder="Search for any IP address or domain" required class="input-field">
+
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+
+      </form>
+    </section>
+    <!-- Data Section -->
+    <section class="data-section">
+
+      <!-- IP Address -->
+      <article>
+        <h2>IP Address</h2>
+        <p class="ipAddressField"></p>
+      </article>
+      <hr>
+      <!-- Location -->
+      <article>
+        <h2>Location</h2>
+        <p class="locationInput"></p>
+      </article>
+      <hr>
+      <!-- Timezone -->
+      <article>
+        <h2>Timezone</h2>
+        <p class="timezoneInput"></p>
+      </article>
+      <hr>
+      <!-- ISP-->
+      <article>
+        <h2>ISP</h2>
+        <p class="ispInput"></p>
+      </article>
+    </section>
+    <!-- Map -->
+    <section class="map-section">
+
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <!-- Map API -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='module' src='config.js'></script>
+
+
+  <script type='module' src="app.js"></script>
+
+</body>
+
+</html>
