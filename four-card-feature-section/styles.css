@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --body--font: "Poppins", sans-serif;
+  --light-gray: hsl(0, 0%, 98%);
+  --white: rgb(255, 255, 255);
+  --dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --cyan: hsl(180, 62%, 55%);
+  --red: hsl(0, 78%, 62%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --box-shadow: 0px 12px 14px -10px hsla(212, 86%, 64%, 0.301);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  background-color: var(--light-gray);
+  font-family: var(--body--font);
+  min-height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+/**Feature Section **/
+.feature-section {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+
+/** Feature Header**/
+header {
+  text-align: center;
+  color: var(--dark-blue);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5.3rem;
+  line-height: 3rem;
+  text-align: center;
+  justify-content: center;
+}
+h1 {
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+header span {
+  font-weight: 200;
+}
+header p {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1.3rem;
+  width: 40%;
+  color: var(--grayish-blue);
+  line-height: 1.5rem;
+  word-spacing: -1px;
+  font-weight: 400;
+}
+
+/** Feature Cards **/
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  max-width: 69.375rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3.8rem;
+}
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  position: relative;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.card-info {
+  padding: 1.7rem 2.3rem;
+}
+.card-info h2 {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+}
+.card-info p {
+  color: var(--grayish-blue);
+  font-size: 13px;
+  line-height: 1.5rem;
+  padding-top: 9px;
+}
+
+/** Icon images **/
+
+.icon {
+  position: static;
+  height: 4rem;
+  margin-left: 73%;
+  margin-top: 3%;
+  width: 4rem;
+}
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  border-top-style: solid;
+  border-top-width: 5px;
+  max-width: 350px;
+  width: 100%;
+  min-height: 15rem;
+  height: 30%;
+}
+.card-one {
+  border-color: var(--cyan);
+}
+.card-two {
+  border-color: var(--red);
+}
+.card-three {
+  border-color: var(--orange);
+}
+.card-four {
+  border-color: var(--blue);
+}
+
+.card-one,
+.card-four,
+.grid-center-container {
+  place-self: center;
+}
+
+.grid-center-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+/** Media Queries **/
+
+@media only screen and (max-width: 1025px) {
+  .feature-cards,
+  .grid-center-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}
