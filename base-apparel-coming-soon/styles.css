@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  --body-font: "Josefin Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 57.5% 1fr;
+  min-height: 100vh;
+}
+
+.logo {
+  height: 2.3rem;
+  max-width: 100%;
+}
+
+/* Info Section */
+.info-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 10.2rem;
+  gap: 1rem;
+  background: url("images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-size: cover;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline;
+  color: var(--dark-grayish-red);
+  letter-spacing: 1.1rem;
+  line-height: 4.2rem;
+}
+
+h1 span {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.info-section p {
+  position: relative;
+  color: var(--desaturated-red);
+  line-height: 1.8rem;
+  font-weight: 400;
+  width: 85%;
+  padding-top: 1.2rem;
+}
+.text-section {
+  max-width: 550px;
+}
+/* Input Section */
+.input-section {
+  position: relative;
+  width: 90%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.6rem;
+}
+
+.input-field {
+  border-color: var(--desaturated-red);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 25px;
+  width: 100%;
+  padding: 1.7rem;
+  overflow: hidden;
+  background-color: transparent;
+  font-family: var(--body-font);
+}
+.input-field::placeholder {
+  font-family: var(--body-font);
+}
+
+.btn {
+  cursor: pointer;
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 23%;
+  height: 3.5rem;
+  border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+}
+
+.arrow-img {
+  background-image: url("images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+
+.error-msg {
+  display: none;
+  position: absolute;
+  color: var(--soft-red);
+  top: 130%;
+  left: 5%;
+  font-size: 0.8rem;
+}
+
+.error {
+  display: none;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  right: 25%;
+}
+.error-icon {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+/* IMG Section */
+.img-section {
+  background-image: url("images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    -webkit-box-shadow: -1px 16px 17px -6px rgba(0, 0, 0, 0.51);
+    box-shadow: -1px 16px 17px -6px rgba(0, 0, 0, 0.51);
+    transition: all ease-in-out 0.3s;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .main-container {
+    grid-template-columns: 50% 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .info-section {
+    display: initial;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 50% 1fr;
+    grid-template-areas:
+      "icon"
+      "hero"
+      "info";
+  }
+
+  .img-section {
+    grid-area: hero;
+  }
+
+  .logo {
+    position: absolute;
+    grid-area: icon;
+    top: 5%;
+    left: 5%;
+  }
+
+  .info-section {
+    grid-area: info;
+    position: initial;
+    padding: 5rem 2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
