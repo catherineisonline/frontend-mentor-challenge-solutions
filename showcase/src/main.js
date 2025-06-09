@@ -1,8 +1,7 @@
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import "./assets/styles.sass";
 
+const app = createApp(App);
 
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+app.mount("#app");
