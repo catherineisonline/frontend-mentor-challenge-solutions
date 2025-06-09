@@ -1,14 +1,9 @@
 <img src="https://github.com/catherineisonline/QR-code-component-frontendmentor/blob/main/images/project%20preview.png?raw=true"></img>
 
-
 <h1 align="center">QR code component challenge</h1>
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/QR-code-component-frontendmentor/" color="white">
-      Live
-    </a>
-    <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/qr-code-component-g0YvCa7rB">
       Solution
     </a>
@@ -36,10 +31,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 <br>
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -47,6 +39,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 - Desktop-first workflow
 
 ## What I learned
+
 Very easy project for someone who recently stepped in the world of development! The only issue I had was the height of flex container as it looked different in Safari. So I changed approach a little bit - that's why I had many changes in this simple project.
 
 ## Useful resources
@@ -56,4 +49,4 @@ Very easy project for someone who recently stepped in the world of development! 
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/qr-code-component-g0YvCa7rB">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/qr-code-component-g0YvCa7rB">solution</a>. It definitely helps to find new ways to code and find easier solutions!

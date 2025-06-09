@@ -1,14 +1,9 @@
 <img src="https://github.com/catherineisonline/huddle-landing-page-with-a-single-introductory-section-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
-
 <h1 align="center">Huddle landing page with a single introductory section</h1>
 
 <div align="center">
-  <h3>
-    <a href="https://catherineisonline.github.io/huddle-landing-page-with-a-single-introductory-section-frontendmentor/" color="white">
-      Live
-    </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/huddle-landing-page-with-a-single-introductory-section-6uAm3BHTq">
+  <h3><a href="https://www.frontendmentor.io/solutions/huddle-landing-page-with-a-single-introductory-section-6uAm3BHTq">
       Solution
     </a>
   <span> | </span>    <a href="https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0">
@@ -34,10 +29,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 <br>
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -46,7 +38,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 ## What I learned
 
-Another great project to practice flex and make it responsive. At the start, the hardest part for me was working with responsiveness of the image however it was much easier than I thought. 
+Another great project to practice flex and make it responsive. At the start, the hardest part for me was working with responsiveness of the image however it was much easier than I thought.
 
 ## Useful resources
 
@@ -55,4 +47,4 @@ Another great project to practice flex and make it responsive. At the start, the
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">solution</a>. It definitely helps to find new ways to code and find easier solutions!

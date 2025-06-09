@@ -1,15 +1,9 @@
-
 <img src="https://github.com/catherineisonline/3-column-card-component-frontendmentor/blob/main/images/project-preview.png?raw=true" ></img>
-
 
 <h1 align="center">3-column preview card component</h1>
 
 <div align="center">
-  <h3>
-    <a href="https://catherineisonline.github.io/3-column-card-component-frontendmentor/" color="white">
-      Live
-    </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/3column-preview-card-component-3icyN8S1s">
+  <h3>   <a href="https://www.frontendmentor.io/solutions/3column-preview-card-component-3icyN8S1s">
       Solution
     </a>
   <span> | </span>    <a href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-">
@@ -35,10 +29,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 <br>
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -47,7 +38,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 ## What I learned
 
-The project was fun to build and did not require a lot of experience. Making hover states was easy. A bit time consuming to make the card responsive for tablets but I believe I did fine. The only thing I deslike the most is how card changes height a little bit when I hover over the button and I found no solution how to fix this issue. I  am not even sure what causes it. I tried overflow: hidden but it does not help. Finally, I am still unsure which one I like more - desktop or mobile first versions. 
+The project was fun to build and did not require a lot of experience. Making hover states was easy. A bit time consuming to make the card responsive for tablets but I believe I did fine. The only thing I deslike the most is how card changes height a little bit when I hover over the button and I found no solution how to fix this issue. I am not even sure what causes it. I tried overflow: hidden but it does not help. Finally, I am still unsure which one I like more - desktop or mobile first versions.
 
 ## Useful resources
 
@@ -56,4 +47,4 @@ The project was fun to build and did not require a lot of experience. Making hov
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/3column-preview-card-component-3icyN8S1s">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/3column-preview-card-component-3icyN8S1s">solution</a>. It definitely helps to find new ways to code and find easier solutions!

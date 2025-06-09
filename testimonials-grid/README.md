@@ -1,14 +1,9 @@
 <img src="https://github.com/catherineisonline/testimonials-grid-section-frontendmentor/blob/master/images/project-preview.png?raw=true"></img>
 
-
 <h1 align="center">Testimonials Grid Section</h1>
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/testimonials-grid-section-frontendmentor/" color="white">
-      Live
-    </a>
-    <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/testimonials-grid-section-NwtTYJ5jI">
       Solution
     </a>
@@ -36,10 +31,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 <br>
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -48,6 +40,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 - Desktop-first workflow
 
 ## What I learned
+
 Another great project to practice some grid. I finally had a better understand of grid layout and learned the use of span meaning in grid. Really loved the project!
 
 ## Useful resources
@@ -57,4 +50,4 @@ Another great project to practice some grid. I finally had a better understand o
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/testimonials-grid-section-NwtTYJ5jI">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/testimonials-grid-section-NwtTYJ5jI">solution</a>. It definitely helps to find new ways to code and find easier solutions!

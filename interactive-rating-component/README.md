@@ -5,10 +5,6 @@
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/interactive-rating-component-frontendmentor/" color="white">
-      Live
-    </a>
-    <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/interactive-rating-component-B1FOwAQB9">
       Solution
     </a>

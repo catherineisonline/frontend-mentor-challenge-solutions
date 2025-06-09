@@ -1,14 +1,9 @@
 <img src="https://github.com/catherineisonline/base-apparel-coming-soon-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
-
 <h1 align="center">Base Apparel Coming Soon Page</h1>
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/base-apparel-coming-soon-frontendmentor/" color="white">
-      Live
-    </a>
-    <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-KdvKyw8NE#comment-62207992f54ba279579c06ec">
       Solution
     </a>
@@ -39,10 +34,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 <br>
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -55,14 +47,11 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 My second project where I used some email validation process. Another quick project to practice some JavaScript and CSS. Nothing new that I learned however decreased the timing to do the projects in general. Used to take much longer.
 
-
 ## Useful resources
 
 1. <a href="https://www.figma.com/">Figma</a> - Paste your design image to check the size of containers, width, etc.
 2. <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi">Perfect Pixel</a> - Awesome Chrome extension that helps you to match the pixels of the provided design.
 
-
-
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-KdvKyw8NE#comment-62207992f54ba279579c06ec">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-KdvKyw8NE#comment-62207992f54ba279579c06ec">solution</a>. It definitely helps to find new ways to code and find easier solutions!

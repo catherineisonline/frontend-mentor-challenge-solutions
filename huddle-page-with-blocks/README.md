@@ -4,15 +4,12 @@
 
 <div align="center">
 
-[Live](https://catherineisonline.github.io/huddle-landing-page-with-feature-blocks-frontendmentor/)
-| [Solution](https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb)
+[Solution](https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb)
 | [Challenge](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
 
 </div>
-
-
 
 ## About The Project
 
@@ -36,4 +33,4 @@ A very easy project to keep updated with the Frontend Mentor projects and rememb
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my [solution](https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb). It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my [solution](https://www.frontendmentor.io/solutions/huddle-landing-page-with-alternating-feature-blocks-UYWzkSPFOb). It definitely helps to find new ways to code and find easier solutions!

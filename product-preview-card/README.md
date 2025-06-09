@@ -5,10 +5,6 @@
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/product-preview-card-frontendmentor/" color="white">
-      Live
-    </a>
-    <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/product-preview-card-component-2dVqjwidC2">
       Solution
     </a>
@@ -32,9 +28,10 @@ The challenge is to build out this product preview card component and get it loo
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 <br><br>Users should be able to: <br>
+
 1. View the optimal layout depending on their device's screen size.
 2. See hover and focus states for interactive elements.
-<br>
+   <br>
 
 ## Built with
 

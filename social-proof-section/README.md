@@ -1,15 +1,9 @@
-
 <img src="https://github.com/catherineisonline/social-proof-section-frontendmentor/blob/main/images/project-preview.png?raw=true" ></img>
-
 
 <h1 align="center">Social proof section</h1>
 
 <div align="center">
-  <h3>
-    <a href="https://catherineisonline.github.io/social-proof-section-frontendmentor/" color="white">
-      Live
-    </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/social-proof-section-VuyCscZZL">
+  <h3>   <a href="https://www.frontendmentor.io/solutions/social-proof-section-VuyCscZZL">
       Solution
     </a>
   <span> | </span>    <a href="https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA">
@@ -34,10 +28,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 <br>
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -48,7 +39,6 @@ You can use any tools you like to help you complete the challenge. So if you've 
 ## What I learned
 
 Another great project to practise some grid layout and flexbox. Hardest part was to make it pixel perfect. Overall I felt that I improved my grid understanding!
- 
 
 ## Useful resources
 
@@ -57,4 +47,4 @@ Another great project to practise some grid layout and flexbox. Hardest part was
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/social-proof-section-VuyCscZZL">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/social-proof-section-VuyCscZZL">solution</a>. It definitely helps to find new ways to code and find easier solutions!

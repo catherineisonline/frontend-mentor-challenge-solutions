@@ -1,14 +1,9 @@
 <img src="https://github.com/catherineisonline/nft-preview-card-frontendmentor/blob/main/images/project-preview.png?raw=true"></img>
 
-
 <h1 align="center">NFT preview card component</h1>
 
 <div align="center">
-  <h3>
-    <a href="https://catherineisonline.github.io/nft-preview-card-frontendmentor/" color="white">
-      Live
-    </a>
-  <span> | </span>    <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">
+  <h3> <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">
       Solution
     </a>
   <span> | </span>    <a href="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U">
@@ -34,10 +29,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 <br>
 <br> <p>I do not have access to the Figma sketch so the design is not pixel perfect.</p>
 
-
-
-
-## Built with 
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -55,4 +47,4 @@ There was nothing knew I did not know before however the hover effect was a bit 
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">solution</a>. It definitely helps to find new ways to code and find easier solutions! 
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-Ag75YunU-">solution</a>. It definitely helps to find new ways to code and find easier solutions!

@@ -4,10 +4,6 @@
 
 <div align="center">
   <h3>
-    <a href="https://catherineisonline.github.io/calculator/" color="white">
-      Live
-    </a>
-    <span> | </span>
     <a href="https://www.frontendmentor.io/solutions/calculator-app-QeAU-DdsSj">
       Solution
     </a>
@@ -56,7 +52,7 @@ I learned how to do simple math calculations using functions, condiitons and per
 
 ## Contribution
 
-This project serves as a project to show off my personal skills. I do not accept any contributions like pull requests to this project however if you have any suggestions or ideas feel free to message me or submit an idea in the [discussions](https://github.com/catherineisonline/calculator/discussions). Otherwise, you are free to fork this project and change it for your own purposes. 
+This project serves as a project to show off my personal skills. I do not accept any contributions like pull requests to this project however if you have any suggestions or ideas feel free to message me or submit an idea in the [discussions](https://github.com/catherineisonline/calculator/discussions). Otherwise, you are free to fork this project and change it for your own purposes.
 
 ## Useful resources
 
