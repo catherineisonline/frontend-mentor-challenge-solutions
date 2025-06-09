@@ -1,0 +1,46 @@
+main {
+  display: grid;
+  grid-template-columns: minmax(14rem, 17rem) minmax(20rem, 28rem);
+  gap: 6rem;
+  background-color: var(--white);
+  width: 90vw;
+  max-width: 58.5rem;
+  min-width: 42rem;
+  height: 100%;
+  max-height: 37.5rem;
+  grid-template-areas: "nav step";
+  border-radius: 10px;
+  padding: 1rem 6.25rem 1rem 1rem;
+  margin: 0 auto;
+  margin-top: 6.5rem;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.step {
+  grid-area: step;
+}
+@media screen and (max-width: 1025px) {
+  main {
+    padding: 1rem;
+    gap: 2.5rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15rem 1fr;
+    grid-template-areas:
+      "nav "
+      "step";
+    width: 100%;
+    min-width: auto;
+    gap: 0;
+    margin-top: 0;
+    padding: 0;
+    background-color: var(--blue-100);
+    max-height: 47.5rem;
+  }
+}
