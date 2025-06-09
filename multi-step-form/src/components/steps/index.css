@@ -1,0 +1,42 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem 0 1rem 0;
+  height: 100%;
+}
+.step header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue-950);
+}
+.step header p {
+  color: var(--grey-500);
+  line-height: 2.8;
+}
+.step__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.6rem;
+}
+@media screen and (max-width: 1025px) {
+  .step header p {
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 690px) {
+  .step {
+    flex-grow: 1;
+    max-width: 90vw;
+    width: 90vw;
+    height: max-content;
+
+    margin: 0 auto;
+    margin-top: -6rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2.5rem 1rem;
+  }
+}
