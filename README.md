@@ -14,7 +14,7 @@ Frontend Mentor: A showcase of my front-end skills and learning progress. This c
 ## B <a id="bF"></a>
 
 - [PUBLIC ARCHIVE] [Base apparel coming soon page](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/base-apparel-coming-soon) - coming soon page made with HTML, CSS & Vanilla JavaScript
-- [Blog preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/blog-preview-card) -
+- [Blog preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/blog-preview-card) - built with semantic HTML and CSS using the desktop-first approach
 
 ## C <a id="cF"></a>
 
@@ -48,7 +48,7 @@ Frontend Mentor: A showcase of my front-end skills and learning progress. This c
 
 ## N <a id="nF"></a>
 
-- [Multi-step form](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/multi-step-form) -
+- [Multi-step form](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/multi-step-form) - build with Vite, React, CSS
 - [PUBLIC ARCHIVE] [The news homepage](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/) -
 - [PUBLIC ARCHIVE] [NFT preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/nft-preview-card) - a single block of NFT preview card made with HTML & CSS
 
@@ -82,7 +82,7 @@ Frontend Mentor: A showcase of my front-end skills and learning progress. This c
 
 ## U <a id="uF"></a>
 
-- [URL shortening API](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/url-shortening-api) -
+- [URL shortening API](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/url-shortening-api) - desktop-first Vanilla JS project integrated with URL shortener API Ulvis
 
 ## W <a id="wF"></a>
 
