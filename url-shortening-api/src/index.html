@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Shortly URL shortening API - Frontend Mentor">
+  <meta name="keywords" content="Shortly URL shortening API, Frontend Mentor, API project">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <nav>
+    <!-- Header Icon -->
+    <img src="images/logo.svg" alt="Shortly">
+
+    <!-- Menu -->
+    <section class="menu-section">
+
+      <ul class="links-section gray-p">
+        <li><a href="/">Features</a></li>
+        <li><a href="/">Pricing</a></li>
+        <li><a href="/">Resources</a></li>
+      </ul>
+      <hr class="menu-hr">
+      <!-- Header Buttons -->
+      <ul class="buttons-section">
+        <li><a class="gray-p" href="/">Login</a></li>
+        <li><a class="cyan-btn sign-up-btn" href="/">Sign Up</a></li>
+      </ul>
+    </section>
+    <i class="fa-solid fa-bars"></i>
+  </nav>
+  <main class="main-container">
+    <!-- Section 1-->
+    <article class="section-1">
+
+      <div class="main-info">
+        <h1>More than just shorter links</h1>
+        <p class="gray-p"> Build your brand's recognition and get detailed insights
+          on how your links are performing.</p>
+        <a class="cyan-btn" href="" aria-hidden="true"> Get Started</a>
+      </div>
+      <img src="images/illustration-working.svg" alt="" aria-hidden="true">
+    </article>
+    <!-- Section 2 -->
+    <form action="" class="section-2">
+      <div class="url-input-block">
+        <input type="text" class="url-input" placeholder="Shorten a link here...">
+        <em class="error-msg"></em>
+      </div>
+      <button type="submit" class="url-button cyan-btn">Shorten It!</button>
+    </form>
+    <!-- Section 3 -->
+    <article class="section-3">
+      <!-- Shortly Results -->
+      <button class="cyan-btn reset-results">Clear Results
+      </button>
+      <section class="search-result-block">
+
+      </section>
+      <h2> Advanced Statistics</h2>
+      <p class="info">Track how your links are performing across the web with our
+        advanced statistics dashboard.</p>
+      <section class="section-3-blocks ">
+
+        <div>
+          <img src="images/icon-brand-recognition.svg" alt="" aria-hidden="true">
+          <h3> Brand Recognition</h3>
+          <p class="gray-p">Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.</p>
+        </div>
+        <div>
+          <img src="images/icon-detailed-records.svg" alt="" aria-hidden="true">
+          <h3>Detailed Records</h3>
+          <p class="gray-p">Gain insights into who is clicking your links. Knowing when and where
+            people engage with your content helps inform better decisions.</p>
+        </div>
+        <div>
+          <img src="images/icon-fully-customizable.svg" alt="" aria-hidden="true">
+          <h3> Fully Customizable</h3>
+          <p class="gray-p"> Improve brand awareness and content discoverability through customizable
+            links, supercharging audience engagement.</p>
+        </div>
+      </section>
+    </article>
+    <!-- Section 4 -->
+    <article class="section-4">
+      <h2> Boost your links today</h2>
+      <a class="cyan-btn" href="/"> Get Started</a>
+    </article>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <!-- Logo -->
+    <article>
+      <img class="logo-img" src="images/logo-white.svg" alt="Shortly">
+    </article>
+
+    <section class="footer-menu">
+      <!-- Footer Menu -->
+      <article>
+        <h4> Features</h4>
+        <ul class="gray-p">
+          <li><a href="/"> Link Shortening</a></li>
+          <li><a href="/"> Branded Links</a></li>
+          <li><a href="/"> Analytics</a></li>
+        </ul>
+      </article>
+      <article>
+        <h4> Resources</h4>
+        <ul class="gray-p">
+          <li><a href="/"> Blog</a></li>
+          <li><a href="/"> Developers</a></li>
+          <li><a href="/"> Support</a></li>
+        </ul>
+      </article>
+      <article>
+        <h4> Company</h4>
+        <ul class="gray-p">
+          <li><a href="/">About</a></li>
+          <li><a href="/">Our Team</a></li>
+          <li><a href="/">Careers</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+
+      </article>
+
+      <!-- Social Media-->
+      <article class="social-media">
+        <a href="/" target="_blank"></a><img src="images/icon-facebook.svg" alt="Facebook link"></a>
+        <a href="/" target="_blank"></a><img src="images/icon-twitter.svg" alt="Twitter link"></a>
+        <a href="/" target="_blank"></a><img src="images/icon-pinterest.svg" alt="Pinterest link"></a>
+        <a href="/" target="_blank"></a><img src="images/icon-instagram.svg" alt="Instagram link"></a>
+      </article>
+    </section>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
