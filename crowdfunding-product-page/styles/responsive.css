@@ -1,0 +1,151 @@
+@media screen and (max-width: 990px) {
+  header {
+    height: 15rem;
+    background-size: cover;
+  }
+  .project-header,
+  .stats,
+  .project-description,
+  .modal-content {
+    width: 60%;
+  }
+  .completed .modal-success {
+    top: 5%;
+    left: 0;
+    right: 0;
+    max-width: 90%;
+    transform: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    background-image: url("../images/image-hero-mobile.jpg");
+  }
+  .hambruger-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hamburger-menu {
+    width: 16px;
+    height: 15px;
+    background: url("../images/icon-hamburger.svg") no-repeat;
+    display: block;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-hambruger {
+    display: inline-block;
+  }
+  .hamburger-menu.active {
+    background: url("../images/icon-close-menu.svg") no-repeat;
+    background-size: contain;
+  }
+  .menu {
+    display: none;
+  }
+  .menu.active {
+    position: absolute;
+    top: 3%;
+    right: 0;
+    left: 0;
+    width: calc(100% - 2 * 11.5vw);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: var(--white);
+    font-size: 1.5em;
+    z-index: 4;
+    box-shadow: 0 0 150px 150px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  .menu.active ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .menu.active a {
+    color: var(--black);
+    font-size: 1.1rem;
+  }
+  .hidden-image {
+    display: none;
+  }
+  .menu.active li {
+    position: relative;
+  }
+  .menu.active li::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--light-gray);
+    width: 80%;
+    left: 0;
+    top: 120%;
+  }
+  .menu.active li:last-child::after {
+    width: 0;
+  }
+  .bookmark {
+    width: 56px;
+  }
+  .bookmark button {
+    display: none;
+  }
+  .project-header,
+  .stats,
+  .project-description,
+  .modal-content,
+  .modal-success {
+    margin: 2rem 11.5vw;
+    width: calc(100% - 2 * 11.5vw - 4rem);
+    padding: 2rem;
+  }
+  .action-btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+  .action-btn .bookmark p {
+    display: none;
+  }
+  .stats .numbers {
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .modal-content {
+    position: absolute;
+    margin: 0;
+  }
+  .item.item-selected .pledge {
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stats-numbers {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .stat::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    bottom: initial;
+    width: inherit;
+    height: 7rem;
+    border-right: 1px solid var(--light-gray);
+    rotate: 90deg;
+  }
+  .stat {
+    text-align: center;
+  }
+}
