@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --dark-magenta: hsl(300, 43%, 22%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --body-font: "Spartan", sans-serif;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+  background-position:
+    left 50px top 0,
+    right 0 bottom -300px;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-size: contain, contain;
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: var(--body-font);
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.main-container {
+  width: 80%;
+  max-width: 69.375rem;
+  min-width: 20rem;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 8.125rem;
+  margin-bottom: 8rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.2rem;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "first-area"
+    "second-area"
+    "third-area";
+}
+
+/** Main Title **/
+.main-title {
+  grid-area: first-area;
+  text-align: center;
+}
+.main-title h1 {
+  color: var(--dark-magenta);
+  font-size: 2.9rem;
+  margin: 0;
+  line-height: 3rem;
+}
+.main-title p {
+  color: var(--dark-grayish-magenta);
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+/** Ratings **/
+.ratings {
+  grid-area: second-area;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.rating-container-1,
+.rating-container-2,
+.rating-container-3 {
+  background-color: var(--light-grayish-magenta);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  height: fit-content;
+  text-align: center;
+}
+
+.rating-container-1 p,
+.rating-container-2 p,
+.rating-container-3 p {
+  color: var(--dark-magenta);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/** Stars **/
+.stars {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 2rem;
+}
+
+.star-icon {
+  background-image: url("images/icon-star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 7px;
+}
+
+/** Buyer Ratings **/
+.buyer-ratings {
+  grid-area: third-area;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  height: auto;
+}
+.buyer-container-1,
+.buyer-container-2,
+.buyer-container-3 {
+  background-color: var(--dark-magenta);
+  border-radius: 5px;
+  padding: 1.8rem;
+  height: fit-content;
+  width: fit-content;
+}
+
+/** Ratings Header **/
+.rating-header {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.buyer-one {
+  background-image: url("images/image-colton.jpg");
+}
+.buyer-two {
+  background-image: url("images/image-irene.jpg");
+}
+.buyer-three {
+  background-image: url("images/image-anne.jpg");
+}
+
+.buyer-one,
+.buyer-two,
+.buyer-three {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.buyer-information {
+  line-height: 10px;
+}
+
+.buyer-name {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+}
+.buyer-verification {
+  color: var(--soft-pink);
+  font-size: 14px;
+}
+
+.buyer-feedback p {
+  color: var(--light-grayish-magenta);
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 13px;
+}
+
+/** Media Queries **/
+@media only screen and (min-width: 600px) {
+  body {
+    background-position:
+      left 100px top -100px,
+      right 0 bottom -500px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+    background-position:
+      left -800px top 0,
+      right -250px bottom 0;
+  }
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "first-area second-area"
+      "third-area third-area";
+  }
+  .main-title > * {
+    text-align: left;
+  }
+  h1 {
+    width: 80%;
+  }
+  .main-title p {
+    width: 85%;
+  }
+  .ratings {
+    align-items: left;
+    padding: 1rem;
+  }
+
+  .rating-info {
+    width: 85%;
+  }
+
+  .rating-container-2 {
+    margin-left: 3rem;
+  }
+  .rating-container-3 {
+    margin-left: 6rem;
+  }
+
+  .rating-container-1,
+  .rating-container-2,
+  .rating-container-3 {
+    text-align: left;
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .buyer-ratings {
+    flex-direction: row;
+  }
+  .buyer-container-2 {
+    margin-top: 1rem;
+  }
+  .buyer-container-3 {
+    margin-top: 2rem;
+  }
+}
