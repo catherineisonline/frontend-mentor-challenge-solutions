@@ -22,7 +22,7 @@ This project serves as a showcase of my personal skills. I do not accept any con
 
 ## C <a id="cF"></a>
 
-- [PUBLIC ARCHIVE] [Calculator](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/refactor/calculator) - single page calculator website with theme switcher made with HTML, CSS, React & Styled Components
+- [PUBLIC ARCHIVE] [Calculator](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/rest-countries) - single page calculator website with theme switcher made with HTML, CSS, React & Styled Components
 - [PUBLIC ARCHIVE] [Crowdfunding product page](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/crowdfunding-product-page) - a landing page made with HTML, CSS & Vanilla JavaScript
 
 ## F <a id="fF"></a>
