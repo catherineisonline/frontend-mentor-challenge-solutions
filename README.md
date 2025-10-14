@@ -48,7 +48,7 @@ This project serves as a showcase of my personal skills. I do not accept any con
 
 ## N <a id="nF"></a>
 
-- [Multi-step form](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/multi-step-form) - build with Vite, React, CSS
+- [PUBLIC ARCHIVE] [Multi-step form](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/multi-step-form) - build with Vite, React, CSS
 - [PUBLIC ARCHIVE] [News homepage](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/news-homepage) - practiced CSS Grid skills
 - [PUBLIC ARCHIVE] [NFT preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/nft-preview-card) - a single block of NFT preview card made with HTML & CSS
 

@@ -4,8 +4,7 @@
 
 <div align="center">
 
-[Live](https://multistep-form-frontendmentor.vercel.app/)
-| [Solution](https://www.frontendmentor.io/solutions/multi-step-form-g4hNvPeYzM)
+[Solution](https://www.frontendmentor.io/solutions/multi-step-form-g4hNvPeYzM)
 | [Challenge](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
