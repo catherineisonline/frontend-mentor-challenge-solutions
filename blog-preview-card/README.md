@@ -4,8 +4,7 @@
 
 <div align="center">
 
-[Live](https://blog-preview-card-frontendmentor-seven.vercel.app/)
-| [Solution](https://www.frontendmentor.io/solutions/blog-preview-card-AfTd4vSRNx)
+[Solution](https://www.frontendmentor.io/solutions/blog-preview-card-AfTd4vSRNx)
 | [Challenge](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
