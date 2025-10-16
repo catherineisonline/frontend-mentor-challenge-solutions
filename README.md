@@ -18,7 +18,7 @@ This project serves as a showcase of my personal skills. I do not accept any con
 ## B <a id="bF"></a>
 
 - [PUBLIC ARCHIVE] [Base apparel coming soon page](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/base-apparel-coming-soon) - coming soon page made with HTML, CSS & Vanilla JavaScript
-- [Blog preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/blog-preview-card) - built with semantic HTML and CSS using the desktop-first approach
+- [PUBLIC ARCHIVE] [Blog preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/blog-preview-card) - built with semantic HTML and CSS using the desktop-first approach
 
 ## C <a id="cF"></a>
 
@@ -70,7 +70,7 @@ This project serves as a showcase of my personal skills. I do not accept any con
 ## S <a id="sF"></a>
 
 - [PUBLIC ARCHIVE] [Single price grid](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/single-price-grid) - a single block of price grid made with HTML & CSS
-- [Social links profile](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/social-links-profile) - built with Semantic HTML5 and Tailwind CSS
+- [PUBLIC ARCHIVE] [Social links profile](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/social-links-profile) - built with Semantic HTML5 and Tailwind CSS
 - [PUBLIC ARCHIVE] [Social proof section](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/social-proof-section) - a simple social proof section component made with HTML & CSS
 - [PUBLIC ARCHIVE] [Stats preview card](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/stats-preview-card) - a single block of stats preview card made with HTML & CSS
 - [PUBLIC ARCHIVE] [Sunny Side agency](https://github.com/catherineisonline/frontend-mentor-challenge-solutions/tree/main/sunnyside-agency-landing) - landing page made with HTML, CSS & Vanilla JavaScript

@@ -9,7 +9,6 @@
 // const SHORTENER_API_KEY = process.env.SHORTENER_API_KEY;
 // const allowedOrigins = ['https://catherineisonline.github.io', 'http://localhost:3000', 'http://127.0.0.1:8080/'];
 
-
 // app.use(cors());
 // app.use(json());
 
@@ -25,7 +24,7 @@
 
 //     try {
 
-//         const apiUrl = SHORTENER_API_URL;
+//         const apiUrl = ≈;
 //         const apiKey = SHORTENER_API_KEY;
 //         const payload = {
 //             url: inputValue,

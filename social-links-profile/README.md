@@ -4,8 +4,7 @@
 
 <div align="center">
 
-[Live](https://social-links-profile-frontendmentor-gamma.vercel.app/)
-| [Solution](https://www.frontendmentor.io/solutions/social-links-profile-uuvPp8n0AT)
+[Solution](https://www.frontendmentor.io/solutions/social-links-profile-uuvPp8n0AT)
 | [Challenge](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
